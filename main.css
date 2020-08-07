@@ -9,9 +9,9 @@ html, body {
     --primaryfont: "Helvetica";
     --secondaryfont: "Jannon 10 Pro";
     --arabicfont: "Finder";
-    --primarycolour: #fdfff5; /* electric blue */
-    --secondarycolour: blue; /* interdimensional blue */
-    --tertiarycolour: #fdfff5; /* water */
+    --primarycolour: #fdfff5; /* milk */
+    --secondarycolour: #000; /* black */
+    --tertiarycolour: #fdfff5; /* milk */
     --hovercolour: #ff6347; /* tomato */
     --activecolour: #ff0000; /* red */
     --selectioncolour: #7fffd4; /* aquamarine */
