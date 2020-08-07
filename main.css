@@ -9,9 +9,9 @@ html, body {
     --primaryfont: "Helvetica";
     --secondaryfont: "Jannon 10 Pro";
     --arabicfont: "Finder";
-    --primarycolour: #f8f8ff; /* milk */
-    --secondarycolour: #000; /* black */
-    --tertiarycolour: #ccccff; /* water */
+    --primarycolour: #fdfff5; /* electric blue */
+    --secondarycolour: blue; /* interdimensional blue */
+    --tertiarycolour: #fdfff5; /* water */
     --hovercolour: #ff6347; /* tomato */
     --activecolour: #ff0000; /* red */
     --selectioncolour: #7fffd4; /* aquamarine */
@@ -190,6 +190,7 @@ a:active {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
+	align-items: flex-start;
 }
 .column3 {
 	display: flex;
@@ -615,8 +616,3 @@ a:active {
     font-size: calc(var(--fontsize) * 2.5);
 }
 /* END CLICK ON AN ENTRY TO SEE MORE */
-
-.essayfigure {
-    margin-bottom: var(--margin);
-    width: var(--figuresize);
-}
