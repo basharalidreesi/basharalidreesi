@@ -11,7 +11,7 @@ html, body {
     --arabicfont: "Finder";
     --primarycolour: #fdfff5; /* milk */
     --secondarycolour: #000; /* black */
-    --tertiarycolour: #fdfff5; /* milk */
+    --tertiarycolour: #7df9ff; /* milk */
     --hovercolour: #ff6347; /* tomato */
     --activecolour: #ff0000; /* red */
     --selectioncolour: #7fffd4; /* aquamarine */
@@ -452,8 +452,8 @@ a:active {
     top: 50%;
     left: 25%;
     transform: translate(-50%, -50%);
-    border: var(--overwriteborderthickness) solid var(--secondarycolour);
     box-shadow: 0px 0px calc(var(--margin) * 2) calc(var(--margin) / 2) var(--entrycolour);
+	border: var(--overwriteborderthickness) solid var(--secondarycolour);
     border-radius: 12.5vw 12.5vw 0 0;
     padding-top: calc(var(--margin) * 2);
     background-image: var(--entryimage);
@@ -476,6 +476,7 @@ a:active {
     transform: translate(0, 0);
     border: none;
     box-shadow: 0px 0px calc(var(--margin) * 1) calc(var(--margin) / 2) var(--entrycolour);
+	border-right: var(--borderthickness) solid var(--secondarycolour);
     border-radius: 0;
     padding-top: calc(var(--margin) * 3 + var(--margin) / 5 + var(--fontsize) * 1.4 + var(--fontsize) * 2);
     background-image: none !important;
@@ -533,11 +534,12 @@ a:active {
     --entryimage: url("/Graphics/test.png");
     --entrycolour: #ffff33; /* electric yellow */
 	--secondarycolour: var(--entrycolour);
+	--tertiarycolour: #3cd070;
 }
 #powerandthedisplaysofanenthronedprince {
     --fontsize: var(--overwritefontsize);
     --figuresize: 100%;
-    --entrycolour: #360ccc; /* interdimensional blue */
+    --entrycolour: #ff3503; /* electric orange */
 	--secondarycolour: var(--entrycolour);
 	--tertiarycolour: #7df9ff;
 }
@@ -616,3 +618,6 @@ a:active {
     font-size: calc(var(--fontsize) * 2.5);
 }
 /* END CLICK ON AN ENTRY TO SEE MORE */
+.column:hover {
+	background-color: var(--tertiarycolour);
+}
