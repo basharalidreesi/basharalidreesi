@@ -1,16 +1,4 @@
-<!doctype html>
-<html lang="en">
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Bashar al-Idreesi</title>
-		<meta name="description" content="Bashar al-Idreesi">
-		<meta name="author" content="Bashar al-Idreesi">
-		<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-	</head>
-	<body>
-		This is generated from default.html
-		<html>
+I"š”<html>
 	<head>
 	</head>
 	<body>
@@ -687,6 +675,4 @@ layout: default
 		<div class="frame" id="bottomframe"></div> -->
 	</body>
 </html>
-
-	</body>
-</html>
+:ET
