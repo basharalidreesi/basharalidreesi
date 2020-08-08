@@ -1,8 +1,4 @@
-<!doctype html>
-<html>
-  <body>
-	  This is generated from default.html
-    <p>This is generated from the main page</p>
+I"z<p>This is generated from the main page</p>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -662,6 +658,4 @@
 	<div class="frame" id="bottomframe"></div> -->
 </body>
 </html>
-
-  </body>
-</html>
+:ET

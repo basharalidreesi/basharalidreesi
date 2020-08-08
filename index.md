@@ -350,7 +350,7 @@ This is generated from the main page
 					</span>
 				</div>
 				<div class="cardentryportal" id="powerandthedisplaysofanenthronedprince" tabindex="1">
-					{% include_relative power-and-the-displays-of-an-enthroned-prince/index.md %}
+					{% include_relative power-and-the-displays-of-an-enthroned-prince/index.html %}
 				</div>
 				<!-- END Power and the Displays of an Enthroned Prince -->
 				<!-- START The Library as a Place of Production -->
