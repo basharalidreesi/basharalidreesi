@@ -1,4 +1,5 @@
-I"æÄ<html lang="en">
+I"@Å<p>This is generated from the main page</p>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <title>Bashar al-Idreesi</title>
@@ -316,7 +317,7 @@
 				<div class="cardentrycontainer" tabindex="1">
 					<span class="cardentry cardentryleft">
 						<p class="text cardentrytext centredtext uppercasetext primaryfonttext">
-							Power and the Displays of an Enthroned Prince [test4]
+							Power and the Displays of an Enthroned Prince
 						</p>
 					</span>
 					<span class="cardentry cardentryright">
@@ -345,8 +346,11 @@
 					</span>
 				</div>
 				<div class="cardentryportal" id="powerandthedisplaysofanenthronedprince" tabindex="1">
-					&lt;!doctype html&gt;
-
+					---
+title: Bashar al-Idreesi
+layout: default
+---
+This is genrated from Power and the Displays of an Enthroned Prince
 <html lang="en">
 <head>
     <meta charset="utf-8" />

@@ -1,10 +1,15 @@
-I"+<html lang="en">
+---
+title: Bashar al-Idreesi
+layout: default
+---
+This is genrated from Power and the Displays of an Enthroned Prince
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Power and the Displays of an Enthroned Prince, Bashar al-Idreesi</title>
-    <meta name="description" content="Bashar al-Idreesi" />
-    <meta name="author" content="Bashar al-Idreesi" />
-    <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+    <meta name="description" content="Bashar al-Idreesi">
+    <meta name="author" content="Bashar al-Idreesi">
+    <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
 </head>
 <body>
     <header>
@@ -13,7 +18,7 @@
 		Power and the Displays of an Enthroned Prince
 	</h1>
 	<h2 class="text subheadingtext threequarterwidthtext centredtext secondaryfonttext threequarterwidthtext">
-		Janet Abu-Lughod Library Seminar II:<br />
+		Janet Abu-Lughod Library Seminar II:<br>
 		Encountering Qusayr Amra: Building Expenditure?
 	</h2>
 	<p class="text leftalignedtext primaryfonttext indentedtext">
@@ -36,4 +41,3 @@
 	</p>
 </body>
 </html>
-:ET
