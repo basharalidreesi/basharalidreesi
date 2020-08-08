@@ -6,7 +6,7 @@
 		<title>Power and the Displays of an Enthroned Prince, Bashar al-Idreesi</title>
 		<meta name="description" content="Bashar al-Idreesi">
 		<meta name="author" content="Bashar al-Idreesi">
-		<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+		<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
 	</head>
 	<body>
 		<h1 class="text headingtext threequarterwidthtext centredtext secondaryfonttext threequarterwidthtext">
