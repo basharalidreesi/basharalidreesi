@@ -15,7 +15,7 @@
     <header>
     </header>
 	<h1 class="text headingtext threequarterwidthtext centredtext secondaryfonttext threequarterwidthtext">
-		LOL
+		Power and the Displays of an Enthroned Prince
 	</h1>
 	<h2 class="text subheadingtext threequarterwidthtext centredtext secondaryfonttext threequarterwidthtext">
 		Janet Abu-Lughod Library Seminar II:<br />
