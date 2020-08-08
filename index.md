@@ -2,6 +2,7 @@
 title: Bashar al-Idreesi
 layout: default
 ---
+This is generated from the main page
 <html lang="en">
 <head>
     <meta charset="utf-8">

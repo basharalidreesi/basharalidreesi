@@ -2,6 +2,7 @@
 title: Bashar al-Idreesi
 layout: default
 ---
+This is genrated from Power and the Displays of an Enthroned Prince
 <html lang="en">
 <head>
     <meta charset="utf-8">
