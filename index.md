@@ -349,7 +349,7 @@ layout: default
 					</span>
 				</div>
 				<div class="cardentryportal" id="powerandthedisplaysofanenthronedprince" tabindex="1">
-					{% include_relative power-and-the-displays-of-an-enthroned-prince/index.html %}
+					{% include_relative power-and-the-displays-of-an-enthroned-prince/index.md %}
 				</div>
 				<!-- END Power and the Displays of an Enthroned Prince -->
 				<!-- START The Library as a Place of Production -->
