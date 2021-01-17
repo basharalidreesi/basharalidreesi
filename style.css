@@ -138,7 +138,7 @@ html, body {
 	text-decoration-color: #e1e1e1;
 }
 .projectinfo:active > .projectlink, .datalink:active {
-	color: #ffb200;
+	color: #ff3503;
 	text-decoration: underline;
 	text-decoration-style: wavy;
 	text-decoration-color: #ffd0ff;
