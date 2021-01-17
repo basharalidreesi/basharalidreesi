@@ -1,0 +1,38 @@
+I"¡<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Bashar al-Idreesi</title>
+		<meta name="description" content="Bashar al-Idreesi" />
+		<meta name="author" content="Bashar al-Idreesi" />
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	</head>
+	<body>
+		<div class="frame">
+			<div class="area area-1">
+				<div class="area area-1-1">
+					<p>Contact</p>
+					<p>basharalidreesi@gmail.com</p>
+					<p>Bashar al-Idreesi</p>
+					<p>Amman, Jordan</p>
+				</div>
+				<div class="area area-1-2">
+					<p>Services</p>
+					<p>Lorem ipsum dolor sit amet.</p>
+				</div>
+			</div>
+			<div class="area area-2">
+				<p>CV</p>
+				<p>Click here for a PDF version.</p>
+				<p>Education</p>
+				<p>Work</p>
+				<p>Seminars and Workshops</p>
+				<p>Languages</p>
+			</div>
+			<div class="area area-3">
+				<p>Selected Works</p>
+				<p>Lorem ipsum dolor sit amet.</p>
+			</div>
+		</div>
+	</body>
+</html>
+:ET
