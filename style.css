@@ -4,7 +4,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-	background-color: #ffeeb9;
+	background-color: #ffeeb9; /* peach */
 	counter-reset: project-number;
 }
 * {
@@ -45,7 +45,7 @@ html, body {
 	flex-flow: row nowrap;
 	align-items: center;
 	padding-bottom: 1.785vw;
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid #000;
 	top: 1.785vw;
 	pointer-events: none;
 }
@@ -73,16 +73,16 @@ html, body {
 	flex-flow: row nowrap;
 	justify-content: space-around;
 	padding-bottom: calc(1.785vw/2);
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid #000;
 }
 .datalink {
-	color: black;
+	color: #000;
 	font-size: 1.785vw;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-decoration: none;
 }
 .datalink:visited {
-	color: black;
+	color: #000;
 }
 .projectlist {
 	display: flex;
@@ -90,15 +90,15 @@ html, body {
 }
 .projectlist li:first-child {
 	padding-bottom: calc(1.785vw/2);
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #000;
 }
 .projectlist li:not(:first-child) {
 	padding-top: calc(1.785vw/2);
 	padding-bottom: calc(1.785vw/2);
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #000;
 }
 .projectlist li:last-child {
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid #000;
 }
 .projectlist li {
 	display: flex;
@@ -136,23 +136,23 @@ html, body {
 	transform: translateX(calc(1.785vw/-2));
 }
 .projectinfo:hover > .projectlink, .datalink:hover {
-	color: #8f00ff;
+	color: #8f00ff; /* electric violet */
 	text-decoration: underline;
 	text-decoration-style: wavy;
-	text-decoration-color: #e1e1e1;
+	text-decoration-color: #e1e1e1; /* grey */
 }
 .projectinfo:active > .projectlink, .datalink:active {
-	color: #ff3503;
+	color: #ff3503; /* electric orange */
 	text-decoration: underline;
 	text-decoration-style: wavy;
-	text-decoration-color: #ffd0ff;
+	text-decoration-color: #ffd0ff; /* thistle */
 }
 .projectlink {
 	text-decoration: none;
-	color: black;
+	color: #000;
 }
 .projectlink:visited {
-	color: black;
+	color: #000;
 }
 .content {
 	display: none;
