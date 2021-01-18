@@ -4,7 +4,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-	background-color: #fdf9bb;
+	background-color: #d0ffff;
 	counter-reset: project-number;
 }
 * {
@@ -14,6 +14,7 @@ html, body {
     margin: 0;
 	font-size: 100%;
 	text-align: left;
+	line-height: 125%;
 }
 *:lang(ar) {
 	text-align: right;
@@ -101,35 +102,38 @@ html, body {
 }
 .projectlist li {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 }
 .projectnumber {
-	flex: 0 1 1.785vw;
+	flex: 0 0 1.785vw;
 }
 .projectnumber:before {
 	counter-increment: project-number;
 	content: counter(project-number);
 	font-size: 1.785vw;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Temeraire", "Times New Roman", serif;
+	line-height: 125%;
 }
 .projectinfo {
 	flex: 1 1 auto;
 	text-align: center;
+	transform: none;
+	transition: transform 0.25s ease;
 }
 .projecttitle {
 	font-size: 1.785vw;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Temeraire", "Times New Roman", serif;
 	text-transform: uppercase;
 	text-align: center;
 }
 .projectsubtitle {
 	font-size: 1vw;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Temeraire", "Times New Roman", serif;
 	text-align: center;
 	padding-top: calc(1.785vw/2);
 }
 .projectinfo:hover {
-	
+	transform: translateX(calc(1.785vw/-2));
 }
 .projectinfo:hover > .projectlink, .datalink:hover {
 	color: #8f00ff;
