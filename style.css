@@ -1,208 +1,28 @@
 html, body {
 	margin: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-	background-color: #ffeeb9; /* peach */
-	counter-reset: project-number;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: aquamarine;
+	color: red;
 }
 * {
 	box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    margin: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 	font-size: 100%;
 	text-align: left;
-	line-height: 125%;
+	line-height: 100%;
 }
 *:lang(ar) {
 	text-align: right;
-	font-family: "SF-Mada", serif;
-	font-weight: bold;
 }
-.motherpanel {
+.mother_container {
 	display: flex;
-	flex-flow: row wrap;
-	min-height: 100vh;
-}
-.primarypanel {
-	flex: 1 0 0;
-	display: flex;
-	flex-flow: row wrap;
-	align-content: flex-start;
-	padding: 1.785vw;
-}
-.secondarypanel {
-	flex: 2 0 0;
-	padding: 1.785vw;
-}
-.header {
-	position: sticky;
-	position: -webkit-sticky;
-	flex: 1 1 100%;
-	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: column nowrap;
 	align-items: center;
-	padding-bottom: 1.785vw;
-	border-bottom: 2px solid #000;
-	top: 1.785vw;
-	pointer-events: none;
-}
-.bashar {
-	flex: 1
-}
-.header p {
-	font-size: 1.785vw;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.header p:lang(ar) {
-	font-family: "SF-Mada", serif;
-	font-weight: bold;
-}
-.list {
-	flex: 1 1 100%;
-	padding-top: calc(1.785vw/2);
-	padding-bottom: calc(1.785vw/2);
-	padding-left: 0;
-	list-style-position: inside;
-	list-style-type: none;
-}
-.datalist {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-around;
-	padding-bottom: calc(1.785vw/2);
-	border-bottom: 2px solid #000;
-}
-.datalink {
-	color: #000;
-	font-size: 1.785vw;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	text-decoration: none;
-}
-.datalink:visited {
-	color: #000;
-}
-.projectlist {
-	display: flex;
-	flex-direction: column;
-}
-.projectlist li:first-child {
-	padding-bottom: calc(1.785vw/2);
-	border-bottom: 1px solid #000;
-}
-.projectlist li:not(:first-child) {
-	padding-top: calc(1.785vw/2);
-	padding-bottom: calc(1.785vw/2);
-	border-bottom: 1px solid #000;
-}
-.projectlist li:last-child {
-	border-bottom: 2px solid #000;
-}
-.projectlist li {
-	display: flex;
-	flex-flow: row nowrap;
-}
-.projectnumber {
-	flex: 0 0 1.785vw;
-}
-.projectnumber:before {
-	counter-increment: project-number;
-	content: counter(project-number);
-	font-size: 1.785vw;
-	/* font-family: "Temeraire", "Times New Roman", serif; */
-	
-	font-family: temeraire, serif;
-	font-style: normal;
-	font-weight: 400;
-	
-	line-height: 125%;
-}
-.projectinfo {
-	flex: 1 1 auto;
-	text-align: center;
-	transform: none;
-	transition: transform 0.25s ease;
-}
-.projecttitle {
-	font-size: 1.785vw;
-	/* font-family: "Temeraire", "Times New Roman", serif; */
-	
-	font-family: temeraire, serif;
-	font-style: normal;
-	font-weight: 400;
-	
-	text-transform: uppercase;
-	text-align: center;
-}
-.projectsubtitle {
-	font-size: 1vw;
-	/* font-family: "Temeraire", "Times New Roman", serif; */
-	
-	font-family: temeraire, serif;
-	font-style: normal;
-	font-weight: 400;
-	
-	text-align: center;
-	padding-top: calc(1.785vw/2);
-}
-.projectinfo:hover {
-	transform: translateX(calc(1.785vw/-2));
-}
-.projectinfo:hover > .projectlink, .datalink:hover {
-	color: #8f00ff; /* electric violet */
-	text-decoration: underline;
-	text-decoration-style: wavy;
-	text-decoration-color: #e1e1e1; /* grey */
-}
-.projectinfo:active > .projectlink, .datalink:active {
-	color: #ff3503; /* electric orange */
-	text-decoration: underline;
-	text-decoration-style: wavy;
-	text-decoration-color: #ffd0ff; /* thistle */
-}
-.projectlink {
-	text-decoration: none;
-	color: #000;
-}
-.projectlink:visited {
-	color: #000;
-}
-.content {
-	display: none;
-	min-height: calc(100% + 1.785vw * 2);
-	margin: -1.785vw;
-	padding: 1.785vw;
-}
-#profile:target {
-	display: block;
-}
-#contact:target {
-	display: block;
-}
-#project-1:target {
-	display: block;
-}
-#project-2:target {
-	display: block;
-}
-#project-3:target {
-	display: block;
-}
-#project-4:target {
-	display: block;
-}
-#project-5:target {
-	display: block;
-	color: #fff;
-	background-color: #000;
-	box-shadow: 0px 0px calc(1.785vw) calc(1.785vw/50) #000;
-	-moz-box-shadow: 0px 0px calc(1.785vw) calc(1.785vw/50) #000;
-	-webkit-box-shadow: 0px 0px calc(1.785vw) calc(1.785vw/50) #000;
-}
-@media screen and (max-width: 1024px) {
-	.motherpanel {
-		flex-direction: column;
-	}
+	justify–content: center;
 }
