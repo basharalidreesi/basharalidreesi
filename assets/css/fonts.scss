@@ -5,6 +5,8 @@
 {%- assign arabic = site.data.unicode.arabic | join: ", " -%}
 {%- assign bilingual = site.data.unicode.latin | concat: site.data.unicode.arabic | join: ", " -%}
 
+@charset "UTF-8";
+
 @font-face {
         font-family: "Avara";
         src:
