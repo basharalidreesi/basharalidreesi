@@ -45,6 +45,15 @@ body {
 	text-rendering: geometricPrecision;
 }
 
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+        text-decoration: none;
+        color: inherit;
+}
+
 body {
 	font-size: $u;
 	font-weight: 400;
@@ -63,7 +72,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		font-weight: 700;
-		font-size: $tu;
+		font-size: $du;
                 font-family: "Avara", serif;
                 h1 {
                         padding: $du;
