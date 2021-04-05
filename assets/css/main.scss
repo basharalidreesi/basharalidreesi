@@ -13,7 +13,6 @@ $nqu:           -0.25rem;
 $dnu:           -2rem;
 $nqdu:          -4rem;
 
-@import "normalize";
 @import "font-face";
 
 html,
@@ -24,7 +23,11 @@ body {
         min-height: 100%;
 }
 
-* {
+*,
+*::before,
+*::after {
+        display: block;
+        position: relative;
         margin: 0;
         padding: 0;
         font-size: $u;
