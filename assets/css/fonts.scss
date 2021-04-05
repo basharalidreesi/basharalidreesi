@@ -10,6 +10,7 @@
 		url("/assets/fonts/avara/avara-bold.woff2") format("woff2");
 	font-weight: 700;
 	font-style: normal;
+        font-display: block;
 }
 
 @font-face {
@@ -19,6 +20,7 @@
 		url("/assets/fonts/avara/avara-bold_italic.woff2") format("woff2");
 	font-weight: 700;
 	font-style: italic;
+        font-display: block;
 }
 
 @font-face {
@@ -30,4 +32,4 @@
 	font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Mirza:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mirza:wght@500&display=block');
