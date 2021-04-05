@@ -1,9 +1,9 @@
 ---
 ---
 
-{%- assign latin = site.data.unicode.latin | join: ", " | remove: " " -%}
-{%- assign arabic = site.data.unicode.arabic | join: ", " | remove: " " -%}
-{%- assign bilingual = site.data.unicode.latin | concat: site.data.unicode.arabic | join: ", " | remove: " " -%}
+{%- assign latin = site.data.unicode.latin | join: ", " | remove: " " | append: ";" -%}
+{%- assign arabic = site.data.unicode.arabic | join: ", " | remove: " " | append: ";" -%}
+{%- assign bilingual = site.data.unicode.latin | concat: site.data.unicode.arabic | join: ", " | remove: " " | append: ";" -%}
 
 @font-face {
         font-family: "Avara";
@@ -32,7 +32,7 @@
                 url("/assets/fonts/avara/avara-black.woff2") format("woff2");
         font-weight: 900;
         font-style: normal;
-        unicode-range: {{ latin }};
+        unicode-range: {{ latin }}
 }
 
 @font-face {
@@ -42,7 +42,7 @@
                 url("/assets/fonts/avara/mirza-regular.woff2") format("woff2");
         font-weight: 400;
         font-style: normal;
-        unicode-range: {{ arabic }};
+        unicode-range: {{ arabic }}
 }
 
 @font-face {
@@ -52,7 +52,7 @@
                 url("/assets/fonts/avara/mirza-medium.woff2") format("woff2");
         font-weight: 500;
         font-style: normal;
-        unicode-range: {{ arabic }};
+        unicode-range: {{ arabic }}
 }
 
 @font-face {
@@ -62,7 +62,7 @@
                 url("/assets/fonts/avara/mirza-semibold.woff2") format("woff2");
         font-weight: 600;
         font-style: normal;
-        unicode-range: {{ arabic }};
+        unicode-range: {{ arabic }}
 }
 
 @font-face {
@@ -72,5 +72,5 @@
                 url("/assets/fonts/avara/mirza-bold.woff2") format("woff2");
         font-weight: 700;
         font-style: normal;
-        unicode-range: {{ arabic }};
+        unicode-range: {{ arabic }}
 }
