@@ -70,10 +70,7 @@ body {
 		display: flex;
 		flex-flow: row nowrap;
 		align-items: center;
-		justify-content: center;
-		font-weight: 700;
-		font-size: $du;
-                font-family: "Avara", serif;
+		justify-content: space-between;
                 h1 {
                         padding: $du;
                 }
