@@ -76,6 +76,7 @@ body {
                         img {
                                 height: $tu;
                                 width: auto;
+                                max-width: calc(100vw - $du);
                                 display: block;
                         }
                 }
