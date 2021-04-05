@@ -1,1 +1,30 @@
-name: Bashar al-Idreesi
+# Info
+title: Bashar al-Idreesi
+author:
+  en: Bashar al-Idreesi
+  ar: بشار الإدريسي
+email: basharalidreesi@gmail.com
+description: >-
+  Lorem ipsum dolor sit amet.
+baseurl: /
+url: basharalidreesi.com
+instagram: basharalidreesi
+github: basharalidreesi
+
+# Build
+collections:
+  texts:
+    title: Texts
+    output: true
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: default
+theme: null
+sass:
+    sass_dir: _sass
+    style: compressed
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

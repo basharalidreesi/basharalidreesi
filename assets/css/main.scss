@@ -1,0 +1,32 @@
+---
+---
+
+@import "normalize";
+@import "font-face";
+
+$font-size: 15px !default;
+$u: 1.00rem;
+$hu: 0.50rem;
+$qu: 0.25rem;
+$2u: 2.00rem;
+$4u: 4.00rem;
+$nu: -1.00rem;
+$nhu: -0.50rem;
+$nqu: -0.25rem;
+$2nu: -2.00rem;
+$4nu: -4.00rem;
+
+#header {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        h1 {
+                font-family: "Avara", serif;
+                padding: $2u;
+        }
+        h1[dir=ltr] {
+        }
+        h1[dir=rtl] {
+        }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="auto">
+        <head>
+                <meta charset="utf-8">
+                <title>{{ site.title }}</title>
+                <link rel="stylesheet" type="text/css" href="/assets/css/main.css" media="all" />
+        </head>
+        <body class="--{{ page.layout }}">
+                <div class="mother">
+                        <header id="header">
+                                <h1 dir="ltr">{{ site.author.en }}</h1>
+                                <h1 dir="rtl">{{ site.author.ar }}</h1>
+                        </header>
+                        <nav id="nav">
+                                <ul>
+                                        <li><a href="/texts">Texts</a></li>
+                                        <li><a href="/texts">Websites</a></li>
+                                        <li><a href="/texts">Translation</a></li>
+                                </ul>
+                        </nav>
+                        <main id="main">
+                                <article>
+                                        {{ content }}
+                                </article>
+                        </main>
+                        <footer id="footer">
+
+                        </footer>
+                </div>
+        </body>
+</html>
