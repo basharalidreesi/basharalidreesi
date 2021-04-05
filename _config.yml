@@ -1,4 +1,4 @@
-# Info
+# Data
 title: Bashar al-Idreesi
 author:
   en: Bashar al-Idreesi
@@ -24,7 +24,7 @@ defaults:
 theme: null
 sass:
   sass_dir: _sass
- # style: compressed
+  style: compressed
 plugins:
   - jekyll-feed
   - jekyll-sitemap
