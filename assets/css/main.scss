@@ -48,21 +48,20 @@ body {
         width: 100%;
         height: 100%;
         min-height: 100vh;
-}
-
-#header {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: space-between;
-        h1 {
-                font-family: "Avara", serif;
-                font-weight: 700;
-                font-size: $du;
-                padding: $du;
-        }
-        h1[dir=ltr] {
-        }
-        h1[dir=rtl] {
+        #header {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-between;
+                h1 {
+                        font-family: "Avara", serif;
+                        font-weight: 700;
+                        font-size: $du;
+                        padding: $du;
+                }
+                h1[dir=ltr] {
+                }
+                h1[dir=rtl] {
+                }
         }
 }
