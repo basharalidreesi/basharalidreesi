@@ -74,10 +74,19 @@ body {
                 h1 {
                         padding: $u;
                         img {
-                                height: $tu;
+                                height: 100%;
                                 width: auto;
+                                max-height: $tu;
                                 max-width: calc(100vw - #{$du});
                                 display: block;
+                        }
+                        @media only screen and (max-width: 768px) {
+                                &:first-of-type img {
+                                        padding-bottom: $hu;
+                                }
+                                &:last-of-type img {
+                                        padding-top: $hu;
+                                }
                         }
                 }
                 @media only screen and (max-width: 768px) {
