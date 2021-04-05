@@ -13,8 +13,6 @@ $nqu:          -0.25rem;
 $dnu:          -2.00rem;
 $nqdu:         -4.00rem;
 
-@import "font-face";
-
 html,
 body {
         top: 0;
@@ -61,7 +59,7 @@ body {
                 flex-flow: row nowrap;
                 align-items: center;
                 justify-content: space-between;
-                font-family: "Avara", serif;
+                font-family: "Avara", "Mirza", serif;
                 font-weight: 700;
                 font-size: $du;
                 h1 {

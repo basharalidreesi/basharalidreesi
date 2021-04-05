@@ -1,0 +1,76 @@
+---
+---
+
+{%- assign latin = site.data.unicode.latin | join: ", " -%}
+{%- assign arabic = site.data.unicode.arabic | join: ", " -%}
+{%- assign bilingual = site.data.unicode.latin | concat: site.data.unicode.arabic | join: ", " -%}
+
+@font-face {
+        font-family: "Avara";
+        src:
+                url("/assets/fonts/avara/avara-bold.woff") format("woff"),
+                url("/assets/fonts/avara/avara-bold.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        unicode-range: {{ latin }};
+}
+
+@font-face {
+        font-family: "Avara";
+        src:
+                url("/assets/fonts/avara/avara-bold_italic.woff") format("woff"),
+                url("/assets/fonts/avara/avara-bold_italic.woff2") format("woff2");
+        font-weight: 700;
+        font-style: italic;
+        unicode-range: {{ latin }};
+}
+
+@font-face {
+        font-family: "Avara";
+        src:
+                url("/assets/fonts/avara/avara-black.woff") format("woff"),
+                url("/assets/fonts/avara/avara-black.woff2") format("woff2");
+        font-weight: 900;
+        font-style: normal;
+        unicode-range: {{ latin }};
+}
+
+@font-face {
+        font-family: "Mirza";
+        src:
+                url("/assets/fonts/mirza/mirza-regular.woff") format("woff"),
+                url("/assets/fonts/avara/mirza-regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        unicode-range: {{ arabic }};
+}
+
+@font-face {
+        font-family: "Mirza";
+        src:
+                url("/assets/fonts/mirza/mirza-medium.woff") format("woff"),
+                url("/assets/fonts/avara/mirza-medium.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+        unicode-range: {{ arabic }};
+}
+
+@font-face {
+        font-family: "Mirza";
+        src:
+                url("/assets/fonts/mirza/mirza-semibold.woff") format("woff"),
+                url("/assets/fonts/avara/mirza-semibold.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+        unicode-range: {{ arabic }};
+}
+
+@font-face {
+        font-family: "Mirza";
+        src:
+                url("/assets/fonts/mirza/mirza-bold.woff") format("woff"),
+                url("/assets/fonts/avara/mirza-bold.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        unicode-range: {{ arabic }};
+}
