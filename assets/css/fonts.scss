@@ -1,9 +1,9 @@
 ---
 ---
 
-{%- assign latin = site.data.unicode.latin | join: ", " -%}
-{%- assign arabic = site.data.unicode.arabic | join: ", " -%}
-{%- assign bilingual = site.data.unicode.latin | concat: site.data.unicode.arabic | join: ", " -%}
+{%- assign latin = site.data.unicode.latin | join: ", U+" | prepend: "U+" -%}
+{%- assign arabic = site.data.unicode.arabic | join: ", U+" | prepend: "U+" -%}
+{%- assign bilingual = site.data.unicode.latin | concat: site.data.unicode.arabic | join: ", U+" | prepend: "U+" -%}
 
 @charset "UTF-8";
 
