@@ -8,6 +8,7 @@ $u:		1.00rem;
 $hu:		0.50rem;
 $qtu:		0.25rem;
 $du:		2.00rem;
+$tu:		3.00rem;
 $qdu:		4.00rem;
 $nu:		-1.00rem;
 $nhu:		-0.50rem;
@@ -62,7 +63,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		font-weight: 700;
-		font-size: $qdu;
+		font-size: $tu;
                 font-family: "Avara", serif;
                 h1 {
                         padding: $du;
