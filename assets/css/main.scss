@@ -1,21 +1,11 @@
 ---
 ---
 
+@import "vars";
+
 @import "normalize";
 @import "reset";
 @import "font-face";
-
-$font-size:     15px !default;
-$u:             1rem;
-$hu:            0.50rem;
-$qtu:           0.25rem;
-$du:            2rem;
-$qdu:           4rem;
-$nu:            -1rem;
-$nhu:           -0.50rem;
-$nqu:           -0.25rem;
-$dnu:           -2rem;
-$nqdu:          -4rem;
 
 #header {
         display: flex;
