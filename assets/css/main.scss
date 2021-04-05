@@ -72,7 +72,12 @@ body {
 		align-items: center;
 		justify-content: space-between;
                 h1 {
-                        padding: $du;
+                        padding: $u;
+                        img {
+                                max-height: $tu;
+                                width: auto;
+                                display: block;
+                        }
                 }
 	}
 }
