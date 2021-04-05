@@ -3,69 +3,69 @@
 
 @charset "UTF-8";
 
-$font-size:     15px !default;
-$u:             1.00rem;
-$hu:            0.50rem;
-$qtu:           0.25rem;
-$du:            2.00rem;
-$qdu:           4.00rem;
-$nu:           -1.00rem;
-$nhu:          -0.50rem;
-$nqu:          -0.25rem;
-$dnu:          -2.00rem;
-$nqdu:         -4.00rem;
+$font-size:	15px !default;
+$u:		1.00rem;
+$hu:		0.50rem;
+$qtu:		0.25rem;
+$du:		2.00rem;
+$qdu:		4.00rem;
+$nu:		-1.00rem;
+$nhu:		-0.50rem;
+$nqu:		-0.25rem;
+$dnu:		-2.00rem;
+$nqdu:		-4.00rem;
 
 html,
 body {
-        top: 0;
-        left: 0;
-        width: 100%;
-        min-height: 100%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
 }
 
 *,
 *::before,
 *::after {
-        margin: 0;
-        padding: 0;
-        font-size: inherit;
-        font-family: inherit;
-        font-weight: inherit;
-        line-height: inherit;
-        font-synthesis: none;
-        text-align: center;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        text-size-adjust: none;
-        -moz-text-size-adjust: none;
-        -webkit-text-size-adjust: none;
-        -ms-text-size-adjust: none;
-        text-rendering: geometricPrecision;
+	margin: 0;
+	padding: 0;
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	font-synthesis: none;
+	text-align: center;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	text-rendering: geometricPrecision;
 }
 
 body {
-        font-size: $u;
-        font-weight: 400;
-        line-height: 1.0;
+	font-size: $u;
+	font-weight: 400;
+	line-height: 1.0;
 }
 
 .mother {
-        display: flex;
-        flex-flow: column nowrap;
-        width: 100%;
-        height: 100%;
-        min-height: 100vh;
-        #header {
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: center;
-                justify-content: space-between;
-                font-family: "Avara", "Mirza", serif;
-                font-weight: 700;
-                font-size: $du;
-                h1 {
-                        padding: $du;
-                }
-        }
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	#header {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: space-between;
+		font-family: "Avara", "Mirza", serif;
+		font-weight: 700;
+		font-size: $du;
+		h1 {
+			padding: $du;
+		}
+	}
 }
