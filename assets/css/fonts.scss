@@ -3,7 +3,7 @@
 
 {%- assign latin = site.data.unicode.latin | join: ", " | replace: " –", "–" -%}
 {%- assign arabic = site.data.unicode.arabic | join: ", " | replace: " –", "–" -%}
-{%- assign bilingual = site.data.unicode.latin | concat: site.data.unicode.arabic | join: ", " | replace: " -", "-" -%}
+{%- assign bilingual = site.data.unicode.latin | concat: site.data.unicode.arabic | join: ", " | replace: " –", "–" -%}
 
 @font-face {
         font-family: "Avara";
