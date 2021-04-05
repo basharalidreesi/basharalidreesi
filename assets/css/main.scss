@@ -82,6 +82,12 @@ body {
                 }
                 @media only screen and (max-width: 768px) {
                         flex-flow: column nowrap;
+                        img:first-of-type {
+                                padding-bottom: $hu;
+                        }
+                        img:last-of-type {
+                                padding-top: $hu;
+                        }
                 }
 	}
 }
