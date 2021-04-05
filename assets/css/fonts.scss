@@ -1,9 +1,9 @@
 ---
 ---
 
-{%- assign latin = site.data.unicode.latin | join: ", " -%}
-{%- assign arabic = site.data.unicode.arabic | join: ", " -%}
-{%- assign bilingual = site.data.unicode.latin | concat: site.data.unicode.arabic | join: ", " -%}
+{%- assign latin = site.data.unicode.latin | join: ", " | remove: " " -%}
+{%- assign arabic = site.data.unicode.arabic | join: ", " | remove: " " -%}
+{%- assign bilingual = site.data.unicode.latin | concat: site.data.unicode.arabic | join: ", " | remove: " " -%}
 
 @font-face {
         font-family: "Avara";

@@ -23,8 +23,8 @@ defaults:
       layout: default
 theme: null
 sass:
-    sass_dir: _sass
-    style: compressed
+  sass_dir: _sass
+  style: compressed
 plugins:
   - jekyll-feed
   - jekyll-sitemap
