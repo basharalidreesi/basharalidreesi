@@ -24,8 +24,8 @@ defaults:
 theme: null
 sass:
   sass_dir: _sass
-  sourcemap: never
   style: compact
+  sourcemap: never
 plugins:
   - jekyll-feed
   - jekyll-sitemap
