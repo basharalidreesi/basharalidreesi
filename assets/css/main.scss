@@ -75,16 +75,16 @@ body {
                         padding: $u;
                         img {
                                 height: 100%;
-                                width: auto;
+                                width: 100%;
                                 max-height: $tu;
                                 max-width: calc(100vw - #{$du});
                                 display: block;
                         }
                         @media only screen and (max-width: 768px) {
-                                &:first-of-type img {
+                                &:first-of-type {
                                         padding-bottom: $hu;
                                 }
-                                &:last-of-type img {
+                                &:last-of-type {
                                         padding-top: $hu;
                                 }
                         }
