@@ -2,6 +2,7 @@
 ---
 
 @import "normalize";
+@import "reset";
 @import "font-face";
 
 $font-size:     15px !default;
@@ -23,6 +24,7 @@ $nqdu:          -4rem;
         justify-content: space-between;
         h1 {
                 font-family: "Avara", serif;
+                font-weight: 700;
                 padding: $du;
         }
         h1[dir=ltr] {
