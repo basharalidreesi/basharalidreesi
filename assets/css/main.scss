@@ -2,16 +2,16 @@
 ---
 
 $font-size:     15px !default;
-$u:             1rem;
+$u:             1.00rem;
 $hu:            0.50rem;
 $qtu:           0.25rem;
-$du:            2rem;
-$qdu:           4rem;
-$nu:            -1rem;
-$nhu:           -0.50rem;
-$nqu:           -0.25rem;
-$dnu:           -2rem;
-$nqdu:          -4rem;
+$du:            2.00rem;
+$qdu:           4.00rem;
+$nu:           -1.00rem;
+$nhu:          -0.50rem;
+$nqu:          -0.25rem;
+$dnu:          -2.00rem;
+$nqdu:         -4.00rem;
 
 @import "font-face";
 
@@ -28,8 +28,10 @@ body {
 *::after {
         margin: 0;
         padding: 0;
-        font-size: $u;
-        line-height: 1.0;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
         font-synthesis: none;
         text-align: center;
         box-sizing: border-box;
@@ -40,6 +42,12 @@ body {
         -webkit-text-size-adjust: none;
         -ms-text-size-adjust: none;
         text-rendering: geometricPrecision;
+}
+
+body {
+        font-size: $u;
+        font-weight: 400;
+        line-height: 1.0;
 }
 
 .mother {
@@ -53,15 +61,11 @@ body {
                 flex-flow: row nowrap;
                 align-items: center;
                 justify-content: space-between;
+                font-family: "Avara", serif;
+                font-weight: 700;
+                font-size: $du;
                 h1 {
-                        font-family: "Avara", serif;
-                        font-weight: 700;
-                        font-size: $du;
                         padding: $du;
-                }
-                h1[dir=ltr] {
-                }
-                h1[dir=rtl] {
                 }
         }
 }
