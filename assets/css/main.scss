@@ -61,11 +61,16 @@ body {
 		flex-flow: row nowrap;
 		align-items: center;
 		justify-content: space-between;
-		font-family: "Avara", "Mirza", serif;
 		font-weight: 700;
 		font-size: $du;
 		h1 {
 			padding: $du;
+                        &[dir=ltr] {
+                                font-family: "Avara", serif;
+                        }
+                        &[dir=rtl] {
+                                font-family: "Mirza", cursive;
+                        }
 		}
 	}
 }
