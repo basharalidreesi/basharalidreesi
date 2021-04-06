@@ -34,7 +34,7 @@ body {
 	font-weight: inherit;
 	line-height: inherit;
 	font-synthesis: none;
-	text-align: center;
+	text-align: left;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -70,28 +70,12 @@ body {
 		display: flex;
 		flex-flow: row nowrap;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
+		font-weight: 700;
+		font-size: $du;
+                font-family: "Avara", serif;
                 h1 {
-                        flex: 1;
-                        padding: $u;
-                        img {
-                                height: 100%;
-                                width: 100%;
-                                max-height: $tu;
-                                max-width: calc(100vw - #{$du});
-                                display: block;
-                        }
-                        @media only screen and (max-width: 768px) {
-                                &:first-of-type {
-                                        padding-bottom: $hu;
-                                }
-                                &:last-of-type {
-                                        padding-top: $hu;
-                                }
-                        }
-                }
-                @media only screen and (max-width: 768px) {
-                        flex-flow: column nowrap;
+                        padding: $du;
                 }
 	}
 }
