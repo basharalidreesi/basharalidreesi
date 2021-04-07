@@ -87,23 +87,10 @@ body {
                 h1 {
                         padding: $du;
 			a {
-				display: inline-block;
+				display: inline;
 				height: 100%;
 				width: 100%;
 				em {
-					&:before,
-					&:after {
-						content: "";
-						display: block;
-						height: 0;
-						width: 100%;
-					}
-					&:before {
-						margin-top: 5px;
-					}
-					&:after {
-						margin-bottom: -15px;
-					}
 					span { }
 				}
 			}
