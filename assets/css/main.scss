@@ -74,6 +74,20 @@ body {
                 font-family: "Avara", serif;
                 h1 {
                         padding: $du;
+			&:before,
+			&:after {
+				content: "";
+				display: block;
+				height: 0;
+				width: 100%;
+			}
+			&:before {
+				margin-top: 5px;
+			}
+			&:after {
+				margin-bottom: -15px;
+			}
+			span { }
                 }
 	}
 }
