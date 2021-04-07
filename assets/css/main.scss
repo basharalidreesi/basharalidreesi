@@ -86,23 +86,23 @@ body {
 		}
                 h1 {
                         padding: $du;
-			&:before,
-			&:after {
-				content: "";
-				display: block;
-				height: 0;
-				width: 100%;
-			}
-			&:before {
-				margin-top: 5px;
-			}
-			&:after {
-				margin-bottom: -15px;
-			}
 			a {
 				display: inline-block;
 				height: 100%;
 				width: 100%;
+				&:before,
+				&:after {
+					content: "";
+					display: block;
+					height: 0;
+					width: 100%;
+				}
+				&:before {
+					margin-top: 5px;
+				}
+				&:after {
+					margin-bottom: -15px;
+				}
 				span { }
 			}
                 }
