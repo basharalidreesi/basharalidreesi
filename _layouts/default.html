@@ -15,7 +15,7 @@
 		<header id="header">
 			<h1>
                                 <a href="/">
-                                        <em>{{ site.author.en }}</em>
+                                        <em>{{ site.author.en | split: " " | first }}<span>{{ site.author.en | split: " " | last | prepend: " " }}</span></em>
                                 </a>
                         </h1>
 		</header>
