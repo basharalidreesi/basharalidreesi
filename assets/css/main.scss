@@ -75,6 +75,15 @@ body {
 		font-weight: 700;
 		font-size: $qdu;
                 font-family: "Avara", serif;
+		animation: fadeHeaderIn 0.25s;
+		@keyframes fadeHeaderIn {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
                 h1 {
                         padding: $du;
 			&:before,
