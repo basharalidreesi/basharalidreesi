@@ -72,6 +72,7 @@ body {
 		top: 0;
 		left: 0;
 		display: flex;
+		padding: $du;
 		font-weight: 700;
 		font-size: $qdu;
                 font-family: "Avara", serif;
@@ -84,16 +85,5 @@ body {
 				opacity: 1;
 			}
 		}
-                h1 {
-                        padding: $du;
-			a {
-				display: inline;
-				height: 100%;
-				width: 100%;
-				em {
-					span { }
-				}
-			}
-                }
 	}
 }
