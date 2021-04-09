@@ -111,7 +111,7 @@ body {
 			img {
 				display: block;
 				height: auto;
-				width: calc(100% - #{$qdu});
+				width: calc(100vw - #{$qdu});
 				pointer-events: none;
 			}
 		}
