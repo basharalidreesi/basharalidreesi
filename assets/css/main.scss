@@ -101,6 +101,12 @@ body {
 	   -moz-user-select: none;
 	    -ms-user-select: none;
 		user-select: none;
+		@media (hover: hover) {
+			&:hover {
+				background: var(--seccol);
+				border: 1px solid var(--borcol);
+			}
+		}
 		h1 {
 			flex: 1;
 			display: flex;
@@ -123,7 +129,7 @@ body {
 		flex: 1;
 		display: flex;
 		flex-flow: column nowrap;
-		border: 1px solid var(--borcol);
 		background: var(--seccol);
+		border: 1px solid var(--borcol);
 	}
 }
