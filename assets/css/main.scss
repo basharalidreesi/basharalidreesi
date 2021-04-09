@@ -107,6 +107,8 @@ body {
 			justify-content: center;
 			a {
 				display: block;
+				height: auto;
+				width: calc(100vw - #{$qdu});
 			}
 			img {
 				display: block;
