@@ -112,6 +112,9 @@ body {
 		}
 	}
 	.daughter {
+		flex: 1;
+		display: flex;
+		flex-flow: column nowrap;
 		margin: $du;
 		border: 1px solid var(--borCol);
 		background: var(--secCol);
