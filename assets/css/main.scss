@@ -16,6 +16,13 @@ $nqu:		-0.25rem;
 $dnu:		-2.00rem;
 $nqdu:		-4.00rem;
 
+:root {
+	--priCol: #d9d9d9;
+	--secCol: #fff;
+	--borCol: #000;
+	--texCol: #000;
+}
+
 html,
 body {
 	top: 0;
@@ -58,7 +65,7 @@ body {
 	font-size: $u;
 	font-weight: 400;
 	line-height: 1.0;
-        background: #d9d9d9;
+        background: var(--priCol);
 }
 
 .mother {
@@ -72,10 +79,8 @@ body {
 		top: 0;
 		left: 0;
 		display: flex;
-		padding-top: $qdu;
-		padding-bottom: $qdu;
-		padding-left: $du;
-		padding-right: $du;
+		margin: $du;
+		margin-top: $qdu;
 		font-size: 0;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
@@ -105,5 +110,10 @@ body {
 				}
 			}
 		}
+	}
+	.daughter {
+		margin: $du;
+		border: 1px solid var(--borCol);
+		background: var(--secCol);
 	}
 }
