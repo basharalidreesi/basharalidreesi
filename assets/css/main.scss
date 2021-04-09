@@ -90,6 +90,10 @@ body {
 		& + * {
 			margin-top: 0;
 		}
+		&:not(header) {
+			background: var(--seccol);
+			border: 1px solid var(--borcol);
+		}
 	}
 	header {
 		position: sticky;
@@ -125,11 +129,9 @@ body {
 			}
 		}
 	}
-	.daughter {
+	nav { /* none yet! */ }
+	main {
 		flex: 1;
-		display: flex;
-		flex-flow: column nowrap;
-		background: var(--seccol);
-		border: 1px solid var(--borcol);
 	}
+	footer { /* none yet! */ }
 }
