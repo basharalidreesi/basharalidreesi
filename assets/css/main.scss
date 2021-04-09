@@ -72,7 +72,10 @@ body {
 		top: 0;
 		left: 0;
 		display: flex;
-		padding: $du;
+		padding-top: $qdu;
+		padding-bottom: $qdu;
+		padding-left: $du;
+		padding-right: $du;
 		font-size: 0;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
@@ -98,6 +101,7 @@ body {
 					height: $qdu;
 					width: auto;
 					max-height: $qdu;
+					max-width: 100%;
 				}
 			}
 		}
