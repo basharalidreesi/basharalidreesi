@@ -71,6 +71,7 @@ body {
 }
 
 .mother {
+	position: relative;
 	display: flex;
 	flex-flow: column nowrap;
 	width: 100%;
@@ -78,11 +79,7 @@ body {
 	min-height: 100vh;
 	animation: fadeIn 1.5s;
 	@keyframes fadeIn {
-		0% {
-			opacity: 0;
-		} 100% {
-			opacity: 1;
-		}
+		from { opacity: 0; } to { opacity: 1; }
 	}
 	& > * {
 		margin: $du;
