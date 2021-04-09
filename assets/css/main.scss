@@ -77,10 +77,10 @@ body {
 		font-size: $qdu;
                 font-family: "Avara", serif;
 		font-kerning: -8px;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
 		user-select: none;
-		-ms-user-select: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
 		animation: fadeHeaderIn 1.25s;
 		@keyframes fadeHeaderIn {
 			0% {
