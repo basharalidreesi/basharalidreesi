@@ -17,10 +17,10 @@ $dnu:		-2.00rem;
 $nqdu:		-4.00rem;
 
 :root {
-	--priCol: #d9d9d9;
-	--secCol: #fff;
-	--borCol: #000;
-	--texCol: #000;
+	--pricol: #d9d9d9;
+	--seccol: #fff;
+	--borcol: #000;
+	--texcol: #000;
 }
 
 html,
@@ -65,7 +65,8 @@ body {
 	font-size: $u;
 	font-weight: 400;
 	line-height: 1.0;
-        background: var(--priCol);
+	color: var(--textcol);
+        background: var(--pricol);
 }
 
 .mother {
@@ -119,7 +120,7 @@ body {
 		display: flex;
 		flex-flow: column nowrap;
 		margin: $du;
-		border: 1px solid var(--borCol);
-		background: var(--secCol);
+		border: 1px solid var(--borcol);
+		background: var(--seccol);
 	}
 }
