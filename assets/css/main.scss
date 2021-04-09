@@ -123,6 +123,12 @@ body {
 			}
 		}
 	}
+	nav,
+	main,
+	footer {
+		z-index: 100;
+		position: relative;
+	}
 	nav { /* none yet! */ }
 	main {
 		flex: 1;
