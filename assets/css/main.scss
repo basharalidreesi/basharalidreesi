@@ -91,10 +91,7 @@ body {
 		left: 0;
 		display: flex;
 		margin: $du;
-		margin-bottom: 0;
-		padding: $du;
-		padding-left: 0;
-		padding-right: 0;
+		margin-bottom: $u;
 		font-size: 0;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
@@ -123,6 +120,7 @@ body {
 		display: flex;
 		flex-flow: column nowrap;
 		margin: $du;
+		margin-top: $u;
 		border: 1px solid var(--borcol);
 		background: var(--seccol);
 	}
