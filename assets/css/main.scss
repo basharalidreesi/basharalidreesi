@@ -73,10 +73,7 @@ body {
 		left: 0;
 		display: flex;
 		padding: $du;
-		font-weight: 700;
-		font-size: $qdu;
-                font-family: "Avara", serif;
-		font-kerning: -8px;
+		font-size: 0;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	    -ms-user-select: none;
@@ -92,6 +89,17 @@ body {
 		}
 		h1 {
 			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			a {
+				img {
+					display: block;
+					height: $qdu;
+					width: auto;
+					max-height: $qdu;
+				}
+			}
 		}
 	}
 }
