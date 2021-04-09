@@ -110,8 +110,9 @@ body {
 			}
 			img {
 				display: block;
-				height: 100%;
-				width: 100%;
+				height: auto;
+				width: calc(100% - #{$qdu});
+				pointer-events: none;
 			}
 		}
 	}
