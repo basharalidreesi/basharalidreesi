@@ -88,7 +88,7 @@ body {
 	& > * {
 		margin: $du;
 	}
-	(& > *) + (& > *) {
+	&>* + &>* {
 		margin-top: 0;
 	}
 	header {
