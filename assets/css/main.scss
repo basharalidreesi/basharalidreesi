@@ -130,17 +130,23 @@ body {
 	main {
 		flex: 1;
 		display: flex;
+		pointer-events: none;
 		article,
 		aside {
 			flex: 1;
 			background: var(--seccol);
 			border: 1px solid var(--borcol);
+			pointer-events: auto;
 		}
 		article {
 			margin-right: $u;
 		}
 		aside {
+			position: sticky;
+			top: $du;
 			margin-left: $u;
+			max-height: calc(100vh - 4rem);
+			border-radius: 9999px 9999px 0 0;
 		}
 	}
 	footer { /* none yet! */ }
