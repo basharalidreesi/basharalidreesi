@@ -86,7 +86,7 @@ body {
 		& + * {
 			margin-top: 0;
 		}
-		&:not(header) {
+		&:not(header):not(main) {
 			background: var(--seccol);
 			border: 1px solid var(--borcol);
 		}
@@ -101,6 +101,7 @@ body {
 	   -moz-user-select: none;
 	    -ms-user-select: none;
 		user-select: none;
+		z-index: 0;
 		h1 {
 			flex: 1;
 			display: flex;
@@ -128,6 +129,19 @@ body {
 	nav { /* none yet! */ }
 	main {
 		flex: 1;
+		display: flex;
+		article,
+		aside {
+			flex: 1;
+			background: var(--seccol);
+			border: 1px solid var(--borcol);
+		}
+		article {
+			margin-right: $u;
+		}
+		aside {
+			margin-left: $u;
+		}
 	}
 	footer { /* none yet! */ }
 }
