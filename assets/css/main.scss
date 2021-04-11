@@ -131,6 +131,7 @@ body {
 	nav {
 		ul {
 			display: flex;
+			flex-flow: row wrap;
 			list-style: none;
 			list-style-position: inside;
 			& > li {
