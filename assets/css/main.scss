@@ -150,8 +150,10 @@ body {
 					background: var(--textcol);
 				}
 				@media (hover: hover) {
-					color: var(--seccol);
-					background: var(--textcol);
+					&:hover {
+						color: var(--seccol);
+						background: var(--textcol);
+					}
 				}
 				& > a {
 					display: block;
