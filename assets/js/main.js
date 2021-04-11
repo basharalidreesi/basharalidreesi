@@ -5,31 +5,30 @@ var bashar = {
         lexicon: {
                 body: document.body,
                         header: document.getElementById("header"),
-                                headerGradient: document.getElementById("headerGradient"),
-                                headerGradientCentralStop: document.getElementById("headerGradientCentralStop"),
+                                centralStop: document.getElementById("headerGradientCentralStop"),
                         nav: document.getElementById("nav"),
                         main: document.getElementById("main"),
                         footer: document.getElementById("footer")
         },
 
-        init: function() {
-                bashar.initHeader();
+        initialiseScripts: function() {
+                bashar.header.initialiseHeaderScripts();
         },
 
-        initHeader: function() {
-                bashar.trackCursorPosWithinHeader();
-        },
+        header: {
+                initialiseHeaderScripts: function() {
 
-        trackCursorPosWithinHeader: function() {
-                window.addEventListener("mousemove", (event) => {
-                        let cursorPos = parseInt(event.pageY / bashar.lexicon.header.offsetHeight * 100);
-                        bashar.updateHeaderGradientCentralStop(cursorPos);
-                });
-        },
-
-        updateHeaderGradientCentralStop: function(cursorPos) {
-                bashar.lexicon.headerGradientCentralStop.setAttribute("offset", cursorPos + "%");
+                },
+                trackCursorPosition: function() {
+                        window.addEventListener("mousemove", (event) => {
+                                let cursorPositionPercentage = parseInt(event.clientY / window.innerHeight * 100) + "%";
+                                bashar.header.updateCentralStopOffset(cursorPositionPercentage);
+                        });
+                },
+                updateCentralStopOffset: function(cursorPosition) {
+                        bashar.lexicon.centralStop.setAttribute("offset", cursorPos);
+                },
         },
 }
 
-bashar.init();
+bashar.initialiseScripts();
