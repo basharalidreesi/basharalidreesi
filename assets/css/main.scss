@@ -129,13 +129,14 @@ body {
 					height: 100%;
 					width: 100%;
 					fill: var(--texcol);
+					stroke: transparent;
+					stroke-width: 2px;
 					pointer-events: none;
 				}
 				@media (hover: hover) {
 					&:hover svg {
 						fill: var(--seccol);
 						stroke: var(--texcol);
-						stroke-width: 1px;
 					}
 				}
 			}
