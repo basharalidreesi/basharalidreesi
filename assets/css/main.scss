@@ -151,7 +151,7 @@ body {
 				&:focus,
 				&.--current {
 					color: var(--seccol);
-					background: var(--textcol);
+					background: var(--texcol);
 				}
 				@media (hover: hover) {
 					&:hover {
