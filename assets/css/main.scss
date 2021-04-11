@@ -62,6 +62,10 @@ a:visited {
         color: inherit;
 }
 
+:focus {
+	outline: none;
+}
+
 body {
 	font-size: $u;
 	font-weight: 400;
@@ -111,7 +115,6 @@ body {
 				display: block;
 				height: 100%;
 				width: 100%;
-				outline: none;
 				img {
 					display: block;
 					height: 100%;
@@ -141,6 +144,14 @@ body {
 				flex: 1;
 				& + li {
 					border-left: 1px dashed var(--borcol);
+				}
+				&:focus {
+					color: var(--seccol);
+					background: var(--textcol);
+				}
+				@media (hover: hover) {
+					color: var(--seccol);
+					background: var(--textcol);
 				}
 				& > a {
 					display: block;
