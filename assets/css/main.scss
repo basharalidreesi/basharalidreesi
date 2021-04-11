@@ -128,7 +128,18 @@ body {
 		z-index: 100;
 		-webkit-transform: translate3d(0,0,0);
 	}
-	nav { /* none yet! */ }
+	nav {
+		ul {
+			display: flex;
+			& > li {
+				flex: 1;
+				padding: $du;
+			}
+		}
+		ul + ul {
+			border-top: 1px solid var(--borcol);
+		}
+	}
 	main {
 		flex: 1;
 		display: flex;
