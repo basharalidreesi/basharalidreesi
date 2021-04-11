@@ -28,7 +28,7 @@ const bashar = {
                                         return;
                                 }
                                 // let cursorPositionPercentage = parseInt(event.clientY / window.innerHeight * 100) + "%";
-                                let cursorPositionPercentage = parseInt((event.clientY / bashar.lexicon.header.clientHeight * 100) - bashar.lexicon.header.offsetTop) + "%";
+                                let cursorPositionPercentage = parseInt((event.clientY / bashar.lexicon.header.clientHeight * 100) - bashar.lexicon.header.getBoundingClientRect().top) + "%";
                                 bashar.header.updateCentralStopOffset(cursorPositionPercentage);
                         });
                 },
