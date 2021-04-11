@@ -144,6 +144,7 @@ body {
 			}
 			& > li {
 				flex: 1;
+				transition: background 0.25s, color 0.25s;
 				& + li {
 					border-left: 1px solid var(--borcol);
 				}
