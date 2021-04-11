@@ -24,7 +24,7 @@ const bashar = {
                 trackCursorY: function() {
                         window.addEventListener("mousemove", (event) => {
                                 let cursorYPos = event.clientY;
-                                let cursorYPercent = parseInt((cursorYPos - bashar.lexicon.headerOffsetTop) / bashar.lexicon.headerHeight) * 100 + "%";
+                                let cursorYPercent = parseInt(((cursorYPos - bashar.lexicon.headerOffsetTop) / bashar.lexicon.headerHeight) * 100) + "%";
                                 bashar.header.transferCursorY(cursorYPercent);
                         });
                 },
