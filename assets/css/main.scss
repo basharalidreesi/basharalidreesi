@@ -139,6 +139,9 @@ body {
 				padding: $u;
 				text-align: center;
 				font-family: "MD IO";
+				& + li {
+					border-left: 1px solid var(--borcol);
+				}
 			}
 		}
 		ul + ul {
