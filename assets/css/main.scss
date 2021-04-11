@@ -139,11 +139,14 @@ body {
 			}
 			& > li {
 				flex: 1;
-				padding: $u;
-				text-align: center;
-				font-family: "MD IO";
 				& + li {
 					border-left: 1px dashed var(--borcol);
+				}
+				& > a {
+					display: block;
+					padding: $u;
+					text-align: center;
+					font-family: "MD IO";
 				}
 			}
 		}
