@@ -5,8 +5,8 @@ const bashar = {
         lexicon: {
                 body: document.body,
                 header: document.getElementById("header"),
-                        headerHeight: bashar.lexicon.header.clientHeight,
-                        headerOffsetTop: bashar.lexicon.header.getBoundingClientRect().top,
+                        headerHeight: header.clientHeight,
+                        headerOffsetTop: header.getBoundingClientRect().top,
                 centralStop: document.getElementById("headerGradientCentralStop"),
                 nav: document.getElementById("nav"),
                 main: document.getElementById("main"),
