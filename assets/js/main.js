@@ -21,7 +21,14 @@ const bashar = {
                 },
                 trackCursorPosition: function() {
                         window.addEventListener("mousemove", (event) => {
-                                let cursorPositionPercentage = parseInt(event.clientY / window.innerHeight * 100) + "%";
+                                if (
+                                        event.clientY < bashar.lexicon.header.getBoundingClientRect().top
+                                        || event.clientY > bashar.lexicon.header.getBoundingClientRect().bottom
+                                ) {
+                                        return;
+                                }
+                                // let cursorPositionPercentage = parseInt(event.clientY / window.innerHeight * 100) + "%";
+                                let cursorPositionPercentage = parseInt(event.clientY / bashar.lexicon.header.clientHeight * 100) + "%";
                                 bashar.header.updateCentralStopOffset(cursorPositionPercentage);
                         });
                 },
