@@ -29,7 +29,7 @@ const bashar = {
                                 bashar.header.reportCursorY(cursorYRatio, cursorYPercent);
                         });
                 },
-                reportCursorY: function(cursorYPercent) {
+                reportCursorY: function(cursorYRatio, cursorYPercent) {
                         bashar.header.opacifyCentralStop(cursorYRatio);
                         bashar.header.offsetCentralStop(cursorYPercent);
                 },
