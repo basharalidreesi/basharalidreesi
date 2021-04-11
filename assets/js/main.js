@@ -38,8 +38,22 @@ const bashar = {
                 opacifyCentralStop: function(cursorYPercent) {
                         // do something
                 },
+                keepHeaderHeightCurrent: function() {
+                        window.addEventListener("resize", () => {
+                                bashar.util.debounce(() => {
+                                        bashar.lexicon.header.headerHeight = header.clientHeight;
+                                }, 250);
+                        })
+                }
         },
 
+        util: {
+                timer: 0,
+                debounce: function(callback, delay) {
+                        clearTimeout(bashar.util.timer);
+        		return bashar.util.timer = setTimeout(callback, delay);
+                },
+        },
 }
 
 bashar.initAllScripts();
