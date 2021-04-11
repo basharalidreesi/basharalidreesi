@@ -142,9 +142,6 @@ body {
 			}
 			& > li {
 				flex: 1;
-				& + li {
-					border-left: 1px dashed var(--borcol);
-				}
 				&:focus {
 					color: var(--seccol);
 					background: var(--textcol);
@@ -161,6 +158,9 @@ body {
 					text-align: center;
 					font-family: "MD IO";
 				}
+			}
+			.separator {
+				background: var(--borcol);
 			}
 		}
 	}
