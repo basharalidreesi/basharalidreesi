@@ -24,19 +24,21 @@ const bashar = {
                                 let cursorYPos = event.clientY;
                                 let headerOffsetTop = bashar.lexicon.header.getBoundingClientRect().top;
                                 let headerHeight = bashar.lexicon.header.clientHeight;
-                                let cursorYPercent = parseInt((cursorYPos - headerOffsetTop) / headerHeight * 100) + "%";
-                                bashar.header.transferCursorY(cursorYPercent);
+                                let cursorYRatio = (cursorYPos - headerOffsetTop) / headerHeight;
+                                let cursorYPercent = parseInt(cursorYRatio * 100) + "%";
+                                bashar.header.reportCursorY(cursorYRatio, cursorYPercent);
                         });
                 },
-                transferCursorY: function(cursorYPercent) {
+                reportCursorY: function(cursorYPercent) {
+                        bashar.header.opacifyCentralStop(cursorYRatio);
                         bashar.header.offsetCentralStop(cursorYPercent);
-                        bashar.header.opacifyCentralStop(cursorYPercent);
+                },
+                opacifyCentralStop: function(cursorYRatio) {
+                        console.log(cursorYRatio);
+                        // do something
                 },
                 offsetCentralStop: function(cursorYPercent) {
                         bashar.lexicon.centralStop.setAttribute("offset", cursorYPercent);
-                },
-                opacifyCentralStop: function(cursorYPercent) {
-                        // do something
                 },
         },
 
