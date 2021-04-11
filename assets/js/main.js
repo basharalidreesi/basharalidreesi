@@ -20,6 +20,7 @@ const bashar = {
         header: {
                 initHeaderScripts: function() {
                         bashar.header.trackCursorY();
+                        bashar.header.keepHeaderHeightCurrent();
                 },
                 trackCursorY: function() {
                         window.addEventListener("mousemove", (event) => {
