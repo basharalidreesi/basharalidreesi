@@ -28,7 +28,7 @@ var bashar = {
         },
 
         updateHeaderGradientCentralStop: function(cursorPos) {
-                bashar.lexicon.headerGradientCentralStop.setAttribute("offset", cursorPos);
+                bashar.lexicon.headerGradientCentralStop.setAttribute("offset", cursorPos + "%");
         },
 }
 
