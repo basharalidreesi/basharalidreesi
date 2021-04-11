@@ -131,9 +131,13 @@ body {
 	nav {
 		ul {
 			display: flex;
+			list-style: none;
+			list-style-position: inside;
 			& > li {
 				flex: 1;
-				padding: $du;
+				padding: $u;
+				text-align: center;
+				font-family: "MD IO";
 			}
 		}
 		ul + ul {
