@@ -134,7 +134,6 @@ body {
 	nav {
 		ul {
 			display: flex;
-			flex-flow: row wrap;
 			list-style: none;
 			list-style-position: inside;
 			background: var(--seccol);
@@ -145,7 +144,6 @@ body {
 			}
 			& > li {
 				flex: 1;
-				min-width: 25%;
 				& + li {
 					border-left: 1px solid var(--borcol);
 				}
