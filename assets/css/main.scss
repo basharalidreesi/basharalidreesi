@@ -130,15 +130,13 @@ body {
 					width: 100%;
 					overflow: visible;
 					fill: url(#headerFill);
-					stroke: transparent;
-					stroke-width: 2px;
 					pointer-events: none;
-					transition: fill 0.25s, stroke 0.25s;
+					transition: fill 0.25s;
+					--seccol: var(--texcol);
 				}
 				@media (hover: hover) {
 					&:hover svg {
-						fill: var(--seccol);
-						stroke: var(--texcol);
+						--seccol: revert;
 					}
 				}
 			}
