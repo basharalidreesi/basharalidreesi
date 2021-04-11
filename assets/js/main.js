@@ -21,7 +21,7 @@ var bashar = {
         },
 
         trackCursorPosWithinHeader: function() {
-                bashar.lexicon.header.addEventListener("mousemove", (event) => {
+                window.addEventListener("mousemove", (event) => {
                         let cursorPos = parseInt(event.pageY / bashar.lexicon.header.children[0].offsetHeight * 100);
                         bashar.updateHeaderGradientCentralStop(cursorPos);
                 });
