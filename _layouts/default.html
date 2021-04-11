@@ -37,13 +37,13 @@
 					<a href="/">Home</a>
 				</li>
 				{%- endunless %}
-				<li>
-					<a href="/profile/" {%- if page.url == "/profile/" %} class="--current" {%- endif -%}>
+				<li {%- if page.url == "/profile/" %} class="--current" {%- endif -%}>
+					<a href="/profile/">
 						Profile
 					</a>
 				</li>
-				<li>
-					<a href="/contact/" {%- if page.url == "/contact/" %} class="--current" {%- endif -%}>
+				<li {%- if page.url == "/contact/" %} class="--current" {%- endif -%}>
+					<a href="/contact/">
 						Contact
 					</a>
 				</li>
