@@ -136,12 +136,14 @@ body {
 		-webkit-transform: translate3d(0,0,0);
 	}
 	nav {
+		pointer-events: none;
 		ul {
 			display: flex;
 			list-style: none;
 			list-style-position: inside;
 			background: var(--seccol);
 			border: 1px solid var(--borcol);
+			pointer-events: auto;
 			& + ul {
 				border-top: 1px solid var(--borcol);
 				margin-top: $du;
