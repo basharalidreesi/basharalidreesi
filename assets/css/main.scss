@@ -124,11 +124,11 @@ body {
 				height: 100%;
 				width: 100%;
 				cursor: alias;
-				img,
 				svg {
 					display: block;
 					height: 100%;
 					width: 100%;
+					fill: var(--texcol);
 					pointer-events: none;
 				}
 			}
