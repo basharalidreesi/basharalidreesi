@@ -5,8 +5,6 @@ const bashar = {
         lexicon: {
                 body: document.body,
                 header: document.getElementById("header"),
-                        headerHeight: header.clientHeight,
-                        headerOffsetTop: header.getBoundingClientRect().top,
                 centralStop: document.getElementById("headerGradientCentralStop"),
                 nav: document.getElementById("nav"),
                 main: document.getElementById("main"),
@@ -20,12 +18,13 @@ const bashar = {
         header: {
                 initHeaderScripts: function() {
                         bashar.header.trackCursorY();
-                        bashar.header.keepHeaderHeightCurrent();
                 },
                 trackCursorY: function() {
                         window.addEventListener("mousemove", (event) => {
                                 let cursorYPos = event.clientY;
-                                let cursorYPercent = parseInt(((cursorYPos - bashar.lexicon.headerOffsetTop) / bashar.lexicon.headerHeight) * 100) + "%";
+                                let headerOffsetTop = bashar.lexicon.header.getBoundingClientRect().top;
+                                let headerHeight = bashar.lexicon.header.clientHeight;
+                                let cursorYPercent = parseInt((cursorYPos - headerOffsetTop) / headerHeight * 100) + "%";
                                 bashar.header.transferCursorY(cursorYPercent);
                         });
                 },
@@ -39,13 +38,6 @@ const bashar = {
                 opacifyCentralStop: function(cursorYPercent) {
                         // do something
                 },
-                keepHeaderHeightCurrent: function() {
-                        window.addEventListener("resize", () => {
-                                bashar.util.debounce(() => {
-                                        bashar.lexicon.header.headerHeight = bashar.lexicon.header.clientHeight;
-                                }, 250);
-                        })
-                }
         },
 
         util: {
