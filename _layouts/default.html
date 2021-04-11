@@ -32,11 +32,20 @@
 		</header>
 		<nav id="nav">
 			<ul>
+				{%- unless page.url = "/" %}
 				<li>
-					<a href="/profile/">Profile</a>
+					<a href="/">Home</a>
+				</li>
+				{%- endunless %}
+				<li>
+					<a href="/profile/" {%- if page.url == "/profile/" %} class="--current" {%- endif -%}>
+						Profile
+					</a>
 				</li>
 				<li>
-					<a href="/contact/">Contact</a>
+					<a href="/contact/" {%- if page.url == "/contact/" %} class="--current" {%- endif -%}>
+						Contact
+					</a>
 				</li>
 			</ul>
 			<ul>
