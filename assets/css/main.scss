@@ -130,7 +130,6 @@ body {
 					width: 100%;
 					fill: var(--texcol);
 					pointer-events: none;
-					transition: fill 0.25s;
 				}
 				@media (hover: hover) {
 					&:hover svg {
