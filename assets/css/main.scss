@@ -148,8 +148,7 @@ body {
 				& + li {
 					border-left: 1px solid var(--borcol);
 				}
-				&.--current,
-				& > a:focus {
+				&.--current {
 					color: var(--seccol);
 					background: var(--texcol);
 				}
@@ -164,6 +163,9 @@ body {
 					padding: $u;
 					text-align: center;
 					font-family: "MD IO";
+					&:focus {
+						/* do something */
+					}
 				}
 			}
 		}
