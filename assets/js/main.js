@@ -17,7 +17,7 @@ var bashar = {
 
         header: {
                 initialiseHeaderScripts: function() {
-
+                        trackCursorPosition();
                 },
                 trackCursorPosition: function() {
                         window.addEventListener("mousemove", (event) => {
@@ -29,6 +29,7 @@ var bashar = {
                         bashar.lexicon.centralStop.setAttribute("offset", cursorPos);
                 },
         },
+
 }
 
 bashar.initialiseScripts();
