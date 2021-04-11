@@ -4,32 +4,42 @@ const bashar = {
 
         lexicon: {
                 body: document.body,
-                        header: document.getElementById("header"),
-                                centralStop: document.getElementById("headerGradientCentralStop"),
-                        nav: document.getElementById("nav"),
-                        main: document.getElementById("main"),
-                        footer: document.getElementById("footer")
+                header: document.getElementById("header"),
+                        headerHeight: bashar.lexicon.header.clientHeight,
+                        headerOffsetTop: bashar.lexicon.header.getBoundingClientRect().top,
+                centralStop: document.getElementById("headerGradientCentralStop"),
+                nav: document.getElementById("nav"),
+                main: document.getElementById("main"),
+                footer: document.getElementById("footer")
         },
 
-        initialiseScripts: function() {
-                bashar.header.initialiseHeaderScripts();
+        initAllScripts: function() {
+                bashar.header.initHeaderScripts();
         },
 
         header: {
-                initialiseHeaderScripts: function() {
-                        bashar.header.trackCursorPosition();
+                initHeaderScripts: function() {
+                        bashar.header.trackCursorY();
                 },
-                trackCursorPosition: function() {
+                trackCursorY: function() {
                         window.addEventListener("mousemove", (event) => {
-                                let cursorPositionPercentage = parseInt((event.clientY / bashar.lexicon.header.clientHeight * 100) - bashar.lexicon.header.getBoundingClientRect().top) + "%";
-                                bashar.header.updateCentralStopOffset(cursorPositionPercentage);
+                                let cursorYPos = event.clientY;
+                                let cursorYPercent = parseInt(cursorYPos / (headerHeight - headerOffsetTop) * 100) + "%";
+                                bashar.header.transferCursorY(cursorYPercent);
                         });
                 },
-                updateCentralStopOffset: function(cursorPositionPercentage) {
-                        bashar.lexicon.centralStop.setAttribute("offset", cursorPositionPercentage);
+                transferCursorY: function(cursorYPercent) {
+                        bashar.header.offsetCentralStop(cursorYPercent);
+                        bashar.header.opacifyCentralStop(cursorYPercent);
+                },
+                offsetCentralStop: function(cursorYPercent) {
+                        bashar.lexicon.centralStop.setAttribute("offset", cursorYPercent);
+                },
+                opacifyCentralStop: function(cursorYPercent) {
+                        // do something
                 },
         },
 
 }
 
-bashar.initialiseScripts();
+bashar.initAllScripts();
