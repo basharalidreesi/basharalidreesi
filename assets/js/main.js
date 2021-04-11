@@ -1,6 +1,6 @@
 "use strict";
 
-var bashar = {
+const bashar = {
 
         lexicon: {
                 body: document.body,
