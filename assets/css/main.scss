@@ -90,7 +90,7 @@ body {
 		& + * {
 			margin-top: 0;
 		}
-		&:not(header):not(main) {
+		&:not(header):not(nav):not(main) {
 			background: var(--seccol);
 			border: 1px solid var(--borcol);
 		}
@@ -137,8 +137,11 @@ body {
 			flex-flow: row wrap;
 			list-style: none;
 			list-style-position: inside;
+			background: var(--seccol);
+			border: 1px solid var(--borcol);
 			& + ul {
 				border-top: 1px solid var(--borcol);
+				margin-top: $du;
 			}
 			& > li {
 				flex: 1;
