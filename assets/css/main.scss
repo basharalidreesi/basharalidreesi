@@ -134,18 +134,18 @@ body {
 			flex-flow: row wrap;
 			list-style: none;
 			list-style-position: inside;
+			& + ul {
+				border-top: 1px solid var(--borcol);
+			}
 			& > li {
 				flex: 1;
 				padding: $u;
 				text-align: center;
 				font-family: "MD IO";
 				& + li {
-					border-left: 1px solid var(--borcol);
+					border-left: 1px dashed var(--borcol);
 				}
 			}
-		}
-		ul + ul {
-			border-top: 1px solid var(--borcol);
 		}
 	}
 	main {
