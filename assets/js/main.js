@@ -25,8 +25,8 @@ const bashar = {
                                 bashar.header.updateCentralStopOffset(cursorPositionPercentage);
                         });
                 },
-                updateCentralStopOffset: function(cursorPosition) {
-                        bashar.lexicon.centralStop.setAttribute("offset", cursorPos);
+                updateCentralStopOffset: function(cursorPositionPercentage) {
+                        bashar.lexicon.centralStop.setAttribute("offset", cursorPositionPercentage);
                 },
         },
 
