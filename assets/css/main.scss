@@ -132,6 +132,7 @@ body {
 					stroke: transparent;
 					stroke-width: 2px;
 					pointer-events: none;
+					transition: fill 0.25s, stroke 0.25s;
 				}
 				@media (hover: hover) {
 					&:hover svg {
