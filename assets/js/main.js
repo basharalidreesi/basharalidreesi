@@ -17,7 +17,7 @@ var bashar = {
 
         header: {
                 initialiseHeaderScripts: function() {
-                        trackCursorPosition();
+                        bashar.header.trackCursorPosition();
                 },
                 trackCursorPosition: function() {
                         window.addEventListener("mousemove", (event) => {
