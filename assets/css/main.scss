@@ -132,10 +132,12 @@ body {
 					pointer-events: none;
 					transition: fill 0.25s, stroke 0.25s;
 				}
-				&:hover svg {
-					fill: var(--seccol);
-					stroke: var(--texcol);
-					stroke-width: 1px;
+				@media (hover: hover) {
+					&:hover svg {
+						fill: var(--seccol);
+						stroke: var(--texcol);
+						stroke-width: 1px;
+					}
 				}
 			}
 		}
