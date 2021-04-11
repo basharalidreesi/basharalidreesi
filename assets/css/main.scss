@@ -62,6 +62,10 @@ a:visited {
         color: inherit;
 }
 
+a:focus {
+	/* do something */
+}
+
 :focus {
 	outline: none;
 }
@@ -163,9 +167,6 @@ body {
 					padding: $u;
 					text-align: center;
 					font-family: "MD IO";
-					&:focus {
-						/* do something */
-					}
 				}
 			}
 		}
