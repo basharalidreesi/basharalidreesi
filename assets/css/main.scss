@@ -145,8 +145,9 @@ body {
 			}
 			& > li {
 				flex: 1;
+				min-width: 25%;
 				& + li {
-					border-left: 1px dashed var(--borcol);
+					border-left: 1px solid var(--borcol);
 				}
 				&:focus {
 					color: var(--seccol);
