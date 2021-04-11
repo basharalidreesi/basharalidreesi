@@ -22,7 +22,7 @@ var bashar = {
 
         trackCursorPosWithinHeader: function() {
                 bashar.lexicon.header.addEventListener("mousemove", (event) => {
-                        let cursorPos = parseInt(event.pageY / bashar.lexicon.header.offsetHeight * 100);
+                        let cursorPos = parseInt(event.pageY / bashar.lexicon.header.clientHeight * 100);
                         bashar.updateHeaderGradientCentralStop(cursorPos);
                 });
         },
