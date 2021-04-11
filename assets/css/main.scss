@@ -148,8 +148,8 @@ body {
 				& + li {
 					border-left: 1px solid var(--borcol);
 				}
-				&:focus,
-				&.--current {
+				&.--current,
+				& > a:focus {
 					color: var(--seccol);
 					background: var(--texcol);
 				}
