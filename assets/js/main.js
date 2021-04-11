@@ -42,7 +42,7 @@ const bashar = {
                 keepHeaderHeightCurrent: function() {
                         window.addEventListener("resize", () => {
                                 bashar.util.debounce(() => {
-                                        bashar.lexicon.header.headerHeight = header.clientHeight;
+                                        bashar.lexicon.header.headerHeight = bashar.lexicon.header.clientHeight;
                                 }, 250);
                         })
                 }
