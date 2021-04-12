@@ -58,25 +58,12 @@ const bashar = {
                         bashar.header.generateSparkles(sparkleX, sparkleY);
                 },
                 generateSparkles: function(sparkleX, sparkleY) {
-                        let point = bashar.lexicon.svg.createSVGPoint();
-                        point.x = sparkleX;
-                        point.y = sparkleY;
-                        if (bashar.lexicon.headerGroup.isPointInFill(point)) {
-                                const sparkle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                                sparkle.setAttribute("fill", "red");
-                                sparkle.setAttribute("r", "5");
-                                sparkle.setAttribute("cx", sparkleX);
-                                sparkle.setAttribute("cy", sparkleY);
-                        }
-                        // const svg = document.querySelector("svg");
-                        // const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                        // point.setAttribute("fill", "red");
-                        // point.setAttribute("r", "5");
-                        // point.setAttribute("cx", sparkleX);
-                        // point.setAttribute("cy", sparkleY);
-                        // if (svg.checkIntersection(bashar.lexicon.headerGroup, point)) {
-                        //         bashar.lexicon.headerSparkles.appendChild(point);
-                        // }
+                        const svg = document.querySelector("svg");
+                        const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                        point.setAttribute("fill", "white");
+                        point.setAttribute("r", "5");
+                        point.setAttribute("cx", sparkleX);
+                        point.setAttribute("cy", sparkleY);
                         // console.log("X: " + sparkleX);
                         // console.log("Y: " + sparkleY);
                 },
