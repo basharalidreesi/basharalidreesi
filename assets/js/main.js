@@ -97,8 +97,8 @@ const bashar = {
                         point.setAttribute("cy", sparkleY);
                         bashar.lexicon.headerSparkles.appendChild(point);
                         console.log("***");
-                                console.log("PointX: " + point.clientX);
-                                console.log("PointY: " + point.clientY);
+                                console.log("PointX: " + point.getBoundingClientRect().top);
+                                console.log("PointY: " + point.getBoundingClientRect().left);
                                 console.log("SparkleX: " + sparkleX);
                                 console.log("SparkleY: " + sparkleY);
                 },
