@@ -64,6 +64,7 @@ const bashar = {
                         point.setAttribute("r", "5");
                         point.setAttribute("cx", sparkleX);
                         point.setAttribute("cy", sparkleY);
+                        bashar.lexicon.headerSparkles.appendChild(point);
                         // console.log("X: " + sparkleX);
                         // console.log("Y: " + sparkleY);
                 },
