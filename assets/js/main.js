@@ -51,10 +51,10 @@ const bashar = {
                         bashar.lexicon.sparkleArea.setAttribute("y", shiftingRate);
                 },
                 scatterSparkles: function(clampedCursorYRatio) {
-                        let scatterRangeX = bashar.lexicon.header.clientWidth;
-                        let scatterRangeY = clampedCursorYRatio * bashar.lexicon.header.clientHeight;
+                        let scatterRangeX = bashar.lexicon.header.sparkleArea.getBBox().width;
+                        let scatterRangeY = parseInt(clampedCursorYRatio * 100) + "%";
                         let sparkleX = Math.random() * scatterRangeX;
-                        let sparkleY = Math.random() * scatterRangeY;
+                        let sparkleY = scatterRangeY;
                         bashar.header.generateSparkles(sparkleX, sparkleY);
                 },
                 generateSparkles: function(sparkleX, sparkleY) {
