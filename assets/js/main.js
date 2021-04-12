@@ -55,30 +55,30 @@ const bashar = {
                 },
                 situateSparkle: function() {
                         let minSparkleRangeX = parseFloat(bashar.lexicon.sparkleArea.getAttribute("x")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("width"));
-                        let maxSparkleRangeX = parseFloat(bashar.lexicon.sparkleArea.getAttribute("width")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("width")) - minSparkleRangeX;
+                        let maxSparkleRangeX = parseFloat(bashar.lexicon.sparkleArea.getAttribute("width")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("width")) + minSparkleRangeX;
                         let minSparkleRangeY = parseFloat(bashar.lexicon.sparkleArea.getAttribute("y")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("height"));
-                        let maxSparkleRangeY = parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("height")) - minSparkleRangeY;
+                        let maxSparkleRangeY = parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("height")) + minSparkleRangeY;
                         let sparkleX = bashar.util.getRandomFrom(minSparkleRangeX, maxSparkleRangeX);
                         let sparkleY = bashar.util.getRandomFrom(minSparkleRangeY, maxSparkleRangeY);
                         bashar.header.validateSparkle(sparkleX, sparkleY);
                         bashar.header.generateSparkle(sparkleX, sparkleY);
 
-                        document.querySelectorAll("rect").forEach((rect) => {
-                                if(rect.getAttribute("class") === "fuck") {
-                                        rect.remove();
-                                }
-                        });
-
-
-                        const testRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-                        testRect.setAttribute("class", "fuck");
-                        testRect.setAttribute("fill", "transparent");
-                        testRect.setAttribute("stroke", "red");
-                        testRect.setAttribute("x", minSparkleRangeX);
-                        testRect.setAttribute("y", minSparkleRangeY);
-                        testRect.setAttribute("width", maxSparkleRangeX);
-                        testRect.setAttribute("height", maxSparkleRangeY);
-                        bashar.lexicon.svg.appendChild(testRect);
+                        // document.querySelectorAll("rect").forEach((rect) => {
+                        //         if(rect.getAttribute("class") === "fuck") {
+                        //                 rect.remove();
+                        //         }
+                        // });
+                        //
+                        //
+                        // const testRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                        // testRect.setAttribute("class", "fuck");
+                        // testRect.setAttribute("fill", "transparent");
+                        // testRect.setAttribute("stroke", "red");
+                        // testRect.setAttribute("x", minSparkleRangeX);
+                        // testRect.setAttribute("y", minSparkleRangeY);
+                        // testRect.setAttribute("width", maxSparkleRangeX);
+                        // testRect.setAttribute("height", maxSparkleRangeY);
+                        // bashar.lexicon.svg.appendChild(testRect);
 
 
 
