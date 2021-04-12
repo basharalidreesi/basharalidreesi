@@ -82,8 +82,9 @@ const bashar = {
                         bashar.header.acceptSparkle(sparkleX, sparkleY, clampedCursorYRatio);
                 },
                 acceptSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
-                        bashar.lexicon.sparkle.setAttribute("x", sparkleX);
-                        bashar.lexicon.sparkle.setAttribute("y", sparkleY);
+                        // bashar.lexicon.sparkle.setAttribute("x", sparkleX);
+                        // bashar.lexicon.sparkle.setAttribute("y", sparkleY);
+                        bashar.lexicon.sparkle.setAttribute("transform", "translate(" + sparkleX + ", " + sparkleY + ")");
                         let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
                         bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
                         bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
