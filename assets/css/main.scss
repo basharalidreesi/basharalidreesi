@@ -130,12 +130,7 @@ body {
 					width: 100%;
 					overflow: visible;
 					pointer-events: none;
-					& > switch:first-of-type {
-						fill: var(--seccol);
-					}
-					& > switch:last-of-type {
-						fill: url(#lGradient);
-					}
+					fill: url(#lGradient);
 				}
 			}
 		}
