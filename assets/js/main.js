@@ -7,7 +7,6 @@ const bashar = {
                 fStop: document.getElementById("fStop"),
                 sStop: document.getElementById("sStop"),
                 sparkleArea: document.getElementById("sparkleArea"),
-                headerSparkles: document.getElementById("headerSparkles"),
         },
 
         initAllScripts: function() {
@@ -51,17 +50,18 @@ const bashar = {
                         bashar.header.scatterSparkles();
                 },
                 scatterSparkles: function() {
-                        let scatterRangeWidth = bashar.lexicon.headerSparkles.getBoundingClientRect().width;
-                        let scatterRangeHeight = bashar.lexicon.headerSparkles.getBoundingClientRect().height;
+                        let scatterRangeWidth = bashar.lexicon.sparkleArea.getBoundingClientRect().width;
+                        let scatterRangeHeight = bashar.lexicon.sparkleArea.getBoundingClientRect().height;
                         let sparkleX = Math.random() * scatterRangeWidth;
                         let sparkleY = Math.random() * scatterRangeHeight;
                         bashar.header.generateSparkles(sparkleX, sparkleY);
                 },
                 generateSparkles: function(sparkleX, sparkleY) {
                         const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
-                        use.setAttributeNS("http://www.w3.org/2000/svg", "svg:cx", sparkleX);
-                        use.setAttributeNS("http://www.w3.org/2000/svg", "svg:cy", sparkleY);
-                        bashar.lexicon.headerSparkles.appendChild(use);
+                        use.setAttributeNS("http://www.w3.org/2000/svg", "href", "#sparklePoint");
+                        use.setAttributeNS("http://www.w3.org/2000/svg", "cx", sparkleX);
+                        use.setAttributeNS("http://www.w3.org/2000/svg", "cy", sparkleY);
+                        document.querySelectorAll("switch")[1].appendChild(use);
                 },
         },
 
