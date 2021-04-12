@@ -72,22 +72,28 @@ const bashar = {
                         bashar.header.generateSparkle(sparkleX, sparkleY);
                 },
                 validateSparkle: function(sparkleX, sparkleY) {
-                        // if (document.elementFromPoint(sparkleX, sparkleY).getAttribute("href") === "#headerMain") {
-                        //         console.log("true");
-                        // } else {
-                        //         console.log("false");
-                        // }
+                        const testPoint = bashar.lexicon.svg.createSVGPoint();
+                        testPoint.x = sparkleX;
+                        testPoint.y = sparkleY;
+                        const screenCTM = testPoint.matrixTransform(bashar.lexicon.svg.getScreenCTM().inverse());
+                        let validatedSparkleX = screenCTM.x;
+                        let validatedSparkleY = screenCTM.y;
+                        if (document.elementFromPoint(validatedSparkleX, validatedSparkleY).getAttribute("href") === "#headerMain") {
+                                console.log("true");
+                        } else {
+                                console.log("falae");
+                        }
                         document.querySelectorAll("circle").forEach((circle) => {
                                 circle.remove();
                         });
-                        const testPoint = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                        const elementAtPoint = document.elementFromPoint(sparkleX, sparkleY);
-                        testPoint.setAttribute("fill", "transparent");
-                        testPoint.setAttribute("stroke", "red");
-                        testPoint.setAttribute("r", "10");
-                        testPoint.setAttribute("cx", sparkleX);
-                        testPoint.setAttribute("cy", sparkleY);
-                        bashar.lexicon.headerSparkles.appendChild(testPoint);
+                        // const testPoint = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                        // const elementAtPoint = document.elementFromPoint(sparkleX, sparkleY);
+                        // testPoint.setAttribute("fill", "transparent");
+                        // testPoint.setAttribute("stroke", "red");
+                        // testPoint.setAttribute("r", "10");
+                        // testPoint.setAttribute("cx", sparkleX);
+                        // testPoint.setAttribute("cy", sparkleY);
+                        // bashar.lexicon.headerSparkles.appendChild(testPoint);
                 },
                 generateSparkle: function(sparkleX, sparkleY) {
                         const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
@@ -96,11 +102,6 @@ const bashar = {
                         point.setAttribute("cx", sparkleX);
                         point.setAttribute("cy", sparkleY);
                         bashar.lexicon.headerSparkles.appendChild(point);
-                        console.log("***");
-                                console.log("PointX: " + point.getBoundingClientRect().x);
-                                console.log("PointY: " + point.getBoundingClientRect().y);
-                                console.log("SparkleX: " + sparkleX);
-                                console.log("SparkleY: " + sparkleY);
                 },
         },
 
