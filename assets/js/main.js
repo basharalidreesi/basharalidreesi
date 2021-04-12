@@ -62,37 +62,12 @@ const bashar = {
                         let sparkleY = bashar.util.getRandomFrom(minSparkleRangeY, maxSparkleRangeY);
                         bashar.header.validateSparkle(sparkleX, sparkleY);
                         bashar.header.generateSparkle(sparkleX, sparkleY);
-
-                        // document.querySelectorAll("rect").forEach((rect) => {
-                        //         if(rect.getAttribute("class") === "fuck") {
-                        //                 rect.remove();
-                        //         }
-                        // });
-                        //
-                        //
-                        // const testRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-                        // testRect.setAttribute("class", "fuck");
-                        // testRect.setAttribute("fill", "transparent");
-                        // testRect.setAttribute("stroke", "red");
-                        // testRect.setAttribute("x", minSparkleRangeX);
-                        // testRect.setAttribute("y", minSparkleRangeY);
-                        // testRect.setAttribute("width", maxSparkleRangeX);
-                        // testRect.setAttribute("height", maxSparkleRangeY);
-                        // bashar.lexicon.svg.appendChild(testRect);
-
-
-
-                        // let sparkleX = parseInt(Math.random() * 100) + "%";
-                        // let sparkleY = parseInt(clampedCursorYRatio * 100) + "%";
-                        // console.log(bashar.header.validateSparkle(sparkleX, sparkleY));
-                        // bashar.header.generateSparkle(sparkleX, sparkleY);
                 },
                 validateSparkle: function(sparkleX, sparkleY) {
                         document.querySelectorAll("circle").forEach((circle) => {
                                 circle.remove();
                         });
                         const testPoint = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-
                         const elementAtPoint = document.elementFromPoint(sparkleX, sparkleY);
                         testPoint.setAttribute("fill", "transparent");
                         testPoint.setAttribute("stroke", "red");
@@ -171,6 +146,7 @@ const bashar = {
                         return Math.floor(Math.random() * (max - min) + min);
                 },
                 deviceCanHover: window.matchMedia("(any-hover: hover)").matches,
+                debug: false,
         },
 
 }
