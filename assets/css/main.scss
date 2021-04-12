@@ -129,13 +129,12 @@ body {
 					height: 100%;
 					width: 100%;
 					overflow: visible;
-					fill: url(#lGradient);
 					pointer-events: none;
-					transition: fill 0.25s;
-				}
-				@media (hover: none) {
-					&:hover svg {
-						--seccol: var(--texcol);
+					& g:first-of-type {
+						fill: var(--seccol);
+					}
+					& g:last-of-type {
+						fill: url(#lGradient);
 					}
 				}
 			}

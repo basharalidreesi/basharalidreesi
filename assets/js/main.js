@@ -25,21 +25,21 @@ const bashar = {
                                 let headerOffsetTop = bashar.lexicon.header.getBoundingClientRect().top;
                                 let headerHeight = bashar.lexicon.header.clientHeight;
                                 let cursorYRatio = (cursorYPos - headerOffsetTop) / headerHeight;
-                                let cursorYPercent = parseInt(cursorYRatio * 100) + "%";
-                                bashar.header.reportCursorY(cursorYRatio, cursorYPercent);
+                                let clampedCursorYRatio = bashar.util.clamp(0, cursorYRatio, 1);
+                                let clampedCursorYPercent = parseInt(clampedCursorYRatio * 100) + "%";
+                                bashar.header.reportCursorY(clampedCursorYRatio, clampedCursorYPercent);
                         });
                 },
-                reportCursorY: function(cursorYRatio, cursorYPercent) {
-                        bashar.header.opacifyStop(cursorYRatio);
-                        bashar.header.offsetStop(cursorYPercent);
+                reportCursorY: function(clampedCursorYRatio, clampedCursorYPercent) {
+                        bashar.header.opacifyStop(clampedCursorYRatio);
+                        bashar.header.offsetStop(clampedCursorYPercent);
                 },
-                opacifyStop: function(cursorYRatio) {
-                        let clampedCursorYRatio = bashar.util.clamp(0, cursorYRatio, 1);
+                opacifyStop: function(clampedCursorYRatio) {
                         let opacifyRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
                         bashar.lexicon.cStop.setAttribute("stop-opacity", opacifyRate);
                 },
-                offsetStop: function(cursorYPercent) {
-                        bashar.lexicon.cStop.setAttribute("offset", cursorYPercent);
+                offsetStop: function(clampedCursorYPercent) {
+                        bashar.lexicon.cStop.setAttribute("offset", clampedCursorYPercent);
                 },
         },
 
