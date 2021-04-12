@@ -29,15 +29,6 @@ const bashar = {
                                 let clampedCursorYRatio = bashar.util.clamp(0, cursorYRatio, 1);
                                 bashar.header.reportCursorY(clampedCursorYRatio);
                         });
-                        window.addEventListener("click", (event) => {
-                                let x = event.clientX;
-                                let y = event.clientY;
-                                if (document.elementFromPoint(x, y).getAttribute("href") === "#headerMain") {
-                                        console.log("true");
-                                } else {
-                                        console.log("false");
-                                }
-                        });
                 },
                 reportCursorY: function(clampedCursorYRatio) {
                         bashar.header.opacifyStops(clampedCursorYRatio);
@@ -73,16 +64,17 @@ const bashar = {
                 },
                 validateSparkle: function(sparkleX, sparkleY) {
                         const testPoint = bashar.lexicon.svg.createSVGPoint();
+                        const testZones = querySelectorAll("#headerMain *");
                         testPoint.x = sparkleX;
                         testPoint.y = sparkleY;
-                        const screenCTM = testPoint.matrixTransform(bashar.lexicon.svg.getScreenCTM());
-                        let validatedSparkleX = screenCTM.x;
-                        let validatedSparkleY = screenCTM.y;
-                        if (document.elementFromPoint(validatedSparkleX, validatedSparkleY).getAttribute("href") === "#headerMain") {
-                                console.log("true");
-                        } else {
-                                console.log("false");
-                        }
+                        testZones.forEach((testZone) => {
+                                if (testZone.isPointInFill(testPoint)) {
+                                        console.log("true");
+                                } else {
+                                        console.log("false");
+                                }
+                        });
+
                         document.querySelectorAll("circle").forEach((circle) => {
                                 circle.remove();
                         });
