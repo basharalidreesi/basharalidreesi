@@ -55,13 +55,13 @@ const bashar = {
                         let scatterRangeHeight = bashar.lexicon.sparkleArea.getBoundingClientRect().height;
                         let scatterRangeStartY = bashar.lexicon.sparkleArea.getBoundingClientRect().top;
                         let sparkleX = Math.floor(Math.random() * scatterRangeWidth);
-                        let sparkleY = Math.floor(Math.random() * scatterRangeHeight) + scatterRangeStartY;
+                        let sparkleY = Math.floor(Math.random() * scatterRangeHeight);
                         bashar.header.generateSparkles(sparkleX, sparkleY);
                 },
                 generateSparkles: function(sparkleX, sparkleY) {
                         const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
                         point.setAttribute("fill", "red");
-                        point.setAttribute("r", "1");
+                        point.setAttribute("r", "5");
                         point.setAttribute("cx", sparkleX);
                         point.setAttribute("cy", sparkleY);
                         bashar.lexicon.headerSparkles.appendChild(point);
