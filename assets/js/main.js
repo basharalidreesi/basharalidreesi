@@ -72,11 +72,11 @@ const bashar = {
                         bashar.header.generateSparkle(sparkleX, sparkleY);
                 },
                 validateSparkle: function(sparkleX, sparkleY) {
-                        if (document.elementFromPoint(sparkleX, sparkleY).getAttribute("href") === "#headerGroup") {
-                                console.log("true");
-                        } else {
-                                console.log("false");
-                        }
+                        // if (document.elementFromPoint(sparkleX, sparkleY).getAttribute("href") === "#headerGroup") {
+                        //         console.log("true");
+                        // } else {
+                        //         console.log("false");
+                        // }
                         document.querySelectorAll("circle").forEach((circle) => {
                                 circle.remove();
                         });
@@ -88,6 +88,13 @@ const bashar = {
                         testPoint.setAttribute("cx", sparkleX);
                         testPoint.setAttribute("cy", sparkleY);
                         bashar.lexicon.headerSparkles.appendChild(testPoint);
+
+                        window.addEventListener("click", (click) => {
+                                console.log("ClickX: " + event.clientX);
+                                console.log("ClickY: " + event.clientY);
+                                console.log("SparkleX: " + sparkleX);
+                                console.log("SparkleY: " + sparkleY);
+                        });
                 },
                 generateSparkle: function(sparkleX, sparkleY) {
                         const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
