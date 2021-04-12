@@ -48,6 +48,7 @@ const bashar = {
                         bashar.lexicon.sStop.setAttribute("offset", offsettingRate);
                 },
                 shiftSparkleArea: function(clampedCursorYRatio) {
+                        if (clampedCursorYRatio >= 1 || clampedCursorYRatio <= 0) { return; }
                         let sparkleAreaHalfHeight = parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 2;
                         let shiftingRate = parseInt(clampedCursorYRatio * 100) - sparkleAreaHalfHeight + "%";
                         bashar.lexicon.sparkleArea.setAttribute("y", shiftingRate);
