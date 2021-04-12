@@ -33,7 +33,7 @@ const bashar = {
                 reportCursorY: function(clampedCursorYRatio) {
                         bashar.header.opacifyStops(clampedCursorYRatio);
                         bashar.header.offsetStops(clampedCursorYRatio);
-                        bashar.header.shiftSparkleArea(clampedCursorYRatio);
+                        bashar.header.shiftSparkleZone(clampedCursorYRatio);
                 },
                 opacifyStops: function(clampedCursorYRatio) {
                         let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
@@ -45,13 +45,13 @@ const bashar = {
                         bashar.lexicon.fStop.setAttribute("offset", offsettingRate);
                         bashar.lexicon.sStop.setAttribute("offset", offsettingRate);
                 },
-                shiftSparkleArea: function(clampedCursorYRatio) {
+                shiftSparkleZone: function(clampedCursorYRatio) {
                         let sparkleAreaHalfHeight = parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 2;
                         let shiftingRate = parseInt(clampedCursorYRatio * 100) - sparkleAreaHalfHeight + "%";
                         bashar.lexicon.sparkleArea.setAttribute("y", shiftingRate);
-                        bashar.header.situateSparkle();
+                        bashar.header.proposeSparkle();
                 },
-                situateSparkle: function() {
+                proposeSparkle: function() {
                         let minSparkleRangeX = parseFloat(bashar.lexicon.sparkleArea.getAttribute("x")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("width"));
                         let maxSparkleRangeX = parseFloat(bashar.lexicon.sparkleArea.getAttribute("width")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("width")) + minSparkleRangeX;
                         let minSparkleRangeY = parseFloat(bashar.lexicon.sparkleArea.getAttribute("y")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("height"));
@@ -69,9 +69,9 @@ const bashar = {
                                 }
                         });
                         if (!validPoint) { return; }
-                        bashar.header.generateSparkle(sparkleX, sparkleY);
+                        bashar.header.acceptSparkle(sparkleX, sparkleY);
                 },
-                generateSparkle: function(sparkleX, sparkleY) {
+                acceptSparkle: function(sparkleX, sparkleY) {
                         bashar.lexicon.sparkle.setAttribute("cx", sparkleX);
                         bashar.lexicon.sparkle.setAttribute("cy", sparkleY);
                 },
