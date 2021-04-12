@@ -82,8 +82,8 @@ const bashar = {
                         bashar.header.acceptSparkle(sparkleX, sparkleY);
                 },
                 acceptSparkle: function(sparkleX, sparkleY) {
-                        bashar.lexicon.sparkle.setAttribute("x", sparkleX);
-                        bashar.lexicon.sparkle.setAttribute("y", sparkleY);
+                        bashar.lexicon.sparkle.setAttribute("cx", sparkleX);
+                        bashar.lexicon.sparkle.setAttribute("cy", sparkleY);
                 },
         },
 
