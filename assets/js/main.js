@@ -32,8 +32,10 @@ const bashar = {
                         window.addEventListener("click", (event) => {
                                 let x = event.clientX;
                                 let y = event.clientY;
-                                if (document.elementFromPoint(x, y) === bashar.lexicon.svg) {
+                                if (document.elementFromPoint(x, y).getAttribute("href") === "#headerGroup") {
                                         console.log("true");
+                                } else {
+                                        console.log("false");
                                 }
                         });
                 },
