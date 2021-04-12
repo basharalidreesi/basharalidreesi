@@ -56,15 +56,15 @@ const bashar = {
                 situateSparkle: function(clampedCursorYRatio) {
                         let sparkleX = parseInt(Math.random() * 100) + "%";
                         let sparkleY = parseInt(clampedCursorYRatio * 100) + "%";
-                        bashar.header.validateSparkle(sparkleX, sparkleY);
-                        bashar.header.generateSparkle(sparkleX, sparkleY);
+                        if (bashar.header.validateSparkle(sparkleX, sparkleY)) {
+                                bashar.header.generateSparkle(sparkleX, sparkleY);
+                        }
                 },
                 validateSparkle: function(sparkleX, sparkleY) {
                         let xPos = parseFloat(sparkleX);
                         let yPos = parseFloat(sparkleY);
                         let elementAtPoint = document.elementFromPoint(xPos, yPos);
-                        console.log(elementAtPoint);
-                        if (elementAtPoint === "path") {
+                        if (elementAtPoint.isSameNode(bashar.lexicon.svg)) {
                                 return true;
                         }
                         return false;
