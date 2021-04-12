@@ -52,10 +52,20 @@ const bashar = {
                         bashar.header.proposeSparkle();
                 },
                 proposeSparkle: function() {
-                        let minSparkleRangeX = parseFloat(bashar.lexicon.sparkleArea.getAttribute("x")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("width"));
-                        let maxSparkleRangeX = parseFloat(bashar.lexicon.sparkleArea.getAttribute("width")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("width")) + minSparkleRangeX;
-                        let minSparkleRangeY = parseFloat(bashar.lexicon.sparkleArea.getAttribute("y")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("height"));
-                        let maxSparkleRangeY = parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("height")) + minSparkleRangeY;
+                        let minSparkleRangeX =
+                                parseFloat(bashar.lexicon.sparkleArea.getAttribute("x")) / 100
+                                * parseFloat(bashar.lexicon.svg.getAttribute("width"));
+                        let maxSparkleRangeX =
+                                parseFloat(bashar.lexicon.sparkleArea.getAttribute("width")) / 100
+                                * parseFloat(bashar.lexicon.svg.getAttribute("width"))
+                                + minSparkleRangeX;
+                        let minSparkleRangeY =
+                                parseFloat(bashar.lexicon.sparkleArea.getAttribute("y")) / 100
+                                * parseFloat(bashar.lexicon.svg.getAttribute("height"));
+                        let maxSparkleRangeY =
+                                parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 100
+                                * parseFloat(bashar.lexicon.svg.getAttribute("height"))
+                                + minSparkleRangeY;
                         let sparkleX = bashar.util.randomIntBetween(minSparkleRangeX, maxSparkleRangeX);
                         let sparkleY = bashar.util.randomIntBetween(minSparkleRangeY, maxSparkleRangeY);
                         bashar.header.validateSparkle(sparkleX, sparkleY);
