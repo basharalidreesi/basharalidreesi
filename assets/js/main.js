@@ -53,7 +53,7 @@ const bashar = {
                 scatterSparkles: function() {
                         let scatterRangeWidth = bashar.lexicon.sparkleArea.getBoundingClientRect().width;
                         let scatterRangeHeight = bashar.lexicon.sparkleArea.getBoundingClientRect().height;
-                        let scatterRangeStartY = bashar.lexicon.sparkleArea.getAttribute("y");
+                        let scatterRangeStartY = bashar.lexicon.sparkleArea.getBoundingClientRect().top;
                         let sparkleX = Math.floor(Math.random() * scatterRangeWidth);
                         let sparkleY = Math.floor(Math.random() * scatterRangeHeight) + scatterRangeStartY;
                         bashar.header.generateSparkles(sparkleX, sparkleY);
