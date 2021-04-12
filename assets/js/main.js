@@ -7,6 +7,7 @@ const bashar = {
                 fStop: document.getElementById("fStop"),
                 sStop: document.getElementById("sStop"),
                 sparkleArea: document.getElementById("sparkleArea"),
+                headerSparkles: document.getElementById("headerSparkles"),
         },
 
         initAllScripts: function() {
@@ -57,11 +58,12 @@ const bashar = {
                         bashar.header.generateSparkles(sparkleX, sparkleY);
                 },
                 generateSparkles: function(sparkleX, sparkleY) {
-                        const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
-                        use.setAttributeNS("http://www.w3.org/2000/svg", "href", "#sparklePoint");
-                        use.setAttributeNS("http://www.w3.org/2000/svg", "cx", sparkleX);
-                        use.setAttributeNS("http://www.w3.org/2000/svg", "cy", sparkleY);
-                        document.querySelectorAll("switch")[1].appendChild(use);
+                        const point = document.createElement("circle");
+                        point.setAttribute("fill", "red");
+                        point.setAttribute("r", "10");
+                        point.setAttribute("cx", sparkleX);
+                        point.setAttribute("cy", sparkleY);
+                        bashar.lexicon.headerSparkles.appendChild(point);
                 },
         },
 
