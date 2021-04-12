@@ -5,7 +5,8 @@ const bashar = {
         lexicon: {
                 body: document.body,
                 header: document.getElementById("header"),
-                cStop: document.getElementById("cStop"),
+                fStop: document.getElementById("fStop"),
+                sStop: document.getElementById("sStop"),
                 nav: document.getElementById("nav"),
                 main: document.getElementById("main"),
                 footer: document.getElementById("footer"),
@@ -36,11 +37,13 @@ const bashar = {
                 },
                 opacifyStop: function(clampedCursorYRatio) {
                         let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
-                        bashar.lexicon.cStop.setAttribute("stop-opacity", opacificationRate);
+                        bashar.lexicon.fStop.setAttribute("stop-opacity", opacificationRate);
+                        bashar.lexicon.sStop.setAttribute("stop-opacity", opacificationRate);
                 },
                 offsetStop: function(clampedCursorYRatio) {
                         let offsettingRate = parseInt(clampedCursorYRatio * 100) + "%";
-                        bashar.lexicon.cStop.setAttribute("offset", offsettingRate);
+                        bashar.lexicon.fStop.setAttribute("offset", offsettingRate);
+                        bashar.lexicon.sStop.setAttribute("offset", offsettingRate);
                 },
         },
 

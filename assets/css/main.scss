@@ -134,7 +134,9 @@ body {
 						fill: var(--texcol);
 					}
 					& > switch:last-of-type {
-						fill: url(#lGradient);
+						fill: url(#fillGradient);
+						stroke: url(#strokeGradient);
+						stroke-width: 1px;
 						@media (any-hover: none) {
 							fill: var(--texcol);
 						}
