@@ -61,7 +61,7 @@ const bashar = {
                 generateSparkles: function(sparkleX, sparkleY) {
                         const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
                         point.setAttribute("fill", "red");
-                        point.setAttribute("r", "10");
+                        point.setAttribute("r", "1");
                         point.setAttribute("cx", sparkleX);
                         point.setAttribute("cy", sparkleY);
                         bashar.lexicon.headerSparkles.appendChild(point);
