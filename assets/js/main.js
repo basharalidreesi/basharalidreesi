@@ -32,15 +32,15 @@ const bashar = {
                         });
                 },
                 reportCursorY: function(clampedCursorYRatio) {
-                        bashar.header.opacifyStop(clampedCursorYRatio);
-                        bashar.header.offsetStop(clampedCursorYRatio);
+                        bashar.header.opacifyStops(clampedCursorYRatio);
+                        bashar.header.offsetStops(clampedCursorYRatio);
                 },
-                opacifyStop: function(clampedCursorYRatio) {
+                opacifyStops: function(clampedCursorYRatio) {
                         let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
                         bashar.lexicon.fStop.setAttribute("stop-opacity", opacificationRate);
                         bashar.lexicon.sStop.setAttribute("stop-opacity", opacificationRate);
                 },
-                offsetStop: function(clampedCursorYRatio) {
+                offsetStops: function(clampedCursorYRatio) {
                         let offsettingRate = parseInt(clampedCursorYRatio * 100) + "%";
                         bashar.lexicon.fStop.setAttribute("offset", offsettingRate);
                         bashar.lexicon.sStop.setAttribute("offset", offsettingRate);
