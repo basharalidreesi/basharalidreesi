@@ -33,6 +33,7 @@ const bashar = {
                         bashar.header.opacifyStops(clampedCursorYRatio);
                         bashar.header.offsetStops(clampedCursorYRatio);
                         bashar.header.shiftSparkleArea(clampedCursorYRatio);
+                        bashar.header.scatterSparkles(clampedCursorYRatio);
                 },
                 opacifyStops: function(clampedCursorYRatio) {
                         let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
@@ -48,14 +49,16 @@ const bashar = {
                         let sparkleAreaHalfHeight = parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 2;
                         let shiftingRate = parseInt(clampedCursorYRatio * 100) - sparkleAreaHalfHeight + "%";
                         bashar.lexicon.sparkleArea.setAttribute("y", shiftingRate);
-                        bashar.header.scatterSparkles();
                 },
-                scatterSparkles: function() {
-                        let scatterRangeWidth = bashar.lexicon.sparkleArea.getBBox().width;
-                        let scatterRangeHeight = bashar.lexicon.sparkleArea.getBBox().height;
-                        let sparkleX = Math.floor(Math.random() * scatterRangeWidth);
-                        let sparkleY = Math.floor(Math.random() * scatterRangeHeight);
-                        bashar.header.generateSparkles(sparkleX, sparkleY);
+                scatterSparkles: function(clampedCursorYRatio) {
+                        let scatterRangeX = clampedCursorYRatio * bashar.lexicon.header.clientHeight;
+                        console.log(scatterRangeX);
+
+                //        let scatterRangeWidth = bashar.lexicon.sparkleArea.getBBox().width;
+                //        let scatterRangeHeight = bashar.lexicon.sparkleArea.getBBox().height;
+                //        let sparkleX = Math.floor(Math.random() * scatterRangeWidth);
+                //        let sparkleY = Math.floor(Math.random() * scatterRangeHeight);
+                //        bashar.header.generateSparkles(sparkleX, sparkleY);
                 },
                 generateSparkles: function(sparkleX, sparkleY) {
                 //        const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
@@ -64,8 +67,8 @@ const bashar = {
                 //        point.setAttribute("cx", sparkleX);
                 //        point.setAttribute("cy", sparkleY);
                 //        bashar.lexicon.headerSparkles.appendChild(point);
-                        console.log("X: " + sparkleX);
-                        console.log("Y: " + sparkleY);
+                //        console.log("X: " + sparkleX);
+                //        console.log("Y: " + sparkleY);
                 },
         },
 
