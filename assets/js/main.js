@@ -26,20 +26,20 @@ const bashar = {
                                 let headerHeight = bashar.lexicon.header.clientHeight;
                                 let cursorYRatio = (cursorYPos - headerOffsetTop) / headerHeight;
                                 let clampedCursorYRatio = bashar.util.clamp(0, cursorYRatio, 1);
-                                let clampedCursorYPercent = parseInt(clampedCursorYRatio * 100) + "%";
-                                bashar.header.reportCursorY(clampedCursorYRatio, clampedCursorYPercent);
+                                bashar.header.reportCursorY(clampedCursorYRatio);
                         });
                 },
-                reportCursorY: function(clampedCursorYRatio, clampedCursorYPercent) {
+                reportCursorY: function(clampedCursorYRatio) {
                         bashar.header.opacifyStop(clampedCursorYRatio);
-                        bashar.header.offsetStop(clampedCursorYPercent);
+                        bashar.header.offsetStop(clampedCursorYRatio);
                 },
                 opacifyStop: function(clampedCursorYRatio) {
-                        let opacifyRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
-                        bashar.lexicon.cStop.setAttribute("stop-opacity", opacifyRate);
+                        let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
+                        bashar.lexicon.cStop.setAttribute("stop-opacity", opacificationRate);
                 },
-                offsetStop: function(clampedCursorYPercent) {
-                        bashar.lexicon.cStop.setAttribute("offset", clampedCursorYPercent);
+                offsetStop: function(clampedCursorYRatio) {
+                        let offsettingRate = parseInt(clampedCursorYRatio * 100) + "%";
+                        bashar.lexicon.cStop.setAttribute("offset", offsettingRate);
                 },
         },
 
