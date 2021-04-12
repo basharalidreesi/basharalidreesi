@@ -63,6 +63,7 @@ const bashar = {
                 validateSparkle: function(sparkleX, sparkleY) {
                         let xPos = parseFloat(sparkleX);
                         let yPos = parseFloat(sparkleY);
+                        console.log(xPos + ", " + yPos);
                         let elementAtPoint = document.elementFromPoint(xPos, yPos);
                         if (elementAtPoint.isSameNode(bashar.lexicon.svg)) {
                                 return true;
