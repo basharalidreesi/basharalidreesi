@@ -58,7 +58,7 @@ const bashar = {
                         bashar.header.generateSparkles(sparkleX, sparkleY);
                 },
                 generateSparkles: function(sparkleX, sparkleY) {
-                        const point = document.createElement("circle");
+                        const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
                         point.setAttribute("fill", "red");
                         point.setAttribute("r", "10");
                         point.setAttribute("cx", sparkleX);
