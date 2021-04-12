@@ -4,6 +4,8 @@ const bashar = {
 
         lexicon: {
                 header: document.getElementById("header"),
+                svg: document.getElementById("headerSVG"),
+                headerGroup: document.getElementById("headerGroup"),
                 fStop: document.getElementById("fStop"),
                 sStop: document.getElementById("sStop"),
                 sparkleArea: document.getElementById("sparkleArea"),
@@ -56,12 +58,25 @@ const bashar = {
                         bashar.header.generateSparkles(sparkleX, sparkleY);
                 },
                 generateSparkles: function(sparkleX, sparkleY) {
-                        const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                        point.setAttribute("fill", "red");
-                        point.setAttribute("r", "5");
-                        point.setAttribute("cx", sparkleX);
-                        point.setAttribute("cy", sparkleY);
-                        bashar.lexicon.headerSparkles.appendChild(point);
+                        let point = bashar.lexicon.svg.createSVGPoint();
+                        point.x = sparkleX;
+                        point.y = sparkleY;
+                        if (bashar.lexicon.headerGroup.isPointInFill(point)) {
+                                const sparkle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                                sparkle.setAttribute("fill", "red");
+                                sparkle.setAttribute("r", "5");
+                                sparkle.setAttribute("cx", sparkleX);
+                                sparkle.setAttribute("cy", sparkleY);
+                        }
+                        // const svg = document.querySelector("svg");
+                        // const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                        // point.setAttribute("fill", "red");
+                        // point.setAttribute("r", "5");
+                        // point.setAttribute("cx", sparkleX);
+                        // point.setAttribute("cy", sparkleY);
+                        // if (svg.checkIntersection(bashar.lexicon.headerGroup, point)) {
+                        //         bashar.lexicon.headerSparkles.appendChild(point);
+                        // }
                         // console.log("X: " + sparkleX);
                         // console.log("Y: " + sparkleY);
                 },
