@@ -3,14 +3,10 @@
 const bashar = {
 
         lexicon: {
-                body: document.body,
                 header: document.getElementById("header"),
                 fStop: document.getElementById("fStop"),
                 sStop: document.getElementById("sStop"),
                 sparkleArea: document.getElementById("sparkleArea"),
-                nav: document.getElementById("nav"),
-                main: document.getElementById("main"),
-                footer: document.getElementById("footer"),
         },
 
         initAllScripts: function() {
@@ -51,6 +47,20 @@ const bashar = {
                         let sparkleAreaHalfHeight = parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 2;
                         let shiftingRate = parseInt(clampedCursorYRatio * 100) - sparkleAreaHalfHeight + "%";
                         bashar.lexicon.sparkleArea.setAttribute("y", shiftingRate);
+                        bashar.header.scatterSparkles();
+                },
+                scatterSparkles: function() {
+                        let scatterRangeWidth = bashar.lexicon.sparkleArea.getBoundingClientRect().width;
+                        let scatterRangeHeight = bashar.lexicon.sparkleArea.getBoundingClientRect().height;
+                        let sparkleX = Math.random() * scatterRangeWidth;
+                        let sparkleY = Math.random() * scatterRangeHeight;
+                        bashar.header.generateSparkles(sparkleX, sparkleY);
+                },
+                generateSparkles: function(sparkleX, sparkleY) {
+                        const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+                        use.setAttributeNS("http://www.w3.org/2000/svg", "svg:cx", sparkleX);
+                        use.setAttributeNS("http://www.w3.org/2000/svg", "svg:cy", sparkleY);
+                        document.querySelectorAll("switch")[1].appendChild(use);
                 },
         },
 
