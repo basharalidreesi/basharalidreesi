@@ -7,7 +7,7 @@ const bashar = {
                 svg: document.getElementById("headerSVG"),
                 fStop: document.getElementById("fStop"),
                 sStop: document.getElementById("sStop"),
-                sparkleArea: document.getElementById("sparkleArea"),
+                sparkleZone: document.getElementById("sparkleZone"),
                 sparkle: document.getElementById("sparkle"),
         },
 
@@ -46,24 +46,24 @@ const bashar = {
                         bashar.lexicon.sStop.setAttribute("offset", offsettingRate);
                 },
                 shiftSparkleZone: function(clampedCursorYRatio) {
-                        let sparkleAreaHalfHeight = parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 2;
-                        let shiftingRate = parseInt(clampedCursorYRatio * 100) - sparkleAreaHalfHeight + "%";
-                        bashar.lexicon.sparkleArea.setAttribute("y", shiftingRate);
+                        let sparkleZoneHalfHeight = parseFloat(bashar.lexicon.sparkleZone.getAttribute("height")) / 2;
+                        let shiftingRate = parseInt(clampedCursorYRatio * 100) - sparkleZoneHalfHeight + "%";
+                        bashar.lexicon.sparkleZone.setAttribute("y", shiftingRate);
                         bashar.header.proposeSparkle();
                 },
                 proposeSparkle: function() {
                         let minSparkleRangeX =
-                                parseFloat(bashar.lexicon.sparkleArea.getAttribute("x")) / 100
+                                parseFloat(bashar.lexicon.sparkleZone.getAttribute("x")) / 100
                                 * parseFloat(bashar.lexicon.svg.getAttribute("width"));
                         let maxSparkleRangeX =
-                                parseFloat(bashar.lexicon.sparkleArea.getAttribute("width")) / 100
+                                parseFloat(bashar.lexicon.sparkleZone.getAttribute("width")) / 100
                                 * parseFloat(bashar.lexicon.svg.getAttribute("width"))
                                 + minSparkleRangeX;
                         let minSparkleRangeY =
-                                parseFloat(bashar.lexicon.sparkleArea.getAttribute("y")) / 100
+                                parseFloat(bashar.lexicon.sparkleZone.getAttribute("y")) / 100
                                 * parseFloat(bashar.lexicon.svg.getAttribute("height"));
                         let maxSparkleRangeY =
-                                parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 100
+                                parseFloat(bashar.lexicon.sparkleZone.getAttribute("height")) / 100
                                 * parseFloat(bashar.lexicon.svg.getAttribute("height"))
                                 + minSparkleRangeY;
                         let sparkleX = bashar.util.randomIntBetween(minSparkleRangeX, maxSparkleRangeX);
