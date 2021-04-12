@@ -64,7 +64,7 @@ const bashar = {
                 },
                 validateSparkle: function(sparkleX, sparkleY) {
                         const testPoint = bashar.lexicon.svg.createSVGPoint();
-                        const testZones = querySelectorAll("#headerMain *");
+                        const testZones = document.querySelectorAll("#headerMain *");
                         testPoint.x = sparkleX;
                         testPoint.y = sparkleY;
                         testZones.forEach((testZone) => {
