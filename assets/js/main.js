@@ -33,7 +33,6 @@ const bashar = {
                 reportCursorY: function(clampedCursorYRatio) {
                         bashar.header.opacifyStops(clampedCursorYRatio);
                         bashar.header.offsetStops(clampedCursorYRatio);
-                        if (clampedCursorYRatio >= 1 || clampedCursorYRatio <= 0) { return; }
                         bashar.header.shiftSparkleArea(clampedCursorYRatio);
                 },
                 opacifyStops: function(clampedCursorYRatio) {
@@ -60,36 +59,24 @@ const bashar = {
                         let sparkleX = bashar.util.randomIntBetween(minSparkleRangeX, maxSparkleRangeX);
                         let sparkleY = bashar.util.randomIntBetween(minSparkleRangeY, maxSparkleRangeY);
                         bashar.header.validateSparkle(sparkleX, sparkleY);
-                        bashar.header.generateSparkle(sparkleX, sparkleY);
                 },
                 validateSparkle: function(sparkleX, sparkleY) {
-                        const testPoint = bashar.lexicon.svg.createSVGPoint();
-                        const testZones = document.querySelectorAll("#headerMain *");
-                        testPoint.x = sparkleX;
-                        testPoint.y = sparkleY;
+                        let validPoint = false;
+                        const testZones = document.querySelectorAll("path");
                         testZones.forEach((testZone) => {
-                                if (testZone.isPointInFill(testPoint)) {
-                                        console.log("true");
-                                } else {
-                                        console.log("false");
+                                if (testZone.isPointInFill(new DOMPoint(sparkleX, sparkleY))) {
+                                        validPoint = true;
                                 }
                         });
-
+                        if (!validPoint) { return; }
                         document.querySelectorAll("circle").forEach((circle) => {
                                 circle.remove();
                         });
-                        // const testPoint = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                        // const elementAtPoint = document.elementFromPoint(sparkleX, sparkleY);
-                        // testPoint.setAttribute("fill", "transparent");
-                        // testPoint.setAttribute("stroke", "red");
-                        // testPoint.setAttribute("r", "10");
-                        // testPoint.setAttribute("cx", sparkleX);
-                        // testPoint.setAttribute("cy", sparkleY);
-                        // bashar.lexicon.headerSparkles.appendChild(testPoint);
+                        bashar.header.generateSparkle(sparkleX, sparkleY);
                 },
                 generateSparkle: function(sparkleX, sparkleY) {
                         const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                        point.setAttribute("fill", "white");
+                        point.setAttribute("fill", "red");
                         point.setAttribute("r", "5");
                         point.setAttribute("cx", sparkleX);
                         point.setAttribute("cy", sparkleY);
