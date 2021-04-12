@@ -7,6 +7,7 @@ const bashar = {
                 header: document.getElementById("header"),
                 fStop: document.getElementById("fStop"),
                 sStop: document.getElementById("sStop"),
+                sparkleArea: document.getElementById("sparkleArea"),
                 nav: document.getElementById("nav"),
                 main: document.getElementById("main"),
                 footer: document.getElementById("footer"),
@@ -34,7 +35,7 @@ const bashar = {
                 reportCursorY: function(clampedCursorYRatio) {
                         bashar.header.opacifyStops(clampedCursorYRatio);
                         bashar.header.offsetStops(clampedCursorYRatio);
-                        bashar.header.findSparkleArea(clampedCursorYRatio);
+                        bashar.header.moveSparkleArea(clampedCursorYRatio);
                 },
                 opacifyStops: function(clampedCursorYRatio) {
                         let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
@@ -46,8 +47,9 @@ const bashar = {
                         bashar.lexicon.fStop.setAttribute("offset", offsettingRate);
                         bashar.lexicon.sStop.setAttribute("offset", offsettingRate);
                 },
-                findSparkleArea: function(clampedCursorYRatio) {
-                //        let sparkleArea = ;
+                moveSparkleArea: function(clampedCursorYRatio) {
+                        let shiftingRate = parseInt(clampedCursorYRatio * 100) + "%";
+                        bashar.lexicon.sparkleArea.setAttribute("y", shiftingRate);
                 }
         },
 
