@@ -31,7 +31,6 @@ const bashar = {
                         });
                 },
                 reportCursorY: function(clampedCursorYRatio) {
-                        if (clampedCursorYRatio >= 1 || clampedCursorYRatio <= 0) { return; }
                         bashar.header.opacifyStop(clampedCursorYRatio);
                         bashar.header.offsetStop(clampedCursorYRatio);
                 },
