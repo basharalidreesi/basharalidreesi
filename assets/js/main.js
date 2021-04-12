@@ -49,9 +49,9 @@ const bashar = {
                 },
                 shiftSparkleArea: function(clampedCursorYRatio) {
                         let sparkleAreaHalfHeight = parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 2;
-                        let shiftingRate = parseInt(clampedCursorYRatio - sparkleAreaHalfHeight * 100) + "%";
+                        let shiftingRate = parseInt(clampedCursorYRatio * 100) - sparkleAreaHalfHeight + "%";
                         bashar.lexicon.sparkleArea.setAttribute("y", shiftingRate);
-                }
+                },
         },
 
         util: {
