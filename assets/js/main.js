@@ -8,7 +8,7 @@ const bashar = {
                 fStop: document.getElementById("fStop"),
                 sStop: document.getElementById("sStop"),
                 sparkleArea: document.getElementById("sparkleArea"),
-                headerSparkles: document.getElementById("headerSparkles"),
+                sparkle: document.getElementById("sparkle"),
         },
 
         initAllScripts: function() {
@@ -69,18 +69,11 @@ const bashar = {
                                 }
                         });
                         if (!validPoint) { return; }
-                        document.querySelectorAll("circle").forEach((circle) => {
-                                circle.remove();
-                        });
                         bashar.header.generateSparkle(sparkleX, sparkleY);
                 },
                 generateSparkle: function(sparkleX, sparkleY) {
-                        const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                        point.setAttribute("fill", "red");
-                        point.setAttribute("r", "5");
-                        point.setAttribute("cx", sparkleX);
-                        point.setAttribute("cy", sparkleY);
-                        bashar.lexicon.headerSparkles.appendChild(point);
+                        bashar.lexicon.sparkle.setAttribute("cx", sparkleX);
+                        bashar.lexicon.sparkle.setAttribute("cy", sparkleY);
                 },
         },
 
