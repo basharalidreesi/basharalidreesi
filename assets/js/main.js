@@ -5,7 +5,6 @@ const bashar = {
         lexicon: {
                 header: document.getElementById("header"),
                 svg: document.getElementById("headerSVG"),
-                headerGroup: document.getElementById("headerGroup"),
                 fStop: document.getElementById("fStop"),
                 sStop: document.getElementById("sStop"),
                 sparkleArea: document.getElementById("sparkleArea"),
