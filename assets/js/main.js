@@ -75,13 +75,13 @@ const bashar = {
                         const testPoint = bashar.lexicon.svg.createSVGPoint();
                         testPoint.x = sparkleX;
                         testPoint.y = sparkleY;
-                        const screenCTM = testPoint.matrixTransform(bashar.lexicon.svg.getScreenCTM().inverse());
+                        const screenCTM = testPoint.matrixTransform(bashar.lexicon.svg.getScreenCTM());
                         let validatedSparkleX = screenCTM.x;
                         let validatedSparkleY = screenCTM.y;
                         if (document.elementFromPoint(validatedSparkleX, validatedSparkleY).getAttribute("href") === "#headerMain") {
                                 console.log("true");
                         } else {
-                                console.log("falae");
+                                console.log("false");
                         }
                         document.querySelectorAll("circle").forEach((circle) => {
                                 circle.remove();
