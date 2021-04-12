@@ -5,7 +5,8 @@ const bashar = {
         lexicon: {
                 body: document.body,
                 header: document.getElementById("header"),
-                centralStop: document.getElementById("headerGradientCentralStop"),
+                fStop: document.getElementById("fStop"),
+                bStop: document.getElementById("bStop"),
                 nav: document.getElementById("nav"),
                 main: document.getElementById("main"),
                 footer: document.getElementById("footer")
@@ -30,16 +31,17 @@ const bashar = {
                         });
                 },
                 reportCursorY: function(cursorYRatio, cursorYPercent) {
-                        bashar.header.opacifyCentralStop(cursorYRatio);
-                        bashar.header.offsetCentralStop(cursorYPercent);
+                        bashar.header.opacifyGradientStops(cursorYRatio);
+                        bashar.header.offsetGradientStops(cursorYPercent);
                 },
-                opacifyCentralStop: function(cursorYRatio) {
+                opacifyGradientStops: function(cursorYRatio) {
                         let clampedCursorYRatio = bashar.util.clamp(0, cursorYRatio, 1);
                         let opacifyRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
-                        bashar.lexicon.centralStop.setAttribute("stop-opacity", opacifyRate);
+                        bashar.lexicon.fStop.setAttribute("stop-opacity", opacifyRate);
                 },
-                offsetCentralStop: function(cursorYPercent) {
-                        bashar.lexicon.centralStop.setAttribute("offset", cursorYPercent);
+                offsetGradientStops: function(cursorYPercent) {
+                        bashar.lexicon.fStop.setAttribute("offset", cursorYPercent);
+                        bashar.lexicon.bStop.setAttribute("offset", cursorYPercent);
                 },
         },
 
