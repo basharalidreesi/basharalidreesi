@@ -34,8 +34,9 @@ const bashar = {
                         bashar.header.offsetCentralStop(cursorYPercent);
                 },
                 opacifyCentralStop: function(cursorYRatio) {
-                        console.log(cursorYRatio);
-                        // do something
+                        let clampedCursorYRatio = bashar.util.clamp(0, cursorYRatio, 1);
+                        let opacifyRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
+                        bashar.lexicon.centralStop.setAttribute("stop-opacity", opacifyRate);
                 },
                 offsetCentralStop: function(cursorYPercent) {
                         bashar.lexicon.centralStop.setAttribute("offset", cursorYPercent);
@@ -47,6 +48,9 @@ const bashar = {
                 debounce: function(callback, delay) {
                         clearTimeout(bashar.util.timer);
         		return bashar.util.timer = setTimeout(callback, delay);
+                },
+                clamp: function(min, number, max) {
+                        return Math.max(min, Math.min(number, max));
                 },
         },
 }
