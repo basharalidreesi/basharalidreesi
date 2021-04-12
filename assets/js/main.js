@@ -71,14 +71,14 @@ const bashar = {
                         bashar.header.validateSparkle(sparkleX, sparkleY);
                 },
                 validateSparkle: function(sparkleX, sparkleY) {
-                        let validPoint = false;
-                        const testZones = document.querySelectorAll("path");
-                        testZones.forEach((testZone) => {
-                                if (testZone.isPointInFill(new DOMPoint(sparkleX, sparkleY))) {
-                                        validPoint = true;
+                        let validSparkle = false;
+                        let validationZones = document.querySelectorAll("path");
+                        validationZones.forEach((validationZone) => {
+                                if (validationZone.isPointInFill(new DOMPoint(sparkleX, sparkleY))) {
+                                        validSparkle = true;
                                 }
                         });
-                        if (!validPoint) { return; }
+                        if (!validSparkle) { return; }
                         bashar.header.acceptSparkle(sparkleX, sparkleY);
                 },
                 acceptSparkle: function(sparkleX, sparkleY) {
