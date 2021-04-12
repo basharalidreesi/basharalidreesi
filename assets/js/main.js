@@ -53,6 +53,7 @@ const bashar = {
                         return Math.max(min, Math.min(number, max));
                 },
         },
+
 }
 
 bashar.initAllScripts();
