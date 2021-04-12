@@ -52,21 +52,18 @@ const bashar = {
                 },
                 scatterSparkles: function(clampedCursorYRatio) {
                         let scatterRangeX = clampedCursorYRatio * bashar.lexicon.header.clientHeight;
-                        console.log(scatterRangeX);
-
-                //        let scatterRangeWidth = bashar.lexicon.sparkleArea.getBBox().width;
-                //        let scatterRangeHeight = bashar.lexicon.sparkleArea.getBBox().height;
-                //        let sparkleX = Math.floor(Math.random() * scatterRangeWidth);
-                //        let sparkleY = Math.floor(Math.random() * scatterRangeHeight);
-                //        bashar.header.generateSparkles(sparkleX, sparkleY);
+                        let scatterRangeY = bashar.lexicon.header.clientWidth;
+                        let sparkleX = Math.random() * scatterRangeX;
+                        let sparkleY = Math.random() * scatterRangeY;
+                        bashar.header.generateSparkles(sparkleX, sparkleY);
                 },
                 generateSparkles: function(sparkleX, sparkleY) {
-                //        const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                //        point.setAttribute("fill", "red");
-                //        point.setAttribute("r", "5");
-                //        point.setAttribute("cx", sparkleX);
-                //        point.setAttribute("cy", sparkleY);
-                //        bashar.lexicon.headerSparkles.appendChild(point);
+                        const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                        point.setAttribute("fill", "red");
+                        point.setAttribute("r", "5");
+                        point.setAttribute("cx", sparkleX);
+                        point.setAttribute("cy", sparkleY);
+                        bashar.lexicon.headerSparkles.appendChild(point);
                 //        console.log("X: " + sparkleX);
                 //        console.log("Y: " + sparkleY);
                 },
