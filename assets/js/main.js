@@ -56,19 +56,19 @@ const bashar = {
                 situateSparkle: function(clampedCursorYRatio) {
                         let sparkleX = parseInt(Math.random() * 100) + "%";
                         let sparkleY = parseInt(clampedCursorYRatio * 100) + "%";
-                        if (bashar.header.validateSparkle(sparkleX, sparkleY)) {
-                                bashar.header.generateSparkle(sparkleX, sparkleY);
-                        }
+                        bashar.header.validateSparkle(sparkleX, sparkleY);
+                        bashar.header.generateSparkle(sparkleX, sparkleY);
                 },
                 validateSparkle: function(sparkleX, sparkleY) {
                         let xPos = parseFloat(sparkleX);
                         let yPos = parseFloat(sparkleY);
-                        console.log(xPos + ", " + yPos);
                         let elementAtPoint = document.elementFromPoint(xPos, yPos);
-                        if (elementAtPoint.isSameNode(bashar.lexicon.svg)) {
-                                return true;
-                        }
-                        return false;
+                        console.log(elementAtPoint);
+                        // console.log(xPos + ", " + yPos);
+                        // if (elementAtPoint.isSameNode(bashar.lexicon.svg)) {
+                        //         return true;
+                        // }
+                        // return false;
                 },
                 generateSparkle: function(sparkleX, sparkleY) {
                         const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
