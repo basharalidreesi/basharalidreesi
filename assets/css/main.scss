@@ -133,7 +133,7 @@ body {
 					& > switch:first-of-type {
 						fill: var(--texcol);
 					}
-					& > switch:last-of-type {
+					& > switch:nth-of-type(2) {
 						fill: url(#fillGradient);
 						stroke: url(#strokeGradient);
 						stroke-width: 1px;

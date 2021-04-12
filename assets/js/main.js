@@ -32,7 +32,7 @@ const bashar = {
                         window.addEventListener("click", (event) => {
                                 let x = event.clientX;
                                 let y = event.clientY;
-                                if (document.elementFromPoint(x, y).getAttribute("href") === "#headerGroup") {
+                                if (document.elementFromPoint(x, y).getAttribute("href") === "#headerMain") {
                                         console.log("true");
                                 } else {
                                         console.log("false");
@@ -72,7 +72,7 @@ const bashar = {
                         bashar.header.generateSparkle(sparkleX, sparkleY);
                 },
                 validateSparkle: function(sparkleX, sparkleY) {
-                        // if (document.elementFromPoint(sparkleX, sparkleY).getAttribute("href") === "#headerGroup") {
+                        // if (document.elementFromPoint(sparkleX, sparkleY).getAttribute("href") === "#headerMain") {
                         //         console.log("true");
                         // } else {
                         //         console.log("false");
