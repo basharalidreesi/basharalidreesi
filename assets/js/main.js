@@ -88,13 +88,6 @@ const bashar = {
                         testPoint.setAttribute("cx", sparkleX);
                         testPoint.setAttribute("cy", sparkleY);
                         bashar.lexicon.headerSparkles.appendChild(testPoint);
-
-                        window.addEventListener("click", (click) => {
-                                console.log("ClickX: " + event.clientX);
-                                console.log("ClickY: " + event.clientY);
-                                console.log("SparkleX: " + sparkleX);
-                                console.log("SparkleY: " + sparkleY);
-                        });
                 },
                 generateSparkle: function(sparkleX, sparkleY) {
                         const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
@@ -103,6 +96,11 @@ const bashar = {
                         point.setAttribute("cx", sparkleX);
                         point.setAttribute("cy", sparkleY);
                         bashar.lexicon.headerSparkles.appendChild(point);
+                        console.log("***");
+                                console.log("PointX: " + point.clientX);
+                                console.log("PointY: " + point.clientY);
+                                console.log("SparkleX: " + sparkleX);
+                                console.log("SparkleY: " + sparkleY);
                 },
         },
 
