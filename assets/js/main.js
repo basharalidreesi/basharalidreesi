@@ -9,7 +9,7 @@ const bashar = {
                 bStop: document.getElementById("bStop"),
                 nav: document.getElementById("nav"),
                 main: document.getElementById("main"),
-                footer: document.getElementById("footer")
+                footer: document.getElementById("footer"),
         },
 
         initAllScripts: function() {
@@ -31,15 +31,15 @@ const bashar = {
                         });
                 },
                 reportCursorY: function(cursorYRatio, cursorYPercent) {
-                        bashar.header.opacifyGradientStops(cursorYRatio);
-                        bashar.header.offsetGradientStops(cursorYPercent);
+                        bashar.header.opacifyFStop(cursorYRatio);
+                        bashar.header.offsetStops(cursorYPercent);
                 },
-                opacifyGradientStops: function(cursorYRatio) {
+                opacifyFStop: function(cursorYRatio) {
                         let clampedCursorYRatio = bashar.util.clamp(0, cursorYRatio, 1);
                         let opacifyRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
                         bashar.lexicon.fStop.setAttribute("stop-opacity", opacifyRate);
                 },
-                offsetGradientStops: function(cursorYPercent) {
+                offsetStops: function(cursorYPercent) {
                         bashar.lexicon.fStop.setAttribute("offset", cursorYPercent);
                         bashar.lexicon.bStop.setAttribute("offset", cursorYPercent);
                 },
