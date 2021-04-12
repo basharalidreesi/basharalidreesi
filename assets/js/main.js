@@ -55,9 +55,9 @@ const bashar = {
                 },
                 situateSparkle: function() {
                         let minSparkleRangeX = parseFloat(bashar.lexicon.sparkleArea.getAttribute("x")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("width"));
-                        let maxSparkleRangeX = parseFloat(bashar.lexicon.sparkleArea.getAttribute("width")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("width"));
+                        let maxSparkleRangeX = (parseFloat(bashar.lexicon.sparkleArea.getAttribute("width")) + minSparkleRangeX) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("width"));
                         let minSparkleRangeY = parseFloat(bashar.lexicon.sparkleArea.getAttribute("y")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("height"));
-                        let maxSparkleRangeY = parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("height"));
+                        let maxSparkleRangeY = (parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) + minSparkleRangeY) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("height"));
                         let sparkleX = bashar.util.getRandomFrom(minSparkleRangeX, maxSparkleRangeX);
                         let sparkleY = bashar.util.getRandomFrom(minSparkleRangeY, maxSparkleRangeY);
                         bashar.header.validateSparkle(sparkleX, sparkleY);
