@@ -34,6 +34,7 @@ const bashar = {
                 reportCursorY: function(clampedCursorYRatio) {
                         bashar.header.opacifyStops(clampedCursorYRatio);
                         bashar.header.offsetStops(clampedCursorYRatio);
+                        bashar.header.findSparkleArea(clampedCursorYRatio);
                 },
                 opacifyStops: function(clampedCursorYRatio) {
                         let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
@@ -45,6 +46,9 @@ const bashar = {
                         bashar.lexicon.fStop.setAttribute("offset", offsettingRate);
                         bashar.lexicon.sStop.setAttribute("offset", offsettingRate);
                 },
+                findSparkleArea: function(clampedCursorYRatio) {
+                //        let sparkleArea = ;
+                }
         },
 
         util: {
