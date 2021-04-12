@@ -135,7 +135,7 @@ body {
 					}
 					& > switch:last-of-type {
 						fill: url(#lGradient);
-						@media (hover: none) {
+						@media (any-hover: none) {
 							fill: var(--texcol);
 						}
 					}

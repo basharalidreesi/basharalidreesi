@@ -21,6 +21,7 @@ const bashar = {
                 },
                 trackCursorY: function() {
                         window.addEventListener("mousemove", (event) => {
+                                if (!deviceCanHover) { return; }
                                 let cursorYPos = event.clientY;
                                 let headerOffsetTop = bashar.lexicon.header.getBoundingClientRect().top;
                                 let headerHeight = bashar.lexicon.header.clientHeight;
@@ -30,6 +31,7 @@ const bashar = {
                         });
                 },
                 reportCursorY: function(clampedCursorYRatio) {
+                        if (clampedCursorYRatio >= 1 || clampedCursorYRatio <= 0) { return; }
                         bashar.header.opacifyStop(clampedCursorYRatio);
                         bashar.header.offsetStop(clampedCursorYRatio);
                 },
@@ -52,6 +54,7 @@ const bashar = {
                 clamp: function(min, number, max) {
                         return Math.max(min, Math.min(number, max));
                 },
+                deviceCanHover: window.matchMedia("(any-hover: hover)").matches,
         },
 
 }
