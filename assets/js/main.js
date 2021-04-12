@@ -36,7 +36,7 @@ const bashar = {
                         bashar.header.offsetStops(clampedCursorYRatio);
                         if (clampedCursorYRatio >= 1 || clampedCursorYRatio <= 0) { return; }
                         bashar.header.shiftSparkleArea(clampedCursorYRatio);
-                        bashar.header.scatterSparkles(clampedCursorYRatio);
+                        bashar.header.situateSparkle(clampedCursorYRatio);
                 },
                 opacifyStops: function(clampedCursorYRatio) {
                         let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
@@ -53,21 +53,29 @@ const bashar = {
                         let shiftingRate = parseInt(clampedCursorYRatio * 100) - sparkleAreaHalfHeight + "%";
                         bashar.lexicon.sparkleArea.setAttribute("y", shiftingRate);
                 },
-                scatterSparkles: function(clampedCursorYRatio) {
+                situateSparkle: function(clampedCursorYRatio) {
                         let sparkleX = parseInt(Math.random() * 100) + "%";
                         let sparkleY = parseInt(clampedCursorYRatio * 100) + "%";
-                        bashar.header.generateSparkles(sparkleX, sparkleY);
+                        bashar.header.validateSparkle(sparkleX, sparkleY);
+                        bashar.header.generateSparkle(sparkleX, sparkleY);
                 },
-                generateSparkles: function(sparkleX, sparkleY) {
-                        const svg = document.querySelector("svg");
+                validateSparkle: function(sparkleX, sparkleY) {
+                        let xPos = parseFloat(sparkleX);
+                        let yPos = parseFloat(sparkleY);
+                        let elementAtPoint = document.elementFromPoint(xPos, yPos);
+                        console.log(elementAtPoint);
+                        if (elementAtPoint === "path") {
+                                return true;
+                        }
+                        return false;
+                },
+                generateSparkle: function(sparkleX, sparkleY) {
                         const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
                         point.setAttribute("fill", "white");
                         point.setAttribute("r", "5");
                         point.setAttribute("cx", sparkleX);
                         point.setAttribute("cy", sparkleY);
                         bashar.lexicon.headerSparkles.appendChild(point);
-                        // console.log("X: " + sparkleX);
-                        // console.log("Y: " + sparkleY);
                 },
         },
 
