@@ -29,6 +29,13 @@ const bashar = {
                                 let clampedCursorYRatio = bashar.util.clamp(0, cursorYRatio, 1);
                                 bashar.header.reportCursorY(clampedCursorYRatio);
                         });
+                        window.addEventListener("click", (event) => {
+                                let x = event.clientX;
+                                let y = event.clientY;
+                                if (document.elementFromPoint(x, y) === bashar.lexicon.svg) {
+                                        console.log("true");
+                                }
+                        });
                 },
                 reportCursorY: function(clampedCursorYRatio) {
                         bashar.header.opacifyStops(clampedCursorYRatio);
@@ -57,8 +64,8 @@ const bashar = {
                         let maxSparkleRangeX = parseFloat(bashar.lexicon.sparkleArea.getAttribute("width")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("width")) + minSparkleRangeX;
                         let minSparkleRangeY = parseFloat(bashar.lexicon.sparkleArea.getAttribute("y")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("height"));
                         let maxSparkleRangeY = parseFloat(bashar.lexicon.sparkleArea.getAttribute("height")) / 100 * parseFloat(bashar.lexicon.svg.getAttribute("height")) + minSparkleRangeY;
-                        let sparkleX = bashar.util.getRandomFrom(minSparkleRangeX, maxSparkleRangeX);
-                        let sparkleY = bashar.util.getRandomFrom(minSparkleRangeY, maxSparkleRangeY);
+                        let sparkleX = bashar.util.randomIntBetween(minSparkleRangeX, maxSparkleRangeX);
+                        let sparkleY = bashar.util.randomIntBetween(minSparkleRangeY, maxSparkleRangeY);
                         bashar.header.validateSparkle(sparkleX, sparkleY);
                         bashar.header.generateSparkle(sparkleX, sparkleY);
                 },
@@ -139,7 +146,7 @@ const bashar = {
                 clamp: function(min, number, max) {
                         return Math.max(min, Math.min(number, max));
                 },
-                getRandomFrom: function(min, max) {
+                randomIntBetween: function(min, max) {
                         min = Math.ceil(min);
                         max = Math.floor(max);
                         return Math.floor(Math.random() * (max - min) + min);
