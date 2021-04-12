@@ -49,9 +49,9 @@ const bashar = {
                         let sparkleZoneHalfHeight = parseFloat(bashar.lexicon.sparkleZone.getAttribute("height")) / 2;
                         let shiftingRate = parseInt(clampedCursorYRatio * 100) - sparkleZoneHalfHeight + "%";
                         bashar.lexicon.sparkleZone.setAttribute("y", shiftingRate);
-                        bashar.header.proposeSparkle();
+                        bashar.header.proposeSparkle(clampedCursorYRatio);
                 },
-                proposeSparkle: function() {
+                proposeSparkle: function(clampedCursorYRatio) {
                         let minSparkleRangeX =
                                 parseFloat(bashar.lexicon.sparkleZone.getAttribute("x")) / 100
                                 * parseFloat(bashar.lexicon.svg.getAttribute("width"));
@@ -68,9 +68,9 @@ const bashar = {
                                 + minSparkleRangeY;
                         let sparkleX = bashar.util.randomIntBetween(minSparkleRangeX, maxSparkleRangeX);
                         let sparkleY = bashar.util.randomIntBetween(minSparkleRangeY, maxSparkleRangeY);
-                        bashar.header.validateSparkle(sparkleX, sparkleY);
+                        bashar.header.validateSparkle(sparkleX, sparkleY, clampedCursorYRatio);
                 },
-                validateSparkle: function(sparkleX, sparkleY) {
+                validateSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
                         let validSparkle = false;
                         let validationZones = document.querySelectorAll("path");
                         validationZones.forEach((validationZone) => {
@@ -79,11 +79,13 @@ const bashar = {
                                 }
                         });
                         if (!validSparkle) { return; }
-                        bashar.header.acceptSparkle(sparkleX, sparkleY);
+                        bashar.header.acceptSparkle(sparkleX, sparkleY, clampedCursorYRatio);
                 },
-                acceptSparkle: function(sparkleX, sparkleY) {
+                acceptSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
                         bashar.lexicon.sparkle.setAttribute("cx", sparkleX);
                         bashar.lexicon.sparkle.setAttribute("cy", sparkleY);
+                        let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
+                        bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
                 },
         },
 
