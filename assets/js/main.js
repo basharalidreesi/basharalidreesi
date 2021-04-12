@@ -72,6 +72,11 @@ const bashar = {
                         bashar.header.generateSparkle(sparkleX, sparkleY);
                 },
                 validateSparkle: function(sparkleX, sparkleY) {
+                        if (document.elementFromPoint(sparkleX, sparkleY).getAttribute("href") === "#headerGroup") {
+                                console.log("true");
+                        } else {
+                                console.log("false");
+                        }
                         document.querySelectorAll("circle").forEach((circle) => {
                                 circle.remove();
                         });
@@ -83,51 +88,6 @@ const bashar = {
                         testPoint.setAttribute("cx", sparkleX);
                         testPoint.setAttribute("cy", sparkleY);
                         bashar.lexicon.headerSparkles.appendChild(testPoint);
-                        // if (elementAtPoint.isSameNode(bashar.lexicon.svg)) {
-                        //         console.log("true");
-                        //         return;
-                        // }
-                        // console.log("false");
-
-                        // paths.forEach((path) => {
-                        //         if (path.isPointInFill(testPoint)) {
-                        //                 console.log("true");
-                        //                 return;
-                        //         }
-                        // });
-                        // console.log("false");
-
-
-                        // if (elementAtPoint.isSameNode(document.querySelector("use")) || elementAtPoint.isSameNode(document.querySelectorAll("use")[2])) {
-                        //         console.log("true");
-                        //         console.log(elementAtPoint);
-                        //         return;
-                        // }
-                        // console.log("false");
-
-                //         let xPos = parseFloat(sparkleX) * bashar.lexicon.svg.getBoundingClientRect().width / 100 + bashar.lexicon.svg.getBoundingClientRect().left;
-                //         let yPos = parseFloat(sparkleY) * bashar.lexicon.svg.getBoundingClientRect().height / 100 + bashar.lexicon.svg.getBoundingClientRect().top;
-                //         let elementAtPoint = document.elementFromPoint(xPos, yPos);
-                //         const use = document.querySelectorAll("use");
-                //         // console.log(elementAtPoint);
-                //
-                //         document.querySelectorAll("circle").forEach((uses) => {
-                //                 uses.remove();
-                //         });
-                //
-                //         const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                //         point.setAttribute("fill", "transparent");
-                //         point.setAttribute("stroke", "red");
-                //         point.setAttribute("r", "10");
-                //         point.setAttribute("cx", xPos);
-                //         point.setAttribute("cy", yPos);
-                //         bashar.lexicon.headerSparkles.appendChild(point);
-                //
-                //
-                //         if (elementAtPoint.isSameNode(bashar.lexicon.svg)) {
-                //                 return true;
-                //         }
-                //         return false;
                 },
                 generateSparkle: function(sparkleX, sparkleY) {
                         const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
