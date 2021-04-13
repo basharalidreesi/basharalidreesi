@@ -91,14 +91,15 @@ const bashar = {
                                 bashar.util.randomFloatBetween(opacificationRate - 0.25, opacificationRate + 0.25),
                                 1.25
                         );
+                        bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
+                        bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
+                        if(clampedCursorYRatio >= 1 || clampedCursorYRatio <= 0) { return; }
                         bashar.lexicon.sparkle.setAttribute(
                                 "transform",
                                         "translate(" + sparkleX + ", " + sparkleY + ")"
                                         + " scale(" + scalingRate + ")"
                                         + " rotate(45)"
                         );
-                        bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
-                        bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
                 },
         },
 
