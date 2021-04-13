@@ -232,13 +232,18 @@ body {
 			max-width: calc(100vh - 4rem);
 			border-radius: 9999px 9999px 0 0;
 			overflow: hidden; // temp
-			@media only screen and (max-width: #{$breakpointW}), (max-height: #{$breakpointH}) {
+			@media only screen and (max-width: #{$breakpointW}) {
 				position: initial;
 				top: initial;
 				margin: 0;
 				margin-top: $du;
 				max-height: none;
 				max-width: none;
+			}
+			@media only screen and (max-height: #{$breakpointH}) {
+				position: initial;
+				top: initial;
+				max-height: none;
 			}
 			section {
 				width: 100%;
