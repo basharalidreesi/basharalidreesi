@@ -3,6 +3,8 @@
 
 @charset "UTF-8";
 
+$breakpoint:	512px;
+
 $font-size:	15px !default;
 $u:		1.00rem;
 $hu:		0.50rem;
@@ -161,6 +163,9 @@ body {
 			background: var(--seccol);
 			border: 1px solid var(--borcol);
 			pointer-events: auto;
+			@media only screen and (max-width: 512px) {
+				flex-flow: column nowrap;
+			}
 			& + ul {
 				border-top: 1px solid var(--borcol);
 				margin-top: $du;
