@@ -108,7 +108,7 @@ body {
 			border: 1px solid var(--borcol);
 		}
 	}
-	header {
+	& > header {
 		position: sticky;
 		top: $du;
 		left: 0;
@@ -119,12 +119,12 @@ body {
 	    -ms-user-select: none;
 		user-select: none;
 		z-index: 0;
-		h1 {
+		& > h1 {
 			flex: 1;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			a {
+			& > a {
 				display: block;
 				height: 100%;
 				width: 100%;
@@ -149,16 +149,16 @@ body {
 			}
 		}
 	}
-	nav,
-	main,
-	footer {
+	& > nav,
+	& > main,
+	& > footer {
 		position: relative;
 		z-index: 100;
 		-webkit-transform: translate3d(0,0,0);
 	}
-	nav {
+	& > nav {
 		pointer-events: none;
-		ul {
+		& > ul {
 			display: flex;
 			list-style: none;
 			list-style-position: inside;
@@ -215,20 +215,20 @@ body {
 		@media only screen and (max-width: #{$breakpointW}) {
 			flex-flow: column nowrap;
 		}
-		article,
-		aside {
+		& > article,
+		& > aside {
 			flex: 1;
 			background: var(--seccol);
 			border: 1px solid var(--borcol);
 			pointer-events: auto;
 		}
-		article {
+		& > article {
 			margin-right: $u;
 			@media only screen and (max-width: #{$breakpointW}) {
 				margin: 0;
 			}
 		}
-		aside {
+		& > aside {
 			position: sticky;
 			top: $du;
 			display: flex;
@@ -249,7 +249,7 @@ body {
 				top: initial;
 				max-height: none;
 			}
-			section {
+			& > section {
 				width: 100%;
 				&:first-of-type {
 					flex: 0;
@@ -265,5 +265,5 @@ body {
 			}
 		}
 	}
-	footer { /* none yet! */ }
+	& > footer { /* none yet! */ }
 }
