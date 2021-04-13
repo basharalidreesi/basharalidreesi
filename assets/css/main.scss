@@ -165,7 +165,6 @@ body {
 			// background: var(--seccol);
 			border-top: 2.5px solid var(--borcol);
 			border-bottom: 2.5px solid var(--borcol);
-			box-shadow: inset 0 0 $u $u var(--pricol);
 			pointer-events: auto;
 			@media only screen and (max-width: #{$breakpointW}) {
 				flex-flow: column nowrap;
@@ -175,6 +174,7 @@ body {
 			}
 			& > li {
 				flex: 1;
+				box-shadow: inset 0 0 $u $u var(--pricol);
 				// box-shadow: none;
 				// transition: background-color 0.25s, color 0.25s, box-shadow 0.25s;
 				& + li {
