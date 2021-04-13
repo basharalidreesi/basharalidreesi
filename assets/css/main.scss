@@ -142,7 +142,8 @@ body {
 						}
 					}
 					svg {
-						
+						overflow: visible;
+						pointer-events: none;
 					}
 				}
 			}
