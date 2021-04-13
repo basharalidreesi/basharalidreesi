@@ -124,7 +124,7 @@ body {
 				height: 100%;
 				width: 100%;
 				cursor: crosshair;
-				svg {
+				& > svg {
 					display: block;
 					height: 100%;
 					width: 100%;
@@ -140,6 +140,9 @@ body {
 						@media (any-hover: none) {
 							fill: var(--texcol);
 						}
+					}
+					svg {
+						
 					}
 				}
 			}

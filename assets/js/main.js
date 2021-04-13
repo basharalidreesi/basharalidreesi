@@ -72,7 +72,7 @@ const bashar = {
                 },
                 validateSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
                         let validSparkle = false;
-                        let validationZones = document.querySelectorAll("path");
+                        let validationZones = document.querySelectorAll("#headerMain > g > *");
                         validationZones.forEach((validationZone) => {
                                 if (validationZone.isPointInFill(new DOMPoint(sparkleX, sparkleY))) {
                                         validSparkle = true;
@@ -84,7 +84,7 @@ const bashar = {
                 acceptSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
                         // bashar.lexicon.sparkle.setAttribute("x", sparkleX);
                         // bashar.lexicon.sparkle.setAttribute("y", sparkleY);
-                        bashar.lexicon.sparkle.setAttribute("transform", "translate(" + (sparkleX - bashar.lexicon.sparkle.getBoundingClientRect().width) + ", " + (sparkleY - bashar.lexicon.sparkle.getBoundingClientRect().height) + ") scale(0.2, 0.2)");
+                        bashar.lexicon.sparkle.setAttribute("transform", "translate(" + (sparkleX - 50) + ", " + (sparkleY - 50) + ")");
                         let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
                         bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
                         bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
