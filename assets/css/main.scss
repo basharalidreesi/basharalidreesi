@@ -249,7 +249,8 @@ body {
 				border-radius: 9999px 9999px 0 0;
 				background: lightcyan;
 				@media only screen and (max-width: #{$breakpoint}) {
-					height: calc(50vw - #{$du});
+					min-height: calc(50vw - #{$du});
+					max-height: calc(50vw - #{$du});
 				}
 			}
 			section:last-of-type {
