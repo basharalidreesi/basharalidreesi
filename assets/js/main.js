@@ -90,8 +90,8 @@ const bashar = {
                         bashar.lexicon.sparkle.setAttribute(
                                 "transform",
                                         "translate(" + sparkleX + ", " + sparkleY + ")"
-                                        + "scale(" + scalingRate + ")"
-                                        + "rotate(" + bashar.util.randomIntBetween(0, 45) + ")"
+                                        + " scale(" + scalingRate + ")"
+                                        + " rotate(" + bashar.util.randomIntBetween(0, 45) + ")"
                         );
                         bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
                         bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
