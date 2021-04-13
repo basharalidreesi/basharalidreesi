@@ -163,7 +163,7 @@ body {
 			background: var(--seccol);
 			border: 1px solid var(--borcol);
 			pointer-events: auto;
-			@media only screen and (max-width: 512px) {
+			@media only screen and (max-width: #{$breakpoint}) {
 				flex-flow: column nowrap;
 			}
 			& + ul {
