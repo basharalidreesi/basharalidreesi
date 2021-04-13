@@ -87,7 +87,7 @@ const bashar = {
                         bashar.lexicon.sparkle.setAttribute("transform", "translate(" + sparkleX + ", " + sparkleY + ") rotate(45)");
                         // bashar.lexicon.sparkle.style.transform = "rotate(" + bashar.util.randomIntBetween(0, 45) + "deg)";
                         let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
-                        // bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
+                        bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
                         bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
                 },
         },
