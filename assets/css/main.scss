@@ -246,8 +246,8 @@ body {
 			section:first-of-type {
 				min-height: calc(25vw - #{$u});
 				max-height: calc(25vw - #{$u});
+				border-bottom: 1px solid var(--borcol);
 				border-radius: 9999px 9999px 0 0;
-				background: lightcyan;
 				@media only screen and (max-width: #{$breakpoint}) {
 					min-height: calc(50vw - #{$du});
 					max-height: calc(50vw - #{$du});
