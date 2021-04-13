@@ -182,10 +182,6 @@ body {
 						border-top: 1px solid var(--borcol);
 					}
 				}
-				&.--current {
-					// color: var(--seccol);
-					// background: var(--texcol);
-				}
 				& > a {
 					display: block;
 					padding: $hu;
@@ -204,6 +200,10 @@ body {
 							box-shadow: 0 0 $u $du var(--seccol);
 						}
 					}
+				}
+				&.--current {
+					--pricol: var(--seccol);
+					background: var(--seccol);
 				}
 			}
 		}
