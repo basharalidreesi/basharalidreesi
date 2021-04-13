@@ -22,6 +22,7 @@ $nqdu:		-4.00rem;
 :root {
 	--pricol: #d9d9d9;
 	--seccol: whitesmoke;
+	--tercol: azure;
 	--borcol: #000;
 	--texcol: #000;
 }
@@ -218,7 +219,7 @@ body {
 		& > article,
 		& > aside {
 			flex: 1;
-			background: var(--seccol);
+			background: var(--tercol);
 			border: 1px solid var(--borcol);
 			pointer-events: auto;
 		}
