@@ -231,7 +231,7 @@ body {
 			max-height: calc(100vh - 4rem);
 			// max-width: calc(100vh - 4rem); // debug
 			border-radius: 9999px 9999px 0 0;
-			overflow: hidden; // temp
+			overflow: hidden;
 			@media only screen and (max-width: #{$breakpointW}) {
 				position: initial;
 				top: initial;
