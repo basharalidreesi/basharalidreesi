@@ -224,6 +224,8 @@ body {
 		aside {
 			position: sticky;
 			top: $du;
+			display: flex;
+			flex-flow: column nowrap;
 			margin-left: $u;
 			max-height: calc(100vh - 4rem);
 			max-width: calc(100vh - 4rem);
@@ -238,13 +240,19 @@ body {
 				max-width: none;
 			}
 			section {
-
+				width: 100%;
 			}
 			section:first-of-type {
-				
+				height: calc(25vw - #{$u});
+				border-radius: 9999px 9999px 0 0;
+				background: lightcyan;
+				@media only screen and (max-width: #{$breakpoint}) {
+					height: calc(50vw - #{$du});
+				}
 			}
 			section:last-of-type {
-
+				flex: 1;
+				overflow: auto;
 			}
 		}
 	}
