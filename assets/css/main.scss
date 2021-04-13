@@ -69,7 +69,7 @@ a[href*="//"]:not([href*="{{- site.url -}}{{- site.baseurl -}}"]), a[href*="mail
 }
 
 a:focus {
-	text-decoration: underline;
+	// text-decoration: underline; // todo
 }
 
 :focus {
@@ -205,6 +205,9 @@ body {
 		flex: 1;
 		display: flex;
 		pointer-events: none;
+		@media only screen and (max-width: #{$breakpoint}) {
+			flex-flow: column nowrap;
+		}
 		article,
 		aside {
 			flex: 1;
