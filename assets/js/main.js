@@ -87,12 +87,12 @@ const bashar = {
                 acceptSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
                         let opacificationRate = bashar.util.parabola(-4, clampedCursorYRatio, -0.5, 1);
                         let scalingRate = bashar.util.randomIntBetween(opacificationRate - 0.25, opacificationRate + 0.25);
-                        bashar.lexicon.sparkle.setAttribute
-                                ("transform",
+                        bashar.lexicon.sparkle.setAttribute(
+                                "transform",
                                         "translate(" + sparkleX + ", " + sparkleY + ")"
                                         + "scale(" + scalingRate + ")"
                                         + "rotate(" + bashar.util.randomIntBetween(0, 45) + ")"
-                                );
+                        );
                         bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
                         bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
                 },
