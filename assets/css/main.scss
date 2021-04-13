@@ -77,12 +77,14 @@ a:focus {
 	outline: none;
 }
 
-.--default {
-	font-size: $u;
-	font-weight: 400;
-	line-height: 1.0;
-	color: var(--texcol);
-        background: var(--pricol);
+body {
+	&.--default {
+		font-size: $u;
+		font-weight: 400;
+		line-height: 1.0;
+		color: var(--texcol);
+	        background: var(--pricol);
+	}
 }
 
 .mother {
