@@ -3,7 +3,8 @@
 
 @charset "UTF-8";
 
-$breakpoint:	768px;
+$breakpointW:	768px;
+$breakpointH:	50vw;
 
 $font-size:	15px !default;
 $u:		1.00rem;
@@ -163,7 +164,7 @@ body {
 			background: var(--seccol);
 			border: 1px solid var(--borcol);
 			pointer-events: auto;
-			@media only screen and (max-width: #{$breakpoint}) {
+			@media only screen and (max-width: #{$breakpointW}) {
 				flex-flow: column nowrap;
 			}
 			& + ul {
@@ -176,7 +177,7 @@ body {
 				transition: background-color 0.25s, color 0.25s, box-shadow 0.25s;
 				& + li {
 					border-left: 1px solid var(--borcol);
-					@media only screen and (max-width: #{$breakpoint}) {
+					@media only screen and (max-width: #{$breakpointW}) {
 						border: none;
 						border-top: 1px solid var(--borcol);
 					}
@@ -205,7 +206,7 @@ body {
 		flex: 1;
 		display: flex;
 		pointer-events: none;
-		@media only screen and (max-width: #{$breakpoint}) {
+		@media only screen and (max-width: #{$breakpointW}) {
 			flex-flow: column nowrap;
 		}
 		article,
@@ -217,7 +218,7 @@ body {
 		}
 		article {
 			margin-right: $u;
-			@media only screen and (max-width: #{$breakpoint}) {
+			@media only screen and (max-width: #{$breakpointW}) {
 				margin: 0;
 			}
 		}
@@ -231,7 +232,8 @@ body {
 			max-width: calc(100vh - 4rem);
 			border-radius: 9999px 9999px 0 0;
 			overflow: hidden; // temp
-			@media only screen and (max-width: #{$breakpoint}) {
+			@media only screen and (max-width: #{$breakpointW}),
+			@media only screen and (max-height: #{$breakpointH}) {
 				position: initial;
 				top: initial;
 				margin: 0;
