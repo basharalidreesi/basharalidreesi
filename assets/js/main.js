@@ -88,7 +88,7 @@ const bashar = {
                         let opacificationRate = bashar.util.parabola(-4, clampedCursorYRatio, -0.5, 1);
                         let scalingRate = bashar.util.clamp(
                                 0,
-                                bashar.util.randomFloatBetween(opacificationRate - 0.25, opacificationRate + 0.25);,
+                                bashar.util.randomFloatBetween(opacificationRate - 0.25, opacificationRate + 0.25),
                                 1.25
                         );
                         bashar.lexicon.sparkle.setAttribute(
