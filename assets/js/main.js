@@ -18,6 +18,11 @@ const bashar = {
 	header: {
 		initHeaderScripts: function() {
 			bashar.header.trackCursorY();
+			bashar.header.trackScrollY();
+		},
+		trackScrollY: function() {
+			if (bashar.util.deviceCanHover) { return; }
+			console.log("trackScrollY init");
 		},
 		trackCursorY: function() {
 			window.addEventListener("mousemove", (event) => {
