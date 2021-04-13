@@ -73,8 +73,11 @@ const bashar = {
                 validateSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
                         let validSparkle = false;
                         let validationZones = document.querySelectorAll("#headerMain > g > *");
+                        let validationPoint = bashar.lexicon.svg.createSVGPoint();
+                        validationPoint.x = sparkleX;
+                        validationPoint.y = sparkleY;
                         validationZones.forEach((validationZone) => {
-                                if (validationZone.isPointInFill(new DOMPoint(sparkleX, sparkleY))) {
+                                if (validationZone.isPointInFill(validationPoint)) {
                                         validSparkle = true;
                                 }
                         });
@@ -83,11 +86,7 @@ const bashar = {
                 },
                 acceptSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
                         let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
-                        // bashar.lexicon.sparkle.setAttribute("x", sparkleX);
-                        // bashar.lexicon.sparkle.setAttribute("y", sparkleY);
                         bashar.lexicon.sparkle.setAttribute("transform", "translate(" + sparkleX + ", " + sparkleY + ") scale(" + opacificationRate + ") rotate(45)");
-                        // bashar.lexicon.sparkle.style.transform = "rotate(" + bashar.util.randomIntBetween(0, 45) + "deg)";
-
                         bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
                         bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
                 },
