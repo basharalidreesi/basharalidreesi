@@ -36,7 +36,7 @@ const bashar = {
                         bashar.header.shiftSparkleZone(clampedCursorYRatio);
                 },
                 opacifyStops: function(clampedCursorYRatio) {
-                        let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
+                        let opacificationRate = bashar.util.parabola(-4, clampedCursorYRatio, -0.5, 1);
                         bashar.lexicon.fStop.setAttribute("stop-opacity", opacificationRate);
                         bashar.lexicon.sStop.setAttribute("stop-opacity", opacificationRate);
                 },
@@ -85,8 +85,9 @@ const bashar = {
                         bashar.header.acceptSparkle(sparkleX, sparkleY, clampedCursorYRatio);
                 },
                 acceptSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
-                        let opacificationRate = -4 * ((clampedCursorYRatio - 0.5) ** 2) + 1;
-                        bashar.lexicon.sparkle.setAttribute("transform", "translate(" + sparkleX + ", " + sparkleY + ") scale(" + opacificationRate + ") rotate(45)");
+                        let opacificationRate = bashar.util.parabola(-4, clampedCursorYRatio, -0.5, 1);
+                        let scalingRate = bashar.util.randomIntBetween(opacificationRate - 0.25, opacificationRate + 0.25);
+                        bashar.lexicon.sparkle.setAttribute("transform", "translate(" + sparkleX + ", " + sparkleY + ") scale(" + scalingRate + ") rotate(" + bashar.util.randomIntBetween(0, 45) + ")");
                         bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
                         bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
                 },
@@ -100,6 +101,10 @@ const bashar = {
                 },
                 clamp: function(min, number, max) {
                         return Math.max(min, Math.min(number, max));
+                },
+                parabola: function(a, x, b, c) {
+                        /* https://www.desmos.com/calculator */
+                        return (a * (x + b) ** 2 + c);`
                 },
                 randomIntBetween: function(min, max) {
                         min = Math.ceil(min);
