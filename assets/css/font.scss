@@ -4,6 +4,62 @@
 @charset "UTF-8";
 
 @font-face {
+        font-family: "Avara";
+        src:
+                url(/assets/fonts/avara/avara-bold.woff) format("woff"),
+                url(/assets/fonts/avara/avara-bold.woff2) format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: block;
+}
+@font-face {
+        font-family: "Avara";
+        src:
+                url(/assets/fonts/avara/avara-bold_italic.woff) format("woff"),
+                url(/assets/fonts/avara/avara-bold_italic.woff2) format("woff2");
+        font-weight: 700;
+        font-style: italic;
+        font-display: block;
+}
+@font-face {
+        font-family: "Avara";
+        src:
+                url(/assets/fonts/avara/avara-black.woff) format("woff"),
+                url(/assets/fonts/avara/avara-black.woff2) format("woff2");
+        font-weight: 900;
+        font-style: normal;
+        font-display: block;
+}
+
+@font-face {
+        font-family: "Happy Times at the IKOB";
+        src:
+                url(/assets/fonts/happy_times_at_the_ikob/happy_times_at_the_ikob-regular.woff) format("woff"),
+                url(/assets/fonts/happy_times_at_the_ikob/happy_times_at_the_ikob-regular.woff2) format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: block;
+}
+@font-face {
+        font-family: "Happy Times at the IKOB";
+        src:
+                url(/assets/fonts/happy_times_at_the_ikob/happy_times_at_the_ikob-italic.woff) format("woff"),
+                url(/assets/fonts/happy_times_at_the_ikob/happy_times_at_the_ikob-italic.woff2) format("woff2");
+        font-weight: 400;
+        font-style: italic;
+        font-display: block;
+}
+@font-face {
+        font-family: "Happy Times at the IKOB";
+        src:
+                url(/assets/fonts/happy_times_at_the_ikob/happy_times_at_the_ikob-bold.woff) format("woff"),
+                url(/assets/fonts/happy_times_at_the_ikob/happy_times_at_the_ikob-bold.woff2) format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: block;
+}
+
+@font-face {
         font-family: "MD IO";
         src:
                 url(/assets/fonts/md_io/md_io-regular.woff) format("woff"),
@@ -12,13 +68,22 @@
         font-style: normal;
         font-display: block;
 }
-
 @font-face {
         font-family: "MD IO";
         src:
                 url(/assets/fonts/md_io/md_io-bold.woff) format("woff"),
                 url(/assets/fonts/md_io/md_io-bold.woff2) format("woff2");
         font-weight: 700;
+        font-style: normal;
+        font-display: block;
+}
+
+@font-face {
+        font-family: "Mister Pixel";
+        src:
+                url(/assets/fonts/mister_pixel/mister_pixel-regular.woff) format("woff"),
+                url(/assets/fonts/mister_pixel/mister_pixel-regular.woff2) format("woff2");
+        font-weight: 400;
         font-style: normal;
         font-display: block;
 }
