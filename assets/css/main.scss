@@ -204,7 +204,7 @@ body {
 					overflow: hidden;
 					& > span {
 						background: var(--pricol);
-						box-shadow: inset 0 0 $u $du var(--pricol);
+						box-shadow: 0 0 $u $du var(--pricol);
 					}
 				}
 			}
