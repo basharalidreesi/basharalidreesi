@@ -86,12 +86,12 @@ const bashar = {
                 },
                 acceptSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
                         let opacificationRate = bashar.util.parabola(-4, clampedCursorYRatio, -0.5, 1);
-                        let scalingRate = bashar.util.randomIntBetween(opacificationRate - 0.25, opacificationRate + 0.25);
+                        let scalingRate = bashar.util.randomFloatBetween(opacificationRate - 0.25, opacificationRate + 0.25);
                         bashar.lexicon.sparkle.setAttribute(
                                 "transform",
                                         "translate(" + sparkleX + ", " + sparkleY + ")"
                                         + " scale(" + scalingRate + ")"
-                                        + " rotate(" + bashar.util.randomIntBetween(0, 45) + ")"
+                                        + " rotate(45)"
                         );
                         bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
                         bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
@@ -109,12 +109,15 @@ const bashar = {
                 },
                 parabola: function(a, x, b, c) {
                         /* https://www.desmos.com/calculator */
-                        return (a * (x + b) ** 2 + c);
+                        return a * (x + b) ** 2 + c;
                 },
                 randomIntBetween: function(min, max) {
                         min = Math.ceil(min);
                         max = Math.floor(max);
                         return Math.floor(Math.random() * (max - min) + min);
+                },
+                randomFloatBetween: function(min, max) {
+                        return Math.random() * (max - min) + min;
                 },
                 deviceCanHover: window.matchMedia("(any-hover: hover)").matches,
                 debug: false,
