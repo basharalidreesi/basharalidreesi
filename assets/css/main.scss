@@ -229,7 +229,7 @@ body {
 			flex-flow: column nowrap;
 			margin-left: $u;
 			max-height: calc(100vh - 4rem);
-			// max-width: calc(100vh - 4rem);
+			// max-width: calc(100vh - 4rem); // debug
 			border-radius: 9999px 9999px 0 0;
 			overflow: hidden; // temp
 			@media only screen and (max-width: #{$breakpointW}) {
@@ -238,7 +238,7 @@ body {
 				margin: 0;
 				margin-top: $du;
 				max-height: none;
-				// max-width: none;
+				// max-width: none; // debug
 			}
 			@media only screen and (max-height: #{$breakpointH}) {
 				position: initial;
