@@ -197,11 +197,11 @@ body {
 						background: var(--pricol);
 						box-shadow: 0 0 $u $u var(--pricol);
 						transition: background-color 0.25s, box-shadow 0.25s;
-						@media (hover: hover) {
-							a:hover & {
-								background: var(--seccol);
-								box-shadow: 0 0 $u $du var(--seccol);
-							}
+					}
+					@media (any-hover: hover) {
+						&:hover > span {
+							background: var(--seccol);
+							box-shadow: 0 0 $u $du var(--seccol);
 						}
 					}
 				}
