@@ -244,6 +244,7 @@ body {
 				width: 100%;
 			}
 			section:first-of-type {
+				min-height: calc(25vw - #{$u});
 				max-height: calc(25vw - #{$u});
 				border-radius: 9999px 9999px 0 0;
 				background: lightcyan;
