@@ -109,7 +109,7 @@ const bashar = {
                 },
                 parabola: function(a, x, b, c) {
                         /* https://www.desmos.com/calculator */
-                        return (a * (x + b) ** 2 + c);`
+                        return (a * (x + b) ** 2 + c);
                 },
                 randomIntBetween: function(min, max) {
                         min = Math.ceil(min);
