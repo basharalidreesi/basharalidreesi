@@ -240,20 +240,15 @@ body {
 				max-width: none;
 			}
 			section {
-				flex: 1;
 				width: 100%;
 				&:first-of-type {
-					// min-height: calc(25vw - #{$u});
-					// max-height: calc(25vw - #{$u});
+					flex: 0;
 					margin-top: 50%;
 					border-bottom: 1px solid var(--borcol);
 					border-radius: 9999px 9999px 0 0;
-					@media only screen and (max-width: #{$breakpoint}) {
-						// min-height: calc(50vw - #{$du});
-						// max-height: calc(50vw - #{$du});
-					}
 				}
 				&:last-of-type {
+					flex: 1;
 					overflow: auto;
 				}
 			}
