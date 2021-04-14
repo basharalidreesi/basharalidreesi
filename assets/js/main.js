@@ -154,16 +154,17 @@ const bashar = {
 	},
 
 	util: {
-		timer: 0,
+		dTimer: 0,
 		debounce: function(callback, delay) {
-			clearTimeout(bashar.util.timer);
-			return bashar.util.timer = setTimeout(callback, delay);
+			clearTimeout(bashar.util.dTimer);
+			return bashar.util.dTimer = setTimeout(callback, delay);
 		},
+		tTimer: 0,
 		throttle: function(callback, delay) {
-			if (bashar.util.timer) { return; }
-			return bashar.util.timer = setTimeout(() => {
+			if (bashar.util.tTimer) { return; }
+			return bashar.util.tTimer = setTimeout(() => {
 				callback();
-				bashar.util.timer = undefined;
+				bashar.util.tTimer = 0;
 			}, delay);
 		},
 		clamp: function(min, number, max) {
@@ -188,9 +189,3 @@ const bashar = {
 }
 
 bashar.initAllScripts();
-
-window.addEventListener("click", () => {
-	bashar.util.throttle(() => {
-		console.log("throttle");
-	}, 250);
-});
