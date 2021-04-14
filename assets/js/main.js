@@ -136,6 +136,11 @@ const bashar = {
 		},
 		acceptFlare: function(flareX, flareY) {
 			let intensity = bashar.util.randomFloatBetween(0.5, 1);
+			if (bashar.util.matchMedia("768px")) {
+				let scale = intensity * 2;
+			} else {
+				let scale = intensity;
+			}
 			bashar.lexicon.sparkle.setAttribute("fill-opacity", intensity);
 			bashar.lexicon.sparkle.setAttribute("stroke-opacity", intensity);
 			bashar.lexicon.sparkle.setAttribute(
@@ -144,7 +149,7 @@ const bashar = {
 					+ " scale(" + intensity + ")"
 					+ " rotate(45)"
 			);
-			const switches = document.querySelectorAll("switch");
+			let switches = document.querySelectorAll("switch");
 			switches[1].style.fill = "url(#flareGradient)";
 			switches[1].style.stroke = "url(#flareGradient)";
 			bashar.lexicon.flare.setAttribute("fx", flareX);
@@ -187,7 +192,9 @@ const bashar = {
 			return Math.random() * (max - min) + min;
 		},
 		deviceCanHover: window.matchMedia("(any-hover: hover)").matches,
-		debug: false,
+		queryMax: function(query) {
+			return window.matchMedia("(max-width: " + query + ")").matches;
+		},
 	},
 
 }
