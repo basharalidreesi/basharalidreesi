@@ -111,7 +111,7 @@ const bashar = {
 				if (bashar.util.deviceCanHover) { return; }
 				bashar.header.proposeFlare();
 			});
-			window.addEventListener("keydown" (event) => {
+			window.addEventListener("keydown", (event) => {
 				switch (event.code) {
 					case "ArrowUp":
 					case "ArrowDown":
@@ -119,7 +119,7 @@ const bashar = {
 						break;
 					default:
 						// nothing
-				}	
+				}
 			});
 		},
 		proposeFlare: function() {
