@@ -136,7 +136,7 @@ const bashar = {
 		},
 		acceptFlare: function(flareX, flareY) {
 			let intensity = bashar.util.randomFloatBetween(0.5, 1);
-			if (bashar.util.matchMedia("768px")) {
+			if (bashar.util.queryMax("768px")) {
 				let scale = intensity * 2;
 			} else {
 				let scale = intensity;
