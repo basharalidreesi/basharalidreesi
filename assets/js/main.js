@@ -110,9 +110,9 @@ const bashar = {
 		},
 		proposeFlare: function() {
 			let minFlareRangeX = 0;
-			let maxFlareRangeX = 100;
+			let maxFlareRangeX = parseFloat(bashar.lexicon.svg.getAttribute("width"));
 			let minFlareRangeY = 0;
-			let maxFlareRangeY = 100;
+			let maxFlareRangeY = parseFloat(bashar.lexicon.svg.getAttribute("height"));
 			let flareX = bashar.util.randomIntBetween(minFlareRangeX, maxFlareRangeX);
 			let flareY = bashar.util.randomIntBetween(minFlareRangeY, maxFlareRangeY);
 			bashar.header.validateFlare(flareX, flareY);
