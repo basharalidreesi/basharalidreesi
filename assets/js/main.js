@@ -29,7 +29,7 @@ const bashar = {
 				let cursorYRatio = (cursorYPos - headerOffsetTop) / headerHeight;
 				let clampedCursorYRatio = bashar.util.clamp(0, cursorYRatio, 1);
 				bashar.header.reportCursorY(clampedCursorYRatio);
-			});
+			}, { passive: true; });
 		},
 		reportCursorY: function(clampedCursorYRatio) {
 			bashar.header.opacifyStops(clampedCursorYRatio);
@@ -106,7 +106,7 @@ const bashar = {
 			window.addEventListener("scroll", () => {
 				if (bashar.util.deviceCanHover) { return; }
 				bashar.header.proposeFlare();
-			});
+			}, { passive: true; });
 		},
 		proposeFlare: function() {
 			let minFlareRangeX = 0;
