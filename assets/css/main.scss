@@ -26,11 +26,11 @@ $nqdu:		-4.00rem;
 	--borcol: blue; // #000
 	--texcol: blue; // #000
 	@media (prefers-color-scheme: dark) {
-		--pricol: grey;		// #
-		--seccol: lightcyan;	// #
+		--pricol: lightgrey;	// #
+		--seccol: whitesmoke;	// #
 		--tercol: transparent;	// #
-		--borcol: whitesmoke;	// #
-		--texcol: whitesmoke;	// #
+		--borcol: black;	// #
+		--texcol: black;	// #
 	}
 }
 
