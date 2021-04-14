@@ -149,7 +149,7 @@ const bashar = {
 			bashar.lexicon.flare.setAttribute("fy", flareY);
 			bashar.lexicon.flare.setAttribute("cx", flareX);
 			bashar.lexicon.flare.setAttribute("cy", flareY);
-			bashar.lexicon.flare.setAttribute("r", parseInt(intensity * 100) + "%");
+			bashar.lexicon.flare.setAttribute("r", bashar.util.clamp(10, parseInt(intensity * 100), 25) + "%");
 		},
 	},
 
