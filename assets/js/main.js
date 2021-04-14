@@ -136,7 +136,7 @@ const bashar = {
 		},
 		acceptFlare: function(flareX, flareY) {
 			let intensity = bashar.util.randomFloatBetween(0.5, 1);
-			if (bashar.util.queryMax("768px")) {
+			if (bashar.util.queryMax("(max-width: 768px)")) {
 				let scale = intensity * 2;
 			} else {
 				let scale = intensity;
@@ -193,7 +193,7 @@ const bashar = {
 		},
 		deviceCanHover: window.matchMedia("(any-hover: hover)").matches,
 		queryMax: function(query) {
-			return window.matchMedia("(max-width: " + query + ")").matches;
+			return window.matchMedia(query).matches;
 		},
 	},
 
