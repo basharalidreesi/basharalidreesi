@@ -115,8 +115,6 @@ const bashar = {
 					+ " scale(" + scalingRate + ")"
 					+ " rotate(45)"
 			);
-			bashar.lexicon.switches[1].style.fill = "url(#sparkleGradient)";
-			bashar.lexicon.switches[1].style.stroke = "url(#sparkleGradient)";
 		},
 		proposeFlare: function() {
 			let minFlareRangeX = 0;
