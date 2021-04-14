@@ -103,7 +103,7 @@ const bashar = {
 			);
 			if (bashar.util.queryMedia("(max-width: 768px)")) {
 				bashar.lexicon.sparkle.setAttribute("stroke-width", "2.5px");
-				scalingRate = scalingRate * 2;
+				scalingRate = scalingRate * 1.5;
 			}
 			bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
 			bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
