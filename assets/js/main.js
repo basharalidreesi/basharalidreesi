@@ -18,7 +18,7 @@ const bashar = {
 	header: {
 		initHeaderScripts: function() {
 			bashar.header.trackCursorY();
-			bashar.header.trackScrollY();
+			bashar.header.trackScroll();
 		},
 		trackCursorY: function() {
 			window.addEventListener("mousemove", (event) => {
@@ -102,11 +102,37 @@ const bashar = {
 					+ " rotate(45)"
 			);
 		},
-		trackScrollY: function() {
+		trackScroll: function() {
 			window.addEventListener("scroll", (event) => {
 				if (bashar.util.deviceCanHover) { return; }
-				console.log("trackScrollY init");
+				bashar.header.proposeFlare();
 			});
+		},
+		proposeFlare: function() {
+			let minFlareRangeX = 0;
+			let maxFlareRangeX = 100%;
+			let minFlareRangeY = 0;
+			let maxFlareRangeY = 100%;
+			let flareX = bashar.util.randomIntBetween(minFlareRangeX, maxFlareRangeX);
+			let flareY = bashar.util.randomIntBetween(minFlareRangeY, maxFlareRangeY);
+			bashar.header.validateFlare(flareX, flareY);
+		},
+		validateFlare: function(flareX, flareY) {
+			let validFlare = false;
+			let validationZones = document.querySelectorAll("#headerMain > g > *");
+			let validationPoint = bashar.lexicon.svg.createSVGPoint();
+			validationPoint.x = flareX;
+			validationPoint.y = flareY;
+			validationZones.forEach((validationZone) => {
+				if (validationZone.isPointInFill(validationPoint)) {
+					validFlare = true;
+				}
+			});
+			if (!validFlare) { return; }
+			bashar.header.acceptFlare(flareX, flareY);
+		},
+		acceptFlare: function(flareX, flareY) {
+			console.log("Flare accepted at " + flareX + ", " + flareY);
 		},
 	},
 
