@@ -105,7 +105,7 @@ const bashar = {
 		trackScroll: function() {
 			window.addEventListener("scroll", (event) => {
 				if (bashar.util.deviceCanHover) { return; }
-				bashar.header.proposeFlare();
+				bashar.util.throttle(bashar.header.proposeFlare(), 100);
 			});
 		},
 		proposeFlare: function() {
@@ -141,6 +141,18 @@ const bashar = {
 		debounce: function(callback, delay) {
 			clearTimeout(bashar.util.timer);
 			return bashar.util.timer = setTimeout(callback, delay);
+		},
+		throttle: function(callback, delay) {
+			let scheduled = false;
+			return function (...args) {
+				if (!scheduled) {
+					callback(...args);
+					scheduled = true;
+					setTimeout(() => {
+						scheduled = false;
+					}, delay);
+				}
+			}
 		},
 		clamp: function(min, number, max) {
 			return Math.max(min, Math.min(number, max));
