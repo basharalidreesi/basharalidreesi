@@ -9,6 +9,7 @@ const bashar = {
 		sStop: document.getElementById("sStop"),
 		sparkleZone: document.getElementById("sparkleZone"),
 		sparkle: document.getElementById("sparkle"),
+		flare: document.getElementById("flareGradient"),
 	},
 
 	initAllScripts: function() {
@@ -29,6 +30,12 @@ const bashar = {
 				let cursorYRatio = (cursorYPos - headerOffsetTop) / headerHeight;
 				let clampedCursorYRatio = bashar.util.clamp(0, cursorYRatio, 1);
 				bashar.header.reportCursorY(clampedCursorYRatio);
+			}, { passive: true });
+		},
+		trackScroll: function() {
+			window.addEventListener("scroll", () => {
+				if (bashar.util.deviceCanHover) { return; }
+				bashar.header.proposeFlare();
 			}, { passive: true });
 		},
 		reportCursorY: function(clampedCursorYRatio) {
@@ -102,12 +109,6 @@ const bashar = {
 					+ " rotate(45)"
 			);
 		},
-		trackScroll: function() {
-			window.addEventListener("scroll", () => {
-				if (bashar.util.deviceCanHover) { return; }
-				bashar.header.proposeFlare();
-			}, { passive: true });
-		},
 		proposeFlare: function() {
 			let minFlareRangeX = 0;
 			let maxFlareRangeX = parseFloat(bashar.lexicon.svg.getAttribute("width"));
@@ -141,6 +142,12 @@ const bashar = {
 					+ " scale(" + intensity + ")"
 					+ " rotate(45)"
 			);
+			const switches = document.querySelectorAll("switch");
+			switches[1].style.fill = "url(#sparkleGradient)";
+			switches[1].style.stroke = "url(#sparkleGradient)";
+			bashar.lexicon.flare.setAttribute("cx", flareX);
+			bashar.lexicon.flare.setAttribute("cy", flareX);
+			bashar.lexicon.flare.setAttribute("r", parseInt(intensity * 100) + "%");
 		},
 	},
 
