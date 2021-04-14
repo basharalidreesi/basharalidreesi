@@ -159,6 +159,14 @@ const bashar = {
 			clearTimeout(bashar.util.timer);
 			return bashar.util.timer = setTimeout(callback, delay);
 		},
+		scheduled: false,
+		throttle: function(callback, delay) {
+			if (timer) { return; }
+			return timer = setTimeout(() => {
+				callback();
+				timer = undefined;
+			}, delay);
+		},
 		clamp: function(min, number, max) {
 			return Math.max(min, Math.min(number, max));
 		},
@@ -181,3 +189,9 @@ const bashar = {
 }
 
 bashar.initAllScripts();
+
+window.addEventListener("click", () => {
+	bashar.util.throttle(() => {
+		console.log("throttle");
+	}, 250);
+});
