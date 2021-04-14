@@ -137,16 +137,16 @@ const bashar = {
 		acceptFlare: function(flareX, flareY) {
 			let intensity = bashar.util.randomFloatBetween(0.5, 1);
 			var scale = intensity;
-			if (bashar.util.queryMedia("(max-width: 768px)")) {
-				let lines = document.querySelectorAll("#headerSparkle line");
-				lines.forEach((line, i) => {
-					line.setAttribute("stroke-width", "2.5px");
-					if (i >= 4) {
-						line.setAttribute("transform", "translate(25, 25) scale(0.5)");
-					}
-				});
-				scale = intensity * 2;
-			}
+			// if (bashar.util.queryMedia("(max-width: 768px)")) {
+			// 	let lines = document.querySelectorAll("#headerSparkle line");
+			// 	lines.forEach((line, i) => {
+			// 		line.setAttribute("stroke-width", "2.5px");
+			// 		if (i >= 4) {
+			// 			line.setAttribute("transform", "translate(25, 25) scale(0.5)");
+			// 		}
+			// 	});
+			// 	scale = intensity * 2;
+			// }
 			bashar.lexicon.sparkle.setAttribute("fill-opacity", intensity);
 			bashar.lexicon.sparkle.setAttribute("stroke-opacity", intensity);
 			bashar.lexicon.sparkle.setAttribute(
