@@ -115,6 +115,7 @@ const bashar = {
 				switch (event.code) {
 					case "ArrowUp":
 					case "ArrowDown":
+					case "Space":
 						bashar.header.proposeFlare();
 						break;
 					default:
@@ -146,7 +147,15 @@ const bashar = {
 			bashar.header.acceptFlare(flareX, flareY);
 		},
 		acceptFlare: function(flareX, flareY) {
-			console.log("Flare accepted at " + flareX + ", " + flareY);
+			let intensity = bashar.util.randomFloatBetween(0.25, 1);
+			bashar.lexicon.sparkle.setAttribute("fill-opacity", intensity);
+			bashar.lexicon.sparkle.setAttribute("stroke-opacity", intensity);
+			bashar.lexicon.sparkle.setAttribute(
+				"transform",
+					"translate(" + sparkleX + ", " + sparkleY + ")"
+					+ " scale(" + intensity + ")"
+					+ " rotate(45)"
+			);
 		},
 	},
 
