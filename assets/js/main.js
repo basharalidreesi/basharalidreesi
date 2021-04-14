@@ -105,7 +105,7 @@ const bashar = {
 		trackScroll: function() {
 			window.addEventListener("scroll", (event) => {
 				if (bashar.util.deviceCanHover) { return; }
-				bashar.util.throttle(bashar.header.proposeFlare(), 100);
+				bashar.util.throttle(bashar.header.proposeFlare(), 1000);
 			});
 		},
 		proposeFlare: function() {
