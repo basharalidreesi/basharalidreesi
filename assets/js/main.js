@@ -18,7 +18,7 @@ const bashar = {
 	header: {
 		initHeaderScripts: function() {
 			bashar.header.trackCursorY();
-			bashar.header.trackNonCursorInput();
+			bashar.header.trackScroll();
 		},
 		trackCursorY: function() {
 			window.addEventListener("mousemove", (event) => {
@@ -102,25 +102,10 @@ const bashar = {
 					+ " rotate(45)"
 			);
 		},
-		trackNonCursorInput: function() {
-			window.addEventListener("touchmove", () => {
+		trackScroll: function() {
+			window.addEventListener("scroll", () => {
 				if (bashar.util.deviceCanHover) { return; }
 				bashar.header.proposeFlare();
-			});
-			window.addEventListener("wheel", () => {
-				if (bashar.util.deviceCanHover) { return; }
-				bashar.header.proposeFlare();
-			});
-			window.addEventListener("keydown", (event) => {
-				switch (event.code) {
-					case "ArrowUp":
-					case "ArrowDown":
-					case "Space":
-						bashar.header.proposeFlare();
-						break;
-					default:
-						// nothing
-				}
 			});
 		},
 		proposeFlare: function() {
