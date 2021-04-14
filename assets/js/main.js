@@ -136,17 +136,16 @@ const bashar = {
 		},
 		acceptFlare: function(flareX, flareY) {
 			let intensity = bashar.util.randomFloatBetween(0.5, 1);
+			var scale = intensity;
 			if (bashar.util.queryMedia("(max-width: 768px)")) {
-				let scale = intensity * 2;
-			} else {
-				let scale = intensity;
+				scale = intensity * 2;
 			}
 			bashar.lexicon.sparkle.setAttribute("fill-opacity", intensity);
 			bashar.lexicon.sparkle.setAttribute("stroke-opacity", intensity);
 			bashar.lexicon.sparkle.setAttribute(
 				"transform",
 					"translate(" + flareX + ", " + flareY + ")"
-					+ " scale(" + intensity + ")"
+					+ " scale(" + scale + ")"
 					+ " rotate(45)"
 			);
 			let switches = document.querySelectorAll("switch");
