@@ -96,11 +96,15 @@ const bashar = {
 		},
 		acceptSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
 			let opacificationRate = bashar.util.parabola(-4, clampedCursorYRatio, -0.5, 1);
-			let scalingRate = bashar.util.clamp(
+			var scalingRate = bashar.util.clamp(
 				0,
 				bashar.util.randomFloatBetween(opacificationRate - 0.25, opacificationRate + 0.25),
 				1.25
 			);
+			if (bashar.util.queryMedia("(max-width: 768px)")) {
+				bashar.lexicon.sparkle.setAttribute("stroke-width", "2.5px");
+				scalingRate = scalingRate * 2;
+			}
 			bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
 			bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
 			if(clampedCursorYRatio >= 1 || clampedCursorYRatio <= 0) { return; }
@@ -137,16 +141,10 @@ const bashar = {
 		acceptFlare: function(flareX, flareY) {
 			let intensity = bashar.util.randomFloatBetween(0.5, 1);
 			var scale = intensity;
-			// if (bashar.util.queryMedia("(max-width: 768px)")) {
-			// 	let lines = document.querySelectorAll("#headerSparkle line");
-			// 	lines.forEach((line, i) => {
-			// 		line.setAttribute("stroke-width", "2.5px");
-			// 		if (i >= 4) {
-			// 			line.setAttribute("transform", "translate(25, 25) scale(0.5)");
-			// 		}
-			// 	});
-			// 	scale = intensity * 2;
-			// }
+			if (bashar.util.queryMedia("(max-width: 768px)")) {
+				bashar.lexicon.sparkle.setAttribute("stroke-width", "2.5px");
+				scale = intensity * 2;
+			}
 			bashar.lexicon.sparkle.setAttribute("fill-opacity", intensity);
 			bashar.lexicon.sparkle.setAttribute("stroke-opacity", intensity);
 			bashar.lexicon.sparkle.setAttribute(
