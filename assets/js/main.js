@@ -110,9 +110,9 @@ const bashar = {
 		},
 		proposeFlare: function() {
 			let minFlareRangeX = 0;
-			let maxFlareRangeX = 100%;
+			let maxFlareRangeX = 100;
 			let minFlareRangeY = 0;
-			let maxFlareRangeY = 100%;
+			let maxFlareRangeY = 100;
 			let flareX = bashar.util.randomIntBetween(minFlareRangeX, maxFlareRangeX);
 			let flareY = bashar.util.randomIntBetween(minFlareRangeY, maxFlareRangeY);
 			bashar.header.validateFlare(flareX, flareY);
