@@ -145,6 +145,8 @@ const bashar = {
 			const switches = document.querySelectorAll("switch");
 			switches[1].style.fill = "url(#flareGradient)";
 			switches[1].style.stroke = "url(#flareGradient)";
+			bashar.lexicon.flare.setAttribute("fx", flareX);
+			bashar.lexicon.flare.setAttribute("fy", flareX);
 			bashar.lexicon.flare.setAttribute("cx", flareX);
 			bashar.lexicon.flare.setAttribute("cy", flareX);
 			bashar.lexicon.flare.setAttribute("r", parseInt(intensity * 100) + "%");
