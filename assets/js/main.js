@@ -37,7 +37,7 @@ const bashar = {
 				if (bashar.util.deviceCanHover) { return; }
 				bashar.util.throttle(() => {
 					bashar.header.proposeFlare();
-				}, 1000);
+				}, 50);
 			}, { passive: true });
 		},
 		reportCursorY: function(clampedCursorYRatio) {
@@ -165,7 +165,7 @@ const bashar = {
 		throttle: function(callback, delay) {
 			if (bashar.util.tTimer) { return; }
 			return bashar.util.tTimer = setTimeout(() => {
-				if (callback) { // ?
+				if (callback) {
 					callback();
 				}
 				bashar.util.tTimer = 0;
