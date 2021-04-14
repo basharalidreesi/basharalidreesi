@@ -161,10 +161,10 @@ const bashar = {
 		},
 		scheduled: false,
 		throttle: function(callback, delay) {
-			if (timer) { return; }
-			return timer = setTimeout(() => {
+			if (bashar.util.timer) { return; }
+			return bashar.util.timer = setTimeout(() => {
 				callback();
-				timer = undefined;
+				bashar.util.timer = undefined;
 			}, delay);
 		},
 		clamp: function(min, number, max) {
