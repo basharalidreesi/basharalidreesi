@@ -163,7 +163,9 @@ const bashar = {
 		throttle: function(callback, delay) {
 			if (bashar.util.tTimer) { return; }
 			return bashar.util.tTimer = setTimeout(() => {
-				callback();
+				if (callback) {
+					callback();
+				}
 				bashar.util.tTimer = 0;
 			}, delay);
 		},
