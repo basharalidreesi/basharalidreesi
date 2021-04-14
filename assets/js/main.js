@@ -138,12 +138,10 @@ const bashar = {
 			let intensity = bashar.util.randomFloatBetween(0.5, 1);
 			var scale = intensity;
 			if (bashar.util.queryMedia("(max-width: 768px)")) {
-				let lines = document.querySelectorAll("#headerSparkle line");
+				let lines = document.querySelectorAll("#headerSparkle line").splice(0, 4);
 				lines.forEach((line) => {
-					if (line.getAttribute("stroke") === "url(#sparkleGradient)") {
-						line.setAttribute("transform", "scale(0.5) translate(50, 50)");
-						line.setAttribute("stroke-width", "5px");
-					}
+					line.setAttribute("transform", "scale(0.5) translate(50, 50)");
+					line.setAttribute("stroke-width", "5px");
 				});
 				scale = intensity * 2;
 			}
