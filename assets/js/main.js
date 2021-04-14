@@ -142,7 +142,7 @@ const bashar = {
 				lines.forEach((line) => {
 					if (line.getAttribute("stroke") === "url(#sparkleGradient)") {
 						line.setAttribute("transform", "scale(0.5) translate(50, 50)");
-						line.setAttribute("stroke-width", "2.5px");
+						line.setAttribute("stroke-width", "5px");
 					}
 				});
 				scale = intensity * 2;
