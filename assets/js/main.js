@@ -20,10 +20,6 @@ const bashar = {
 			bashar.header.trackCursorY();
 			bashar.header.trackScrollY();
 		},
-		trackScrollY: function() {
-			if (bashar.util.deviceCanHover) { return; }
-			console.log("trackScrollY init");
-		},
 		trackCursorY: function() {
 			window.addEventListener("mousemove", (event) => {
 				if (!bashar.util.deviceCanHover) { return; }
@@ -105,6 +101,12 @@ const bashar = {
 					+ " scale(" + scalingRate + ")"
 					+ " rotate(45)"
 			);
+		},
+		trackScrollY: function() {
+			window.addEventListener("scroll", (event) => {
+				if (bashar.util.deviceCanHover) { return; }
+				console.log("trackScrollY init");
+			});
 		},
 	},
 
