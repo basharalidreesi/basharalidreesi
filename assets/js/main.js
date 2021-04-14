@@ -10,6 +10,7 @@ const bashar = {
 		sparkleZone: document.getElementById("sparkleZone"),
 		sparkle: document.getElementById("sparkle"),
 		flare: document.getElementById("flareGradient"),
+		switches: document.querySelectorAll("switch"),
 	},
 
 	initAllScripts: function() {
@@ -114,6 +115,8 @@ const bashar = {
 					+ " scale(" + scalingRate + ")"
 					+ " rotate(45)"
 			);
+			bashar.lexicon.switches[1].style.fill = "url(#sparkleGradient)";
+			bashar.lexicon.switches[1].style.stroke = "url(#sparkleGradient)";
 		},
 		proposeFlare: function() {
 			let minFlareRangeX = 0;
@@ -153,14 +156,13 @@ const bashar = {
 					+ " scale(" + scale + ")"
 					+ " rotate(45)"
 			);
-			let switches = document.querySelectorAll("switch");
-			switches[1].style.fill = "url(#flareGradient)";
-			switches[1].style.stroke = "url(#flareGradient)";
 			bashar.lexicon.flare.setAttribute("fx", flareX);
 			bashar.lexicon.flare.setAttribute("fy", flareY);
 			bashar.lexicon.flare.setAttribute("cx", flareX);
 			bashar.lexicon.flare.setAttribute("cy", flareY);
 			bashar.lexicon.flare.setAttribute("r", parseInt(intensity * 25) + "%");
+			bashar.lexicon.switches[1].style.fill = "url(#flareGradient)";
+			bashar.lexicon.switches[1].style.stroke = "url(#flareGradient)";
 		},
 	},
 
