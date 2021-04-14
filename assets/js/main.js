@@ -142,7 +142,7 @@ const bashar = {
 				lines.forEach((line, i) => {
 					line.setAttribute("stroke-width", "2.5px");
 					if (i >= 4) {
-						line.setAttribute("transform", "scale(0.5)");
+						line.setAttribute("transform", "translate(0, 0) scale(0.5)");
 					}
 				});
 				scale = intensity * 2;
