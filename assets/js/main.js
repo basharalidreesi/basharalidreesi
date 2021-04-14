@@ -132,7 +132,7 @@ const bashar = {
 			bashar.header.acceptFlare(flareX, flareY);
 		},
 		acceptFlare: function(flareX, flareY) {
-			let intensity = bashar.util.randomFloatBetween(0.25, 1);
+			let intensity = bashar.util.randomFloatBetween(0.5, 1);
 			bashar.lexicon.sparkle.setAttribute("fill-opacity", intensity);
 			bashar.lexicon.sparkle.setAttribute("stroke-opacity", intensity);
 			bashar.lexicon.sparkle.setAttribute(
