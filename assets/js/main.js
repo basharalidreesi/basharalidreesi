@@ -152,7 +152,7 @@ const bashar = {
 			bashar.lexicon.sparkle.setAttribute("stroke-opacity", intensity);
 			bashar.lexicon.sparkle.setAttribute(
 				"transform",
-					"translate(" + sparkleX + ", " + sparkleY + ")"
+					"translate(" + flareX + ", " + flareY + ")"
 					+ " scale(" + intensity + ")"
 					+ " rotate(45)"
 			);
