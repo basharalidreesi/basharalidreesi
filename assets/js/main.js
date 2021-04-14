@@ -143,8 +143,8 @@ const bashar = {
 					+ " rotate(45)"
 			);
 			const switches = document.querySelectorAll("switch");
-			switches[1].style.fill = "url(#sparkleGradient)";
-			switches[1].style.stroke = "url(#sparkleGradient)";
+			switches[1].style.fill = "url(#flareGradient)";
+			switches[1].style.stroke = "url(#flareGradient)";
 			bashar.lexicon.flare.setAttribute("cx", flareX);
 			bashar.lexicon.flare.setAttribute("cy", flareX);
 			bashar.lexicon.flare.setAttribute("r", parseInt(intensity * 100) + "%");
