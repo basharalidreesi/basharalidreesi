@@ -18,7 +18,7 @@ const bashar = {
 	header: {
 		initHeaderScripts: function() {
 			bashar.header.trackCursorY();
-			bashar.header.trackScroll();
+			bashar.header.trackNonCursorInput();
 		},
 		trackCursorY: function() {
 			window.addEventListener("mousemove", (event) => {
@@ -102,11 +102,24 @@ const bashar = {
 					+ " rotate(45)"
 			);
 		},
-		trackScroll: function() {
-			window.addEventListener("touchmove", (event) => {
+		trackNonCursorInput: function() {
+			window.addEventListener("touchmove", () => {
 				if (bashar.util.deviceCanHover) { return; }
-				// bashar.util.throttle(bashar.header.proposeFlare(), 10000);
 				bashar.header.proposeFlare();
+			});
+			window.addEventListener("wheel", () => {
+				if (bashar.util.deviceCanHover) { return; }
+				bashar.header.proposeFlare();
+			});
+			window.addEventListener("keydown" (event) => {
+				switch (event.code) {
+					case "ArrowUp":
+					case "ArrowDown":
+						bashar.header.proposeFlare();
+						break;
+					default:
+						// nothing
+				}	
 			});
 		},
 		proposeFlare: function() {
@@ -142,18 +155,6 @@ const bashar = {
 		debounce: function(callback, delay) {
 			clearTimeout(bashar.util.timer);
 			return bashar.util.timer = setTimeout(callback, delay);
-		},
-		throttle: function(callback, delay) {
-			let scheduled = false;
-			return function (...args) {
-				if (!scheduled) {
-					callback(...args);
-					scheduled = true;
-					setTimeout(() => {
-						scheduled = false;
-					}, delay);
-				}
-			}
 		},
 		clamp: function(min, number, max) {
 			return Math.max(min, Math.min(number, max));
