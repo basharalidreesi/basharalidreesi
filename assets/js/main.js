@@ -35,7 +35,7 @@ const bashar = {
 		trackScroll: function() {
 			window.addEventListener("scroll", () => {
 				if (bashar.util.deviceCanHover) { return; }
-				bashar.util.throttle(bashar.header.proposeFlare(), 50);
+				bashar.util.throttle(bashar.header.proposeFlare(), 1000);
 			}, { passive: true });
 		},
 		reportCursorY: function(clampedCursorYRatio) {
