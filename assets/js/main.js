@@ -159,7 +159,6 @@ const bashar = {
 			clearTimeout(bashar.util.timer);
 			return bashar.util.timer = setTimeout(callback, delay);
 		},
-		scheduled: false,
 		throttle: function(callback, delay) {
 			if (bashar.util.timer) { return; }
 			return bashar.util.timer = setTimeout(() => {
