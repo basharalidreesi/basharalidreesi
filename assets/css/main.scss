@@ -25,6 +25,13 @@ $nqdu:		-4.00rem;
 	--tercol: transparent; // transparent
 	--borcol: blue; // #000
 	--texcol: blue; // #000
+	@media (prefers-color-scheme: dark) {
+		--pricol: grey;		// #
+		--seccol: lightcyan;	// #
+		--tercol: transparent;	// #
+		--borcol: whitesmoke;	// #
+		--texcol: whitesmoke;	// #
+	}
 }
 
 html,
