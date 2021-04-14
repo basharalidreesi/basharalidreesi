@@ -139,12 +139,11 @@ const bashar = {
 			var scale = intensity;
 			if (bashar.util.queryMedia("(max-width: 768px)")) {
 				let lines = document.querySelectorAll("#headerSparkle line");
-				let smallLines = lines.slice(4);
-				lines.forEach((line) => {
+				lines.forEach((line, i) => {
 					line.setAttribute("stroke-width", "5px");
-				});
-				smallLines.forEach((line) => {
-					line.setAttribute("transform", "scale(0.5) translate(50, 50)");
+					if (i >= 4) {
+						line.setAttribute("transform", "scale(0.5) translate(50, 50)");
+					}
 				});
 				scale = intensity * 2;
 			}
