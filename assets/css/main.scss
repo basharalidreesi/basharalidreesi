@@ -20,11 +20,11 @@ $dnu:		-2.00rem;
 $nqdu:		-4.00rem;
 
 :root {
-	--pricol: #d9d9d9; // #d9d9d9
-	--seccol: whitesmoke; // whitesmoke
+	--pricol: white; // #d9d9d9
+	--seccol: lightcyan; // whitesmoke
 	--tercol: transparent; // transparent
-	--borcol: blue; // #000
-	--texcol: blue; // #000
+	--borcol: black; // #000
+	--texcol: black; // #000
 	@media (prefers-color-scheme: dark) {
 		--pricol: lightgrey;	// #
 		--seccol: whitesmoke;	// #
@@ -111,7 +111,7 @@ body {
 		from { opacity: 0; } to { opacity: 1; }
 	}
 	& > * {
-		margin: $du;
+		margin: $u;
 		& + * {
 			margin-top: 0;
 		}
