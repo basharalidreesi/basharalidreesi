@@ -1,7 +1,7 @@
 ---
 ---
 
-@use "sass:color";
+@use "sass:color" as color;
 
 @charset "UTF-8";
 
@@ -55,7 +55,7 @@ $unit-negative-quadruple:	-4.00rem;
 	--color-box-dark: color.scale(var(--color-box), $blackness: 25%);
 
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
-	
+
 }
 
 html,
