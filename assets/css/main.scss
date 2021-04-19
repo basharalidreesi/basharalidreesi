@@ -24,26 +24,12 @@ $unit-negative-quadruple:	-4.00rem;
 
 :root {
 	--color-primary: blue;
-	// --color-primary-light: blue;
-	// --color-primary-dark: blue;
-	--color-secondary: lightsalmon;
-	// --color-secondary-light: white;
-	// --color-secondary-dark: white;
-	--color-tertiary: lightgreen;
-	// --color-tertiary-light: lightyellow;
-	// --color-tertiary-dark: lightyellow;
+	--color-secondary: white;
+	--color-tertiary: aquamarine;
 	--color-quaternary: var(--color-tertiary);
-	// --color-quaternary-light: var(--color-tertiary-light);
-	// --color-quaternary-dark: var(--color-tertiary-dark);
 	--color-shine: whitesmoke;
-	// --color-shine-light: whitesmoke;
-	// --color-shine-dark: whitesmoke;
 	--color-text: black;
-	// --color-text-light: black;
-	// --color-text-dark: black;
 	--color-box: black;
-	// --color-box-light: black;
-	// --color-box-dark: black;
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
 }
 
