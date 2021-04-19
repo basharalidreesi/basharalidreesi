@@ -27,7 +27,7 @@ $unit-negative-quadruple:	-4.00rem;
 :root {
 
 	--color-primary: blue;
-	--color-primary-light: #{ color.scale(var(--color-primary), $lightness: 25%) };
+	--color-primary-light: #{color.scale(var(--color-primary), $lightness: 25%)};
 	--color-primary-dark: color.scale(var(--color-primary), $blackness: 25%);
 
 	--color-secondary: lightsalmon;
