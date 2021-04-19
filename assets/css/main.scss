@@ -1,8 +1,6 @@
 ---
 ---
 
-@use "sass:color" as *;
-
 @charset "UTF-8";
 
 $breakpointW:	768px;
@@ -25,37 +23,28 @@ $unit-negative-triple:		-2.00rem;
 $unit-negative-quadruple:	-4.00rem;
 
 :root {
-
 	--color-primary: blue;
-	--color-primary-light: #{scale(var(--color-primary), $lightness: 25%)};
-	--color-primary-dark: scale(var(--color-primary), $blackness: 25%);
-
+	// --color-primary-light: blue;
+	// --color-primary-dark: blue;
 	--color-secondary: lightsalmon;
-	--color-secondary-light: scale(var(--color-secondary), $lightness: 25%);
-	--color-secondary-dark: scale(var(--color-secondary), $blackness: 25%);
-
+	// --color-secondary-light: white;
+	// --color-secondary-dark: white;
 	--color-tertiary: lightgreen;
-	--color-tertiary-light: scale(var(--color-tertiary), $lightness: 25%);
-	--color-tertiary-dark: scale(var(--color-tertiary), $blackness: 25%);
-
+	// --color-tertiary-light: lightyellow;
+	// --color-tertiary-dark: lightyellow;
 	--color-quaternary: var(--color-tertiary);
-	--color-quaternary-light: var(--color-tertiary-light);
-	--color-quaternary-dark: var(--color-tertiary-dark);
-
+	// --color-quaternary-light: var(--color-tertiary-light);
+	// --color-quaternary-dark: var(--color-tertiary-dark);
 	--color-shine: whitesmoke;
-	--color-shine-light: color.scale(var(--color-shine), $lightness: 25%);
-	--color-shine-dark: color.scale(var(--color-shine), $blackness: 25%);
-
+	// --color-shine-light: whitesmoke;
+	// --color-shine-dark: whitesmoke;
 	--color-text: black;
-	--color-text-light: color.scale(var(--color-text), $lightness: 25%);
-	--color-text-dark: color.scale(var(--color-text), $blackness: 25%);
-
+	// --color-text-light: black;
+	// --color-text-dark: black;
 	--color-box: black;
-	--color-box-light: color.scale(var(--color-box), $lightness: 25%);
-	--color-box-dark: color.scale(var(--color-box), $blackness: 25%);
-
+	// --color-box-light: black;
+	// --color-box-dark: black;
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
-
 }
 
 html,
