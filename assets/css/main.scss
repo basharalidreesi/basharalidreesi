@@ -6,56 +6,45 @@
 $breakpointW:	768px;
 $breakpointH:	45vw;
 
-$font-size:	15px !default;
-$u:		1.00rem;
-$hu:		0.50rem;
-$qtu:		0.25rem;
-$du:		2.00rem;
-$tu:		3.00rem;
-$qdu:		4.00rem;
-$nu:		-1.00rem;
-$nhu:		-0.50rem;
-$nqu:		-0.25rem;
-$dnu:		-2.00rem;
-$nqdu:		-4.00rem;
+$font-size:			15px !default;
+
+$unit:				1.00rem;
+$unit-half:			0.50rem;
+$unit-quarter:			0.25rem;
+$unit-double:			2.00rem;
+$unit-triple:			3.00rem;
+$unit-quadruple:		4.00rem;
+
+$unit-negative:			-1.00rem;
+$unit-negative-half:		-0.50rem;
+$unit-negative-quarter:		-0.25rem;
+$unit-negative-double:		-2.00rem;
+$unit-negative-triple:		-2.00rem;
+$unit-negative-quadruple:	-4.00rem;
 
 :root {
 	--color-primary: blue;
 	// --color-primary-light: blue;
 	// --color-primary-dark: blue;
-
-	--color-secondary: white;
+	--color-secondary: lightsalmon;
 	// --color-secondary-light: white;
 	// --color-secondary-dark: white;
-
-	--color-tertiary: lightyellow;
+	--color-tertiary: lightgreen;
 	// --color-tertiary-light: lightyellow;
 	// --color-tertiary-dark: lightyellow;
-
+	--color-quaternary: var(--color-tertiary);
+	// --color-quaternary-light: var(--color-tertiary-light);
+	// --color-quaternary-dark: var(--color-tertiary-dark);
 	--color-shine: whitesmoke;
 	// --color-shine-light: whitesmoke;
 	// --color-shine-dark: whitesmoke;
-
 	--color-text: black;
 	// --color-text-light: black;
 	// --color-text-dark: black;
-
 	--color-box: black;
 	// --color-box-light: black;
 	// --color-box-dark: black;
-	
-	--pricol: lightgrey; // #d9d9d9
-	--seccol: whitesmoke; // whitesmoke
-	--tercol: transparent; // transparent
-	--borcol: black; // #000
-	--texcol: black; // #000
-	@media (prefers-color-scheme: dark) {
-		--pricol: lightgrey;	// #
-		--seccol: whitesmoke;	// #
-		--tercol: transparent;	// #
-		--borcol: black;	// #
-		--texcol: black;	// #
-	}
+	@media (prefers-color-scheme: dark) { /* none yet! */ }
 }
 
 html,
@@ -111,11 +100,11 @@ a:focus {
 
 body {
 	&.--default {
-		font-size: $u;
+		font-size: $font-size;
 		font-weight: 400;
 		line-height: 1.0;
-		color: var(--texcol);
-	        background: var(--pricol);
+		color: var(--color-text);
+	        background: var(--color-primary);
 	}
 }
 
@@ -123,24 +112,22 @@ body {
 	position: relative;
 	display: flex;
 	flex-flow: column nowrap;
-	width: calc(100% - #{$du});
+	width: calc(100% - #{$unit-double});
 	height: 100%;
 	min-height: 100vh;
-	margin: $u;
+	margin: $unit;
+	padding-top: $unit;
+	background: linear-gradient(var(--color-secondary) 0%, var(--color-tertiary) 100%);
 	animation: fadeIn 1.5s;
 	@keyframes fadeIn {
 		from { opacity: 0; } to { opacity: 1; }
 	}
 	& > * {
-		margin: $u;
-		&:not(header):not(nav):not(main) {
-			background: var(--seccol);
-			border: 1px solid var(--borcol);
-		}
+		margin: $unit;
 	}
 	& > header {
 		position: sticky;
-		top: $du;
+		top: $unit-triple;
 		left: 0;
 		display: flex;
 		font-size: 0;
@@ -165,14 +152,14 @@ body {
 					width: 100%;
 					overflow: visible;
 					& > switch:first-of-type {
-						fill: var(--texcol);
+						fill: var(--color-text);
 					}
 					& > switch:nth-of-type(2) {
 						fill: url(#fillGradient);
 						stroke: url(#strokeGradient);
 						stroke-width: 1px;
 						@media (any-hover: none) {
-							fill: var(--texcol);
+							fill: var(--color-text);
 						}
 					}
 				}
@@ -192,49 +179,26 @@ body {
 			display: flex;
 			list-style: none;
 			list-style-position: inside;
-			// background: var(--seccol);
-			border-top: 2.5px solid var(--borcol);
-			border-bottom: 2.5px solid var(--borcol);
+			border-top: 2.5px solid var(--color-box);
+			border-bottom: 2.5px solid var(--color-box);
 			pointer-events: auto;
 			@media only screen and (max-width: #{$breakpointW}) {
 				flex-flow: column nowrap;
 			}
 			& + ul {
-				margin-top: $du;
+				margin-top: $unit-double;
 			}
 			& > li {
 				flex: 1;
-				box-shadow: inset 0 0 $u $u var(--pricol);
-				& + li {
-					border-left: 1px solid var(--borcol);
-					@media only screen and (max-width: #{$breakpointW}) {
-						border: none;
-						border-top: 1px solid var(--borcol);
-					}
-				}
 				& > a {
 					display: block;
-					padding: $hu;
+					padding: $unit-half;
 					text-align: center;
 					font-family: "Karrik";
-					font-size: $du;
+					font-size: $unit-double;
 					overflow: hidden;
-					& > span {
-						background: var(--pricol);
-						box-shadow: 0 0 $u $u var(--pricol);
-						transition: background-color 0.25s, box-shadow 0.25s;
-					}
-					@media (any-hover: hover) {
-						&:hover > span {
-							background: var(--seccol);
-							box-shadow: 0 0 $u $du var(--seccol);
-						}
-					}
 				}
-				&.--current {
-					--pricol: var(--seccol);
-					background: var(--seccol);
-				}
+				&.--current { /* none yet! */ }
 			}
 		}
 	}
@@ -248,22 +212,21 @@ body {
 		& > article,
 		& > aside {
 			flex: 1;
-			background: var(--tercol);
-			border: 1px solid var(--borcol);
+			border: 1px solid var(--color-box);
 			pointer-events: auto;
 		}
 		& > article {
-			margin-right: $u;
+			margin-right: $unit;
 			@media only screen and (max-width: #{$breakpointW}) {
 				margin: 0;
 			}
 		}
 		& > aside {
 			position: sticky;
-			top: $du;
+			top: $unit-double;
 			display: flex;
 			flex-flow: column nowrap;
-			margin-left: $u;
+			margin-left: $unit;
 			max-height: calc(100vh - 4rem);
 			border-radius: 9999px 9999px 0 0;
 			overflow: hidden;
@@ -271,7 +234,7 @@ body {
 				position: initial;
 				top: initial;
 				margin: 0;
-				margin-top: $du;
+				margin-top: $unit-double;
 				max-height: none;
 			}
 			@media only screen and (max-height: #{$breakpointH}) {
@@ -284,9 +247,8 @@ body {
 				&:first-of-type {
 					flex: 0;
 					padding-top: 50%;
-					border-bottom: 1px solid var(--borcol);
+					border-bottom: 1px solid var(--color-box);
 					border-radius: 9999px 9999px 0 0;
-					background: lightcyan; // temp
 				}
 				&:last-of-type {
 					flex: 1;
