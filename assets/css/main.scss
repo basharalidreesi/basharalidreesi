@@ -25,6 +25,7 @@ $unit-negative-triple:		-2.00rem;
 $unit-negative-quadruple:	-4.00rem;
 
 :root {
+
 	--color-primary: blue;
 	--color-primary-light: color.scale(var(--color-primary), $lightness: 25%);
 	--color-primary-dark: color.scale(var(--color-primary), $blackness: 25%);
@@ -52,8 +53,9 @@ $unit-negative-quadruple:	-4.00rem;
 	--color-box: black;
 	--color-box-light: color.scale(var(--color-box), $lightness: 25%);
 	--color-box-dark: color.scale(var(--color-box), $blackness: 25%);
-	
+
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
+	
 }
 
 html,
