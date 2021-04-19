@@ -1,7 +1,7 @@
 ---
 ---
 
-@use "sass:color" as color;
+@use "sass:color" as *;
 
 @charset "UTF-8";
 
@@ -27,16 +27,16 @@ $unit-negative-quadruple:	-4.00rem;
 :root {
 
 	--color-primary: blue;
-	--color-primary-light: #{color.scale(var(--color-primary), $lightness: 25%)};
-	--color-primary-dark: color.scale(var(--color-primary), $blackness: 25%);
+	--color-primary-light: scale(var(--color-primary), $lightness: 25%);
+	--color-primary-dark: scale(var(--color-primary), $blackness: 25%);
 
 	--color-secondary: lightsalmon;
-	--color-secondary-light: color.scale(var(--color-secondary), $lightness: 25%);
-	--color-secondary-dark: color.scale(var(--color-secondary), $blackness: 25%);
+	--color-secondary-light: scale(var(--color-secondary), $lightness: 25%);
+	--color-secondary-dark: scale(var(--color-secondary), $blackness: 25%);
 
 	--color-tertiary: lightgreen;
-	--color-tertiary-light: color.scale(var(--color-tertiary), $lightness: 25%);
-	--color-tertiary-dark: color.scale(var(--color-tertiary), $blackness: 25%);
+	--color-tertiary-light: scale(var(--color-tertiary), $lightness: 25%);
+	--color-tertiary-dark: scale(var(--color-tertiary), $blackness: 25%);
 
 	--color-quaternary: var(--color-tertiary);
 	--color-quaternary-light: var(--color-tertiary-light);
