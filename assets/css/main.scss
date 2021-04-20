@@ -23,13 +23,15 @@ $unit-negative-triple:		-2.00rem;
 $unit-negative-quadruple:	-4.00rem;
 
 :root {
-	--color-primary: red;
-	--color-secondary: lightgray;
-	--color-tertiary: lightgray;
+	--color-primary: white;
+	--color-secondary: white;
+	--color-tertiary: white;
 	--color-quaternary: var(--color-tertiary);
 	--color-shine: white;
 	--color-text: black;
-	--color-box: red;
+	--color-box: black;
+
+	--box-body: 1px;
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
 }
 
@@ -91,6 +93,7 @@ body {
 		line-height: 1.0;
 		color: var(--color-text);
 	        background: var(--color-primary);
+		box-shadow: 0 0 0 var(--box-body) var(--color-box);
 	}
 }
 
@@ -112,9 +115,9 @@ body {
 		margin: $unit;
 	}
 	& > header {
-		position: sticky;
-		top: $unit-triple;
-		left: 0;
+		// position: sticky;
+		// top: $unit-triple;
+		// left: 0;
 		display: flex;
 		font-size: 0;
 	-webkit-user-select: none;
