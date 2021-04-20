@@ -23,13 +23,13 @@ $unit-negative-triple:		-2.00rem;
 $unit-negative-quadruple:	-4.00rem;
 
 :root {
-	--color-primary: blue;
-	--color-secondary: white;
-	--color-tertiary: aquamarine;
+	--color-primary: red;
+	--color-secondary: lightgray;
+	--color-tertiary: lightgray;
 	--color-quaternary: var(--color-tertiary);
-	--color-shine: whitesmoke;
+	--color-shine: white;
 	--color-text: black;
-	--color-box: black;
+	--color-box: red;
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
 }
 
