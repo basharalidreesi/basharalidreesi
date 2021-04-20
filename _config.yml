@@ -1,5 +1,4 @@
 # Data
-timezone: JO
 title: Bashar al-Idreesi
 author:
   en: Bashar al-Idreesi
@@ -11,6 +10,7 @@ baseurl: /
 url: https://basharalidreesi.com
 instagram: basharalidreesi
 github: basharalidreesi
+timezone: JO
 
 # Build
 collections:
