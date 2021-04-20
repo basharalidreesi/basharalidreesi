@@ -31,7 +31,7 @@ $unit-negative-quadruple:	-4.00rem;
 	--color-text: black;
 	--color-box: black;
 
-	--box-body: 1px;
+	--box-mother: 1px;
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
 }
 
@@ -93,7 +93,6 @@ body {
 		line-height: 1.0;
 		color: var(--color-text);
 	        background: var(--color-primary);
-		box-shadow: 0 0 0 var(--box-body) var(--color-box);
 	}
 }
 
@@ -107,6 +106,7 @@ body {
 	margin: $unit;
 	padding-top: $unit;
 	background: linear-gradient(var(--color-secondary) 0%, var(--color-tertiary) 100%);
+	box-shadow: 0 0 0 var(--box-mother) var(--color-box);
 	animation: fadeIn 1.5s;
 	@keyframes fadeIn {
 		from { opacity: 0; } to { opacity: 1; }
