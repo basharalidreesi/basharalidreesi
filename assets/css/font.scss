@@ -117,6 +117,16 @@
 }
 
 @font-face {
+        font-family: "OPTITomaso";
+        src:
+                url(/assets/fonts/optitomaso/optitomaso.woff) format("woff"),
+                url(/assets/fonts/optitomaso/optitomaso.woff2) format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: block;
+}
+
+@font-face {
         font-family: "Sporting Grotesque";
         src:
                 url(/assets/fonts/sporting_grotesque/sporting_grotesque-regular.woff) format("woff"),
