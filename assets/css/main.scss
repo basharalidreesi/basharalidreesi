@@ -145,7 +145,7 @@ body {
 			flex-flow: row wrap;
 			list-style: none;
 			& > li {
-				flex-basis: calc(100% / 3 - #{$unit});
+				flex-basis: calc(100% / 3 - #{$unit-double});
 				margin: $unit;
 				box-shadow: 0 0 0 var(--width-box) var(--color-box);
 				& > span {
