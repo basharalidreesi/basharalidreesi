@@ -143,13 +143,6 @@ body {
 							fill: var(--color-text);
 						}
 					}
-					& #sparkle circle {
-						fill: url(#sparkleGradient);
-					}
-					& #sparkle line {
-						stroke: url(#sparkleGradient);
-						stroke-width: 1px;
-					}
 				}
 			}
 		}
