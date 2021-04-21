@@ -115,21 +115,13 @@ body {
 		margin: $unit;
 	}
 	& > header {
-		// position: sticky;
-		// top: $unit-triple;
-		// left: 0;
 		display: flex;
 		font-size: 0;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	    -ms-user-select: none;
 		user-select: none;
-		z-index: 0;
 		& > h1 {
-			flex: 1;
-			display: flex;
-			align-items: center;
-			justify-content: center;
 			& > a {
 				display: block;
 				height: 100%;
@@ -151,26 +143,24 @@ body {
 							fill: var(--color-text);
 						}
 					}
+					& #sparkle circle {
+						fill: url(#sparkleGradient);
+					}
+					& #sparkle line {
+						stroke: url(#sparkleGradient);
+						stroke-width: 1px;
+					}
 				}
 			}
 		}
 	}
-	& > nav,
-	& > main,
-	& > footer {
-		position: relative;
-		z-index: 100;
-		-webkit-transform: translate3d(0,0,0);
-	}
 	& > nav {
-		pointer-events: none;
 		& > ul {
 			display: flex;
 			list-style: none;
 			list-style-position: inside;
 			border-top: 2.5px solid var(--color-box);
 			border-bottom: 2.5px solid var(--color-box);
-			pointer-events: auto;
 			@media only screen and (max-width: #{$breakpointW}) {
 				flex-flow: column nowrap;
 			}
@@ -194,7 +184,6 @@ body {
 	main {
 		flex: 1;
 		display: flex;
-		pointer-events: none;
 		@media only screen and (max-width: #{$breakpointW}) {
 			flex-flow: column nowrap;
 		}
@@ -202,7 +191,6 @@ body {
 		& > aside {
 			flex: 1;
 			border: 1px solid var(--color-box);
-			pointer-events: auto;
 		}
 		& > article {
 			margin-right: $unit;
