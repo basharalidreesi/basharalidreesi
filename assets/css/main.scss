@@ -143,11 +143,11 @@ body {
 		.--index > & > ol {
 			display: flex;
 			flex-flow: row wrap;
-			margin: $unit-negative;
+			margin: $unit-negative-half;
 			list-style: none;
 			& > li {
-				flex-basis: calc(100% / 3);
-				margin: $unit;
+				flex-basis: calc(100% / 3 - #{$unit});
+				margin: $unit-half;
 				box-shadow: 0 0 0 var(--width-box) var(--color-box);
 				& > span {
 					position: relative;
