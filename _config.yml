@@ -14,8 +14,8 @@ timezone: JO
 
 # Build
 collections:
-  texts:
-    title: Texts
+  works:
+    title: Works
     output: true
 defaults:
   - scope:
