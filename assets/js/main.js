@@ -9,7 +9,6 @@ const bashar = {
 		sStop: document.getElementById("sStop"),
 		sparkleZone: document.getElementById("sparkleZone"),
 		sparkle: document.getElementById("sparkle"),
-		// flare: document.getElementById("flareGradient"),
 		switches: document.querySelectorAll("switch"),
 	},
 
@@ -20,7 +19,6 @@ const bashar = {
 	header: {
 		initHeaderScripts: function() {
 			bashar.header.trackCursorY();
-			// bashar.header.trackScroll();
 		},
 		trackCursorY: function() {
 			window.addEventListener("mousemove", (event) => {
@@ -107,59 +105,6 @@ const bashar = {
 					+ " rotate(45)"
 			);
 		},
-		// trackScroll: function() {
-		// 	window.addEventListener("scroll", () => {
-		// 		if (bashar.util.deviceCanHover) { return; }
-		// 		bashar.util.throttle(() => {
-		// 			bashar.header.proposeFlare();
-		// 		}, 25);
-		// 	}, { passive: true });
-		// },
-		// proposeFlare: function() {
-		// 	let minFlareRangeX = 0;
-		// 	let maxFlareRangeX = parseFloat(bashar.lexicon.svg.getAttribute("width"));
-		// 	let minFlareRangeY = 0;
-		// 	let maxFlareRangeY = parseFloat(bashar.lexicon.svg.getAttribute("height"));
-		// 	let flareX = bashar.util.randomIntBetween(minFlareRangeX, maxFlareRangeX);
-		// 	let flareY = bashar.util.randomIntBetween(minFlareRangeY, maxFlareRangeY);
-		// 	bashar.header.validateFlare(flareX, flareY);
-		// },
-		// validateFlare: function(flareX, flareY) {
-		// 	let validFlare = false;
-		// 	let validationZones = document.querySelectorAll("#headerMain > g > *");
-		// 	let validationPoint = bashar.lexicon.svg.createSVGPoint();
-		// 	validationPoint.x = flareX;
-		// 	validationPoint.y = flareY;
-		// 	validationZones.forEach((validationZone) => {
-		// 		if (validationZone.isPointInFill(validationPoint)) {
-		// 			validFlare = true;
-		// 		}
-		// 	});
-		// 	if (!validFlare) { return; }
-		// 	bashar.header.acceptFlare(flareX, flareY);
-		// },
-		// acceptFlare: function(flareX, flareY) {
-		// 	let intensity = bashar.util.randomFloatBetween(0.5, 1);
-		// 	var scale = intensity;
-		// 	if (bashar.util.queryMedia("(max-width: 768px)")) {
-		// 		scale = intensity * 2;
-		// 	}
-		// 	bashar.lexicon.sparkle.setAttribute("fill-opacity", intensity);
-		// 	bashar.lexicon.sparkle.setAttribute("stroke-opacity", intensity);
-		// 	bashar.lexicon.sparkle.setAttribute(
-		// 		"transform",
-		// 			"translate(" + flareX + ", " + flareY + ")"
-		// 			+ " scale(" + scale + ")"
-		// 			+ " rotate(45)"
-		// 	);
-		// 	bashar.lexicon.flare.setAttribute("fx", flareX);
-		// 	bashar.lexicon.flare.setAttribute("fy", flareY);
-		// 	bashar.lexicon.flare.setAttribute("cx", flareX);
-		// 	bashar.lexicon.flare.setAttribute("cy", flareY);
-		// 	bashar.lexicon.flare.setAttribute("r", parseInt(intensity * 25) + "%");
-		// 	bashar.lexicon.switches[1].style.fill = "url(#flareGradient)";
-		// 	bashar.lexicon.switches[1].style.stroke = "url(#flareGradient)";
-		// },
 	},
 
 	util: {
