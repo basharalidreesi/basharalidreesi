@@ -30,8 +30,7 @@ $unit-negative-quadruple:	-4.00rem;
 	--color-shine: white;
 	--color-text: black;
 	--color-box: black;
-
-	--box-mother: 1px;
+	--width-box: 1px;
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
 }
 
@@ -104,7 +103,7 @@ body {
 	margin: $unit;
 	padding-top: $unit;
 	background: linear-gradient(var(--color-secondary) 0%, var(--color-tertiary) 100%);
-	box-shadow: 0 0 0 var(--box-mother) var(--color-box);
+	box-shadow: 0 0 0 var(--width-box) var(--color-box);
 	animation: fadeIn 1.5s;
 	@keyframes fadeIn {
 		from { opacity: 0; } to { opacity: 1; }
@@ -146,11 +145,13 @@ body {
 			flex-flow: row wrap;
 			list-style: none;
 			& > li {
-				flex: 1 1 calc(100% / 3);
+				flex-basis: calc(100% / 3);
+				padding-top: 75%;
+				box-shadow: 0 0 0 var(--width-box) var(--color-box);
 				& > dl {
 					& > dt {
 						& > dd {
-							
+
 						}
 					}
 				}
