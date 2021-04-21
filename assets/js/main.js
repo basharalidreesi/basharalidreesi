@@ -9,7 +9,7 @@ const bashar = {
 		sStop: document.getElementById("sStop"),
 		sparkleZone: document.getElementById("sparkleZone"),
 		sparkle: document.getElementById("sparkle"),
-		flare: document.getElementById("flareGradient"),
+		// flare: document.getElementById("flareGradient"),
 		switches: document.querySelectorAll("switch"),
 	},
 
@@ -20,7 +20,7 @@ const bashar = {
 	header: {
 		initHeaderScripts: function() {
 			bashar.header.trackCursorY();
-			bashar.header.trackScroll();
+			// bashar.header.trackScroll();
 		},
 		trackCursorY: function() {
 			window.addEventListener("mousemove", (event) => {
@@ -31,14 +31,6 @@ const bashar = {
 				let cursorYRatio = (cursorYPos - headerOffsetTop) / headerHeight;
 				let clampedCursorYRatio = bashar.util.clamp(0, cursorYRatio, 1);
 				bashar.header.reportCursorY(clampedCursorYRatio);
-			}, { passive: true });
-		},
-		trackScroll: function() {
-			window.addEventListener("scroll", () => {
-				if (bashar.util.deviceCanHover) { return; }
-				bashar.util.throttle(() => {
-					bashar.header.proposeFlare();
-				}, 25);
 			}, { passive: true });
 		},
 		reportCursorY: function(clampedCursorYRatio) {
@@ -96,70 +88,78 @@ const bashar = {
 			bashar.header.acceptSparkle(sparkleX, sparkleY, clampedCursorYRatio);
 		},
 		acceptSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
-			let opacificationRate = bashar.util.parabola(-4, clampedCursorYRatio, -0.5, 1);
-			var scalingRate = bashar.util.clamp(
+			let opacity = bashar.util.parabola(-4, clampedCursorYRatio, -0.5, 1);
+			var scale = bashar.util.clamp(
 				0,
-				bashar.util.randomFloatBetween(opacificationRate - 0.25, opacificationRate + 0.25),
+				bashar.util.randomFloatBetween(opacity - 0.25, opacity + 0.25),
 				1.25
 			);
 			if (bashar.util.queryMedia("(max-width: 768px)")) {
-				scalingRate = scalingRate * 1.5;
+				scale = scale * 1.5;
 			}
-			bashar.lexicon.sparkle.setAttribute("fill-opacity", opacificationRate);
-			bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacificationRate);
+			bashar.lexicon.sparkle.setAttribute("fill-opacity", opacity);
+			bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacity);
 			if(clampedCursorYRatio >= 1 || clampedCursorYRatio <= 0) { return; }
 			bashar.lexicon.sparkle.setAttribute(
 				"transform",
 					"translate(" + sparkleX + ", " + sparkleY + ")"
-					+ " scale(" + scalingRate + ")"
-					+ " rotate(45)"
-			);
-		},
-		proposeFlare: function() {
-			let minFlareRangeX = 0;
-			let maxFlareRangeX = parseFloat(bashar.lexicon.svg.getAttribute("width"));
-			let minFlareRangeY = 0;
-			let maxFlareRangeY = parseFloat(bashar.lexicon.svg.getAttribute("height"));
-			let flareX = bashar.util.randomIntBetween(minFlareRangeX, maxFlareRangeX);
-			let flareY = bashar.util.randomIntBetween(minFlareRangeY, maxFlareRangeY);
-			bashar.header.validateFlare(flareX, flareY);
-		},
-		validateFlare: function(flareX, flareY) {
-			let validFlare = false;
-			let validationZones = document.querySelectorAll("#headerMain > g > *");
-			let validationPoint = bashar.lexicon.svg.createSVGPoint();
-			validationPoint.x = flareX;
-			validationPoint.y = flareY;
-			validationZones.forEach((validationZone) => {
-				if (validationZone.isPointInFill(validationPoint)) {
-					validFlare = true;
-				}
-			});
-			if (!validFlare) { return; }
-			bashar.header.acceptFlare(flareX, flareY);
-		},
-		acceptFlare: function(flareX, flareY) {
-			let intensity = bashar.util.randomFloatBetween(0.5, 1);
-			var scale = intensity;
-			if (bashar.util.queryMedia("(max-width: 768px)")) {
-				scale = intensity * 2;
-			}
-			bashar.lexicon.sparkle.setAttribute("fill-opacity", intensity);
-			bashar.lexicon.sparkle.setAttribute("stroke-opacity", intensity);
-			bashar.lexicon.sparkle.setAttribute(
-				"transform",
-					"translate(" + flareX + ", " + flareY + ")"
 					+ " scale(" + scale + ")"
 					+ " rotate(45)"
 			);
-			bashar.lexicon.flare.setAttribute("fx", flareX);
-			bashar.lexicon.flare.setAttribute("fy", flareY);
-			bashar.lexicon.flare.setAttribute("cx", flareX);
-			bashar.lexicon.flare.setAttribute("cy", flareY);
-			bashar.lexicon.flare.setAttribute("r", parseInt(intensity * 25) + "%");
-			bashar.lexicon.switches[1].style.fill = "url(#flareGradient)";
-			bashar.lexicon.switches[1].style.stroke = "url(#flareGradient)";
 		},
+		// trackScroll: function() {
+		// 	window.addEventListener("scroll", () => {
+		// 		if (bashar.util.deviceCanHover) { return; }
+		// 		bashar.util.throttle(() => {
+		// 			bashar.header.proposeFlare();
+		// 		}, 25);
+		// 	}, { passive: true });
+		// },
+		// proposeFlare: function() {
+		// 	let minFlareRangeX = 0;
+		// 	let maxFlareRangeX = parseFloat(bashar.lexicon.svg.getAttribute("width"));
+		// 	let minFlareRangeY = 0;
+		// 	let maxFlareRangeY = parseFloat(bashar.lexicon.svg.getAttribute("height"));
+		// 	let flareX = bashar.util.randomIntBetween(minFlareRangeX, maxFlareRangeX);
+		// 	let flareY = bashar.util.randomIntBetween(minFlareRangeY, maxFlareRangeY);
+		// 	bashar.header.validateFlare(flareX, flareY);
+		// },
+		// validateFlare: function(flareX, flareY) {
+		// 	let validFlare = false;
+		// 	let validationZones = document.querySelectorAll("#headerMain > g > *");
+		// 	let validationPoint = bashar.lexicon.svg.createSVGPoint();
+		// 	validationPoint.x = flareX;
+		// 	validationPoint.y = flareY;
+		// 	validationZones.forEach((validationZone) => {
+		// 		if (validationZone.isPointInFill(validationPoint)) {
+		// 			validFlare = true;
+		// 		}
+		// 	});
+		// 	if (!validFlare) { return; }
+		// 	bashar.header.acceptFlare(flareX, flareY);
+		// },
+		// acceptFlare: function(flareX, flareY) {
+		// 	let intensity = bashar.util.randomFloatBetween(0.5, 1);
+		// 	var scale = intensity;
+		// 	if (bashar.util.queryMedia("(max-width: 768px)")) {
+		// 		scale = intensity * 2;
+		// 	}
+		// 	bashar.lexicon.sparkle.setAttribute("fill-opacity", intensity);
+		// 	bashar.lexicon.sparkle.setAttribute("stroke-opacity", intensity);
+		// 	bashar.lexicon.sparkle.setAttribute(
+		// 		"transform",
+		// 			"translate(" + flareX + ", " + flareY + ")"
+		// 			+ " scale(" + scale + ")"
+		// 			+ " rotate(45)"
+		// 	);
+		// 	bashar.lexicon.flare.setAttribute("fx", flareX);
+		// 	bashar.lexicon.flare.setAttribute("fy", flareY);
+		// 	bashar.lexicon.flare.setAttribute("cx", flareX);
+		// 	bashar.lexicon.flare.setAttribute("cy", flareY);
+		// 	bashar.lexicon.flare.setAttribute("r", parseInt(intensity * 25) + "%");
+		// 	bashar.lexicon.switches[1].style.fill = "url(#flareGradient)";
+		// 	bashar.lexicon.switches[1].style.stroke = "url(#flareGradient)";
+		// },
 	},
 
 	util: {
