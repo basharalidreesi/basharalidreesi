@@ -146,12 +146,22 @@ body {
 			list-style: none;
 			& > li {
 				flex-basis: calc(100% / 3);
-				padding-top: 75%;
 				box-shadow: 0 0 0 var(--width-box) var(--color-box);
-				& > dl {
-					& > dt {
-						& > dd {
+				& > span {
+					position: relative;
+					padding-top: 75%;
+					& > dl {
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 100%;
+						width: 100%;
+						background: azure;
+						& > dt {
 
+						}
+						& > dd {
+							
 						}
 					}
 				}

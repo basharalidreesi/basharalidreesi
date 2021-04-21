@@ -5,10 +5,12 @@ layout: default
 <ol>
         {%- for work in site.works -%}
                 <li>
-                        <dl>
-                                <dt>{{ work.title }}</dt>
-                                <dd>work</dd>
-                        </dl>
+                        <span>
+                                <dl>
+                                        <dt>{{ work.title }}</dt>
+                                        <dd>work</dd>
+                                </dl>
+                        </span>
                 </li>
         {%- endfor -%}
 </ol>
