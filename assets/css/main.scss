@@ -87,13 +87,11 @@ a:focus {
 }
 
 body {
-	&.--default {
-		font-size: $font-size;
-		font-weight: 400;
-		line-height: 1.0;
-		color: var(--color-text);
-	        background: var(--color-primary);
-	}
+	font-size: $font-size;
+	font-weight: 400;
+	line-height: 1.0;
+	color: var(--color-text);
+        background: var(--color-primary);
 }
 
 .mother {
@@ -142,6 +140,22 @@ body {
 		}
 	}
 	& > nav { /* none yet! */ }
-	main { /* none yet! */ }
+	main {
+		.--index & > ol {
+			display: flex;
+			flex-flow: row wrap;
+			list-style: none;
+			& > li {
+				flex: 1 1 calc(100% / 3);
+				& > dl {
+					& > dt {
+						& > dd {
+							
+						}
+					}
+				}
+			}
+		}
+	}
 	& > footer { /* none yet! */ }
 }
