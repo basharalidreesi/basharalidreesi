@@ -143,11 +143,10 @@ body {
 		.--index > & > ol {
 			display: flex;
 			flex-flow: row wrap;
-			margin: $unit-negative-half;
 			list-style: none;
 			& > li {
 				flex-basis: calc(100% / 3 - #{$unit});
-				margin: $unit-half;
+				margin: $unit;
 				box-shadow: 0 0 0 var(--width-box) var(--color-box);
 				& > span {
 					position: relative;
@@ -159,7 +158,6 @@ body {
 						left: 0;
 						height: 100%;
 						width: 100%;
-						background: azure;
 						& > dt {
 
 						}
