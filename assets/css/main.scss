@@ -139,8 +139,8 @@ body {
 		}
 	}
 	& > nav { /* none yet! */ }
-	main {
-		.--index & > ol {
+	& > main {
+		.--index > & > ol {
 			display: flex;
 			flex-flow: row wrap;
 			list-style: none;
@@ -149,7 +149,8 @@ body {
 				box-shadow: 0 0 0 var(--width-box) var(--color-box);
 				& > span {
 					position: relative;
-					padding-top: 75%;
+					display: block;
+					padding-top: 125%;
 					& > dl {
 						position: absolute;
 						top: 0;
@@ -161,7 +162,7 @@ body {
 
 						}
 						& > dd {
-							
+
 						}
 					}
 				}
