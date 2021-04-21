@@ -149,10 +149,10 @@ body {
 			}
 			& > li {
 				flex-basis: calc(100% / 3 - #{$unit-double});
+				height: calc((100vw - #{$unit-quadruple}) / (3 / 4));
 				margin: $unit;
 				box-shadow: 0 0 0 var(--width-box) var(--color-box);
 				& > dl {
-					height: calc(100vw / 3 - #{$unit-quadruple});
 					& > dt {
 
 					}
