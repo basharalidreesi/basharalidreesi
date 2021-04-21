@@ -144,26 +144,20 @@ body {
 			display: flex;
 			flex-flow: row wrap;
 			list-style: none;
+			@media (max-width: #{$breakpointW}) {
+				flex-flow: column nowrap;
+			}
 			& > li {
 				flex-basis: calc(100% / 3 - #{$unit-double});
 				margin: $unit;
 				box-shadow: 0 0 0 var(--width-box) var(--color-box);
-				& > span {
-					position: relative;
-					display: block;
-					padding-top: 133.333%;
-					& > dl {
-						position: absolute;
-						top: 0;
-						left: 0;
-						height: 100%;
-						width: 100%;
-						& > dt {
+				& > dl {
+					height: calc(100vw / 3 - #{$unit-quadruple});
+					& > dt {
 
-						}
-						& > dd {
+					}
+					& > dd {
 
-						}
 					}
 				}
 			}
