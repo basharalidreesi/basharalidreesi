@@ -143,9 +143,11 @@ body {
 		.--index > & > ol {
 			display: flex;
 			flex-flow: row wrap;
+			margin: $unit-negative;
 			list-style: none;
 			& > li {
 				flex-basis: calc(100% / 3);
+				margin: $unit;
 				box-shadow: 0 0 0 var(--width-box) var(--color-box);
 				& > span {
 					position: relative;
