@@ -148,7 +148,7 @@ body {
 				flex-flow: column nowrap;
 			}
 			& > li {
-				flex-basis: calc(100% / 3 - #{$unit-double});
+				flex-basis: calc(100% / 3);
 				height: calc((100vw - #{$unit-double}) / 3 / (3 / 4));
 				box-shadow: 0 0 0 var(--width-box) var(--color-box);
 				& > dl {
