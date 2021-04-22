@@ -6,26 +6,28 @@ layout: default
                                 {%- for work in site.works %}
                                 <li>
                                         <dl>
+                                                {%- if work.title %}
                                                 <div>
                                                         <dt>{{ work.title }}</dt>
                                                 </div>
-                                                {%- unless work.figure == empty or work.caption == empty %}
+                                                {%- endif -%}
+                                                {%- if work.figure %}
                                                 <div>
-                                                        {%- if work.figure %}
                                                         <dd>{{ work.figure }}</dd>
-                                                        {%- endif -%}
-                                                        {%- if work.caption %}
-                                                        <dd>{{ work.caption }}</dd>
-                                                        {%- endif %}
                                                 </div>
-                                                {%- endunless -%}
-                                                {%- unless work.tags == empty %}
+                                                {%- endif -%}
+                                                {%- if work.caption %}
+                                                <div>
+                                                        <dd>{{ work.caption }}</dd>
+                                                </div>
+                                                {%- endif -%}
+                                                {%- if work.tags %}
                                                 <div>
                                                         {%- for tag in work.tags %}
                                                         <dd>{{ tag }}</dd>
                                                         {%- endfor %}
                                                 </div>
-                                                {%- endunless %}
+                                                {%- endif %}
                                         </dl>
                                 </li>
                                 {%- endfor %}
