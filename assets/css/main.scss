@@ -95,7 +95,7 @@ a:focus {
 body {
 	font-size: $font-size;
 	font-weight: 400;
-	line-height: 1.0;
+	line-height: $unit;
 	color: var(--color-text);
         background: var(--color-primary);
 }
