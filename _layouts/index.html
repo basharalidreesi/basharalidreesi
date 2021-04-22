@@ -6,7 +6,7 @@ layout: default
                                 {%- for work in site.works %}
                                 <li>
                                         <dl>
-                                                {%- unless work.title = empty %}
+                                                {%- unless work.title == empty %}
                                                 <div>
                                                         <dt>{{ work.title }}</dt>
                                                 </div>
