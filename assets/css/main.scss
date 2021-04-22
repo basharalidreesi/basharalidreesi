@@ -171,12 +171,14 @@ body {
 						& > dt {
 
 						}
-						& > div {
+						& > div:first-of-type {
 							padding-top: calc(100% / var(--aspect-ratio-card));
 							background: var(--color-text);
 						}
-						& > dd {
+						& > div:last-of-type {
+							& > dd {
 
+							}
 						}
 					}
 				}
