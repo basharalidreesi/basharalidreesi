@@ -32,7 +32,10 @@ $unit-negative-quadruple:	-4.00rem;
 	--color-box: black;
 	--width-box: 1px;
 
-	--number-index-columns: 3;
+	--number-index-grid-columns: 3;
+	--number-index-grid-rows: $unit;
+	--number-index-grid-gap: $unit;
+
 	--aspect-ratio-card: (4 / 3);
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
 }
@@ -145,7 +148,13 @@ body {
 	& > main {
 		.--index > & > ol {
 			display: grid;
-			grid-template-columns: repeat(var(--number-index-columns), calc(100% / var(--number-index-columns)));
+			grid-template-columns:
+				repeat(
+					var(--number-index-grid-columns),
+					calc(100% / var(--number-index-grid-columns))
+				);
+			grid-auto-rows: var(--number-index-grid-rows);
+			grid-gap: var(--number-index-grid-gap);
 			list-style: none;
 			& > li {
 				height: 100px;
