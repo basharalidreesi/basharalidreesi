@@ -6,22 +6,22 @@ layout: default
                                 {%- for work in site.works %}
                                 <li>
                                         <dl>
-                                                {%- unless work.title == "" %}
+                                                {%- unless work.title.size == 0 %}
                                                 <div>
                                                         <dt>{{ work.title }}</dt>
                                                 </div>
                                                 {%- endunless -%}
-                                                {%- unless work.figure == "" %}
+                                                {%- unless work.figure.size == 0 %}
                                                 <div>
                                                         <dd>{{ work.figure }}</dd>
                                                 </div>
                                                 {%- endunless -%}
-                                                {%- unless work.caption == "" %}
+                                                {%- unless work.caption.size == 0 %}
                                                 <div>
                                                         <dd>{{ work.caption }}</dd>
                                                 </div>
                                                 {%- endunless -%}
-                                                {%- unless work.tags == "" %}
+                                                {%- unless work.tags.size == 0 %}
                                                 <div>
                                                         {%- for tag in work.tags %}
                                                         <dd>{{ tag }}</dd>
