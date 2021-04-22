@@ -9,20 +9,20 @@ layout: default
                                                 <div>
                                                         <dt>{{ work.title }}</dt>
                                                 </div>
-                                                {%- if work.image or work.caption %}
+                                                {%- if work.figure or work.caption %}
                                                 <div>
-                                                        {%- if work.image %}
-                                                        <dd><!-- image --></dd>
+                                                        {%- if work.figure %}
+                                                        <dd>{{ work.figure }}</dd>
                                                         {%- endif -%}
                                                         {%- if work.caption %}
-                                                        <dd><!-- text --></dd>
+                                                        <dd>{{ work.caption }}</dd>
                                                         {%- endif %}
                                                 </div>
                                                 {%- endif -%}
                                                 {%- if work.tags %}
                                                 <div>
                                                         {%- for tag in work.tags %}
-                                                        <dd><!-- tag --></dd>
+                                                        <dd>{{ tag }}</dd>
                                                         {%- endfor %}
                                                 </div>
                                                 {%- endif %}
