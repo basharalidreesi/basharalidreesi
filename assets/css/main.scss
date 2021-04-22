@@ -33,8 +33,8 @@ $unit-negative-quadruple:	-4.00rem;
 	--width-box: 1px;
 
 	--number-index-grid-columns: 3;
-	--number-index-grid-rows: $unit;
-	--number-index-grid-gap: $unit;
+	--number-index-grid-rows: #{$unit};
+	--number-index-grid-gap: #{$unit};
 
 	--aspect-ratio-card: (4 / 3);
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
