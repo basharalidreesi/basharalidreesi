@@ -6,28 +6,28 @@ layout: default
                                 {%- for work in site.works %}
                                 <li>
                                         <dl>
-                                                {%- if work.title %}
+                                                {%- unless work.title == "" %}
                                                 <div>
                                                         <dt>{{ work.title }}</dt>
                                                 </div>
-                                                {%- endif -%}
-                                                {%- if work.figure %}
+                                                {%- endunless -%}
+                                                {%- unless work.figure == "" %}
                                                 <div>
                                                         <dd>{{ work.figure }}</dd>
                                                 </div>
-                                                {%- endif -%}
-                                                {%- if work.caption %}
+                                                {%- endunless -%}
+                                                {%- unless work.caption == "" %}
                                                 <div>
                                                         <dd>{{ work.caption }}</dd>
                                                 </div>
-                                                {%- endif -%}
-                                                {%- if work.tags %}
+                                                {%- endunless -%}
+                                                {%- unless work.tags == "" %}
                                                 <div>
                                                         {%- for tag in work.tags %}
                                                         <dd>{{ tag }}</dd>
                                                         {%- endfor %}
                                                 </div>
-                                                {%- endif %}
+                                                {%- endunless %}
                                         </dl>
                                 </li>
                                 {%- endfor %}
