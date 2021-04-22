@@ -150,18 +150,27 @@ body {
 			}
 			& > li {
 				flex-basis: calc((100% - #{$unit-triple}) / 3);
-				height: calc((100vw - 2 * #{$unit-triple}) / 3 / (3 / 4));
 				margin: $unit-half;
 				box-shadow: 0 0 0 var(--width-box) var(--color-box);
 				@media (max-width: #{$breakpointW}) {
 					/* none yet! */
 				}
-				& > dl {
-					& > dt {
+				& > span {
+					position: relative;
+					display: block;
+					padding-top: calc(100% * (4 / 3));
+					& > dl {
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 100%;
+						width: 100%;
+						& > dt {
 
-					}
-					& > dd {
+						}
+						& > dd {
 
+						}
 					}
 				}
 			}
