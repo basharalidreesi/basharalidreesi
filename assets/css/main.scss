@@ -101,7 +101,7 @@ body {
 	height: 100%;
 	min-height: 100vh;
 	margin: $unit;
-	padding-top: $unit;
+	// padding-top: $unit;
 	background: linear-gradient(var(--color-secondary) 0%, var(--color-tertiary) 100%);
 	box-shadow: 0 0 0 var(--width-box) var(--color-box);
 	animation: fadeIn 1.5s;
@@ -143,13 +143,15 @@ body {
 		.--index > & > ol {
 			display: flex;
 			flex-flow: row wrap;
+			margin: $unit-negative-half;
 			list-style: none;
 			@media (max-width: #{$breakpointW}) {
 				flex-flow: column nowrap;
 			}
 			& > li {
-				flex-basis: calc(100% / 3);
-				height: calc((100vw - #{$unit-double}) / 3 / (3 / 4));
+				flex-basis: calc((100% - #{$unit-triple}) / 3);
+				height: calc((100vw - 2 * #{$unit-triple}) / 3 / (3 / 4));
+				margin: $unit-half;
 				box-shadow: 0 0 0 var(--width-box) var(--color-box);
 				& > dl {
 					& > dt {
