@@ -152,7 +152,7 @@ body {
 			grid-template-columns:
 				repeat(
 					var(--number-index-grid-columns),
-					calc(100% / var(--number-index-grid-columns))
+					calc((100% - ((var(--number-index-grid-columns) - 1) * var(--number-index-grid-gaps))) / var(--number-index-grid-columns))
 				);
 			grid-auto-rows: var(--number-index-grid-rows);
 			grid-gap: var(--number-index-grid-gaps);
