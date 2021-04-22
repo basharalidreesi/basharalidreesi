@@ -2,22 +2,31 @@
 layout: default
 ---
 
-<ol>
-        {%- for work in site.works -%}
-                <li>
-                        <span>
-                                <dl>
-                                        <dt>{{ work.title }}</dt>
-                                        <div>
-                                        </div>
-                                        <div>
-                                                <dd>type 1</dd>
-                                                <dd>type 2</dd>
-                                                <dd>type 3</dd>
-                                                <dd>type 4</dd>
-                                        </div>
-                                </dl>
-                        </span>
-                </li>
-        {%- endfor -%}
-</ol>
+                        <ol>
+                                {%- for work in site.works %}
+                                <li>
+                                        <dl>
+                                                <div>
+                                                        <dt>{{ work.title }}</dt>
+                                                </div>
+                                                {%- if work.image or work.caption %}
+                                                <div>
+                                                        {%- if work.image %}
+                                                        <dd><!-- image --></dd>
+                                                        {%- endif -%}
+                                                        {%- if work.caption %}
+                                                        <dd><!-- text --></dd>
+                                                        {%- endif %}
+                                                </div>
+                                                {%- endif -%}
+                                                {%- if work.tags %}
+                                                <div>
+                                                        {%- for tag in work.tags %}
+                                                        <dd><!-- tag --></dd>
+                                                        {%- endif %}
+                                                </div>
+                                                {%- endif %}
+                                        </dl>
+                                </li>
+                                {%- endfor %}
+                        </ol>

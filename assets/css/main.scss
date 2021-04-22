@@ -31,6 +31,8 @@ $unit-negative-quadruple:	-4.00rem;
 	--color-text: black;
 	--color-box: black;
 	--width-box: 1px;
+
+	--number-index-columns: 3;
 	--aspect-ratio-card: (4 / 3);
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
 }
@@ -142,43 +144,19 @@ body {
 	& > nav { /* none yet! */ }
 	& > main {
 		.--index > & > ol {
-			display: flex;
-			flex-flow: row wrap;
-			margin: $unit-negative-half;
+			display: grid;
+			grid-template-columns: repeat(var(--number-index-columns), calc(100% / var(--number-index-columns)));
 			list-style: none;
-			@media (max-width: #{$breakpointW}) {
-				flex-flow: column nowrap;
-			}
 			& > li {
-				flex-basis: calc((100% - #{$unit-triple}) / 3);
-				margin: $unit-half;
-				box-shadow: 0 0 0 var(--width-box) var(--color-box);
-				@media (max-width: #{$breakpointW}) {
-					/* none yet! */
-				}
-				& > span {
-					position: relative;
-					display: block;
-					padding-top: calc(100% * var(--aspect-ratio-card));
-					& > dl {
-						position: absolute;
-						top: 0;
-						left: 0;
-						display: flex;
-						flex-flow: column nowrap;
-						height: 100%;
-						width: 100%;
+				height: 100px;
+				box-shadow: 0 0 0 1px black;
+				& > dl {
+					& > div {
 						& > dt {
 
 						}
-						& > div:first-of-type {
-							padding-top: calc(100% / var(--aspect-ratio-card));
-							background: var(--color-text);
-						}
-						& > div:last-of-type {
-							& > dd {
+						& > dd {
 
-							}
 						}
 					}
 				}
