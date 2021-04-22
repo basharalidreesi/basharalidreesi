@@ -31,6 +31,7 @@ $unit-negative-quadruple:	-4.00rem;
 	--color-text: black;
 	--color-box: black;
 	--width-box: 1px;
+	--aspect-ratio-card: (4 / 3);
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
 }
 
@@ -158,15 +159,21 @@ body {
 				& > span {
 					position: relative;
 					display: block;
-					padding-top: calc(100% * (4 / 3));
+					padding-top: calc(100% * var(--aspect-ratio-card));
 					& > dl {
 						position: absolute;
 						top: 0;
 						left: 0;
+						display: flex;
+						flex-flow: column nowrap;
 						height: 100%;
 						width: 100%;
 						& > dt {
 
+						}
+						& > div {
+							padding-top: calc(100% / var(--aspect-ratio-card));
+							background: var(--color-text);
 						}
 						& > dd {
 
