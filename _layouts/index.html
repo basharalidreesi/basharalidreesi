@@ -9,6 +9,7 @@ layout: default
                                                 <div>
                                                         <dt>{{ work.title }}</dt>
                                                 </div>
+                                                {%- comment -%}
                                                 {%- if work.image or work.caption %}
                                                 <div>
                                                         {%- if work.image %}
@@ -26,6 +27,7 @@ layout: default
                                                         {%- endif %}
                                                 </div>
                                                 {%- endif %}
+                                                {%- endcomment %}
                                         </dl>
                                 </li>
                                 {%- endfor %}
