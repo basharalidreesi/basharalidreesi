@@ -9,7 +9,7 @@ layout: default
                                                 <div>
                                                         <dt>{{ work.title }}</dt>
                                                 </div>
-                                                {%- if work.figure or work.caption %}
+                                                {%- unless work.figure == empty or work.caption == empty %}
                                                 <div>
                                                         {%- if work.figure %}
                                                         <dd>{{ work.figure }}</dd>
@@ -18,14 +18,14 @@ layout: default
                                                         <dd>{{ work.caption }}</dd>
                                                         {%- endif %}
                                                 </div>
-                                                {%- endif -%}
-                                                {%- if work.tags %}
+                                                {%- endunless -%}
+                                                {%- unless work.tags == empty %}
                                                 <div>
                                                         {%- for tag in work.tags %}
                                                         <dd>{{ tag }}</dd>
                                                         {%- endfor %}
                                                 </div>
-                                                {%- endif %}
+                                                {%- endunless %}
                                         </dl>
                                 </li>
                                 {%- endfor %}
