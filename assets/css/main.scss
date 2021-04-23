@@ -146,6 +146,7 @@ body {
 		}
 	}
 	& > nav { /* none yet! */ }
+
 	& #main {
 		& #workIndex {
 			display: grid;
@@ -161,11 +162,18 @@ body {
 				grid-row-end: span var(--number-index-grid-row-spans);
 				box-shadow: 0 0 0 1px black;
 				& .work__title { /* none yet! */ }
-				& .work__figure { /* none yet! */ }
+				& .work__figure {
+					& img {
+						display: block;
+						width: 100%;
+						height: auto;
+					}
+				}
 				& .work__caption { /* none yet! */ }
 				& .work__tags { /* none yet! */ }
 			}
 		}
 	}
+
 	& > footer { /* none yet! */ }
 }
