@@ -36,6 +36,12 @@ $unit-negative-quadruple:	-4.00rem;
 	--number-index-grid-rows: #{$unit};
 	--number-index-grid-gaps: #{$unit};
 	--number-index-grid-row-spans: 12;
+	@media (max-width: 768px) {
+		--number-index-grid-columns: 2;
+	}
+	@media (max-width: 512px) {
+		--number-index-grid-columns: 1;
+	}
 
 	--aspect-ratio-card: (4 / 3);
 	@media (prefers-color-scheme: dark) { /* none yet! */ }
