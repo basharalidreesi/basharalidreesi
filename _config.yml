@@ -22,6 +22,14 @@ defaults:
       path: ''
     values:
       layout: default
+  - scope:
+      path: ''
+      type: 'works'
+    values:
+      title: null
+      figure: null
+      caption: null
+      tags: null
 theme: null
 sass:
   sass_dir: _sass

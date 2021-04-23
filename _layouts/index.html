@@ -6,32 +6,28 @@ layout: default
                                 {%- for work in site.works %}
                                 <li>
                                         <dl>
-                                                {%- assign title = work.title | strip_newlines | remove: "<br />" | strip | remove: " " -%}
-                                                {%- assign figure = work.figure | strip_newlines | remove: "<br />" | strip | remove: " " -%}
-                                                {%- assign caption = work.caption | strip_newlines | remove: "<br />" | strip | remove: " " -%}
-                                                {%- assign tags = work.tags | strip_newlines | remove: "<br />" | strip | remove: " " -%}
-                                                {%- unless title == empty %}
+                                                {%- if work.title %}
                                                 <div>
                                                         <dt>{{ work.title }}</dt>
                                                 </div>
-                                                {%- endunless -%}
-                                                {%- unless figure == empty %}
+                                                {%- endif -%}
+                                                {%- if work.figure %}
                                                 <div>
                                                         <dd>{{ work.figure }}</dd>
                                                 </div>
-                                                {%- endunless -%}
-                                                {%- unless caption == empty %}
+                                                {%- endif -%}
+                                                {%- if work.caption %}
                                                 <div>
                                                         <dd>{{ work.caption }}</dd>
                                                 </div>
-                                                {%- endunless -%}
-                                                {%- unless tags == empty %}
+                                                {%- endif -%}
+                                                {%- if work.tags %}
                                                 <div>
                                                         {%- for tag in work.tags %}
                                                         <dd>{{ tag }}</dd>
                                                         {%- endfor %}
                                                 </div>
-                                                {%- endunless %}
+                                                {%- endif %}
                                         </dl>
                                 </li>
                                 {%- endfor %}
