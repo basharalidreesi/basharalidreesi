@@ -3,17 +3,23 @@ layout: default
 ---
 
                         <ol>
-                                {%- for work in site.data.workIndex.works %}
-                                <li><a href="{{ work.title | slugify | prepend: site.data.workIndex.path | append: '/' }}">
+                                {%- for work in site.data.workIndex.works -%}
+                                {%- assign url =
+                                        work.title |
+                                        slugify |
+                                        prepend: site.data.workIndex.path |
+                                        append: '/'
+                                %}
+                                <li>
                                         <dl>
                                                 {%- if work.title %}
                                                 <div>
-                                                        <dt>{{ work.title }}</dt>
+                                                        <dt><a href="{{ url }}">{{ work.title }}</a></dt>
                                                 </div>
                                                 {%- endif -%}
                                                 {%- if work.figure %}
                                                 <div>
-                                                        <dd>{{ work.figure }}</dd>
+                                                        <dd><a href="{{ url }}">{{ work.figure }}</a></dd>
                                                 </div>
                                                 {%- endif -%}
                                                 {%- if work.caption %}
@@ -29,6 +35,6 @@ layout: default
                                                 </div>
                                                 {%- endif %}
                                         </dl>
-                                </a></li>
+                                </li>
                                 {%- endfor %}
                         </ol>
