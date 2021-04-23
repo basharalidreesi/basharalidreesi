@@ -160,15 +160,17 @@ body {
 			& > li {
 				grid-row-end: span var(--number-index-grid-row-spans);
 				box-shadow: 0 0 0 1px black;
-				& > dl {
-					& > div {
-						& > dt {
+				& > a {
+					& > dl {
+						& > div {
+							& > dt {
 
-						}
-						& > dd {
+							}
+							& > dd {
 
+							}
 						}
-					}
+					}	
 				}
 			}
 		}

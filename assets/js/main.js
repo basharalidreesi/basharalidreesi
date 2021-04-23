@@ -10,7 +10,7 @@ const bashar = {
 		sparkleZone: document.getElementById("sparkleZone"),
 		sparkle: document.getElementById("sparkle"),
 		switches: document.querySelectorAll("switch"),
-		indexDls: document.querySelectorAll(".--index > .mother > main > ol > li > dl"),
+		indexDls: document.querySelectorAll(".--index > .mother > main > ol > li > a > dl"),
 	},
 
 	initAllScripts: function() {
@@ -120,7 +120,7 @@ const bashar = {
 			bashar.lexicon.indexDls.forEach((indexDl) => {
 				let dlHeight = indexDl.getBoundingClientRect().height;
 				let dlSpan = Math.ceil((dlHeight + gridGapHeight) / (gridRowHeight + gridGapHeight));
-				indexDl.parentNode.style.setProperty("--number-index-grid-row-spans", dlSpan);
+				indexDl.parentNode.parentNode.style.setProperty("--number-index-grid-row-spans", dlSpan);
 			});
 		},
 	},
