@@ -1,9 +1,9 @@
+path: /works/
+
 works:
 
 - title: >-
     Lorem
-  path: >-
-    /works/lorem/index.html
   figure: >-
     unsplash.it/300
   caption: >-
@@ -15,8 +15,6 @@ works:
 
 - title: >-
     Ipsum
-  path: >-
-    /works/ipsum/index.html
   figure: >-
     unsplash.it/300
   caption: >-
@@ -26,8 +24,6 @@ works:
 
 - title: >-
     Dolor
-  path: >-
-    /works/dolor/index.html
   figure: >-
     unsplash.it/300
   caption:
@@ -35,8 +31,6 @@ works:
 
 - title: >-
     Sit
-  path: >-
-    /works/sit/index.html
   figure: >-
     unsplash.it/300
   caption: >-
@@ -45,8 +39,6 @@ works:
 
 - title: >-
     Amet
-  path: >-
-    /works/amet/index.html
   figure:
   caption:
   tags:
