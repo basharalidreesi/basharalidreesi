@@ -120,7 +120,7 @@ const bashar = {
 			bashar.lexicon.indexDls.forEach((indexDl) => {
 				let dlHeight = indexDl.getBoundingClientRect().height;
 				let dlSpan = Math.ceil((dlHeight + gridGapHeight) / (gridRowHeight + gridGapHeight));
-				indexDl.parentElement.setProperty("--number-index-grid-row-spans", dlSpan);
+				indexDl.parentNode.style.setProperty("--number-index-grid-row-spans", dlSpan);
 			});
 		},
 	},
