@@ -161,6 +161,11 @@ body {
 			& .workIndex__work {
 				grid-row-end: span var(--number-index-grid-row-spans);
 				box-shadow: 0 0 0 1px black;
+				& .work__title,
+				& .work__caption,
+				& .work__tags {
+					padding: $unit;
+				}
 				& .work__title { /* none yet! */ }
 				& .work__figure {
 					& img {
