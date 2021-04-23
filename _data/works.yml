@@ -3,7 +3,7 @@ index:
 - title: >-
     Lorem
   path: >-
-    /works/lorem/index.md
+    /works/lorem/index.html
   figure: >-
     unsplash.it/300
   caption: >-
@@ -16,7 +16,7 @@ index:
 - title: >-
     Ipsum
   path: >-
-    /works/ipsum/index.md
+    /works/ipsum/index.html
   figure: >-
     unsplash.it/300
   caption: >-
@@ -27,7 +27,7 @@ index:
 - title: >-
     Dolor
   path: >-
-    /works/dolor/index.md
+    /works/dolor/index.html
   figure: >-
     unsplash.it/300
   caption:
@@ -36,7 +36,7 @@ index:
 - title: >-
     Sit
   path: >-
-    /works/sit/index.md
+    /works/sit/index.html
   figure: >-
     unsplash.it/300
   caption: >-
@@ -46,7 +46,7 @@ index:
 - title: >-
     Amet
   path: >-
-    /works/amet/index.md
+    /works/amet/index.html
   figure:
   caption:
   tags:
