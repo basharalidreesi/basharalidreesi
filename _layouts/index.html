@@ -6,28 +6,20 @@ layout: default
                                 {%- for work in site.works %}
                                 <li>
                                         <dl>
-                                                {%- unless work.title == empty %}
                                                 <div>
                                                         <dt>{{ work.title }}</dt>
                                                 </div>
-                                                {%- endunless -%}
-                                                {%- unless work.figure == empty %}
                                                 <div>
                                                         <dd>{{ work.figure }}</dd>
                                                 </div>
-                                                {%- endunless -%}
-                                                {%- unless work.caption == empty %}
                                                 <div>
                                                         <dd>{{ work.caption }}</dd>
                                                 </div>
-                                                {%- endunless -%}
-                                                {%- unless work.tags == empty %}
                                                 <div>
                                                         {%- for tag in work.tags %}
                                                         <dd>{{ tag }}</dd>
                                                         {%- endfor %}
                                                 </div>
-                                                {%- endunless %}
                                         </dl>
                                 </li>
                                 {%- endfor %}
