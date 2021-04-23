@@ -26,10 +26,10 @@ defaults:
       path: ''
       type: 'works'
     values:
-      title: null
-      figure: null
-      caption: null
-      tags: null
+      title: nil
+      figure: nil
+      caption: nil
+      tags: nil
 theme: null
 sass:
   sass_dir: _sass
