@@ -8,7 +8,7 @@ works:
 - title: >-
     Lorem
   figure: >-
-    unsplash.it/300
+    https://source.unsplash.com/random
   caption: >-
     sample caption
   tags:
@@ -19,7 +19,7 @@ works:
 - title: >-
     Ipsum
   figure: >-
-    unsplash.it/300
+    https://source.unsplash.com/random
   caption: >-
     another sample caption
   tags:
@@ -28,14 +28,14 @@ works:
 - title: >-
     Dolor
   figure: >-
-    unsplash.it/300
+    https://source.unsplash.com/random
   caption:
   tags:
 
 - title: >-
     Sit
   figure: >-
-    unsplash.it/300
+    https://source.unsplash.com/random
   caption: >-
     small caption
   tags:
