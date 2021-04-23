@@ -115,6 +115,9 @@ const bashar = {
 			window.addEventListener("load", () => {
 				bashar.main.resizeWorks();
 			});
+			window.addEventListener("resize", () => {
+				bashar.main.resizeWorks();
+			});
 		},
 		resizeWorks: function() {
 			let fontSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("font-size"));
