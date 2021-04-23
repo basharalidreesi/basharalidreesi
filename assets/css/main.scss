@@ -158,24 +158,24 @@ body {
 			grid-auto-rows: var(--number-index-grid-rows);
 			grid-gap: var(--number-index-grid-gaps);
 			list-style: none;
-			&__work {
+			& .workIndex__work {
 				grid-row-end: span var(--number-index-grid-row-spans);
 				box-shadow: 0 0 0 1px black;
-				&--title,
-				&--caption,
-				&--tags {
-					padding: $unit;
+				& .work__title,
+				& .work__caption,
+				& .work__tags {
+					// padding: $unit;
 				}
-				&--title { /* none yet! */ }
-				&--figure {
+				& .work__title { /* none yet! */ }
+				& .work__figure {
 					& img {
 						display: block;
 						width: 100%;
 						height: auto;
 					}
 				}
-				&--caption { /* none yet! */ }
-				&--tags { /* none yet! */ }
+				& .work__caption { /* none yet! */ }
+				& .work__tags { /* none yet! */ }
 			}
 		}
 	}

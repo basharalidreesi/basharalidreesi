@@ -13,12 +13,12 @@ layout: main
                                 <li class="workIndex__work">
                                         <dl>
                                                 {%- if work.title %}
-                                                <div class="workIndex__work--title">
+                                                <div class="work__title">
                                                         <dt><a href="{{ url }}">{{ work.title }}</a></dt>
                                                 </div>
                                                 {%- endif -%}
                                                 {%- if work.figure %}
-                                                <div class="workIndex__work--figure">
+                                                <div class="work__figure">
                                                         <dd>
                                                                 <a href="{{ url }}">
                                                                         <img src="{{ work.figure }}" alt="" />
@@ -27,12 +27,12 @@ layout: main
                                                 </div>
                                                 {%- endif -%}
                                                 {%- if work.caption %}
-                                                <div class="workIndex__work--caption">
+                                                <div class="work__caption">
                                                         <dd>{{ work.caption }}</dd>
                                                 </div>
                                                 {%- endif -%}
                                                 {%- if work.tags %}
-                                                <div class="workIndex__work--tags">
+                                                <div class="work__tags">
                                                         {%- for tag in work.tags %}
                                                         <dd>{{ tag }}</dd>
                                                         {%- endfor %}
