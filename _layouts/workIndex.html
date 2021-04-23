@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: main
 ---
 
-                        <ol>
+                        <ol id="main__workIndex">
                                 {%- for work in site.data.workIndex.works -%}
                                 {%- assign url =
                                         work.title |
@@ -10,25 +10,25 @@ layout: default
                                         prepend: site.data.workIndex.path |
                                         append: '/'
                                 %}
-                                <li>
+                                <li class="workIndex__work">
                                         <dl>
                                                 {%- if work.title %}
-                                                <div>
+                                                <div class="work__title">
                                                         <dt><a href="{{ url }}">{{ work.title }}</a></dt>
                                                 </div>
                                                 {%- endif -%}
                                                 {%- if work.figure %}
-                                                <div>
+                                                <div class="work__figure">
                                                         <dd><a href="{{ url }}">{{ work.figure }}</a></dd>
                                                 </div>
                                                 {%- endif -%}
                                                 {%- if work.caption %}
-                                                <div>
+                                                <div class="work__caption">
                                                         <dd>{{ work.caption }}</dd>
                                                 </div>
                                                 {%- endif -%}
                                                 {%- if work.tags %}
-                                                <div>
+                                                <div class="work__tags">
                                                         {%- for tag in work.tags %}
                                                         <dd>{{ tag }}</dd>
                                                         {%- endfor %}
