@@ -19,7 +19,11 @@ layout: main
                                                 {%- endif -%}
                                                 {%- if work.figure %}
                                                 <div class="work__figure">
-                                                        <dd><a href="{{ url }}">{{ work.figure }}</a></dd>
+                                                        <dd>
+                                                                <a href="{{ url }}">
+                                                                        <img src="{{ work.figure }}" alt="" />
+                                                                </a>
+                                                        </dd>
                                                 </div>
                                                 {%- endif -%}
                                                 {%- if work.caption %}
