@@ -113,22 +113,24 @@ const bashar = {
 	main: {
 		initMainScripts: function() {
 			window.addEventListener("load", () => {
-				bashar.main.resizeWorks();
+				bashar.main.workIndex.resizeWorks();
 			});
 			window.addEventListener("resize", () => {
-				bashar.main.resizeWorks();
+				bashar.main.workIndex.resizeWorks();
 			});
 		},
-		resizeWorks: function() {
-			let fontSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("font-size"));
-			let gridRowHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--number-index-grid-rows")) * fontSize;
-			let gridGapHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--number-index-grid-gaps")) * fontSize;
-			bashar.lexicon.works.forEach((work) => {
-				let workDl = work.querySelector(":scope dl");
-				let workDlHeight = workDl.getBoundingClientRect().height;
-				let workDlSpan = Math.ceil((workDlHeight + gridGapHeight) / (gridRowHeight + gridGapHeight));
-				work.style.setProperty("--number-index-grid-row-spans", workDlSpan);
-			});
+		workIndex: {
+			resizeWorks: function() {
+				let fontSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("font-size"));
+				let gridRowHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--number-index-grid-rows")) * fontSize;
+				let gridGapHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--number-index-grid-gaps")) * fontSize;
+				bashar.lexicon.works.forEach((work) => {
+					let workDl = work.querySelector(":scope dl");
+					let workDlHeight = workDl.getBoundingClientRect().height;
+					let workDlSpan = Math.ceil((workDlHeight + gridGapHeight) / (gridRowHeight + gridGapHeight));
+					work.style.setProperty("--number-index-grid-row-spans", workDlSpan);
+				});
+			},
 		},
 	},
 
