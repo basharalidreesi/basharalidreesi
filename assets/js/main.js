@@ -122,7 +122,7 @@ const bashar = {
 				let workDl = work.querySelector(":scope dl");
 				let workDlHeight = workDl.getBoundingClientRect().height;
 				let workDlSpan = Math.ceil((workDlHeight + gridGapHeight) / (gridRowHeight + gridGapHeight));
-				workDl.style.setProperty("--number-index-grid-row-spans", workDlSpan);
+				work.style.setProperty("--number-index-grid-row-spans", workDlSpan);
 			});
 		},
 	},
