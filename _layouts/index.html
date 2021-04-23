@@ -3,8 +3,8 @@ layout: default
 ---
 
                         <ol>
-                                {%- for work in site.works %}
-                                <li>
+                                {%- for work in site.data.works.index %}
+                                <li><a href="{{ work.path }}">
                                         <dl>
                                                 <div>
                                                         <dt>{{ work.title }}</dt>
@@ -21,6 +21,6 @@ layout: default
                                                         {%- endfor %}
                                                 </div>
                                         </dl>
-                                </li>
+                                </a></li>
                                 {%- endfor %}
                         </ol>

@@ -1,0 +1,52 @@
+index:
+
+- title: >-
+    Lorem
+  path: >-
+    /works/lorem/index.md
+  figure: >-
+    unsplash.it/300
+  caption: >-
+    sample caption
+  tags:
+    - hello
+    - and
+    - goodbye
+
+- title: >-
+    Ipsum
+  path: >-
+    /works/ipsum/index.md
+  figure: >-
+    unsplash.it/300
+  caption: >-
+    another sample caption
+  tags:
+    - just hi
+
+- title: >-
+    Dolor
+  path: >-
+    /works/dolor/index.md
+  figure: >-
+    unsplash.it/300
+  caption:
+  tags:
+
+- title: >-
+    Sit
+  path: >-
+    /works/sit/index.md
+  figure: >-
+    unsplash.it/300
+  caption: >-
+    small caption
+  tags:
+
+- title: >-
+    Amet
+  path: >-
+    /works/amet/index.md
+  figure:
+  caption:
+  tags:

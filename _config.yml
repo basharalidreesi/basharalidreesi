@@ -26,10 +26,6 @@ defaults:
       path: ''
       type: 'works'
     values:
-      title:
-      figure:
-      caption:
-      tags:
 theme: null
 sass:
   sass_dir: _sass
