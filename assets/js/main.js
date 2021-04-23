@@ -10,10 +10,12 @@ const bashar = {
 		sparkleZone: document.getElementById("sparkleZone"),
 		sparkle: document.getElementById("sparkle"),
 		switches: document.querySelectorAll("switch"),
+		indexDls: document.querySelectorAll(".--index > main > ol > li > dl"),
 	},
 
 	initAllScripts: function() {
 		bashar.header.initHeaderScripts();
+		bashar.main.initMainScripts();
 	},
 
 	header: {
@@ -104,6 +106,22 @@ const bashar = {
 					+ " scale(" + scale + ")"
 					+ " rotate(45)"
 			);
+		},
+	},
+
+	main: {
+		initMainScripts: function() {
+			bashar.main.resizeIndexDls();
+		},
+		resizeIndexDls: function() {
+			let fontSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("font-size"));
+			let gridRowHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--number-index-grid-rows")) * fontSize;
+			let gridGapHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--number-index-grid-gaps")) * fontSize;
+			bashar.lexicon.indexDls.forEach((indexDl) => {
+				let dlHeight = indexDl.getBoundingClientRect().height;
+				let dlSpan = Math.ceil((dlHeight + gridGapHeight) / (gridRowHeight + gridGapHeight));
+				indexDl.parentElement.setProperty("--number-index-grid-row-spans", dlSpan);
+			});
 		},
 	},
 
