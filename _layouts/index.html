@@ -6,20 +6,28 @@ layout: default
                                 {%- for work in site.data.workIndex.works %}
                                 <li><a href="{{ work.title | slugify | prepend: site.data.workIndex.path | append: '/' }}">
                                         <dl>
+                                                {%- if work.title %}
                                                 <div>
                                                         <dt>{{ work.title }}</dt>
                                                 </div>
+                                                {%- endif -%}
+                                                {%- if work.figure %}
                                                 <div>
                                                         <dd>{{ work.figure }}</dd>
                                                 </div>
+                                                {%- endif -%}
+                                                {%- if work.caption %}
                                                 <div>
                                                         <dd>{{ work.caption }}</dd>
                                                 </div>
+                                                {%- endif -%}
+                                                {%- if work.tags %}
                                                 <div>
                                                         {%- for tag in work.tags %}
                                                         <dd>{{ tag }}</dd>
                                                         {%- endfor %}
                                                 </div>
+                                                {%- endif %}
                                         </dl>
                                 </a></li>
                                 {%- endfor %}
