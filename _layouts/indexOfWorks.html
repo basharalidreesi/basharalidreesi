@@ -15,24 +15,24 @@ layout: main
 				<li class="indexOfWorks__work">
 					<dl>
 						{%- for entry in work -%}
-							{%- assign key = entry[0] -%}
-							{%- assign value = entry[1] -%}
-							{%- assign datum = index.datum.immediateContent[key] -%}
-							{%- if value and datum %}
+						{%- assign key = entry[0] -%}
+						{%- assign value = entry[1] -%}
+						{%- assign datum = index.indexingDatum[key] -%}
+						{%- if value and datum %}
 						<div class="{{ datum.classes | join: ' ' }}">
 							{%- for node in value %}
 							{{ datum.outerHTML.open }}
-								{%- if datum.isHyperlinked %}
+								{%- if datum.isAnchored %}
 								<a href="{{ url }}">
 								{%- endif %}
-								{% if datum.isHyperlinked %}{{ indent }}{% endif %}{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
-								{%- if datum.isHyperlinked %}
+								{% if datum.isAnchored %}{{ indent }}{% endif %}{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
+								{%- if datum.isAnchored %}
 								</a>
 								{%- endif %}
 							{{ datum.outerHTML.close }}
 							{%- endfor %}
 						</div>
-							{%- endif -%}
+						{%- endif -%}
 						{%- endfor %}
 					</dl>
 				</li>

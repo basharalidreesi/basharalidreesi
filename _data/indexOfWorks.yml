@@ -4,24 +4,22 @@
 
 path: /works/
 
-#   header: {PATH}
-#   colors: {ARRAY}
-#   fonts: {ARRAY}
-#   css: {ARRAY}
-#   js: {ARRAY}
-#   propagate: {BOOLEAN}
-#   display: {BOOLEAN}
-
 # parameters:
-# - title:
-#   subtitle:
-#   figure:
-#   caption:
-#   tags:
-#   clientele:
-#   time:
-#   url:
-#   isIndexed:
+# - title:      # <immediateContent>, unset
+#   subtitle:   # <immediateContent>, unset
+#   figure:     # <immediateContent>, unset
+#   caption:    # <immediateContent>, unset
+#   tags:       # <immediateContent>, unset
+#   clientele:  # <immediateContent>, unset
+#   time:       # <immediateContent>, unset
+#   url:        # <immediateContent>, generated from title if unset
+#   colors: ARRAY TODO
+#   fonts: ARRAY TODO
+#   css: ARRAY TODO
+#   js: ARRAY TODO
+#   header: TODO
+#   isIndexed:  # BOOLEAN, true
+#   doesPropagate: # BOOLEAN, false TODO
 
 works:
 # begin
@@ -43,98 +41,84 @@ works:
   caption: small caption
 # break
 - title: Amet
-  isIndexed: false
 # end
 
-datum:
+indexingDatum:
 # begin
-  immediateContent:
-  # begin
-    title:
-      classes:
-        - indexOfWorks__workTitle
-      outerHTML:
-        open: <dt>
-        close: </dt>
-      innerHTML:
-        open:
-        close:
-      isHyperlinked: true
-    # break
-    subtitle:
-      classes:
-        - indexOfWorks__workSubtitle
-      outerHTML:
-        open: <dd>
-        close: </dd>
-      innerHTML:
-        open:
-        close:
-      isHyperlinked: true
-    # break
-    figure:
-      classes:
-        - indexOfWorks__workFigure
-      outerHTML:
-        open: <dd>
-        close: </dd>
-      innerHTML:
-        open: '<img src="'
-        close: '" />'
-      isHyperlinked: true
-    # break
-    caption:
-      classes:
-        - indexOfWorks__workCaption
-      outerHTML:
-        open: <dd>
-        close: </dd>
-      innerHTML:
-        open:
-        close:
-      isHyperlinked: false
-    # break
-    tags:
-      classes:
-        - indexOfWorks__workTags
-      outerHTML:
-        open: <dd>
-        close: </dd>
-      innerHTML:
-        open:
-        close:
-      isHyperlinked: false
-    # break
-    clientele:
-      classes:
-        - indexOfWorks__workClientele
-      outerHTML:
-        open: <dd>
-        close: </dd>
-      innerHTML:
-        open:
-        close:
-      isHyperlinked: false
-    # break
-    time:
-      classes:
-        - indexOfWorks__workTime
-      outerHTML:
-        open: <dd>
-        close: </dd>
-      innerHTML:
-        open:
-        close:
-      isHyperlinked: false
-  # end
-  intermediateContent: # content for linking to the indexed entry
-  # begin
-    url:
-  # end
-  transmediateContent: # content for display within the indexed entry
-  # begin
-    header:
-    colors:
-    fonts:
-  # end
+  title:
+    classes:
+      - indexOfWorks__workTitle
+    outerHTML:
+      open: <dt>
+      close: </dt>
+    innerHTML:
+      open:
+      close:
+    isAnchored: true
+  # break
+  subtitle:
+    classes:
+      - indexOfWorks__workSubtitle
+    outerHTML:
+      open: <dd>
+      close: </dd>
+    innerHTML:
+      open:
+      close:
+    isAnchored: true
+  # break
+  figure:
+    classes:
+      - indexOfWorks__workFigure
+    outerHTML:
+      open: <dd>
+      close: </dd>
+    innerHTML:
+      open: '<img src="'
+      close: '" />'
+    isAnchored: true
+  # break
+  caption:
+    classes:
+      - indexOfWorks__workCaption
+    outerHTML:
+      open: <dd>
+      close: </dd>
+    innerHTML:
+      open:
+      close:
+    isAnchored: false
+  # break
+  tags:
+    classes:
+      - indexOfWorks__workTags
+    outerHTML:
+      open: <dd>
+      close: </dd>
+    innerHTML:
+      open:
+      close:
+    isAnchored: false
+  # break
+  clientele:
+    classes:
+      - indexOfWorks__workClientele
+    outerHTML:
+      open: <dd>
+      close: </dd>
+    innerHTML:
+      open:
+      close:
+    isAnchored: false
+  # break
+  time:
+    classes:
+      - indexOfWorks__workTime
+    outerHTML:
+      open: <dd>
+      close: </dd>
+    innerHTML:
+      open:
+      close:
+    isAnchored: false
 # end
