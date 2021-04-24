@@ -66,6 +66,7 @@ works:
 # end
 
 metadata:
+# begin
   title:
     content: true
     classes:
@@ -74,6 +75,7 @@ metadata:
       opening: <dt>
       closing: </dt>
     hyperlinked: true
+# break
   subtitle:
     content: true
     classes:
@@ -82,6 +84,7 @@ metadata:
       opening: <dd>
       closing: </dd>
     hyperlinked: true
+# break
   figure:
     content: true
     classes:
@@ -90,6 +93,7 @@ metadata:
       opening: <dd>
       closing: </dd>
     hyperlinked: true
+# break
   caption:
     content: true
     classes:
@@ -98,6 +102,7 @@ metadata:
       opening: <dd>
       closing: </dd>
     hyperlinked: true
+# break
   tags:
     content: true
     classes:
@@ -106,6 +111,7 @@ metadata:
       opening: <dd>
       closing: </dd>
     hyperlinked: true
+# break
   clients:
     content: true
     classes:
@@ -114,23 +120,34 @@ metadata:
       opening: <dd>
       closing: </dd>
     hyperlinked: true
+# break
   link:
     content: false
+# break
   date:
     content: false
+# break
   header:
     content: false
+# break
   colors:
     content: false
+# break
   fonts:
     content: false
+# break
   propagates:
     content: false
+# break
   css:
     content: false
+# break
   js:
     content: false
+# break
   groups:
     content: false
+# break
   displayed:
     content: false
+# end

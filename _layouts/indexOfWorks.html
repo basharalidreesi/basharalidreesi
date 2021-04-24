@@ -10,7 +10,7 @@ layout: main
                                         {%- else -%}
                                                 {%- assign url = work.title
                                                         | slugify
-                                                        | prepend: site.data.workIndex.path
+                                                        | prepend: index.path
                                                         | append: "/"
                                                 -%}
                                         {%- endif %}
@@ -18,9 +18,7 @@ layout: main
                                         <dl>
                                                 {%- for entry in work -%}
                                                         {%- assign key = entry[0] -%}
-                                                        {{ key | inspect }}
                                                         {%- assign value = entry[1] -%}
-                                                        {{ value | inspect }}
                                                         {%- assign metadata = index.metadata[key] -%}
                                                 <div class="{{ metadata.classes | join: ' ' }}">
                                                         {{ metadata.htmlTags.opening }}
