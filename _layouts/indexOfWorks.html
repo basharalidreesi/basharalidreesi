@@ -2,41 +2,41 @@
 layout: main
 ---
 
-                        {%- assign index = site.data.indexOfWorks %}
-                        <ol class="indexOfWorks">
-                                {%- for work in index.works %}
-                                        {%- if work.url -%}
-                                                {%- assign url = work.url -%}
-                                        {%- else -%}
-                                                {%- assign url = work.title
-                                                        | slugify
-                                                        | prepend: index.path
-                                                        | append: "/"
-                                                -%}
-                                        {%- endif %}
-                                <li class="indexOfWorks__work">
-                                        <dl>
-                                                {%- for entry in work -%}
-                                                        {%- assign key = entry[0] -%}
-                                                        {%- assign value = entry[1] -%}
-                                                        {%- assign datum = index.datum.immediateContent[key] -%}
-                                                        {%- if value and datum %}
-                                                <div class="{{ datum.classes | join: ' ' }}">
-                                                        {%- for node in value %}
-                                                        {{ datum.outerHTML.open }}
-                                                                {%- if datum.isHyperlinked %}
-                                                                <a href="{{ url }}">
-                                                                {%- endif %}
-                                                                {{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
-                                                                {%- if datum.isHyperlinked %}
-                                                                </a>
-                                                                {%- endif %}
-                                                        {{ datum.outerHTML.close }}
-                                                        {%- endfor %}
-                                                </div>
-                                                        {%- endif -%}
-                                                {%- endfor %}
-                                        </dl>
-                                </li>
-                                {%- endfor %}
-                        </ol>
+			{%- assign index = site.data.indexOfWorks %}
+			<ol class="indexOfWorks">
+				{%- for work in index.works %}
+					{%- if work.url -%}
+						{%- assign url = work.url -%}
+					{%- else -%}
+						{%- assign url = work.title
+							| slugify
+							| prepend: index.path
+							| append: "/"
+						-%}
+					{%- endif %}
+				<li class="indexOfWorks__work">
+					<dl>
+						{%- for entry in work -%}
+							{%- assign key = entry[0] -%}
+							{%- assign value = entry[1] -%}
+							{%- assign datum = index.datum.immediateContent[key] -%}
+							{%- if value and datum %}
+						<div class="{{ datum.classes | join: ' ' }}">
+							{%- for node in value %}
+							{{ datum.outerHTML.open }}
+								{%- if datum.isHyperlinked %}
+								<a href="{{ url }}">
+								{%- endif %}
+								{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
+								{%- if datum.isHyperlinked %}
+								</a>
+								{%- endif %}
+							{{ datum.outerHTML.close }}
+							{%- endfor %}
+						</div>
+							{%- endif -%}
+						{%- endfor %}
+					</dl>
+				</li>
+				{%- endfor %}
+			</ol>
