@@ -14,11 +14,11 @@ layout: main
                                                         | append: "/"
                                                 -%}
                                         {%- endif %}
-                                <li class="indexOfWorks__entry">
+                                <li class="indexOfWorks__work">
                                         <dl>
                                                 {%- for entry in work -%}
                                                         {%- assign metadata = index.metadata[entry] -%}
-                                                        {%- if work and metadata.content %}
+                                                        {% comment %}{%- if work and metadata.content %}{% endcomment %}
                                                 <div class="{{ metadata.classes | join: ' ' }}">
                                                         {{ metadata.htmlTags.opening }}
                                                                 {%- if metadata.hyperlinked %}
@@ -30,7 +30,7 @@ layout: main
                                                                 {%- endif -%}
                                                         {{ metadata.htmlTags.closing }}
                                                 </div>
-                                                        {%- endif -%}
+                                                        {% comment %}{%- endif -%}{% endcomment %}
                                                 {%- endfor %}
                                         </dl>
                                 </li>
