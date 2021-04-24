@@ -18,7 +18,9 @@ layout: main
                                         <dl>
                                                 {%- for entry in work -%}
                                                         {%- assign key = entry[0] -%}
+                                                        {{ key | inspect }}
                                                         {%- assign value = entry[1] -%}
+                                                        {{ value | inspect }}
                                                         {%- assign metadata = index.metadata[key][1] -%}
                                                 <div class="{{ metadata.classes | join: ' ' }}">
                                                         {{ metadata.htmlTags.opening }}
