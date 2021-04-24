@@ -25,46 +25,40 @@ path: /works/
 
 works:
 # begin
-- title: >-
-    Lorem
-  figure: >-
-    https://source.unsplash.com/random
-  caption: >-
-    sample caption
-  tags:
-    - hello
-    - and
-    - goodbye
+- title: Lorem
+  figure: https://source.unsplash.com/random
+  caption: sample caption
+  tags: [hello, and, goodbye]
+  clientele:
+  time:
 # break
-- title: >-
-    Ipsum
-  figure: >-
-    https://source.unsplash.com/random
-  caption: >-
-    another sample caption
-  tags:
-    - just hi
+- title: Ipsum
+  figure: https://source.unsplash.com/random
+  caption: another sample caption
+  tags: just hi
+  clientele:
+  time:
 # break
-- title: >-
-    Dolor
-  figure: >-
-    https://source.unsplash.com/random
+- title: Dolor
+  figure: https://source.unsplash.com/random
   caption:
   tags:
+  clientele:
+  time:
 # break
-- title: >-
-    Sit
-  figure: >-
-    https://source.unsplash.com/random
-  caption: >-
-    small caption
+- title: Sit
+  figure: https://source.unsplash.com/random
+  caption: small caption
   tags:
+  clientele:
+  time:
 # break
-- title: >-
-    Amet
+- title: Amet
   figure:
   caption:
   tags:
+  clientele:
+  time:
 # end
 
 datum:

@@ -22,12 +22,12 @@ layout: main
                                                         {%- assign datum = index.datum.immediateContent[key] -%}
                                                         {%- if datum %}
                                                 <div class="{{ datum.classes | join: ' ' }}">
-                                                        {%- for item in value %}
+                                                        {%- for node in value %}
                                                         {{ datum.outerHTML.open }}
                                                                 {%- if datum.isHyperlinked %}
                                                                 <a href="{{ url }}">
                                                                 {%- endif %}
-                                                                {{ datum.innerHTML.open }}{{ value }}{{ datum.innerHTML.close }}
+                                                                {{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
                                                                 {%- if datum.isHyperlinked %}
                                                                 </a>
                                                                 {%- endif %}
