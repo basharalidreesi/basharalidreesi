@@ -22,7 +22,8 @@ layout: main
                                                         {%- assign value = entry[1] -%}
                                                         {{ value | inspect }}
                                                         {%- assign metadata = index.metadata -%}
-                                                        <p style="color: red">{{ metadata | inspect }}</p>
+                                                        <p style="color: red">{{ metadata[0] | inspect }}</p>
+                                                        <p style="color: blue">{{ metadata[1] | inspect }}</p>
                                                 <div class="{{ metadata.classes | join: ' ' }}">
                                                         {{ metadata.htmlTags.opening }}
                                                                 {%- if metadata.hyperlinked %}
