@@ -106,7 +106,7 @@ body {
         background: var(--color-primary);
 }
 
-.mother {
+#mother {
 	position: relative;
 	display: flex;
 	flex-flow: column nowrap;
@@ -124,7 +124,7 @@ body {
 	& > * {
 		margin: $unit;
 	}
-	& > header {
+	#header {
 		font-size: 0;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
@@ -151,16 +151,13 @@ body {
 			}
 		}
 	}
-	& > nav { /* none yet! */ }
 
-	& #main {
-		& .indexOfWorks {
+	#nav { /* none yet! */ }
+
+	#main {
+		.indexOfWorks {
 			display: grid;
-			grid-template-columns:
-				repeat(
-					var(--number-index-grid-columns),
-					calc((100% - ((var(--number-index-grid-columns) - 1) * var(--number-index-grid-gaps))) / var(--number-index-grid-columns))
-				);
+			grid-template-columns: repeat(var(--number-index-grid-columns), calc((100% - ((var(--number-index-grid-columns) - 1) * var(--number-index-grid-gaps))) / var(--number-index-grid-columns)));
 			grid-auto-rows: var(--number-index-grid-rows);
 			grid-gap: var(--number-index-grid-gaps);
 			list-style: none;
@@ -171,7 +168,7 @@ body {
 			&__workTitle { }
 			&__workSubtitle { }
 			&__workFigure {
-				& img {
+				img {
 					display: block;
 					width: 100%;
 					height: auto;
@@ -184,5 +181,6 @@ body {
 		}
 	}
 
-	& > footer { /* none yet! */ }
+	#footer { /* none yet! */ }
+
 }
