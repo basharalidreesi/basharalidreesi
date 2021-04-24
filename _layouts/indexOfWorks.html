@@ -19,7 +19,7 @@ layout: main
                                                 {%- for entry in work -%}
                                                         {%- assign key = entry[0] -%}
                                                         {%- assign value = entry[1] -%}
-                                                        {%- assign metadata = index.metadata[key] -%}
+                                                        {%- assign metadata = index.metadata[key][1] -%}
                                                 <div class="{{ metadata.classes | join: ' ' }}">
                                                         {{ metadata.htmlTags.opening }}
                                                                 {%- if metadata.hyperlinked %}
