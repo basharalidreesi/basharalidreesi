@@ -8,11 +8,7 @@ layout: main
 					{%- if work.url -%}
 						{%- assign url = work.url -%}
 					{%- else -%}
-						{%- assign url = work.title
-							| slugify
-							| prepend: index.path
-							| append: "/"
-						-%}
+						{%- assign url = work.title | slugify | prepend: index.path | append: "/" -%}
 					{%- endif %}
 				<li class="indexOfWorks__work">
 					<dl>
@@ -27,7 +23,7 @@ layout: main
 								{%- if datum.isHyperlinked %}
 								<a href="{{ url }}">
 								{%- endif %}
-								{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
+								{% if datum.isHyperlinked %}	{% endif %}{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
 								{%- if datum.isHyperlinked %}
 								</a>
 								{%- endif %}

@@ -75,7 +75,6 @@ datum:
         open:
         close:
       isHyperlinked: true
-      isIterable: false
     # break
     subtitle:
       classes:
@@ -87,7 +86,6 @@ datum:
         open:
         close:
       isHyperlinked: true
-      isIterable: false
     # break
     figure:
       classes:
@@ -99,7 +97,6 @@ datum:
         open: '<img src="'
         close: '" />'
       isHyperlinked: true
-      isIterable: false
     # break
     caption:
       classes:
@@ -111,7 +108,6 @@ datum:
         open:
         close:
       isHyperlinked: false
-      isIterable: false
     # break
     tags:
       classes:
@@ -123,7 +119,6 @@ datum:
         open:
         close:
       isHyperlinked: false
-      isIterable: true
     # break
     clientele:
       classes:
@@ -135,7 +130,6 @@ datum:
         open:
         close:
       isHyperlinked: false
-      isIterable: true
     # break
     time:
       classes:
@@ -147,7 +141,6 @@ datum:
         open:
         close:
       isHyperlinked: false
-      isIterable: true
   # end
   intermediateContent: # content for linking to the indexed entry
   # begin
