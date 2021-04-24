@@ -16,11 +16,7 @@ layout: main
                                         {%- endif %}
                                 <li class="indexOfWorks__work">
                                         <dl>
-                                                {{ work | inspect }}
-
-
                                                 {%- for entry in work -%}
-                                                {{ entry | inspect }}
                                                         {%- assign key = entry[0] -%}
                                                         {%- assign value = entry[1] -%}
                                                         {%- assign metadata = index.metadata[key] -%}
