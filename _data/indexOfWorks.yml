@@ -66,7 +66,7 @@ works:
 # end
 
 metadata:
-- title:
+  title:
     content: true
     classes:
       - indexOfWorks__workTitle
@@ -74,7 +74,7 @@ metadata:
       opening: <dt>
       closing: </dt>
     hyperlinked: true
-- subtitle:
+  subtitle:
     content: true
     classes:
       - indexOfWorks__workSubtitle
@@ -82,7 +82,7 @@ metadata:
       opening: <dd>
       closing: </dd>
     hyperlinked: true
-- figure:
+  figure:
     content: true
     classes:
       - indexOfWorks__workFigure
@@ -90,7 +90,7 @@ metadata:
       opening: <dd>
       closing: </dd>
     hyperlinked: true
-- caption:
+  caption:
     content: true
     classes:
       - indexOfWorks__workCaption
@@ -98,7 +98,7 @@ metadata:
       opening: <dd>
       closing: </dd>
     hyperlinked: true
-- tags:
+  tags:
     content: true
     classes:
       - indexOfWorks__workTags
@@ -106,7 +106,7 @@ metadata:
       opening: <dd>
       closing: </dd>
     hyperlinked: true
-- clients:
+  clients:
     content: true
     classes:
       - indexOfWorks__workClientele
@@ -114,23 +114,23 @@ metadata:
       opening: <dd>
       closing: </dd>
     hyperlinked: true
-- link:
+  link:
     content: false
-- date:
+  date:
     content: false
-- header:
+  header:
     content: false
-- colors:
+  colors:
     content: false
-- fonts:
+  fonts:
     content: false
-- propagates:
+  propagates:
     content: false
-- css:
+  css:
     content: false
-- js:
+  js:
     content: false
-- groups:
+  groups:
     content: false
-- displayed:
+  displayed:
     content: false
