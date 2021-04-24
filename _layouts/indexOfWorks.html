@@ -1,0 +1,38 @@
+---
+layout: main
+---
+
+                        {%- assign index = site.data.indexOfWorks %}
+                        <ol class="indexOfWorks">
+                                {%- for work in index.works %}
+                                        {%- if work.link -%}
+                                                {%- assign url = work.link -%}
+                                        {%- else -%}
+                                                {%- assign url = work.title
+                                                        | slugify
+                                                        | prepend: site.data.workIndex.path
+                                                        | append: "/"
+                                                -%}
+                                        {%- endif %}
+                                <li class="indexOfWorks__entry">
+                                        <dl>
+                                                {%- for entry in work -%}
+                                                        {%- assign metadata = index.metadata[entry] -%}
+                                                        {%- if work and metadata.content %}
+                                                <div class="{{ metadata.classes | join: ' ' }}">
+                                                        {{ metadata.htmlTags.opening }}
+                                                                {%- if metadata.hyperlinked %}
+                                                                <a href="{{ url }}">
+                                                                {%- endif -%}
+                                                                        {{ entry }}
+                                                                {%- if metadata.hyperlinked %}
+                                                                </a>
+                                                                {%- endif -%}
+                                                        {{ metadata.htmlTags.closing }}
+                                                </div>
+                                                        {%- endif -%}
+                                                {%- endfor %}
+                                        </dl>
+                                </li>
+                                {%- endfor %}
+                        </ol>

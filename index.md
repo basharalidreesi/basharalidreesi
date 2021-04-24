@@ -1,5 +1,5 @@
 ---
-layout: workIndex
+layout: indexOfWorks
 ---
 
 # Delicuit sanae

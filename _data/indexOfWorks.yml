@@ -1,0 +1,136 @@
+# --- ------ --- #
+# Index of Works #
+# --- ------ --- #
+
+path: /works/
+
+# - title: {STRING, REQUIRED}
+#   subtitle: {STRING}
+#   figure: {URL OR PATH}
+#   caption: {STRING}
+#   tags: {ARRAY}
+#   clients: {ARRAY, OPTIONAL URLS}
+#   link: {URL IF SET, GENERATED PATH IF UNSET}
+#   date: {STRING}
+#   header: {PATH}
+#   colors: {ARRAY}
+#   fonts: {ARRAY}
+#   propagate: {BOOLEAN}
+#   css: {ARRAY}
+#   js: {ARRAY}
+#   groups: {ARRAY}
+#   display: {BOOLEAN}
+
+works:
+# begin
+- title: >-
+    Lorem
+  figure: >-
+    https://source.unsplash.com/random
+  caption: >-
+    sample caption
+  tags:
+    - hello
+    - and
+    - goodbye
+# break
+- title: >-
+    Ipsum
+  figure: >-
+    https://source.unsplash.com/random
+  caption: >-
+    another sample caption
+  tags:
+    - just hi
+# break
+- title: >-
+    Dolor
+  figure: >-
+    https://source.unsplash.com/random
+  caption:
+  tags:
+# break
+- title: >-
+    Sit
+  figure: >-
+    https://source.unsplash.com/random
+  caption: >-
+    small caption
+  tags:
+# break
+- title: >-
+    Amet
+  figure:
+  caption:
+  tags:
+# end
+
+metadata:
+- title:
+    content: true
+    classes:
+      - indexOfWorks__workTitle
+    htmlTags:
+      opening: <dt>
+      closing: </dt>
+    hyperlinked: true
+- subtitle:
+    content: true
+    classes:
+      - indexOfWorks__workSubtitle
+    htmlTags:
+      opening: <dd>
+      closing: </dd>
+    hyperlinked: true
+- figure:
+    content: true
+    classes:
+      - indexOfWorks__workFigure
+    htmlTags:
+      opening: <dd>
+      closing: </dd>
+    hyperlinked: true
+- caption:
+    content: true
+    classes:
+      - indexOfWorks__workCaption
+    htmlTags:
+      opening: <dd>
+      closing: </dd>
+    hyperlinked: true
+- tags:
+    content: true
+    classes:
+      - indexOfWorks__workTags
+    htmlTags:
+      opening: <dd>
+      closing: </dd>
+    hyperlinked: true
+- clients:
+    content: true
+    classes:
+      - indexOfWorks__workClientele
+    htmlTags:
+      opening: <dd>
+      closing: </dd>
+    hyperlinked: true
+- link:
+    content: false
+- date:
+    content: false
+- header:
+    content: false
+- colors:
+    content: false
+- fonts:
+    content: false
+- propagates:
+    content: false
+- css:
+    content: false
+- js:
+    content: false
+- groups:
+    content: false
+- displayed:
+    content: false
