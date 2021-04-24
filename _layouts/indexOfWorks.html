@@ -20,7 +20,7 @@ layout: main
                                                         {%- assign key = entry[0] -%}
                                                         {%- assign value = entry[1] -%}
                                                         {%- assign datum = index.datum.immediateContent[key] -%}
-                                                        {%- if datum %}
+                                                        {%- if value and datum %}
                                                 <div class="{{ datum.classes | join: ' ' }}">
                                                         {%- for node in value %}
                                                         {{ datum.outerHTML.open }}
