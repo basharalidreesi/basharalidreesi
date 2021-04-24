@@ -5,12 +5,13 @@ layout: main
 			{%- assign index = site.data.indexOfWorks -%}
                         {%- assign indent = "	" %}
 			<ol class="indexOfWorks">
-				{%- for work in index.works %}
-					{%- if work.url -%}
-						{%- assign url = work.url -%}
-					{%- else -%}
-						{%- assign url = work.title | slugify | prepend: index.path | append: "/" -%}
-					{%- endif %}
+				{%- for work in index.works -%}
+				{%- if work.url -%}
+					{%- assign url = work.url -%}
+				{%- else -%}
+					{%- assign url = work.title | slugify | prepend: index.path | append: "/" -%}
+				{%- endif -%}
+                                {%- unless work.isIndexed == false %}
 				<li class="indexOfWorks__work">
 					<dl>
 						{%- for entry in work -%}
@@ -35,5 +36,6 @@ layout: main
 						{%- endfor %}
 					</dl>
 				</li>
+                                {%- endunless -%}
 				{%- endfor %}
 			</ol>

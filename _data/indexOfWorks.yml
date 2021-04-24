@@ -4,24 +4,24 @@
 
 path: /works/
 
-# - title: {STRING, REQUIRED}
-#   subtitle: {STRING}
-#   figure: {URL OR PATH}
-#   caption: {STRING}
-#   tags: {ARRAY}
-#   clients: {ARRAY, OPTIONAL URLS}
-#   date: {STRING}
-
-#   link: {URL IF SET, GENERATED PATH IF UNSET}
 #   header: {PATH}
 #   colors: {ARRAY}
 #   fonts: {ARRAY}
-
 #   css: {ARRAY}
 #   js: {ARRAY}
-
 #   propagate: {BOOLEAN}
 #   display: {BOOLEAN}
+
+# parameters:
+# - title:
+#   subtitle:
+#   figure:
+#   caption:
+#   tags:
+#   clientele:
+#   time:
+#   url:
+#   isIndexed:
 
 works:
 # begin
@@ -29,36 +29,21 @@ works:
   figure: https://source.unsplash.com/random
   caption: sample caption
   tags: [hello, and, goodbye]
-  clientele:
-  time:
 # break
 - title: Ipsum
   figure: https://source.unsplash.com/random
   caption: another sample caption
   tags: just hi
-  clientele:
-  time:
 # break
 - title: Dolor
   figure: https://source.unsplash.com/random
-  caption:
-  tags:
-  clientele:
-  time:
 # break
 - title: Sit
   figure: https://source.unsplash.com/random
   caption: small caption
-  tags:
-  clientele:
-  time:
 # break
 - title: Amet
-  figure:
-  caption:
-  tags:
-  clientele:
-  time:
+  isIndexed: false
 # end
 
 datum:
