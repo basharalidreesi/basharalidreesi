@@ -2,7 +2,8 @@
 layout: main
 ---
 
-			{%- assign index = site.data.indexOfWorks %}
+			{%- assign index = site.data.indexOfWorks -%}
+                        {%- assign indent = "	" %}
 			<ol class="indexOfWorks">
 				{%- for work in index.works %}
 					{%- if work.url -%}
@@ -23,7 +24,7 @@ layout: main
 								{%- if datum.isHyperlinked %}
 								<a href="{{ url }}">
 								{%- endif %}
-								{% if datum.isHyperlinked %}	{% endif %}{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
+								{% if datum.isHyperlinked %}{{ indent }}{% endif %}{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
 								{%- if datum.isHyperlinked %}
 								</a>
 								{%- endif %}
