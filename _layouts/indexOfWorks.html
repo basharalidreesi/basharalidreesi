@@ -21,7 +21,7 @@ layout: main
                                                         {{ key | inspect }}
                                                         {%- assign value = entry[1] -%}
                                                         {{ value | inspect }}
-                                                        {%- assign metadata = index.metadata[key][1] -%}
+                                                        {%- assign metadata = index.metadata[key] -%}
                                                         {{ metadata | inspect }}
                                                 <div class="{{ metadata.classes | join: ' ' }}">
                                                         {{ metadata.htmlTags.opening }}
