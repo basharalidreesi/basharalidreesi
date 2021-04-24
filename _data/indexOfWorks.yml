@@ -10,15 +10,17 @@ path: /works/
 #   caption: {STRING}
 #   tags: {ARRAY}
 #   clients: {ARRAY, OPTIONAL URLS}
-#   link: {URL IF SET, GENERATED PATH IF UNSET}
 #   date: {STRING}
+
+#   link: {URL IF SET, GENERATED PATH IF UNSET}
 #   header: {PATH}
 #   colors: {ARRAY}
 #   fonts: {ARRAY}
-#   propagate: {BOOLEAN}
+
 #   css: {ARRAY}
 #   js: {ARRAY}
-#   groups: {ARRAY}
+
+#   propagate: {BOOLEAN}
 #   display: {BOOLEAN}
 
 works:
@@ -65,89 +67,102 @@ works:
   tags:
 # end
 
-metadata:
+datum:
 # begin
-  title:
-    content: true
-    classes:
-      - indexOfWorks__workTitle
-    htmlTags:
-      opening: <dt>
-      closing: </dt>
-    hyperlinked: true
-# break
-  subtitle:
-    content: true
-    classes:
-      - indexOfWorks__workSubtitle
-    htmlTags:
-      opening: <dd>
-      closing: </dd>
-    hyperlinked: true
-# break
-  figure:
-    content: true
-    classes:
-      - indexOfWorks__workFigure
-    htmlTags:
-      opening: <dd>
-      closing: </dd>
-    hyperlinked: true
-# break
-  caption:
-    content: true
-    classes:
-      - indexOfWorks__workCaption
-    htmlTags:
-      opening: <dd>
-      closing: </dd>
-    hyperlinked: true
-# break
-  tags:
-    content: true
-    classes:
-      - indexOfWorks__workTags
-    htmlTags:
-      opening: <dd>
-      closing: </dd>
-    hyperlinked: true
-# break
-  clients:
-    content: true
-    classes:
-      - indexOfWorks__workClientele
-    htmlTags:
-      opening: <dd>
-      closing: </dd>
-    hyperlinked: true
-# break
-  link:
-    content: false
-# break
-  date:
-    content: false
-# break
-  header:
-    content: false
-# break
-  colors:
-    content: false
-# break
-  fonts:
-    content: false
-# break
-  propagates:
-    content: false
-# break
-  css:
-    content: false
-# break
-  js:
-    content: false
-# break
-  groups:
-    content: false
-# break
-  displayed:
-    content: false
+  immediateContent:
+  # begin
+    title:
+      classes:
+        - indexOfWorks__workTitle
+      outerHTML:
+        open: <dt>
+        close: </dt>
+      innerHTML:
+        open:
+        close:
+      isHyperlinked: true
+      isIterable: false
+    # break
+    subtitle:
+      classes:
+        - indexOfWorks__workSubtitle
+      outerHTML:
+        open: <dd>
+        close: </dd>
+      innerHTML:
+        open:
+        close:
+      isHyperlinked: true
+      isIterable: false
+    # break
+    figure:
+      classes:
+        - indexOfWorks__workFigure
+      outerHTML:
+        open: <dd>
+        close: </dd>
+      innerHTML:
+        open: '<img src="'
+        close: '" />'
+      isHyperlinked: true
+      isIterable: false
+    # break
+    caption:
+      classes:
+        - indexOfWorks__workCaption
+      outerHTML:
+        open: <dd>
+        close: </dd>
+      innerHTML:
+        open:
+        close:
+      isHyperlinked: false
+      isIterable: false
+    # break
+    tags:
+      classes:
+        - indexOfWorks__workTags
+      outerHTML:
+        open: <dd>
+        close: </dd>
+      innerHTML:
+        open:
+        close:
+      isHyperlinked: false
+      isIterable: true
+    # break
+    clientele:
+      classes:
+        - indexOfWorks__workClientele
+      outerHTML:
+        open: <dd>
+        close: </dd>
+      innerHTML:
+        open:
+        close:
+      isHyperlinked: false
+      isIterable: true
+    # break
+    time:
+      classes:
+        - indexOfWorks__workTime
+      outerHTML:
+        open: <dd>
+        close: </dd>
+      innerHTML:
+        open:
+        close:
+      isHyperlinked: false
+      isIterable: true
+  # end
+  intermediateContent: # content for linking to the indexed entry
+  # begin
+    url:
+  # end
+  transmediateContent: # content for display within the indexed entry
+  # begin
+    header:
+    colors:
+    fonts:
+  # end
 # end

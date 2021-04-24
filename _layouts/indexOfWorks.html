@@ -5,8 +5,8 @@ layout: main
                         {%- assign index = site.data.indexOfWorks %}
                         <ol class="indexOfWorks">
                                 {%- for work in index.works %}
-                                        {%- if work.link -%}
-                                                {%- assign url = work.link -%}
+                                        {%- if work.url -%}
+                                                {%- assign url = work.url -%}
                                         {%- else -%}
                                                 {%- assign url = work.title
                                                         | slugify
@@ -19,18 +19,22 @@ layout: main
                                                 {%- for entry in work -%}
                                                         {%- assign key = entry[0] -%}
                                                         {%- assign value = entry[1] -%}
-                                                        {%- assign metadata = index.metadata[key] -%}
-                                                <div class="{{ metadata.classes | join: ' ' }}">
-                                                        {{ metadata.htmlTags.opening }}
-                                                                {%- if metadata.hyperlinked %}
+                                                        {%- assign datum = index.datum.immediateContent[key] -%}
+                                                        {%- if datum %}
+                                                <div class="{{ datum.classes | join: ' ' }}">
+                                                        {%- for item in entry %}
+                                                        {{ datum.outerHTML.open }}
+                                                                {%- if datum.isHyperlinked %}
                                                                 <a href="{{ url }}">
-                                                                {%- endif -%}
-                                                                        {{ value }}
-                                                                {%- if metadata.hyperlinked %}
+                                                                {%- endif %}
+                                                                {{ datum.innerHTML.open }}{{ value }}{{ datum.innerHTML.close }}
+                                                                {%- if datum.isHyperlinked %}
                                                                 </a>
-                                                                {%- endif -%}
-                                                        {{ metadata.htmlTags.closing }}
+                                                                {%- endif %}
+                                                        {{ datum.outerHTML.close }}
+                                                        {%- endfor %}
                                                 </div>
+                                                        {%- endif -%}
                                                 {%- endfor %}
                                         </dl>
                                 </li>
