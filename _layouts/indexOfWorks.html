@@ -17,14 +17,16 @@ layout: main
                                 <li class="indexOfWorks__work">
                                         <dl>
                                                 {%- for entry in work -%}
-                                                        {%- assign metadata = index.metadata[entry[0]] -%}
-                                                        {%- if work and metadata.content %}
+                                                        {%- assign key = entry[0] -%}
+                                                        {%- assign value = entry[1] -%}
+                                                        {%- assign metadata = index.metadata[key] -%}
+                                                        {%- if metadata.content %}
                                                 <div class="{{ metadata.classes | join: ' ' }}">
                                                         {{ metadata.htmlTags.opening }}
                                                                 {%- if metadata.hyperlinked %}
                                                                 <a href="{{ url }}">
                                                                 {%- endif -%}
-                                                                        {{ entry[1] }}
+                                                                        {{ value }}
                                                                 {%- if metadata.hyperlinked %}
                                                                 </a>
                                                                 {%- endif -%}
