@@ -11,7 +11,7 @@ const bashar = {
 		sparkle: document.getElementById("sparkle"),
 		switches: document.querySelectorAll("switch"),
 
-		works: document.querySelectorAll(".workIndex__work"),
+		works: document.querySelectorAll(".indexOfWorks__work"),
 	},
 
 	initAllScripts: function() {

@@ -154,7 +154,7 @@ body {
 	& > nav { /* none yet! */ }
 
 	& #main {
-		& #workIndex {
+		& .indexOfWorks {
 			display: grid;
 			grid-template-columns:
 				repeat(
@@ -164,25 +164,23 @@ body {
 			grid-auto-rows: var(--number-index-grid-rows);
 			grid-gap: var(--number-index-grid-gaps);
 			list-style: none;
-			& .workIndex__work {
+			&__work {
 				grid-row-end: span var(--number-index-grid-row-spans);
 				box-shadow: 0 0 0 1px black;
-				& .work__title,
-				& .work__caption,
-				& .work__tags {
-					// padding: $unit;
-				}
-				& .work__title { /* none yet! */ }
-				& .work__figure {
-					& img {
-						display: block;
-						width: 100%;
-						height: auto;
-					}
-				}
-				& .work__caption { /* none yet! */ }
-				& .work__tags { /* none yet! */ }
 			}
+			&__workTitle { }
+			&__workSubtitle { }
+			&__workFigure {
+				& img {
+					display: block;
+					width: 100%;
+					height: auto;
+				}
+			}
+			&__workCaption { }
+			&__workTags { }
+			&__workClientele { }
+			&__workTime { }
 		}
 	}
 
