@@ -18,7 +18,7 @@ layout: main
                                         <dl>
                                                 {%- for entry in work -%}
                                                         {%- assign metadata = index.metadata[entry] -%}
-                                                        {% comment %}{%- if work and metadata.content %}{% endcomment %}
+
                                                 <div class="{{ metadata.classes | join: ' ' }}">
                                                         {{ metadata.htmlTags.opening }}
                                                                 {%- if metadata.hyperlinked %}
@@ -30,7 +30,7 @@ layout: main
                                                                 {%- endif -%}
                                                         {{ metadata.htmlTags.closing }}
                                                 </div>
-                                                        {% comment %}{%- endif -%}{% endcomment %}
+
                                                 {%- endfor %}
                                         </dl>
                                 </li>
