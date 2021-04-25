@@ -18,7 +18,7 @@ layout: main
 						{%- assign key = entry[0] -%}
 						{%- assign value = entry[1] -%}
 						{%- assign datum = index.indexingDatum[key] -%}
-						{%- if value and datum %}
+						{%- if value and datum -%}
 						{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' -%}
 						{%- for node in value %}
 						{{ datum.outerHTML.open | replace: "&classes", classes }}
@@ -30,7 +30,7 @@ layout: main
 							</a>
 							{%- endif %}
 						{{ datum.outerHTML.close }}
-						{%- endfor %}
+						{%- endfor -%}
 						{%- endif -%}
 						{%- endfor %}
 					</dl>
