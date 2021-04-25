@@ -51,7 +51,7 @@ indexingDatum:
     classes:
       - indexOfWorks__workTitle
     outerHTML:
-      open: <dt>
+      open: <dt &classes>
       close: </dt>
     innerHTML:
       open:
@@ -62,7 +62,7 @@ indexingDatum:
     classes:
       - indexOfWorks__workSubtitle
     outerHTML:
-      open: <dd>
+      open: <dd &classes>
       close: </dd>
     innerHTML:
       open:
@@ -73,7 +73,7 @@ indexingDatum:
     classes:
       - indexOfWorks__workFigure
     outerHTML:
-      open: <dd>
+      open: <dd &classes>
       close: </dd>
     innerHTML:
       open: '<img src="'
@@ -84,7 +84,7 @@ indexingDatum:
     classes:
       - indexOfWorks__workCaption
     outerHTML:
-      open: <dd>
+      open: <dd &classes>
       close: </dd>
     innerHTML:
       open:
@@ -95,7 +95,7 @@ indexingDatum:
     classes:
       - indexOfWorks__workTags
     outerHTML:
-      open: <dd>
+      open: <dd &classes>
       close: </dd>
     innerHTML:
       open:
@@ -106,7 +106,7 @@ indexingDatum:
     classes:
       - indexOfWorks__workClientele
     outerHTML:
-      open: <dd>
+      open: <dd &classes>
       close: </dd>
     innerHTML:
       open:
@@ -117,7 +117,7 @@ indexingDatum:
     classes:
       - indexOfWorks__workTime
     outerHTML:
-      open: <dd>
+      open: <dd &classes>
       close: </dd>
     innerHTML:
       open:

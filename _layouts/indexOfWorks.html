@@ -19,19 +19,18 @@ layout: main
 						{%- assign value = entry[1] -%}
 						{%- assign datum = index.indexingDatum[key] -%}
 						{%- if value and datum %}
-						<div class="{{ datum.classes | join: ' ' }}">
-							{%- for node in value %}
-							{{ datum.outerHTML.open }}
-								{%- if datum.isAnchored %}
-								<a href="{{ url }}">
-								{%- endif %}
-								{% if datum.isAnchored %}{{ indent }}{% endif %}{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
-								{%- if datum.isAnchored %}
-								</a>
-								{%- endif %}
-							{{ datum.outerHTML.close }}
-							{%- endfor %}
-						</div>
+						{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' -%}
+						{%- for node in value %}
+						{{ datum.outerHTML.open | replace: "&classes", classes }}
+							{%- if datum.isAnchored %}
+							<a href="{{ url }}">
+							{%- endif %}
+							{% if datum.isAnchored %}{{ indent }}{% endif %}{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
+							{%- if datum.isAnchored %}
+							</a>
+							{%- endif %}
+						{{ datum.outerHTML.close }}
+						{%- endfor %}
 						{%- endif -%}
 						{%- endfor %}
 					</dl>
