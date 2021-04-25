@@ -1,3 +1,5 @@
+---
+
 # --- ------ --- #
 # Index of Works #
 # --- ------ --- #
@@ -44,7 +46,7 @@ works:
 # end
 
 indexingDatum:
-# begin
+# begin <immediateContent>
   title:
     classes:
       - indexOfWorks__workTitle
@@ -121,4 +123,6 @@ indexingDatum:
       open:
       close:
     isAnchored: false
-# end
+# end <immediateContent>
+
+...
