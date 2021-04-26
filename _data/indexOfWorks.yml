@@ -144,7 +144,7 @@ indexingDatum:
       open:
       close:
     doesEcho: false
-    isAnchored: true
+    isAnchored: false
 # end <immediateContent>
 
 ...
