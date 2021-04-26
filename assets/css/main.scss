@@ -173,7 +173,9 @@ body {
 				background-size: cover;
 				background-position: center;
 			}
-			&__workTitle { }
+			&__workTitle {
+				padding: $unit;
+			}
 			&__workSubtitle { }
 			&__workFigure {
 				img {
