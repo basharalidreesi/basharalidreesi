@@ -7,28 +7,28 @@
 path: /works/
 
 # parameters:
-# - title:      # <immediateContent>, unset
-#   subtitle:   # <immediateContent>, unset
-#   figure:     # <immediateContent>, unset
-#   caption:    # <immediateContent>, unset
-#   tags:       # <immediateContent>, unset
-#   clientele:  # <immediateContent>, unset
-#   time:       # <immediateContent>, unset
-#   url:        # <immediateContent>, generated from title if unset
+# - title:                      # <immediateContent>, unset
+#   subtitle:                   # <immediateContent>, unset
+#   figure:                     # <immediateContent>, unset
+#   caption:                    # <immediateContent>, unset
+#   tags:                       # <immediateContent>, unset
+#   clientele:                  # <immediateContent>, unset
+#   time:                       # <immediateContent>, unset
+#   url:                        # <immediateContent>, generated from title if unset
+#   gap:                        # <immediateContent>, null
 #   colors: ARRAY TODO
 #   fonts: ARRAY TODO
 #   css: ARRAY TODO
 #   js: ARRAY TODO
 #   header: TODO
-#   isIndexed:  # <immediateContentModifier>, true
-#   hasFullHeightFigure: # <immediateContentModifier>, false
-#   doesPropagate: # <intermediateContentModifier>, false TODO
-#   gap
+#   isIndexed:                  # <immediateContentModifier>, true
+#   hasFullHeightFigure:        # <immediateContentModifier>, false
+#   doesPropagate:              # <intermediateContentModifier>, false TODO
 
 works:
 # begin
 - title: Lorem
-  gap: "2"
+  gap: "1"
   caption: sample caption
   tags: [hello, and, goodbye]
   figure: https://source.unsplash.com/random
@@ -37,6 +37,7 @@ works:
 - title: Ipsum
   figure: https://source.unsplash.com/random
   caption: another sample caption
+  gap: 1
   tags: just hi
 # break
 - title: Dolor
