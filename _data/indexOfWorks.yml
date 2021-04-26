@@ -28,7 +28,7 @@ path: /works/
 works:
 # begin
 - title: Lorem
-  gap: 2
+  gap: "2"
   caption: sample caption
   tags: [hello, and, goodbye]
   figure: https://source.unsplash.com/random
@@ -60,6 +60,7 @@ indexingDatum:
     innerHTML:
       open:
       close:
+    doesEcho: true
     isAnchored: true
   # break
   subtitle:
@@ -71,6 +72,7 @@ indexingDatum:
     innerHTML:
       open:
       close:
+    doesEcho: true
     isAnchored: true
   # break
   figure:
@@ -82,6 +84,7 @@ indexingDatum:
     innerHTML:
       open: '<img src="'
       close: '" />'
+    doesEcho: true
     isAnchored: true
   # break
   caption:
@@ -93,6 +96,7 @@ indexingDatum:
     innerHTML:
       open:
       close:
+    doesEcho: true
     isAnchored: false
   # break
   tags:
@@ -104,6 +108,7 @@ indexingDatum:
     innerHTML:
       open:
       close:
+    doesEcho: true
     isAnchored: false
   # break
   clientele:
@@ -115,6 +120,7 @@ indexingDatum:
     innerHTML:
       open:
       close:
+    doesEcho: true
     isAnchored: false
   # break
   time:
@@ -126,6 +132,7 @@ indexingDatum:
     innerHTML:
       open:
       close:
+    doesEcho: true
     isAnchored: false
   gap:
     classes:
@@ -136,6 +143,7 @@ indexingDatum:
     innerHTML:
       open:
       close:
+    doesEcho: false
     isAnchored: true
 # end <immediateContent>
 

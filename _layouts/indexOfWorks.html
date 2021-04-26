@@ -28,7 +28,7 @@ layout: main
 							{%- if datum.isAnchored %}
 							<a href="{{ url }}">
 							{%- endif %}
-							{% if datum.isAnchored %}{{ indent }}{% endif %}{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
+							{% if datum.isAnchored %}{{ indent }}{% endif %}{{ datum.innerHTML.open }}{% if datum.doesEcho %}{{ node }}{% endif %}{{ datum.innerHTML.close }}
 							{%- if datum.isAnchored %}
 							</a>
 							{%- endif %}
