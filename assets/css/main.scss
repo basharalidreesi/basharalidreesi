@@ -80,6 +80,10 @@ body {
 	text-rendering: geometricPrecision;
 }
 
+img {
+	pointer-events: none;
+}
+
 a,
 a:link,
 a:hover,
