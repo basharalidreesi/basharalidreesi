@@ -24,7 +24,7 @@ layout: main
 						{%- if value and datum -%}
 						{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' -%}
 						{%- for node in value %}
-						{{ datum.outerHTML.open | replace: "&classes", classes }}
+						{% if key == "gap" and value %}{{ datum.outerHTML.open | replace: "&classes", classes | remove: ">" | append: 'style="padding-top: calc(100% * ' | append: value | append: ')">' }}{% else %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% endif %}
 							{%- if datum.isAnchored %}
 							<a href="{{ url }}">
 							{%- endif %}
