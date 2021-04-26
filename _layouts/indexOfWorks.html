@@ -12,10 +12,13 @@ layout: main
 				{%- assign url = work.title | slugify | prepend: index.path | append: "/" -%}
 				{%- endif -%}
                                 {%- unless work.isIndexed == false %}
-				<li class="indexOfWorks__work">
+				<li class="indexOfWorks__work" {%- if work.hasFullHeightFigure %} style="background-image: url('{{ work.figure }}');" {%- endif %}>
 					<dl>
 						{%- for entry in work -%}
 						{%- assign key = entry[0] -%}
+						{%- if key == "figure" and work.hasFullHeightFigure -%}
+						{%- continue -%}
+						{%- endif -%}
 						{%- assign value = entry[1] -%}
 						{%- assign datum = index.indexingDatum[key] -%}
 						{%- if value and datum -%}

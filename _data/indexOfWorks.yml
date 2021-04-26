@@ -22,6 +22,7 @@ path: /works/
 #   header: TODO
 #   isIndexed:  # BOOLEAN, true
 #   doesPropagate: # BOOLEAN, false TODO
+#   hasFullHeightFigure: #BOOLEAN, false TODO
 
 works:
 # begin
@@ -29,6 +30,7 @@ works:
   figure: https://source.unsplash.com/random
   caption: sample caption
   tags: [hello, and, goodbye]
+  hasFullHeightFigure: true
 # break
 - title: Ipsum
   figure: https://source.unsplash.com/random

@@ -36,10 +36,10 @@ $unit-negative-quadruple:	-4.00rem;
 	--number-index-grid-rows: #{$unit};
 	--number-index-grid-gaps: #{$unit};
 	--number-index-grid-row-spans: 12;
-	@media (max-width: 768px) {
+	@media (max-width: 1024px) {
 		--number-index-grid-columns: 2;
 	}
-	@media (max-width: 512px) {
+	@media (max-width: 768px) {
 		--number-index-grid-columns: 1;
 	}
 
@@ -163,8 +163,10 @@ body {
 			list-style: none;
 			&__work {
 				grid-row-end: span var(--number-index-grid-row-spans);
-				background: var(--color-quaternary);
 				box-shadow: 0 0 0 1px black;
+				border-radius: $unit-half;
+				background-repeat: no-repeat;
+				background-size: cover;
 			}
 			&__workTitle { }
 			&__workSubtitle { }
