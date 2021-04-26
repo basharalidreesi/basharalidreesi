@@ -7,9 +7,9 @@ layout: main
 			<ol class="indexOfWorks">
 				{%- for work in index.works -%}
 				{%- if work.url -%}
-					{%- assign url = work.url -%}
+				{%- assign url = work.url -%}
 				{%- else -%}
-					{%- assign url = work.title | slugify | prepend: index.path | append: "/" -%}
+				{%- assign url = work.title | slugify | prepend: index.path | append: "/" -%}
 				{%- endif -%}
                                 {%- unless work.isIndexed == false %}
 				<li class="indexOfWorks__work">

@@ -93,7 +93,7 @@ indexingDatum:
   # break
   tags:
     classes:
-      - indexOfWorks__workTags
+      - indexOfWorks__workTag
     outerHTML:
       open: <dd &classes>
       close: </dd>
@@ -104,7 +104,7 @@ indexingDatum:
   # break
   clientele:
     classes:
-      - indexOfWorks__workClientele
+      - indexOfWorks__workClient
     outerHTML:
       open: <dd &classes>
       close: </dd>
