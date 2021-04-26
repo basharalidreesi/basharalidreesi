@@ -20,9 +20,9 @@ path: /works/
 #   css: ARRAY TODO
 #   js: ARRAY TODO
 #   header: TODO
-#   isIndexed:  # BOOLEAN, true
-#   doesPropagate: # BOOLEAN, false TODO
-#   hasFullHeightFigure: #BOOLEAN, false TODO
+#   isIndexed:  # <immediateContentModifier>, true
+#   hasFullHeightFigure: # <immediateContentModifier>, false
+#   doesPropagate: # <intermediateContentModifier>, false TODO
 
 works:
 # begin

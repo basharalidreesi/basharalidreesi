@@ -16,9 +16,9 @@ layout: main
 					<dl>
 						{%- for entry in work -%}
 						{%- assign key = entry[0] -%}
-						{%- if key == "figure" and work.hasFullHeightFigure -%}
-						{%- continue -%}
-						{%- endif -%}
+							{%- if key == "figure" and work.hasFullHeightFigure -%}
+							{%- continue -%}
+							{%- endif -%}
 						{%- assign value = entry[1] -%}
 						{%- assign datum = index.indexingDatum[key] -%}
 						{%- if value and datum -%}
