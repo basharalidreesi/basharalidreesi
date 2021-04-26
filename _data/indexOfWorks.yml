@@ -23,13 +23,15 @@ path: /works/
 #   isIndexed:  # <immediateContentModifier>, true
 #   hasFullHeightFigure: # <immediateContentModifier>, false
 #   doesPropagate: # <intermediateContentModifier>, false TODO
+#   gap
 
 works:
 # begin
 - title: Lorem
-  figure: https://source.unsplash.com/random
+  gap: 2
   caption: sample caption
   tags: [hello, and, goodbye]
+  figure: https://source.unsplash.com/random
   hasFullHeightFigure: true
 # break
 - title: Ipsum
@@ -125,6 +127,16 @@ indexingDatum:
       open:
       close:
     isAnchored: false
+  gap:
+    classes:
+      - indexOfWorks__workGap
+    outerHTML:
+      open: <div &classes>
+      close: </div>
+    innerHTML:
+      open:
+      close:
+    isAnchored: true
 # end <immediateContent>
 
 ...
