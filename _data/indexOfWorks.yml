@@ -28,7 +28,7 @@ path: /works/
 works:
 # begin
 - title: Lorem
-  gap: 2
+  gap: "2"
   caption: sample caption
   tags: [hello, and, goodbye]
   figure: https://source.unsplash.com/random
