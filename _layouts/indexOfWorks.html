@@ -34,6 +34,8 @@ layout: main
 							{%- endif %}
 						{{ datum.outerHTML.close }}
 						{%- endfor -%}
+						{%- else %}
+						<!-- undefined entry `{{ entry }}` in work `{{ work }}` -->
 						{%- endif -%}
 						{%- endfor %}
 					</dl>
