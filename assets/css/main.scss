@@ -23,10 +23,10 @@ $unit-negative-triple:		-2.00rem;
 $unit-negative-quadruple:	-4.00rem;
 
 :root {
-	--color-primary: white;
-	--color-secondary: white;
-	--color-tertiary: white;
-	--color-quaternary: var(--color-tertiary);
+	--color-primary: #cccccc;
+	--color-secondary: #cccccc;
+	--color-tertiary: #cccccc;
+	--color-quaternary: white;
 	--color-shine: white;
 	--color-text: black;
 	--color-box: black;
@@ -114,9 +114,9 @@ body {
 	height: 100%;
 	min-height: 100vh;
 	margin: $unit;
-	padding-top: $unit;
+	// padding-top: $unit;
 	background: linear-gradient(var(--color-secondary) 0%, var(--color-tertiary) 100%);
-	box-shadow: 0 0 0 var(--width-box) var(--color-box);
+	// box-shadow: 0 0 0 var(--width-box) var(--color-box);
 	animation: fadeIn 1.5s;
 	@keyframes fadeIn {
 		from { opacity: 0; } to { opacity: 1; }
@@ -163,6 +163,7 @@ body {
 			list-style: none;
 			&__work {
 				grid-row-end: span var(--number-index-grid-row-spans);
+				background: var(--color-quaternary);
 				box-shadow: 0 0 0 1px black;
 			}
 			&__workTitle { }
