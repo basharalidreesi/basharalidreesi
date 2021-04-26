@@ -39,7 +39,7 @@ $unit-negative-quadruple:	-4.00rem;
 	@media (max-width: 1024px) {
 		--number-index-grid-columns: 2;
 	}
-	@media (max-width: 768px) {
+	@media (max-width: 512px) {
 		--number-index-grid-columns: 1;
 	}
 
@@ -171,6 +171,7 @@ body {
 				border-radius: $unit-half;
 				background-repeat: no-repeat;
 				background-size: cover;
+				background-position: center;
 			}
 			&__workTitle { }
 			&__workSubtitle { }
@@ -185,6 +186,7 @@ body {
 			&__workTag { }
 			&__workClient { }
 			&__workTime { }
+			&__workGap { }
 		}
 	}
 

@@ -15,7 +15,7 @@ path: /works/
 #   clientele:                  # <immediateContent>, unset
 #   time:                       # <immediateContent>, unset
 #   url:                        # <immediateContent>, generated from title if unset
-#   gap:                        # <immediateContent>, null
+#   gap:                        # <immediateContent>, unset
 #   colors: ARRAY TODO
 #   fonts: ARRAY TODO
 #   css: ARRAY TODO
@@ -37,7 +37,6 @@ works:
 - title: Ipsum
   figure: https://source.unsplash.com/random
   caption: another sample caption
-  gap: 1
   tags: just hi
 # break
 - title: Dolor
