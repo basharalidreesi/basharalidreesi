@@ -163,9 +163,11 @@ body {
 			flex-flow: row wrap;
 			align-items: flex-start;
 			justify-content: flex-start;
+			margin: -1rem;
 			&__work {
 				flex-basis: calc(100% / var(--indexOfWorks-columns));
 				position: relative;
+				padding: 1rem;
 				&::before {
 					content: "";
 					display: block;
@@ -174,12 +176,17 @@ body {
 			}
 			&__work__outerCard {
 				position: absolute;
-				top: 0;
-				left: 0;
+				top: 1rem;
+				left: 1rem;
+				height: calc(100% - 2rem);
+				width: calc(100% - 2rem);
+				padding: 0.5rem;
+			}
+			&__work__innerCard {
 				height: 100%;
 				width: 100%;
+				padding: 1rem;
 			}
-			&__work__innerCard { }
 			&__work__title { }
 			&__work__subtitle { }
 			&__work__figure {
