@@ -13,8 +13,8 @@ layout: main
 				{%- endif -%}
                                 {%- unless work.isIndexed == false %}
 				<li class="indexOfWorks__work" {%- if work.hasFullHeightFigure %} style="background-image: url('{{ work.figure }}');" {%- endif %}>
-					<dl class="indexOfWorks__work__outerCard">
-						<div class="indexOfWorks__work__innerCard">
+					<article class="indexOfWorks__work__outerCard">
+						<dl class="indexOfWorks__work__innerCard">
 							{%- for entry in work -%}
 							{%- assign key = entry[0] -%}
 								{%- if key == "figure" and work.hasFullHeightFigure -%}
@@ -40,8 +40,8 @@ layout: main
 							{%- endfor -%}
 							{%- endif -%}
 							{%- endfor %}
-						</div>
-					</dl>
+						</dl>
+					</article>
 				</li>
                                 {%- endunless -%}
 				{%- endfor %}
