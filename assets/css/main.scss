@@ -162,9 +162,19 @@ body {
 			display: flex;
 			flex-flow: row wrap;
 			&__work {
-				flex: 1 1 calc(100% / var(--indexOfWorks-columns));
+				flex-basis: calc(100% / var(--indexOfWorks-columns));
+				position: relative;
+				&::before {
+					padding-top: calc(100% * var(--indexOfWorks-aspectRatio));
+				}
 			}
-			&__work__outerCard { }
+			&__work__outerCard {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+			}
 			&__work__innerCard { }
 			&__work__title { }
 			&__work__subtitle { }
