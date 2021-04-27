@@ -161,6 +161,8 @@ body {
 			list-style: none;
 			display: flex;
 			flex-flow: row wrap;
+			align-items: flex-start;
+			justify-content: flex-start;
 			&__work {
 				flex-basis: calc(100% / var(--indexOfWorks-columns));
 				position: relative;
