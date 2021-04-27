@@ -31,6 +31,8 @@ layout: main
 							{%- for node in value %}
 							{% unless datum.outerHTML.open == previousDatum.outerHTML.open %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% endunless %}
 								{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
+								<!--{{previousDatum.outerHTML.open}}--> <!--{{previousDatum.outerHTML.close}}-->
+								<!--{{nextDatum.outerHTML.open}}--> <!--{{nextDatum.outerHTML.close}}-->
 							{% unless datum.outerHTML.close == nextDatum.outerHTML.close %}{{ datum.outerHTML.close }}{% endunless %}
 							{%- endfor -%}
 							{%- endif -%}
