@@ -28,12 +28,12 @@ path: /works/
 
 works:
 # begin
-- title: Lorem
-  gap: "1"
-  caption: sample caption
-  tags: [hello, and, goodbye]
+- title: One morning, when Gregor Samsa woke from troubled dreams
+  subtitle: he found himself transformed in his bed into a horrible vermin.
   figure: https://source.unsplash.com/random/500x500
-  hasFullHeightFigure: true
+  caption: He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
+  tags: [hello, and, goodbye]
+  clientele: yesses
 # break
 - title: Ipsum
   figure: https://source.unsplash.com/random/500x500
@@ -56,8 +56,8 @@ indexingDatum:
     classes:
       - indexOfWorks__work__title
     outerHTML:
-      open: <dt &classes>
-      close: </dt>
+      open: <h1 &classes>
+      close: </h1>
     innerHTML:
       open:
       close:
