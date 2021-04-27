@@ -13,29 +13,34 @@ layout: main
 				{%- endif -%}
                                 {%- unless work.isIndexed == false %}
 				<li class="indexOfWorks__work" {%- if work.hasFullHeightFigure %} style="background-image: url('{{ work.figure }}');" {%- endif %}>
-					<dl>
-						{%- for entry in work -%}
-						{%- assign key = entry[0] -%}
-							{%- if key == "figure" and work.hasFullHeightFigure -%}
-							{%- continue -%}
+					<dl class="indexOfWorks__work__outerCard">
+						<div class="indexOfWorks__work__innerCard">
+							{%- for entry in work -%}
+							{%- assign key = entry[0] -%}
+								{%- if key == "figure" and work.hasFullHeightFigure -%}
+								{%- continue -%}
+								{%- endif -%}
+							{%- assign value = entry[1] -%}
+							{%- assign datum = index.indexingDatum[key] -%}
+							{%- if value and datum -%}
+							{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' -%}
+							{%- assign styles = datum.styles -%}
+							{%- for node in value %}
+							{% if key == "gap" %}{{ datum.outerHTML.open | replace: "&classes", classes | remove: ">" | append: ' style="padding-top: calc(100% * ' | append: value | append: ')">' }}{% else %}
+							{{ datum.outerHTML.open | replace: "&classes", classes | replace: "&styles", styles }}
+							{% endif %}
+								{%- if datum.isAnchored %}
+								<a href="{{ url }}">
+								{%- endif %}
+								{% if datum.isAnchored %}{{ indent }}{% endif %}{{ datum.innerHTML.open }}{% if datum.doesEcho %}{{ node }}{% endif %}{{ datum.innerHTML.close }}
+								{%- if datum.isAnchored %}
+								</a>
+								{%- endif %}
+							{{ datum.outerHTML.close }}
+							{%- endfor -%}
 							{%- endif -%}
-						{%- assign value = entry[1] -%}
-						{%- assign datum = index.indexingDatum[key] -%}
-						{%- if value and datum -%}
-						{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' -%}
-						{%- for node in value %}
-						{% if key == "gap" %}{{ datum.outerHTML.open | replace: "&classes", classes | remove: ">" | append: ' style="padding-top: calc(100% * ' | append: value | append: ')">' }}{% else %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% endif %}
-							{%- if datum.isAnchored %}
-							<a href="{{ url }}">
-							{%- endif %}
-							{% if datum.isAnchored %}{{ indent }}{% endif %}{{ datum.innerHTML.open }}{% if datum.doesEcho %}{{ node }}{% endif %}{{ datum.innerHTML.close }}
-							{%- if datum.isAnchored %}
-							</a>
-							{%- endif %}
-						{{ datum.outerHTML.close }}
-						{%- endfor -%}
-						{%- endif -%}
-						{%- endfor %}
+							{%- endfor %}
+						</div>
 					</dl>
 				</li>
                                 {%- endunless -%}

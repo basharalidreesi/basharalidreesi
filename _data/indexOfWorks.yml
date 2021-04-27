@@ -24,6 +24,7 @@ path: /works/
 #   isIndexed:                  # <immediateContentModifier>, true
 #   hasFullHeightFigure:        # <immediateContentModifier>, false
 #   doesPropagate:              # <intermediateContentModifier>, false TODO
+#   type TODO
 
 works:
 # begin
@@ -53,7 +54,7 @@ indexingDatum:
 # begin <immediateContent>
   title:
     classes:
-      - indexOfWorks__workTitle
+      - indexOfWorks__work__title
     outerHTML:
       open: <dt &classes>
       close: </dt>
@@ -65,7 +66,7 @@ indexingDatum:
   # break
   subtitle:
     classes:
-      - indexOfWorks__workSubtitle
+      - indexOfWorks__work__subtitle
     outerHTML:
       open: <dd &classes>
       close: </dd>
@@ -77,7 +78,7 @@ indexingDatum:
   # break
   figure:
     classes:
-      - indexOfWorks__workFigure
+      - indexOfWorks__work__figure
     outerHTML:
       open: <dd &classes>
       close: </dd>
@@ -89,7 +90,7 @@ indexingDatum:
   # break
   caption:
     classes:
-      - indexOfWorks__workCaption
+      - indexOfWorks__work__caption
     outerHTML:
       open: <dd &classes>
       close: </dd>
@@ -101,7 +102,7 @@ indexingDatum:
   # break
   tags:
     classes:
-      - indexOfWorks__workTag
+      - indexOfWorks__work__tag
     outerHTML:
       open: <dd &classes>
       close: </dd>
@@ -113,7 +114,7 @@ indexingDatum:
   # break
   clientele:
     classes:
-      - indexOfWorks__workClient
+      - indexOfWorks__work__client
     outerHTML:
       open: <dd &classes>
       close: </dd>
@@ -125,7 +126,7 @@ indexingDatum:
   # break
   time:
     classes:
-      - indexOfWorks__workTime
+      - indexOfWorks__work__time
     outerHTML:
       open: <dd &classes>
       close: </dd>
@@ -136,9 +137,9 @@ indexingDatum:
     isAnchored: false
   gap:
     classes:
-      - indexOfWorks__workGap
+      - indexOfWorks__work__gap
     outerHTML:
-      open: <div &classes>
+      open: <div &classes &styles>
       close: </div>
     innerHTML:
       open:

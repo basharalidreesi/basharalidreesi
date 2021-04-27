@@ -112,12 +112,12 @@ const bashar = {
 
 	main: {
 		initMainScripts: function() {
-			window.addEventListener("load", () => {
-				bashar.main.workIndex.resizeWorks();
-			});
-			window.addEventListener("resize", () => {
-				bashar.main.workIndex.resizeWorks();
-			});
+			// window.addEventListener("load", () => {
+			// 	bashar.main.workIndex.resizeWorks();
+			// });
+			// window.addEventListener("resize", () => {
+			// 	bashar.main.workIndex.resizeWorks();
+			// });
 		},
 		workIndex: {
 			resizeWorks: function() {

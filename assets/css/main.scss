@@ -161,38 +161,26 @@ body {
 
 	#main {
 		.indexOfWorks {
-			display: grid;
-			grid-template-columns: repeat(var(--number-index-grid-columns), calc((100% - ((var(--number-index-grid-columns) - 1) * var(--number-index-grid-gaps))) / var(--number-index-grid-columns)));
-			grid-auto-rows: var(--number-index-grid-rows);
-			grid-gap: var(--number-index-grid-gaps);
 			list-style: none;
-			&__work {
-				grid-row-end: span var(--number-index-grid-row-spans);
-				box-shadow: 0 0 0 1px black;
-				border-radius: $unit-half;
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: center;
-				font-family: "Helvetica Neue", sans-serif;
-				text-align: center;
-			}
-			&__workTitle {
-				padding: $unit-double;
-				font-size: $unit-double;
-			}
-			&__workSubtitle { }
-			&__workFigure {
+			display: flex;
+			flex-flow: row wrap;
+			&__work { }
+			&__work__outerCard { }
+			&__work__innerCard { }
+			&__work__title { }
+			&__work__subtitle { }
+			&__work__figure {
 				img {
 					display: block;
 					width: 100%;
 					height: auto;
 				}
 			}
-			&__workCaption { }
-			&__workTag { }
-			&__workClient { }
-			&__workTime { }
-			&__workGap { }
+			&__work__caption { }
+			&__work__tag { }
+			&__work__client { }
+			&__work__time { }
+			&__work__gap { }
 		}
 	}
 
