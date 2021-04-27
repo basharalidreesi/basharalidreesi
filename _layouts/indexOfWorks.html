@@ -18,12 +18,20 @@ layout: main
 							{%- assign key = entry[0] -%}
 							{%- assign value = entry[1] -%}
 							{%- assign datum = index.indexingDatum[key] -%}
+							{%- assign previousEntry = forloop.index0 | minus: 1 -%}
+							{%- assign previousKey = previousEntry[0] -%}
+							{%- assign previousValue = previousEntry[1] -%}
+							{%- assign previousDatum = index.indexingDatum[previousKey] -%}
+							{%- assign nextEntry = forloop.index0 | plus: 1 -%}
+							{%- assign nextKey = nextEntry[0] -%}
+							{%- assign nextValue = nextEntry[1] -%}
+							{%- assign nextDatum = index.indexingDatum[nextKey] -%}
 							{%- if value and datum -%}
 							{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' -%}
 							{%- for node in value %}
-							{{ datum.outerHTML.open | replace: "&classes", classes }}
+							{% unless datum.outerHTML.open == previousDatum.outerHTML.open %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% endunless %}
 								{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
-							{{ datum.outerHTML.close }}
+							{% unless datum.outerHTML.close == nextDatum.outerHTML.close %}{{ datum.outerHTML.close }}{% endunless %}
 							{%- endfor -%}
 							{%- endif -%}
 							{%- endfor %}
