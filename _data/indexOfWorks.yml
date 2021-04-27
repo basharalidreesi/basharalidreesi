@@ -81,7 +81,7 @@ indexingDatum:
       - indexOfWorks__work__figure
     outerHTML:
       open: <figure &classes>
-      close: </figure>
+      close:
     innerHTML:
       open: '<img src="'
       close: '" />'
@@ -92,11 +92,11 @@ indexingDatum:
     classes:
       - indexOfWorks__work__caption
     outerHTML:
-      open: <dd &classes>
-      close: </dd>
-    innerHTML:
       open:
-      close:
+      close: </figure>
+    innerHTML:
+      open: <figcaption>
+      close: </figcaption>
     doesEcho: true
     isAnchored: false
   # break
