@@ -34,4 +34,3 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-liquify
