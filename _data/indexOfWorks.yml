@@ -32,19 +32,19 @@ works:
   gap: "1"
   caption: sample caption
   tags: [hello, and, goodbye]
-  figure: https://source.unsplash.com/random
+  figure: https://source.unsplash.com/random/500x500
   hasFullHeightFigure: true
 # break
 - title: Ipsum
-  figure: https://source.unsplash.com/random
+  figure: https://source.unsplash.com/random/500x500
   caption: another sample caption
   tags: just hi
 # break
 - title: Dolor
-  figure: https://source.unsplash.com/random
+  figure: https://source.unsplash.com/random/500x500
 # break
 - title: Sit
-  figure: https://source.unsplash.com/random
+  figure: https://source.unsplash.com/random/500x500
   caption: small caption
 # break
 - title: Amet
