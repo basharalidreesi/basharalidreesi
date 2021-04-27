@@ -31,7 +31,7 @@ layout: main
 							{%- for node in value %}
 							{% unless datum.outerHTML.open == previousDatum.outerHTML.open %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% endunless %}
 								{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
-								<!-- {{ work | inspect }} -->
+								<!-- {{ work[1] | inspect }} -->
 								<!-- {{ previousEntry | inspect }} -->
 								<!-- {{ previousKey | inspect }} -->
 								<!-- {{ previousValue | inspect }} -->
