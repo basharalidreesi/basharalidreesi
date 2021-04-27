@@ -19,12 +19,12 @@ layout: main
 							{%- assign value = entry[1] -%}
 							{%- assign datum = index.indexingDatum[key] -%}
 								{%- assign previousEntry = forloop.index0 | minus: 1 -%}
-								{%- assign previousKey = work[previousEntry] -%}
-								{%- assign previousValue = work[previousEntry] -%}
+								{%- assign previousKey = index.works[previousEntry] -%}
+								{%- assign previousValue = index.works[previousEntry] -%}
 								{%- assign previousDatum = index.indexingDatum[previousKey] -%}
 									{%- assign nextEntry = forloop.index0 | plus: 1 -%}
-									{%- assign nextKey = work[nextEntry] -%}
-									{%- assign nextValue = work[nextEntry] -%}
+									{%- assign nextKey = index.works[nextEntry] -%}
+									{%- assign nextValue = index.works[nextEntry] -%}
 									{%- assign nextDatum = index.indexingDatum[nextKey] -%}
 							{%- if value and datum -%}
 							{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' -%}
