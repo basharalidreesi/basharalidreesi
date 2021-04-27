@@ -22,17 +22,23 @@ layout: main
 								{%- assign previousKey = work[previousEntry][0] -%}
 								{%- assign previousValue = work[previousEntry][1] -%}
 								{%- assign previousDatum = index.indexingDatum[previousKey] -%}
-								{%- assign nextEntry = forloop.index0 | plus: 1 -%}
-								{%- assign nextKey = work[nextEntry][0] -%}
-								{%- assign nextValue = work[nextEntry][1] -%}
-								{%- assign nextDatum = index.indexingDatum[nextKey] -%}
+									{%- assign nextEntry = forloop.index0 | plus: 1 -%}
+									{%- assign nextKey = work[nextEntry][0] -%}
+									{%- assign nextValue = work[nextEntry][1] -%}
+									{%- assign nextDatum = index.indexingDatum[nextKey] -%}
 							{%- if value and datum -%}
 							{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' -%}
 							{%- for node in value %}
 							{% unless datum.outerHTML.open == previousDatum.outerHTML.open %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% endunless %}
 								{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
-								<!--{{previousDatum.outerHTML.open}}--> <!--{{previousDatum.outerHTML.close}}-->
-								<!--{{nextDatum.outerHTML.open}}--> <!--{{nextDatum.outerHTML.close}}-->
+								<!-- {{ previousEntry | inspect }} -->
+								<!-- {{ previousKey | inspect }} -->
+								<!-- {{ previousValue | inspect }} -->
+								<!-- {{ previousDatum | inspect }} -->
+								<!-- {{ nextEntry | inspect }} -->
+								<!-- {{ nextKey | inspect }} -->
+								<!-- {{ nextValue | inspect }} -->
+								<!-- {{ nextDatum | inspect }} -->
 							{% unless datum.outerHTML.close == nextDatum.outerHTML.close %}{{ datum.outerHTML.close }}{% endunless %}
 							{%- endfor -%}
 							{%- endif -%}
