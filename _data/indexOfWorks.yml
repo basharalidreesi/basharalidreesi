@@ -15,7 +15,7 @@ path: /works/
 #   clients:                    # <content>, unset
 #   time:                       # <content>, unset
 #   url:                        # <content>, generated from title if unset TODO
-#   type:                       # <modifier>, unset
+#   type TYPOLOGY TODO:                       # <modifier>, unset
 #   isIndexed:                  # <modifier>, true
 
 
@@ -26,8 +26,6 @@ path: /works/
 
 
 
-#   colors: ARRAY TODO
-#   fonts: ARRAY TODO
 #   css: ARRAY TODO
 #   js: ARRAY TODO
 #   header: TODO
@@ -60,6 +58,18 @@ works:
 # break
 - title: Amet
 # end
+
+# typologyDatum:
+# Advertisements for Architecture
+        # id  | example | color-outer | color-inner | color-text | work-titleSize | work-subtitleSize | work-captionSize | work-titleFont | work-subtitleFont | work-captionFont
+        # 1.1 | decay   | black       | black       | white      | 600%           | 600%              | 400%             | helvetica700   | helvetica400      | times
+        # 1.2 | murder  | black       | white       | black      | 600%           | 600%              | 400%             | helvetica700   | helvetica400      | times
+        # 1.3 | ropes   | black       | white       | black      | 1000%          | 600%              | 600%             | helvetica700   | helvetica400      | helvetica400
+        # 1.4 | masks   | black       | black       | white      | 2000%          | 600%              | 400%             | helvetica900   | times             | quadrata
+        # 1.5 | desire  | black       | black       | white      | 800%           | 600%              | 400%             | quadrata       | times             | times
+# FLUXUS
+        # id  | example | color-outer | color-inner | color-text | work-titleSize | work-subtitleSize | work-captionSize | work-titleFont | work-subtitleFont | work-captionFont
+        
 
 indexingDatum:
 # begin <content>
