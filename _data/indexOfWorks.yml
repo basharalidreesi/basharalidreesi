@@ -129,7 +129,7 @@ indexingDatum:
     innerHTML:
       open: <time>
       close: </time>
-    isCollapsible: false
+    isCollapsible: true
 # end <immediateContent>
 
 ...
