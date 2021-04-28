@@ -18,11 +18,14 @@ layout: main
 							{%- assign key = entry[0] -%}
 							{%- assign value = entry[1] -%}
 							{%- assign datum = index.indexingDatum[key] -%}
-							<!-- {{ work | inspect }} -->
-								{%- assign previousEntry = forloop.index0 | minus: 1 -%}
-								<!-- {{ work[previousEntry] | inspect }} -->
-									{%- assign nextEntry = forloop.index0 | plus: 1 -%}
-									<!-- {{ work[nextEntry] | inspect }} -->
+								{%- assign previous = forloop.index0 | minus: 1 -%}
+								{%- for previousEntry in work offset: previous limit: 1 -%}
+								<!-- {{ previousEntry }} -->
+								{%- endfor -%}
+									{%- assign next = forloop.index0 | plus: 1 -%}
+									{%- for nextEntry in work offset: next limit: 1 -%}
+									<!-- nextEntry -->
+									{%- endfor -%}
 							{%- if value and datum -%}
 							{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' -%}
 							{%- for node in value %}
