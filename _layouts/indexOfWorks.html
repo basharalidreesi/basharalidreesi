@@ -24,7 +24,7 @@ layout: main
 								{%- endfor -%}
 									{%- assign next = forloop.index0 | plus: 1 -%}
 									{%- for nextEntry in work offset: next limit: 1 -%}
-									<!-- nextEntry -->
+									<!-- {{ nextEntry }} -->
 									{%- endfor -%}
 							{%- if value and datum -%}
 							{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' -%}
