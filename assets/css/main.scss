@@ -173,6 +173,17 @@ body {
 					display: block;
 					padding-top: calc(100% * var(--indexOfWorks-aspectRatio));
 				}
+				--work-outerCardColor: var(--color-quaternary);
+				--work-innerCardColor: var(--color-quaternary);
+				--work-color: var(--color-text);
+				&--type1 {
+					--work-outerCardColor: black;
+					--work-innerCardColor: black;
+					--work-color: white;
+				}
+				&--type2 {
+					--work-outerCardColor: black;
+				}
 			}
 			&__work__outerCard {
 				position: absolute;
@@ -181,11 +192,14 @@ body {
 				height: calc(100% - 2rem);
 				width: calc(100% - 2rem);
 				padding: 0.5rem;
+				background: var(--work-outerCardColor);
 			}
 			&__work__innerCard {
 				height: 100%;
 				width: 100%;
 				padding: 1rem;
+				background: var(--work-innerCardColor);
+				color: var(--work-color);
 			}
 			&__work__title { }
 			&__work__subtitle { }
