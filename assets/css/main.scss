@@ -148,6 +148,8 @@ body {
 					display: block;
 					padding-top: calc(100% * var(--indexOfWorks-aspectRatio));
 				}
+				--color-outer: white;
+				--color-inner: white;
 				&--type1 {
 					--color-outer: black;
 					--color-inner: black;
