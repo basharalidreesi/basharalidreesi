@@ -32,7 +32,7 @@ layout: main
 									{%- endfor -%}
 							{%- if value and datum -%}
 							{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' %}
-							{%- if forloop.first or datum.outerHTML.open == previousDatum.outerHTML.open and datum.isCollapsible and previousDatum.isCollapsible %}
+							{%- if forloop.first == false and datum.outerHTML.open == previousDatum.outerHTML.open and datum.isCollapsible and previousDatum.isCollapsible %}
 							<!-- collapsed tag: `{{ datum.outerHTML.open }}` -->{% else %}{{ datum.outerHTML.open | replace: "&classes", classes }}
 							{%- endif %}
 							<!-- previous key: {{ previousKey }} -->
@@ -46,7 +46,7 @@ layout: main
 							<!-- next value: {{ nextValue }} -->
 							<!-- next opening tag: {{ nextDatum.outerHTML.open }} -->
 							<!-- next closing tag: {{ nextDatum.outerHTML.close }} -->
-							{%- if forloop.last or datum.outerHTML.close == previousDatum.outerHTML.close and datum.isCollapsible and previousDatum.isCollapsible %}
+							{%- if forloop.last == false and datum.outerHTML.close == previousDatum.outerHTML.close and datum.isCollapsible and previousDatum.isCollapsible %}
 							<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% else %}{{ datum.outerHTML.close }}
 							{%- endif %}
 							{%- endif -%}
