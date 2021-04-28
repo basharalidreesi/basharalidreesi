@@ -138,17 +138,6 @@ indexingDatum:
       close:
     doesEcho: true
     isAnchored: false
-  gap:
-    classes:
-      - indexOfWorks__work__gap
-    outerHTML:
-      open: <div &classes &styles>
-      close: </div>
-    innerHTML:
-      open:
-      close:
-    doesEcho: false
-    isAnchored: false
 # end <immediateContent>
 
 ...
