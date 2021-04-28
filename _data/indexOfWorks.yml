@@ -87,6 +87,7 @@ indexingDatum:
       close: '" />'
     doesEcho: true
     isAnchored: true
+    isCollapsible: true
   # break
   caption:
     classes:
@@ -99,6 +100,7 @@ indexingDatum:
       close: </figcaption>
     doesEcho: true
     isAnchored: false
+    isCollapsible: true
   # break
   tags:
     classes:
@@ -111,6 +113,7 @@ indexingDatum:
       close: </li>
     doesEcho: true
     isAnchored: false
+    isCollapsible: true
   # break
   clientele:
     classes:
