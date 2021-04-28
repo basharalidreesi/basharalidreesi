@@ -21,7 +21,7 @@ path: /works/
 #   css: ARRAY TODO
 #   js: ARRAY TODO
 #   header: TODO
-#   isIndexed:                  # <immediateContentModifier>, true
+#   isIndexed:                  # <modifier>, true
 #   hasFullHeightFigure:        # <immediateContentModifier>, false
 #   doesPropagate:              # <intermediateContentModifier>, false TODO
 #   type TODO
@@ -104,11 +104,11 @@ indexingDatum:
     classes:
       - indexOfWorks__work__tag
     outerHTML:
-      open: <dd &classes>
-      close: </dd>
+      open: <ul &classes>
+      close: </ul>
     innerHTML:
-      open:
-      close:
+      open: <li>
+      close: </li>
     doesEcho: true
     isAnchored: false
   # break
