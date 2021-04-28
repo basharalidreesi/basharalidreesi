@@ -15,11 +15,16 @@ path: /works/
 #   clients:                    # <content>, unset
 #   time:                       # <content>, unset
 #   url:                        # <content>, generated from title if unset TODO
-
+#   type:                       # <modifier>, unset
 #   isIndexed:                  # <modifier>, true
+
+
+#   canCollapse:                # <property>, false
+
+
 #   cardType:                   # <modifier>, unset TODO
 
-#   isCollapsible:              # <property>, false
+
 
 #   colors: ARRAY TODO
 #   fonts: ARRAY TODO
@@ -37,12 +42,14 @@ works:
   tags: [hello, and, goodbye]
   clients: yesses
   time: Summer 2016
+  type: "1"
 # break
 - title: Ipsum
   figure: https://source.unsplash.com/random/500x500
   caption: another sample caption
   tags: just hi
   time: [Summer 2016, Spring 2018]
+  type: "2"
 # break
 - title: Dolor
   figure: https://source.unsplash.com/random/500x500
@@ -55,7 +62,7 @@ works:
 # end
 
 indexingDatum:
-# begin <immediateContent>
+# begin <content>
   title:
     classes:
       - indexOfWorks__work__title
@@ -65,7 +72,7 @@ indexingDatum:
     innerHTML:
       open:
       close:
-    isCollapsible: true
+    canCollapse: true
   # break
   subtitle:
     classes:
@@ -76,7 +83,7 @@ indexingDatum:
     innerHTML:
       open:
       close:
-    isCollapsible: true
+    canCollapse: true
   # break
   figure:
     classes:
@@ -87,7 +94,7 @@ indexingDatum:
     innerHTML:
       open: '<img src="'
       close: '" />'
-    isCollapsible: true
+    canCollapse: true
   # break
   caption:
     classes:
@@ -98,7 +105,7 @@ indexingDatum:
     innerHTML:
       open: <figcaption>
       close: </figcaption>
-    isCollapsible: true
+    canCollapse: true
   # break
   tags:
     classes:
@@ -109,7 +116,7 @@ indexingDatum:
     innerHTML:
       open: <li>
       close: </li>
-    isCollapsible: true
+    canCollapse: true
   # break
   clients:
     classes:
@@ -120,7 +127,7 @@ indexingDatum:
     innerHTML:
       open: <li>
       close: </li>
-    isCollapsible: true
+    canCollapse: true
   # break
   time:
     classes:
@@ -131,7 +138,7 @@ indexingDatum:
     innerHTML:
       open: <time>
       close: </time>
-    isCollapsible: true
-# end <immediateContent>
+    canCollapse: true
+# end <content>
 
 ...
