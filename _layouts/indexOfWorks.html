@@ -20,11 +20,15 @@ layout: main
 							{%- assign datum = index.indexingDatum[key] -%}
 								{%- assign previous = forloop.index0 | minus: 1 -%}
 								{%- for previousEntry in work offset: previous limit: 1 -%}
-								<!-- {{ previousEntry }} -->
+								{%- assign previousKey = previousEntry[0] -%}
+								{%- assign previousValue = previousEntry[1] -%}
+								{%- assign previousDatum = index.indexingDatum[previousKey] -%}
 								{%- endfor -%}
 									{%- assign next = forloop.index0 | plus: 1 -%}
 									{%- for nextEntry in work offset: next limit: 1 -%}
-									<!-- {{ nextEntry }} -->
+									{%- assign nextKey = nextEntry[0] -%}
+									{%- assign nextValue = nextEntry[1] -%}
+									{%- assign nextDatum = index.indexingDatum[nextKey] -%}
 									{%- endfor -%}
 							{%- if value and datum -%}
 							{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' -%}
