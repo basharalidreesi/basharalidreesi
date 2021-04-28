@@ -35,7 +35,7 @@ layout: main
 							{%- for node in value %}
 							{% unless datum.outerHTML.open == previousDatum.outerHTML.open %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% else %}<!-- collapsed tag: `{{ datum.outerHTML.open }}` -->{% endunless %}
 								{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
-							{% unless datum.outerHTML.close == nextDatum.outerHTML.close %}{{ datum.outerHTML.close }}{% else %}<!-- collapsed tag: `{{ datum.outerHTML.open }}` -->{% endunless %}
+							{% unless datum.outerHTML.close == nextDatum.outerHTML.close %}{{ datum.outerHTML.close }}{% else %}<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% endunless %}
 							{%- endfor -%}
 							{%- endif -%}
 							{%- endfor %}
