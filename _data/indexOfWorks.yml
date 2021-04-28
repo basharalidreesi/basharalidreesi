@@ -12,7 +12,7 @@ path: /works/
 #   figure:                     # <immediateContent>, unset
 #   caption:                    # <immediateContent>, unset
 #   tags:                       # <immediateContent>, unset
-#   clientele:                  # <immediateContent>, unset
+#   clients:                  # <immediateContent>, unset
 #   time:                       # <immediateContent>, unset
 #   url:                        # <immediateContent>, generated from title if unset
 #   gap:                        # <immediateContent>, unset
@@ -33,12 +33,14 @@ works:
   figure: https://source.unsplash.com/random/500x500
   caption: He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
   tags: [hello, and, goodbye]
-  clientele: yesses
+  clients: yesses
+  time: Summer 2016
 # break
 - title: Ipsum
   figure: https://source.unsplash.com/random/500x500
   caption: another sample caption
   tags: just hi
+  time: [Summer 2016, Spring 2018]
 # break
 - title: Dolor
   figure: https://source.unsplash.com/random/500x500
@@ -61,8 +63,7 @@ indexingDatum:
     innerHTML:
       open:
       close:
-    doesEcho: true
-    isAnchored: true
+    isCollapsible: true
   # break
   subtitle:
     classes:
@@ -73,8 +74,7 @@ indexingDatum:
     innerHTML:
       open:
       close:
-    doesEcho: true
-    isAnchored: true
+    isCollapsible: true
   # break
   figure:
     classes:
@@ -85,21 +85,17 @@ indexingDatum:
     innerHTML:
       open: '<img src="'
       close: '" />'
-    doesEcho: true
-    isAnchored: true
     isCollapsible: true
   # break
   caption:
     classes:
-      - indexOfWorks__work__caption
+      - indexOfWorks__work__figure
     outerHTML:
       open: <figure &classes>
       close: </figure>
     innerHTML:
       open: <figcaption>
       close: </figcaption>
-    doesEcho: true
-    isAnchored: false
     isCollapsible: true
   # break
   tags:
@@ -111,33 +107,29 @@ indexingDatum:
     innerHTML:
       open: <li>
       close: </li>
-    doesEcho: true
-    isAnchored: false
     isCollapsible: true
   # break
-  clientele:
+  clients:
     classes:
       - indexOfWorks__work__client
     outerHTML:
-      open: <dd &classes>
-      close: </dd>
+      open: <ul &classes>
+      close: </ul>
     innerHTML:
-      open:
-      close:
-    doesEcho: true
-    isAnchored: false
+      open: <li>
+      close: </li>
+    isCollapsible: true
   # break
   time:
     classes:
       - indexOfWorks__work__time
     outerHTML:
-      open: <dd &classes>
-      close: </dd>
+      open: <span &classes>
+      close: </span>
     innerHTML:
-      open:
-      close:
-    doesEcho: true
-    isAnchored: false
+      open: <time>
+      close: </time>
+    isCollapsible: false
 # end <immediateContent>
 
 ...
