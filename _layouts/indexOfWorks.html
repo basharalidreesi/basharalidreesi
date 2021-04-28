@@ -44,7 +44,7 @@ layout: main
 							<!-- next value: {{ nextValue }} -->
 							<!-- next opening tag: {{ nextDatum.outerHTML.open }} -->
 							<!-- next closing tag: {{ nextDatum.outerHTML.close }} -->
-							{% if forloop.last == false and datum.outerHTML.close == previousDatum.outerHTML.close and datum.isCollapsible and previousDatum.isCollapsible %}<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% else %}{{ datum.outerHTML.close }}{% endif %}
+							{% if forloop.last == false and datum.outerHTML.close == nextDatum.outerHTML.close and datum.isCollapsible and nextDatum.isCollapsible %}<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% else %}{{ datum.outerHTML.close }}{% endif %}
 							{%- endif -%}
 							{%- endfor %}
 						</div>
