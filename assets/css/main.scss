@@ -173,16 +173,15 @@ body {
 					display: block;
 					padding-top: calc(100% * var(--indexOfWorks-aspectRatio));
 				}
-				--work-outerCardColor: var(--color-quaternary);
-				--work-innerCardColor: var(--color-quaternary);
-				--work-color: var(--color-text);
 				&--type1 {
 					--work-outerCardColor: black;
 					--work-innerCardColor: black;
-					--work-color: white;
+					--color-text: white;
 				}
 				&--type2 {
 					--work-outerCardColor: black;
+					--work-innerCardColor: white;
+					--color-text: black;
 				}
 			}
 			&__work__outerCard {
@@ -199,7 +198,6 @@ body {
 				width: 100%;
 				padding: 1rem;
 				background: var(--work-innerCardColor);
-				color: var(--work-color);
 			}
 			&__work__title { }
 			&__work__subtitle { }
