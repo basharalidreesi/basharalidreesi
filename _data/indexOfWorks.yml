@@ -37,7 +37,7 @@ works:
 # begin
 - title: One morning, when Gregor Samsa woke from troubled dreams
   subtitle: he found himself transformed in his bed into a horrible vermin.
-  figure: https://source.unsplash.com/random/500x500
+  figure: https://source.unsplash.com/random/300x200
   caption: He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
   tags: [hello, and, goodbye]
   clients: yesses
@@ -45,17 +45,17 @@ works:
   type: "1"
 # break
 - title: Ipsum
-  figure: https://source.unsplash.com/random/500x500
+  figure: https://source.unsplash.com/random/300x200
   caption: another sample caption
   tags: just hi
   time: [Summer 2016, Spring 2018]
   type: "2"
 # break
 - title: Dolor
-  figure: https://source.unsplash.com/random/500x500
+  figure: https://source.unsplash.com/random/300x200
 # break
 - title: Sit
-  figure: https://source.unsplash.com/random/500x500
+  figure: https://source.unsplash.com/random/300x200
   caption: small caption
 # break
 - title: Amet
