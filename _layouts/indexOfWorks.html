@@ -35,11 +35,15 @@ layout: main
 							{% unless forloop.first or datum.outerHTML.open == previousDatum.outerHTML.open %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% else %}<!-- collapsed tag: `{{ datum.outerHTML.open }}` -->{% endunless %}
 							<!-- previous key: {{ previousKey }} -->
 							<!-- previous value: {{ previousValue }} -->
+							<!-- previous opening tag: {{ previousDatum.outerHTML.open }} -->
+							<!-- previous closing tag: {{ previousDatum.outerHTML.close }} -->
 							{%- for node in value %}
 								{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
 							{%- endfor %}
 							<!-- next key: {{ nextKey }} -->
 							<!-- next value: {{ nextValue }} -->
+							<!-- next opening tag: {{ nextDatum.outerHTML.open }} -->
+							<!-- next closing tag: {{ nextDatum.outerHTML.close }} -->
 							{% unless forloop.last or datum.outerHTML.close == nextDatum.outerHTML.close %}{{ datum.outerHTML.close }}{% else %}<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% endunless %}
 							{%- endif -%}
 							{%- endfor %}
