@@ -23,13 +23,13 @@ layout: main
 								{%- assign previousKey = previousEntry[0] -%}
 								{%- assign previousValue = previousEntry[1] -%}
 								{%- assign previousDatum = index.indexingDatum[previousKey] -%}
-								{%- endfor -%} <!-- {{ previousKey | inspect }} : {{ previousValue | inspect }} | {{ previousDatum | inspect }} -->
+								{%- endfor -%}
 									{%- assign next = forloop.index0 | plus: 1 -%}
 									{%- for nextEntry in work offset: next limit: 1 -%}
 									{%- assign nextKey = nextEntry[0] -%}
 									{%- assign nextValue = nextEntry[1] -%}
 									{%- assign nextDatum = index.indexingDatum[nextKey] -%}
-									{%- endfor -%} <!-- {{ nextKey | inspect }} : {{ nextValue | inspect }} | {{ nextDatum | inspect }} -->
+									{%- endfor -%}
 							{%- if value and datum -%}
 							{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' -%}
 							{%- for node in value %}
