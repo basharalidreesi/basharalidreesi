@@ -10,8 +10,9 @@ $font-size: 15px !default;
 	--color-inner: #cccccc;
 	--color-shine: white;
 	--color-text: black;
-	--color-box: black;
 	@media (prefers-color-scheme: dark) { }
+
+	--border-radius: 0;
 
 	--indexOfWorks-columns: 3;
 	--indexOfWorks-aspectRatio: (4 / 3);
@@ -156,6 +157,7 @@ body {
 					--color-outer: black;
 					--color-inner: white;
 					--color-text: black;
+					--border-radius: 0.5rem;
 				}
 			}
 			&__work__outerCard {
@@ -166,6 +168,7 @@ body {
 				width: calc(100% - 2rem);
 				padding: 0.5rem;
 				background: var(--color-outer);
+				border-radius: var(--border-radius);
 			}
 			&__work__innerCard {
 				height: 100%;
