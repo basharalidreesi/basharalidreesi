@@ -20,16 +20,16 @@ layout: main
 							{%- assign datum = index.indexingDatum[key] -%}
 							{%- assign previous = forloop.index0 | minus: 1 -%}
 							{%- assign next = forloop.index0 | plus: 1 -%}
-								{%- for previousEntry in work offset: previous limit: 1 -%}
-								{%- assign previousKey = previousEntry[0] -%}
-								{%- assign previousValue = previousEntry[1] -%}
-								{%- assign previousDatum = index.indexingDatum[previousKey] -%}
-								{%- endfor -%}
-									{%- for nextEntry in work offset: next limit: 1 -%}
-									{%- assign nextKey = nextEntry[0] -%}
-									{%- assign nextValue = nextEntry[1] -%}
-									{%- assign nextDatum = index.indexingDatum[nextKey] -%}
-									{%- endfor -%}
+							{%- for previousEntry in work offset: previous limit: 1 -%}
+							{%- assign previousKey = previousEntry[0] -%}
+							{%- assign previousValue = previousEntry[1] -%}
+							{%- assign previousDatum = index.indexingDatum[previousKey] -%}
+							{%- endfor -%}
+							{%- for nextEntry in work offset: next limit: 1 -%}
+							{%- assign nextKey = nextEntry[0] -%}
+							{%- assign nextValue = nextEntry[1] -%}
+							{%- assign nextDatum = index.indexingDatum[nextKey] -%}
+							{%- endfor -%}
 							{%- if value and datum -%}
 							{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' %}
 							{% if forloop.first == false and datum.outerHTML.open == previousDatum.outerHTML.open and datum.isCollapsible and previousDatum.isCollapsible and datum.classes == previousDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.open }}` -->{% else %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% endif %}

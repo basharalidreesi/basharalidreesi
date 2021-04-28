@@ -7,24 +7,26 @@
 path: /works/
 
 # parameters:
-# - title:                      # <immediateContent>, unset
-#   subtitle:                   # <immediateContent>, unset
-#   figure:                     # <immediateContent>, unset
-#   caption:                    # <immediateContent>, unset
-#   tags:                       # <immediateContent>, unset
-#   clients:                  # <immediateContent>, unset
-#   time:                       # <immediateContent>, unset
-#   url:                        # <immediateContent>, generated from title if unset
-#   gap:                        # <immediateContent>, unset
+# - title:                      # <content>, unset
+#   subtitle:                   # <content>, unset
+#   figure:                     # <content>, unset
+#   caption:                    # <content>, unset
+#   tags:                       # <content>, unset
+#   clients:                    # <content>, unset
+#   time:                       # <content>, unset
+#   url:                        # <content>, generated from title if unset TODO
+
+#   isIndexed:                  # <modifier>, true
+#   cardType:                   # <modifier>, unset TODO
+
+#   isCollapsible:              # <property>, false
+
 #   colors: ARRAY TODO
 #   fonts: ARRAY TODO
 #   css: ARRAY TODO
 #   js: ARRAY TODO
 #   header: TODO
-#   isIndexed:                  # <modifier>, true
-#   hasFullHeightFigure:        # <immediateContentModifier>, false
 #   doesPropagate:              # <intermediateContentModifier>, false TODO
-#   type TODO
 
 works:
 # begin
