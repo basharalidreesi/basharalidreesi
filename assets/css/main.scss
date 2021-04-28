@@ -143,6 +143,7 @@ body {
 				flex-basis: calc(100% / var(--indexOfWorks-columns));
 				position: relative;
 				padding: 1rem;
+				font-size: calc((100vw - 4rem - ((var(--indexOfWorks-columns) - 1) * 2rem) - (var(--indexOfWorks-columns) * 4rem)) / 100);
 				&::before {
 					content: "";
 					display: block;
@@ -178,7 +179,11 @@ body {
 				padding: 1rem;
 				background: var(--color-inner);
 			}
-			&__work__title { }
+			&__work__title {
+				font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+				font-weight: 700;
+				font-size: calc(1rem + 100%);
+			}
 			&__work__subtitle { }
 			&__work__figure {
 				img {
