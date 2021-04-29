@@ -149,33 +149,37 @@ body {
 					padding-top: calc(100% * var(--indexOfWorks-aspectRatio));
 				}
 
-				{%- assign index = site.data.indexOfWorks -%}
-				{%- assign datum = index.typologicalDatum -%}
-				{%- for entry in datum -%}
-				        {%- assign key = entry[0] -%}
-				        {%- assign value = entry[1] -%}
-				        {%- if key == "default" -%}
-				                {%- for node in value %}
-						/* --{{ node[0] }}: {{ node[1] }}; */
-				                {%- endfor -%}
-				        {%- endif -%}
-				{%- endfor -%}
+				{% assign index = site.data.indexOfWorks %}
+				{% assign datum = index.typologicalDatum %}
+				{% for entry in datum %}
+				        {% assign key = entry[0] %}
+				        {% assign value = entry[1] %}
+				        {% if key != "default" %}
+					&--type{{ key }} {
+					{% endif %}
+			                {% for node in value %}
+					/* --{{ node[0] }}: {{ node[1] }}; */
+			                {% endfor %}
+					{% if key != "default" %}
+					}
+					{% endif %}
+				{% endfor %}
 
-				--color-outer: white;
-				--color-inner: white;
-				--size-title: 600%;
-				--size-subtitle: 600%;
-				--size-caption: 400%
-				&--type1 {
-					--color-outer: black;
-					--color-inner: black;
-					--color-text: white;
-				}
-				&--type2 {
-					--color-outer: black;
-					--color-inner: white;
-					--color-text: black;
-				}
+				// --color-outer: white;
+				// --color-inner: white;
+				// --size-title: 600%;
+				// --size-subtitle: 600%;
+				// --size-caption: 400%
+				// &--type1 {
+				// 	--color-outer: black;
+				// 	--color-inner: black;
+				// 	--color-text: white;
+				// }
+				// &--type2 {
+				// 	--color-outer: black;
+				// 	--color-inner: white;
+				// 	--color-text: black;
+				// }
 			}
 			&__work__outerCard {
 				position: absolute;
