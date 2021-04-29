@@ -83,6 +83,7 @@ works:
   caption: Transgression. <br /> An exquisitely perverse act that never lasts. <br /> And like a caress is <br /> almost impossible to resist.
   title: TRANSGRESSION
   type: "19"
+- type: "20"
 # end
 
 indexingDatum:
@@ -187,9 +188,10 @@ typologicalDatum:
     # Ideal 1:1 figure
     # Ideal no subtitle
     color-outer: black
-    color-inner: white
+    color-inner: "#fefdfa"
     color-text: black
-    radius-border: "0"
+    radius-outer: "0"
+    radius-inner: "0"
     size-title: "550%"
     size-subtitle: "375%"
     size-caption: "375%"
@@ -228,8 +230,9 @@ typologicalDatum:
     # Ideal no subtitle
     color-outer: black
     color-inner: black
-    color-text: white
-    radius-border: "0"
+    color-text: "#fefdfa"
+    radius-outer: "0"
+    radius-inner: "0"
     size-title: "550%"
     size-subtitle: "375%"
     size-caption: "375%"
@@ -268,8 +271,9 @@ typologicalDatum:
     # Ideal no subtitle
     color-outer: black
     color-inner: black
-    color-text: white
-    radius-border: "0"
+    color-text: "#fefdfa"
+    radius-outer: "0"
+    radius-inner: "0"
     size-title: "550%"
     size-subtitle: "375%"
     size-caption: "375%"
@@ -308,8 +312,9 @@ typologicalDatum:
     # Ideal no caption
     color-outer: black
     color-inner: black
-    color-text: white
-    radius-border: "0"
+    color-text: "#fefdfa"
+    radius-outer: "0"
+    radius-inner: "0"
     size-title: "650%"
     size-subtitle: "350%"
     size-caption: "350%"
@@ -347,8 +352,9 @@ typologicalDatum:
     # Ideal 5:6 figure
     color-outer: black
     color-inner: black
-    color-text: white
-    radius-border: "0"
+    color-text: "#fefdfa"
+    radius-outer: "0"
+    radius-inner: "0"
     size-title: "650%"
     size-subtitle: "400%"
     size-caption: "650%"
@@ -386,8 +392,9 @@ typologicalDatum:
     # Ideal two 5:3 figures
     color-outer: black
     color-inner: black
-    color-text: white
-    radius-border: "0"
+    color-text: "#fefdfa"
+    radius-outer: "0"
+    radius-inner: "0"
     size-title: "650%"
     size-subtitle: "450%"
     size-caption: "650%"
@@ -425,8 +432,9 @@ typologicalDatum:
     # Ideal 2:1 figure
     color-outer: black
     color-inner: black
-    color-text: white
-    radius-border: "0"
+    color-text: "#fefdfa"
+    radius-outer: "0"
+    radius-inner: "0"
     size-title: "1200%"
     size-subtitle: "375%"
     size-caption: "375%"
@@ -464,8 +472,9 @@ typologicalDatum:
     # Ideal 1:1 figure
     color-outer: black
     color-inner: black
-    color-text: white
-    radius-border: "0"
+    color-text: "#fefdfa"
+    radius-outer: "0"
+    radius-inner: "0"
     size-title: "2000%"
     size-subtitle: "375%"
     size-caption: "298%"
@@ -503,8 +512,9 @@ typologicalDatum:
     # Ideal 4:3 figure
     color-outer: black
     color-inner: black
-    color-text: white
-    radius-border: "0"
+    color-text: "#fefdfa"
+    radius-outer: "0"
+    radius-inner: "0"
     size-title: "500%"
     size-subtitle: "375%"
     size-caption: "280%"
@@ -542,8 +552,9 @@ typologicalDatum:
     # Ideal no figure
     color-outer: black
     color-inner: black
-    color-text: white
-    radius-border: "0"
+    color-text: "#fefdfa"
+    radius-outer: "0"
+    radius-inner: "0"
     size-title: "520%"
     size-subtitle: "400%"
     size-caption: "400%"
@@ -576,6 +587,13 @@ typologicalDatum:
     hyphens-title: none
     hyphens-subtitle: none
     hyphens-caption: none
+  20:
+    # Ideal no text
+    color-outer: "#fefdfa"
+    color-inner: "#fefdfa"
+    color-text: black
+    radius-outer: "7.5% / 5%"
+    radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
 # end
 
 ...

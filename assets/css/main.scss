@@ -180,7 +180,7 @@ body {
 				width: calc(100% - 2rem);
 				padding: 1.5%;
 				background: var(--color-outer);
-				border-radius: var(--radius-border);
+				border-radius: var(--radius-outer);
 			}
 			&__work__innerCard {
 				display: flex;
@@ -191,6 +191,7 @@ body {
 				width: 100%;
 				padding: 3%;
 				background: var(--color-inner);
+				border-radius: var(--radius-inner);
 				& > * {
 					display: flex;
 					flex-flow: column nowrap;
