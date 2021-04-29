@@ -46,7 +46,7 @@ works:
   tags: [hello, and, goodbye]
   clients: yesses
   time: Summer 2016
-  type: "1"
+  type: "10"
 # break
 - title: Ipsum
   figure: https://source.unsplash.com/random/300x200
@@ -188,18 +188,18 @@ typologicalDatum:
     weight-subtitle: "400"
     weight-caption: "400"
   # break
-  # 10:
-  #   color-outer:
-  #   color-inner:
-  #   color-text:
-  #   radius-border:
-  #   size-title:
-  #   size-subtitle:
-  #   size-caption:
-  #   family-title:
-  #   family-subtitle:
-  #   family-caption:
-  # # break
+  10:
+    color-outer: black
+    color-inner: black
+    color-text: white
+    radius-border: "0"
+    size-title: default
+    size-subtitle: default
+    size-caption: default
+    family-title: default
+    family-subtitle: default
+    family-caption: default
+  # break
   # 11:
   #   color-outer:
   #   color-inner:
