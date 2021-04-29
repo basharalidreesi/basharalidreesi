@@ -175,19 +175,6 @@ typologicalDatum:
 #     ...
 #   ...
   default:
-    # color-outer: white
-    # color-inner: white
-    # color-text: black
-    # radius-border: "0"
-    # size-title: "600%"
-    # size-subtitle: "600%"
-    # size-caption: "400%"
-    # family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
-    # family-subtitle: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
-    # family-caption: '"Times", "Times New Roman", serif'
-    # weight-title: "700"
-    # weight-subtitle: "400"
-    # weight-caption: "400"
   # break
   10: # AFA Murder
     # Ideal 1:1 figure
@@ -221,7 +208,7 @@ typologicalDatum:
     color-inner: black
     color-text: white
     radius-border: "0"
-    size-title: "605%"
+    size-title: "550%"
     size-subtitle: "0" # TEMP
     size-caption: "375%"
     family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
@@ -230,20 +217,20 @@ typologicalDatum:
     weight-title: "700"
     weight-subtitle: "0" # TEMP
     weight-caption: "400"
-    width-title: "100%"
+    width-title: "80%"
     width-subtitle: "0" # TEMP
     width-caption: "70%"
     padding-figure: "6%"
   12: # AFA Decay
     # Ideal 6:5 figure
-    #
-    #
-    #
+    # Ideal TODO title
+    # Ideal no subtitle
+    # Ideal TODO caption
     color-outer: black
     color-inner: black
     color-text: white
     radius-border: "0"
-    size-title: "605%"
+    size-title: "550%"
     size-subtitle: "0" # TEMP
     size-caption: "375%"
     family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
@@ -254,10 +241,31 @@ typologicalDatum:
     weight-caption: "400"
     width-title: "100%"
     width-subtitle: "0" # TEMP
-    width-caption: "70%"
+    width-caption: "50%"
     padding-figure: "6%"
-  13: # AFA Figure/Ground
-  14: # AFA Conditions
+  13: # AFA Conditions
+    # Ideal 2:1 figure
+    # Ideal TODO title
+    # Ideal TODO subtitle
+    # Ideal TODO caption
+    color-outer: black
+    color-inner: black
+    color-text: white
+    radius-border: "0"
+    size-title: "550%"
+    size-subtitle: "0" # TEMP
+    size-caption: "375%"
+    family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-subtitle: initial # TEMP
+    family-caption: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    weight-title: "700"
+    weight-subtitle: "0" # TEMP
+    weight-caption: "400"
+    width-title: "100%"
+    width-subtitle: "0" # TEMP
+    width-caption: "100%"
+    padding-figure: "6%"
+  14: # AFA Figure/Ground
 # end
 
 ...
