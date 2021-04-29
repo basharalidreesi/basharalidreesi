@@ -389,9 +389,9 @@ typologicalDatum:
     color-inner: black
     color-text: white
     radius-border: "0"
-    size-title: "2000%"
+    size-title: "500%"
     size-subtitle: "375%"
-    size-caption: "325%"
+    size-caption: "300%"
     family-title: '"Times", "Times New Roman", serif'
     family-subtitle: '"Times", "Times New Roman", serif'
     family-caption: '"Times", "Times New Roman", serif'
@@ -400,13 +400,13 @@ typologicalDatum:
     weight-caption: "400"
     width-title: "100%"
     width-subtitle: "100%"
-    width-figure: "60%"
-    width-caption: "60%"
-    padding-title: "27% 0 0 0"
-    padding-subtitle: "1% 0 15% 0"
+    width-figure: "85%"
+    width-caption: "85%"
+    padding-title: "0"
+    padding-subtitle: "0"
     padding-figure: "3% 0"
-    align-figure: "flex-end"
-    align-caption: "flex-start"
+    align-figure: "center"
+    align-caption: "center"
   # break
   19: # AFA Transgression
 # end
