@@ -220,7 +220,6 @@ body {
 					width: var(--width-image);
 					margin: var(--margin-image);
 					padding: var(--padding-image);
-					align-self: var(--align-image);
 				}
 				figcaption {
 					font-family: var(--family-caption);
@@ -229,7 +228,9 @@ body {
 					width: var(--width-caption);
 					margin: var(--margin-caption);
 					padding: var(--padding-caption);
-					align-self: var(--align-caption);
+					text-align: var(--align-caption);
+					text-indent: var(--indent-caption);
+					hyphens: var(--hyphens-caption);
 				}
 			}
 			&__work__tag {

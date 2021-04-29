@@ -209,6 +209,9 @@ typologicalDatum:
     padding-figure: "0"
     padding-image: "3% 0"
     padding-caption: "0"
+    align-caption: center
+    indent-caption: "0"
+    hyphens-caption: "none"
   # break
   11: # AFA Sensuality
     # Ideal 6:5 figure
@@ -240,6 +243,9 @@ typologicalDatum:
     padding-figure: "0"
     padding-image: "6% 0"
     padding-caption: "0"
+    align-caption: center
+    indent-caption: "0"
+    hyphens-caption: "none"
   # break
   12: # AFA Decay
     # Ideal 6:5 figure
@@ -271,6 +277,9 @@ typologicalDatum:
     margin-figure: "0"
     margin-image: "0"
     margin-caption: "0"
+    align-caption: center
+    indent-caption: "0"
+    hyphens-caption: "none"
   # break
   13: # AFA Conditions
     # Ideal 2:1 figure
@@ -302,6 +311,9 @@ typologicalDatum:
     padding-figure: "0"
     padding-image: "30% 0"
     padding-caption: "0"
+    align-caption: center
+    indent-caption: "0"
+    hyphens-caption: "none"
   # break
   14: # AFA Figure/Ground
     # Ideal 5:6 figure
@@ -332,6 +344,9 @@ typologicalDatum:
     padding-figure: "0"
     padding-image: "3% 0"
     padding-caption: "0"
+    align-caption: center
+    indent-caption: "0"
+    hyphens-caption: "none"
   # break
   15: # AFA Commonplace
     # Ideal two 1.6:1 figures
@@ -362,6 +377,9 @@ typologicalDatum:
     padding-figure: "0"
     padding-image: "1.5% 0"
     padding-caption: "0"
+    align-caption: center
+    indent-caption: "0"
+    hyphens-caption: "none"
   # break
   16: # AFA Ropes
     # Ideal 2:1 figure
@@ -392,6 +410,9 @@ typologicalDatum:
     padding-figure: "0"
     padding-image: "0 0 6% 0"
     padding-caption: "0"
+    align-caption: center
+    indent-caption: "0"
+    hyphens-caption: "none"
   # break
   17: # AFA Masks
     # Ideal 1:1 figure
@@ -422,6 +443,9 @@ typologicalDatum:
     padding-figure: "0"
     padding-image: "0 0 3% 0"
     padding-caption: "0"
+    align-caption: justify
+    indent-caption: "0"
+    hyphens-caption: "none"
   # break
   18: # AFA Desire
     # Ideal 4:3 figure
@@ -452,6 +476,9 @@ typologicalDatum:
     padding-figure: "0"
     padding-image: "3% 0"
     padding-caption: "0"
+    align-caption: justify
+    indent-caption: "10%"
+    hyphens-caption: "auto"
   # break
   19: # AFA Transgression
 # end
