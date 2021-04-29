@@ -33,7 +33,7 @@ works:
 #   <key>: <value>
 #   ...
 # ...
-- title: To really appreciate architecture, you may even need to commit <br /> a murder
+- title: To really appreciate architecture, you may even need to commit <br /> a murder.
   figure: https://source.unsplash.com/random/100x100
   caption: Architecture is defined by the actions it witnesses as much as by the enclosure of its walls. Murder in the Street differs from Murder in the Cathedral in the same way as love in the street differs from the Street of Love. Radically.
   type: "10"
@@ -373,7 +373,7 @@ typologicalDatum:
     radius-border: "0"
     size-title: "2000%"
     size-subtitle: "375%"
-    size-caption: "375%"
+    size-caption: "325%"
     family-title: '"Neue Montreal", "Helvetica", "Helvetica Neue", "Arial", sans-serif'
     family-subtitle: '"Times", "Times New Roman", serif'
     family-caption: '"Times", "Times New Roman", serif'
@@ -384,9 +384,9 @@ typologicalDatum:
     width-subtitle: "100%"
     width-figure: "60%"
     width-caption: "60%"
-    padding-title: "0"
-    padding-subtitle: "0"
-    padding-figure: "0"
+    padding-title: "27% 0 0 0"
+    padding-subtitle: "1%"
+    padding-figure: "3% 0"
     align-figure: "flex-end"
     align-caption: "flex-start"
   # break
