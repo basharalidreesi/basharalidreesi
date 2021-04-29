@@ -154,17 +154,17 @@ body {
 				{% for entry in datum %}
 				        {% assign key = entry[0] %}
 				        {% assign value = entry[1] %}
-				        {% if key != "default" %}
+				        {% unless key == "default" %}
 					&--type{{ key }} {
-					{% endif %}
-					{% if value != "default" %}
+					{% endunless %}
 			                {% for node in value %}
+					{% unless node[1] == "default" %}
 					--{{ node[0] }}: {{ node[1] }};
+					{% endunless %}
 			                {% endfor %}
-					{% endif %}
-					{% if key != "default" %}
+					{% unless key == "default" %}
 					}
-					{% endif %}
+					{% endunless %}
 				{% endfor %}
 
 				// --color-outer: white;

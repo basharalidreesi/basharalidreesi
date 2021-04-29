@@ -181,9 +181,9 @@ typologicalDatum:
     size-title: "600%"
     size-subtitle: "600%"
     size-caption: "400%"
-    family-title: Helvetica, Helvetica Neue, Arial, sans-serif
-    family-subtitle: Helvetica, Helvetica Neue, Arial, sans-serif
-    family-caption: Times, Times New Roman, serif
+    family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-subtitle: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-caption: '"Times", "Times New Roman", serif'
     weight-title: "700"
     weight-subtitle: "400"
     weight-caption: "400"
