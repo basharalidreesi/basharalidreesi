@@ -40,7 +40,7 @@ works:
 #   ...
 # ...
 - title: To really appreciate architecture, you may even need to commit a murder
-  figure: https://source.unsplash.com/random/300x300
+  figure: https://source.unsplash.com/random/100x100
   caption: Architecture is defined by the actions it witnesses as much as by the enclosure of its walls. Murder in the Street differs from Murder in the Cathedral in the same way as love in the street differs from the Street of Love. Radically.
   type: "10"
 # break
@@ -48,6 +48,22 @@ works:
   figure: https://source.unsplash.com/random/600x500
   caption: Architecture is the ultimate erotic act. Carry it to excess and it will reveal both the traces of reason and the sensual experience of space. Simultaneously.
   type: "11"
+# break
+- title: The most architectural thing about this building is the state of decay in which it is.
+  figure: https://source.unsplash.com/random/600x500
+  caption: Architecture only survives where it negates the form that society expects of it. Where it negates itself by transgressing the limits that history has set for it.
+  type: "12"
+# break
+- title: common ground?
+  figure: https://source.unsplash.com/random/200x100
+  caption: Architecture is not so much about the conditions of design but about the design of conditions.
+  type: "13"
+# break
+- title: common ground?
+  figure: https://source.unsplash.com/random/500x600
+  caption: figure/ground
+  subtitle: Architecture is not so much the knowledge of form, but a form of knowledge.
+  type: "14"
 # end
 
 # typologyDatum:
@@ -208,13 +224,15 @@ typologicalDatum:
     family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
     family-subtitle: initial # TEMP
     family-caption: '"Times", "Times New Roman", serif'
-    weight-title: "400"
+    weight-title: "700"
     weight-subtitle: "0" # TEMP
     weight-caption: "400"
     width-title: "100%"
     width-subtitle: "0" # TEMP
     width-caption: "70%"
-    padding-figure: "1%"
+    padding-figure: "6%"
+  12: # AFA Decay
+  13: # AFA Common Ground
 # end
 
 ...
