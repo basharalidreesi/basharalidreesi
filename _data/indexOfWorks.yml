@@ -207,8 +207,9 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "82.5%"
     width-caption: "82.5%"
-    padding-figure: "3% 0"
+    padding-title: "0"
     padding-subtitle: "0"
+    padding-figure: "3% 0"
   # break
   11: # AFA Sensuality
     # Ideal 6:5 figure
@@ -231,8 +232,9 @@ typologicalDatum:
     width-title: "80%"
     width-subtitle: "70%"
     width-caption: "70%"
-    padding-figure: "6% 0"
+    padding-title: "0"
     padding-subtitle: "0"
+    padding-figure: "6% 0"
   # break
   12: # AFA Decay
     # Ideal 6:5 figure
@@ -255,8 +257,9 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "50%"
     width-caption: "50%"
-    padding-figure: "6% 0"
+    padding-title: "0"
     padding-subtitle: "0"
+    padding-figure: "6% 0"
   # break
   13: # AFA Conditions
     # Ideal 2:1 figure
@@ -279,8 +282,9 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "100%"
     width-caption: "100%"
-    padding-figure: "30% 0"
+    padding-title: "0"
     padding-subtitle: "0"
+    padding-figure: "30% 0"
   # break
   14: # AFA Figure/Ground
     # Ideal 5:6 figure
@@ -303,8 +307,9 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "100%"
     width-caption: "100%"
-    padding-figure: "3% 0"
+    padding-title: "0"
     padding-subtitle: "2% 0 0"
+    padding-figure: "3% 0"
   # break
   15: # AFA Commonplace
     # Ideal two 1.6:1 figures
@@ -327,8 +332,9 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "100%"
     width-caption: "100%"
-    padding-figure: "1.5% 0"
+    padding-title: "0"
     padding-subtitle: "0"
+    padding-figure: "1.5% 0"
   # break
   16: # AFA Ropes
     color-outer: black
@@ -336,19 +342,20 @@ typologicalDatum:
     color-text: white
     radius-border: "0"
     size-title: "650%"
-    size-subtitle: "450%"
-    size-caption: "650%"
+    size-subtitle: "375%"
+    size-caption: "375%"
     family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
     family-subtitle: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
     family-caption: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
     weight-title: "700"
     weight-subtitle: "400"
-    weight-caption: "700"
+    weight-caption: "400"
     width-title: "100%"
-    width-subtitle: "100%"
-    width-caption: "100%"
-    padding-figure: "1.5% 0"
+    width-subtitle: "60%"
+    width-caption: "87.5%"
+    padding-title: "10% 0 1% 0"
     padding-subtitle: "0"
+    padding-figure: "15% 0 10% 0"
   # break
   17: # AFA Masks
   # break
