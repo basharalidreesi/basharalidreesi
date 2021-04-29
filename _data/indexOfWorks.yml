@@ -637,8 +637,10 @@ typologicalDatum:
     hyphens-subtitle: none
     hyphens-caption: none
   # break
-  20:
-    # Fluxus / AFA Murder
+  20: # Fluxus / AFA Murder
+    # Fluxus ideal no text
+    # AFA ideal 1:1 figure
+    # AFA ideal no subtitle
     color-outer: "#fefdfa"
     color-inner: "#fefdfa"
     color-text: black
@@ -678,8 +680,9 @@ typologicalDatum:
     hyphens-caption: none
   # break
   21: # Fluxus / AFA Sensuality
-    # Ideal 6:5 figure
-    # Ideal no subtitle
+    # Fluxus ideal no text
+    # AFA ideal 6:5 figure
+    # AFA ideal no subtitle
     color-outer: "#fefdfa"
     color-inner: "#fefdfa"
     color-text: black
@@ -719,8 +722,9 @@ typologicalDatum:
     hyphens-caption: none
   # break
   22: # Fluxus / AFA Decay
-    # Ideal 6:5 figure
-    # Ideal no subtitle
+    # Fluxus ideal no text
+    # AFA ideal 6:5 figure
+    # AFA ideal no subtitle
     color-outer: "#fefdfa"
     color-inner: "#fefdfa"
     color-text: black
@@ -760,8 +764,9 @@ typologicalDatum:
     hyphens-caption: none
   # break
   23: # Fluxus / AFA Conditions
-    # Ideal 2:1 figure
-    # Ideal no caption
+    # Fluxus ideal no text
+    # AFA ideal 2:1 figure
+    # AFA ideal no caption
     color-outer: "#fefdfa"
     color-inner: "#fefdfa"
     color-text: black
@@ -801,7 +806,8 @@ typologicalDatum:
     hyphens-caption: none
   # break
   24: # Fluxus / AFA Figure/Ground
-    # Ideal 5:6 figure
+    # Fluxus ideal no text
+    # AFA ideal 5:6 figure
     color-outer: "#fefdfa"
     color-inner: "#fefdfa"
     color-text: black
@@ -841,7 +847,8 @@ typologicalDatum:
     hyphens-caption: none
   # break
   25: # Fluxus / AFA Commonplace
-    # Ideal two 5:3 figures
+    # Fluxus ideal no text
+    # AFA ideal two 5:3 figures
     color-outer: "#fefdfa"
     color-inner: "#fefdfa"
     color-text: black
@@ -881,7 +888,8 @@ typologicalDatum:
     hyphens-caption: none
   # break
   26: # Fluxus / AFA Ropes
-    # Ideal 2:1 figure
+    # Fluxus ideal no text
+    # AFA ideal 2:1 figure
     color-outer: "#fefdfa"
     color-inner: "#fefdfa"
     color-text: black
@@ -921,7 +929,8 @@ typologicalDatum:
     hyphens-caption: none
   # break
   27: # Fluxus / AFA Masks
-    # Ideal 1:1 figure
+    # Fluxus ideal no text
+    # AFA ideal 1:1 figure
     color-outer: "#fefdfa"
     color-inner: "#fefdfa"
     color-text: black
@@ -961,7 +970,8 @@ typologicalDatum:
     hyphens-caption: "auto"
   # break
   28: # Fluxus / AFA Desire
-    # Ideal 4:3 figure
+    # Fluxus ideal no text
+    # AFA ideal 4:3 figure
     color-outer: "#fefdfa"
     color-inner: "#fefdfa"
     color-text: black
@@ -1001,7 +1011,8 @@ typologicalDatum:
     hyphens-caption: none
   # break
   29: # Fluxus / AFA Transgression
-    # Ideal no figure
+    # Fluxus ideal no text
+    # AFA ideal no figure
     color-outer: "#fefdfa"
     color-inner: "#fefdfa"
     color-text: black
