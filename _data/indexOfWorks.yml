@@ -48,12 +48,10 @@ works:
   time: Summer 2016
   type: "10"
 # break
-- title: Ipsum
-  figure: https://source.unsplash.com/random/300x200
-  caption: another sample caption
-  tags: just hi
-  time: [Summer 2016, Spring 2018]
-  type: "11"
+- title: To really appreciate architecture, you may even need to commit a murder
+  figure: https://source.unsplash.com/random/300x300
+  caption: Architecture is defined by the actions it witnesses as much as by the enclosure of its walls. Murder in the Street differs from Murder in the Cathedral in the same way as love in the street differs from the Street of Love. Radically.
+  type: "10"
 # break
 - title: Dolor
   figure: https://source.unsplash.com/random/300x200
