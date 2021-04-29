@@ -172,7 +172,7 @@ body {
 				{% endfor %}
 
 			}
-			&__work__outerCard {
+			&__work__outerRecto {
 				position: absolute;
 				top: 1rem;
 				left: 1rem;
@@ -182,7 +182,7 @@ body {
 				background: var(--color-outer);
 				border-radius: var(--radius-outer);
 			}
-			&__work__innerCard {
+			&__work__innerRecto {
 				display: flex;
 				flex-flow: column nowrap;
 				align-items: center;
