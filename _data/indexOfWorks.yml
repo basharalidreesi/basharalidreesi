@@ -39,28 +39,15 @@ works:
 #   <key>: <value>
 #   ...
 # ...
-- title: One morning, when Gregor Samsa woke from troubled dreams
-  subtitle: he found himself transformed in his bed into a horrible vermin.
-  figure: https://source.unsplash.com/random/300x200
-  caption: He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
-  tags: [hello, and, goodbye]
-  clients: yesses
-  time: Summer 2016
-  type: "10"
-# break
 - title: To really appreciate architecture, you may even need to commit a murder
   figure: https://source.unsplash.com/random/300x300
   caption: Architecture is defined by the actions it witnesses as much as by the enclosure of its walls. Murder in the Street differs from Murder in the Cathedral in the same way as love in the street differs from the Street of Love. Radically.
   type: "10"
 # break
-- title: Dolor
-  figure: https://source.unsplash.com/random/300x200
-# break
-- title: Sit
-  figure: https://source.unsplash.com/random/300x200
-  caption: small caption
-# break
-- title: Amet
+- title: Sensuality has been known to overcome even the most rational of buildings.
+  figure: https://source.unsplash.com/random/600x500
+  caption: Architecture is the ultimate erotic act. Carry it to excess and it will reveal both the traces of reason and the sensual experience of space. Simultaneously.
+  type: "11"
 # end
 
 # typologyDatum:
@@ -188,39 +175,46 @@ typologicalDatum:
   # break
   10: # AFA Murder
     # Ideal 1:1 figure
+    # Ideal 71ch title
     # Ideal no subtitle
+    # Ideal 233ch caption
     color-outer: black
     color-inner: white
     color-text: black
     radius-border: "0"
     size-title: "550%"
-    size-subtitle: "0"
+    size-subtitle: "0" # TEMP
     size-caption: "375%"
     family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
-    family-subtitle: initial
+    family-subtitle: initial # TEMP
     family-caption: '"Times", "Times New Roman", serif'
     weight-title: "700"
-    weight-subtitle: "0"
+    weight-subtitle: "0" # TEMP
     weight-caption: "400"
     width-title: "100%"
-    width-subtitle: "0"
+    width-subtitle: "0" # TEMP
     width-caption: "82.5%"
     padding-figure: "1%"
   # break
-  11:
+  11: # AFA Sensuality
+    # Ideal 6:5 figure
     color-outer: black
-    color-inner: white
-    color-text: black
-    radius-border: default
-    size-title: default
-    size-subtitle: default
-    size-caption: default
-    family-title: default
-    family-subtitle: default
-    family-caption: default
-    weight-title: default
-    weight-subtitle: default
-    weight-caption: default
+    color-inner: black
+    color-text: white
+    radius-border: "0"
+    size-title: "605%"
+    size-subtitle: "0" # TEMP
+    size-caption: "375%"
+    family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-subtitle: initial # TEMP
+    family-caption: '"Times", "Times New Roman", serif'
+    weight-title: "400"
+    weight-subtitle: "0" # TEMP
+    weight-caption: "400"
+    width-title: "100%"
+    width-subtitle: "0" # TEMP
+    width-caption: "70%"
+    padding-figure: "1%"
 # end
 
 ...
