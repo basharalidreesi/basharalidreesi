@@ -50,7 +50,7 @@ works:
 # break
 - title: common ground?
   figure: https://source.unsplash.com/random/600x300?1
-  caption: Architecture is not so much about the conditions of design but about the design of conditions.
+  subtitle: Architecture is not so much about the conditions of design but about the design of conditions.
   type: "13"
 # break
 - title: common ground?
@@ -305,7 +305,7 @@ typologicalDatum:
   # break
   13: # AFA Conditions
     # Ideal 2:1 figure
-    # Ideal no subtitle
+    # Ideal no caption
     color-outer: black
     color-inner: black
     color-text: white
@@ -323,15 +323,15 @@ typologicalDatum:
     width-subtitle: "100%"
     width-image: "100%"
     width-caption: "100%"
-    margin-title: "0"
-    margin-subtitle: "0"
-    margin-figure: "0"
+    margin-title: "auto 0 auto 0"
+    margin-subtitle: "auto 0 auto 0"
+    margin-figure: "auto 0"
     margin-image: "0"
     margin-caption: "0"
     padding-title: "0"
     padding-subtitle: "0"
     padding-figure: "0"
-    padding-image: "30% 0"
+    padding-image: "0"
     padding-caption: "0"
     align-title: center
     align-subtitle: center
