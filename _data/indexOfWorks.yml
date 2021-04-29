@@ -328,7 +328,7 @@ typologicalDatum:
     margin-image: "0"
     margin-caption: "0"
     padding-title: "0"
-    padding-subtitle: "2% 0 0"
+    padding-subtitle: "1.5% 0 0"
     padding-figure: "0"
     padding-image: "3% 0"
     padding-caption: "0"
@@ -360,7 +360,7 @@ typologicalDatum:
     padding-title: "0"
     padding-subtitle: "0"
     padding-figure: "0"
-    padding-image: "1% 0"
+    padding-image: "1.5% 0"
     padding-caption: "0"
   # break
   16: # AFA Ropes
