@@ -567,8 +567,8 @@ typologicalDatum:
     padding-figure: "0"
     padding-image: "0"
     padding-caption: "0"
-    align-title: left
-    align-subtitle: center
+    align-title: center
+    align-subtitle: left
     align-caption: left
     indent-title: "0"
     indent-subtitle: "0"
