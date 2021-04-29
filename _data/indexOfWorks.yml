@@ -341,10 +341,10 @@ typologicalDatum:
     color-inner: black
     color-text: white
     radius-border: "0"
-    size-title: "1100%"
+    size-title: "1200%"
     size-subtitle: "375%"
     size-caption: "375%"
-    family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-title: '"Neue Montreal", "Helvetica", "Helvetica Neue", "Arial", sans-serif'
     family-subtitle: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
     family-caption: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
     weight-title: "700"
@@ -353,7 +353,7 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "60%"
     width-caption: "87.5%"
-    padding-title: "8% 0 2% 0"
+    padding-title: "6% 0 3% 0"
     padding-subtitle: "0"
     padding-figure: "15% 0 10% 0"
   # break
