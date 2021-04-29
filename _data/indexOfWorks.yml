@@ -180,16 +180,16 @@ typologicalDatum:
     color-text: black
     radius-border: "0"
     size-title: "550%"
-    size-subtitle: "0" # TEMP
+    size-subtitle: "375%"
     size-caption: "375%"
     family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
-    family-subtitle: initial # TEMP
+    family-subtitle: '"Times", "Times New Roman", serif'
     family-caption: '"Times", "Times New Roman", serif'
     weight-title: "700"
-    weight-subtitle: "0" # TEMP
+    weight-subtitle: "400"
     weight-caption: "400"
     width-title: "100%"
-    width-subtitle: "0" # TEMP
+    width-subtitle: "82.5%"
     width-caption: "82.5%"
     padding-figure: "3% 0"
     padding-subtitle: "0"
@@ -204,16 +204,16 @@ typologicalDatum:
     color-text: white
     radius-border: "0"
     size-title: "550%"
-    size-subtitle: "0" # TEMP
+    size-subtitle: "375%"
     size-caption: "375%"
     family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
-    family-subtitle: initial # TEMP
+    family-subtitle: '"Times", "Times New Roman", serif'
     family-caption: '"Times", "Times New Roman", serif'
     weight-title: "700"
-    weight-subtitle: "0" # TEMP
+    weight-subtitle: "400"
     weight-caption: "400"
     width-title: "80%"
-    width-subtitle: "0" # TEMP
+    width-subtitle: "70%"
     width-caption: "70%"
     padding-figure: "6% 0"
     padding-subtitle: "0"
@@ -228,16 +228,16 @@ typologicalDatum:
     color-text: white
     radius-border: "0"
     size-title: "550%"
-    size-subtitle: "0" # TEMP
+    size-subtitle: "375%"
     size-caption: "375%"
     family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
-    family-subtitle: initial # TEMP
+    family-subtitle: '"Times", "Times New Roman", serif'
     family-caption: '"Times", "Times New Roman", serif'
     weight-title: "700"
-    weight-subtitle: "0" # TEMP
+    weight-subtitle: "400"
     weight-caption: "400"
     width-title: "100%"
-    width-subtitle: "0" # TEMP
+    width-subtitle: "50%"
     width-caption: "50%"
     padding-figure: "6% 0"
     padding-subtitle: "0"
@@ -252,16 +252,16 @@ typologicalDatum:
     color-text: white
     radius-border: "0"
     size-title: "650%"
-    size-subtitle: "0" # TEMP
+    size-subtitle: "350%"
     size-caption: "350%"
     family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
-    family-subtitle: initial # TEMP
+    family-subtitle: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
     family-caption: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
     weight-title: "700"
-    weight-subtitle: "0" # TEMP
+    weight-subtitle: "400"
     weight-caption: "400"
     width-title: "100%"
-    width-subtitle: "0" # TEMP
+    width-subtitle: "100%"
     width-caption: "100%"
     padding-figure: "30% 0"
     padding-subtitle: "0"
@@ -289,6 +289,16 @@ typologicalDatum:
     width-caption: "100%"
     padding-figure: "3% 0"
     padding-subtitle: "2% 0 0"
+  # break
+  15: # AFA Commonplace
+  # break
+  16: # AFA Ropes
+  # break
+  17: # AFA Masks
+  # break
+  18: # AFA Desire
+  # break
+  19: # AFA Transgression
 # end
 
 ...
