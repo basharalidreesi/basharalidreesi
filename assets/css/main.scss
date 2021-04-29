@@ -179,31 +179,45 @@ body {
 				border-radius: var(--radius-border);
 			}
 			&__work__innerCard {
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: center;
+				justify-content: center;
 				height: 100%;
 				width: 100%;
 				padding: 3%;
 				background: var(--color-inner);
+				& > * {
+					display: flex;
+					flex-flow: column nowrap;
+					align-items: center;
+					justify-content: center;
+				}
 			}
 			&__work__title {
 				font-family: var(--family-title);
 				font-size: var(--size-title);
 				font-weight: var(--weight-title);
+				width: var(--width-title);
 			}
 			&__work__subtitle {
 				font-family: var(--family-subtitle);
 				font-size: var(--size-subtitle);
 				font-weight: var(--weight-subtitle);
+				width: var(--width-subtitle);
 			}
 			&__work__figure {
 				img {
 					display: block;
-					width: 100%;
 					height: auto;
+					width: 100%;
+					padding: var(--padding-figure) 0;
 				}
 				figcaption {
 					font-family: var(--family-caption);
 					font-size: var(--size-caption);
 					font-weight: var(--weight-caption);
+					width: var(--width-caption);
 				}
 			}
 			&__work__tag {

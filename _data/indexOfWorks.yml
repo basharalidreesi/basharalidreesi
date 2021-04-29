@@ -174,34 +174,40 @@ typologicalDatum:
 #     ...
 #   ...
   default:
-    color-outer: white
+    # color-outer: white
+    # color-inner: white
+    # color-text: black
+    # radius-border: "0"
+    # size-title: "600%"
+    # size-subtitle: "600%"
+    # size-caption: "400%"
+    # family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    # family-subtitle: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    # family-caption: '"Times", "Times New Roman", serif'
+    # weight-title: "700"
+    # weight-subtitle: "400"
+    # weight-caption: "400"
+  # break
+  10: # AFA Murder
+    # Ideal 1:1 figure
+    # Ideal no subtitle
+    color-outer: black
     color-inner: white
     color-text: black
     radius-border: "0"
-    size-title: "600%"
-    size-subtitle: "600%"
-    size-caption: "400%"
+    size-title: "550%"
+    size-subtitle: "0"
+    size-caption: "375%"
     family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
-    family-subtitle: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-subtitle: initial
     family-caption: '"Times", "Times New Roman", serif'
     weight-title: "700"
-    weight-subtitle: "400"
+    weight-subtitle: "0"
     weight-caption: "400"
-  # break
-  10:
-    color-outer: black
-    color-inner: black
-    color-text: white
-    radius-border: default
-    size-title: default
-    size-subtitle: default
-    size-caption: default
-    family-title: default
-    family-subtitle: default
-    family-caption: default
-    weight-title: default
-    weight-subtitle: default
-    weight-caption: default
+    width-title: "100%"
+    width-subtitle: "0"
+    width-caption: "82.5%"
+    padding-figure: "1%"
   # break
   11:
     color-outer: black
