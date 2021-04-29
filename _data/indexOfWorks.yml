@@ -185,29 +185,29 @@ typologicalDatum:
     family-subtitle: blue
     family-caption: blue
   # break
-  10:
-    color-outer:
-    color-inner:
-    color-text:
-    radius-border:
-    size-title:
-    size-subtitle:
-    size-caption:
-    family-title:
-    family-subtitle:
-    family-caption:
-  # break
-  11:
-    color-outer:
-    color-inner:
-    color-text:
-    radius-border:
-    size-title:
-    size-subtitle:
-    size-caption:
-    family-title:
-    family-subtitle:
-    family-caption:
+  # 10:
+  #   color-outer:
+  #   color-inner:
+  #   color-text:
+  #   radius-border:
+  #   size-title:
+  #   size-subtitle:
+  #   size-caption:
+  #   family-title:
+  #   family-subtitle:
+  #   family-caption:
+  # # break
+  # 11:
+  #   color-outer:
+  #   color-inner:
+  #   color-text:
+  #   radius-border:
+  #   size-title:
+  #   size-subtitle:
+  #   size-caption:
+  #   family-title:
+  #   family-subtitle:
+  #   family-caption:
 # end
 
 ...
