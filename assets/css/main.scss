@@ -200,6 +200,7 @@ body {
 				font-size: var(--size-title);
 				font-weight: var(--weight-title);
 				width: var(--width-title);
+				margin: var(--margin-title);
 				padding: var(--padding-title);
 			}
 			&__work__subtitle {
@@ -207,21 +208,27 @@ body {
 				font-size: var(--size-subtitle);
 				font-weight: var(--weight-subtitle);
 				width: var(--width-subtitle);
+				margin: var(--margin-subtitle);
 				padding: var(--padding-subtitle);
 			}
 			&__work__figure {
+				margin: var(--margin-figure);
+				padding: var(--padding-figure);
 				img {
 					display: block;
 					height: auto;
-					width: var(--width-figure);
-					padding: var(--padding-figure);
-					align-self: var(--align-figure);
+					width: var(--width-image);
+					margin: var(--margin-image);
+					padding: var(--padding-image);
+					align-self: var(--align-image);
 				}
 				figcaption {
 					font-family: var(--family-caption);
 					font-size: var(--size-caption);
 					font-weight: var(--weight-caption);
 					width: var(--width-caption);
+					margin: var(--margin-caption);
+					padding: var(--padding-caption);
 					align-self: var(--align-caption);
 				}
 			}
