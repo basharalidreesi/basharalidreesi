@@ -156,7 +156,7 @@ body {
 				        {%- assign value = entry[1] -%}
 				        {%- if key == "default" -%}
 				                {%- for node in value %}
-						// --{{ value[0] }}: {{ value[1] }};
+						/* --{{ value[0] }}: {{ value[1] }}; */
 				                {%- endfor -%}
 				        {%- endif -%}
 				{%- endfor -%}
