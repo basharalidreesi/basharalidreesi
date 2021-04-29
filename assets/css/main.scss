@@ -202,6 +202,9 @@ body {
 				width: var(--width-title);
 				margin: var(--margin-title);
 				padding: var(--padding-title);
+				text-align: var(--align-title);
+				text-indent: var(--indent-title);
+				hyphens: var(--hyphens-title);
 			}
 			&__work__subtitle {
 				font-family: var(--family-subtitle);
@@ -210,6 +213,9 @@ body {
 				width: var(--width-subtitle);
 				margin: var(--margin-subtitle);
 				padding: var(--padding-subtitle);
+				text-align: var(--align-subtitle);
+				text-indent: var(--indent-subtitle);
+				hyphens: var(--hyphens-subtitle);
 			}
 			&__work__figure {
 				margin: var(--margin-figure);
