@@ -511,7 +511,7 @@ typologicalDatum:
     family-title: '"Times", "Times New Roman", serif'
     family-subtitle: '"Times", "Times New Roman", serif'
     family-caption: '"Times", "Times New Roman", serif'
-    weight-title: "700"
+    weight-title: "400"
     weight-subtitle: "400"
     weight-caption: "400"
     width-title: "100%"
@@ -559,10 +559,10 @@ typologicalDatum:
     width-caption: "50%"
     margin-title: "0"
     margin-subtitle: "auto 0"
-    margin-figure: "auto 0"
+    margin-figure: "auto 0 0 0"
     margin-image: "0"
     margin-caption: "0"
-    padding-title: "0"
+    padding-title: "1% 0 9% 0"
     padding-subtitle: "0"
     padding-figure: "0"
     padding-image: "0"
