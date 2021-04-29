@@ -34,7 +34,7 @@ layout: main
 							{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' %}
 							{% if forloop.first == false and datum.outerHTML.open == previousDatum.outerHTML.open and datum.canCollapse and previousDatum.canCollapse and datum.classes == previousDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.open }}` -->{% else %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% endif %}
 							{%- for node in value %}
-								{{ datum.innerHTML.open }}{{ node }}{{ datum.innerHTML.close }}
+								{{ datum.innerHTML.open }}{{ node | strip }}{{ datum.innerHTML.close }}
 							{%- endfor %}
 							{% if forloop.last == false and datum.outerHTML.close == nextDatum.outerHTML.close and datum.canCollapse and nextDatum.canCollapse and datum.classes == nextDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% else %}{{ datum.outerHTML.close }}{% endif %}
 							{%- endif -%}
