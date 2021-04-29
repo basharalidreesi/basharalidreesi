@@ -7,16 +7,16 @@
 path: /works/
 
 # parameters:
-# - title:                      # <content>, unset
-#   subtitle:                   # <content>, unset
-#   figure:                     # <content>, unset
-#   caption:                    # <content>, unset
-#   tags:                       # <content>, unset
-#   clients:                    # <content>, unset
-#   time:                       # <content>, unset
-#   url:                        # <content>, generated from title if unset TODO
-#   type:                       # <modifier>, unset
-#   isIndexed:                  # <modifier>, true
+# - title:      # <content>, unset
+#   subtitle:   # <content>, unset
+#   figure:     # <content>, unset
+#   caption:    # <content>, unset
+#   tags:       # <content>, unset
+#   clients:    # <content>, unset
+#   time:       # <content>, unset
+#   url:        # <content>, generated from title if unset TODO
+#   type:       # <modifier>, unset
+#   isIndexed:  # <modifier>, true
 
 #   canCollapse:                # <property>, false
 
@@ -445,7 +445,7 @@ typologicalDatum:
     padding-caption: "0"
     align-caption: justify
     indent-caption: "9%"
-    hyphens-caption: "none"
+    hyphens-caption: "auto"
   # break
   18: # AFA Desire
     # Ideal 4:3 figure
@@ -478,7 +478,7 @@ typologicalDatum:
     padding-caption: "0"
     align-caption: justify
     indent-caption: "0"
-    hyphens-caption: "auto"
+    hyphens-caption: "none"
   # break
   19: # AFA Transgression
 # end
