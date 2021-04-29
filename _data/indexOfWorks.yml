@@ -409,7 +409,7 @@ typologicalDatum:
     padding-title: "0"
     padding-subtitle: "0"
     padding-figure: "0"
-    padding-image: "3% 0"
+    padding-image: "1.5% 0"
     padding-caption: "0"
     align-title: center
     align-subtitle: center
