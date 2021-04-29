@@ -59,9 +59,9 @@ works:
   subtitle: Architecture is not so much the knowledge of form, but a form of knowledge.
   type: "14"
 - title: common ground?
-  figure: https://source.unsplash.com/random/160x100
+  figure: https://source.unsplash.com/random/500x300
   subtitle: Concept, not form, is what distinguishes architecture from mere building.
-  figure2: "https://source.unsplash.com/random/160x100"
+  figure2: https://source.unsplash.com/random/500x300
   caption: commonplace
   type: "15"
 - figure: https://source.unsplash.com/random/200x100
@@ -349,7 +349,7 @@ typologicalDatum:
     hyphens-caption: "none"
   # break
   15: # AFA Commonplace
-    # Ideal two 1.6:1 figures
+    # Ideal two 5:3 figures
     color-outer: black
     color-inner: black
     color-text: white
