@@ -60,7 +60,7 @@ works:
   type: "14"
 - title: common ground?
   figure: https://source.unsplash.com/random/160x100
-  subtitle: Concept, not form is what distinguishes architecture from mere building.
+  subtitle: Concept, not form, is what distinguishes architecture from mere building.
   figure2: "https://source.unsplash.com/random/160x100"
   caption: commonplace
   type: "15"
@@ -316,7 +316,7 @@ typologicalDatum:
     color-text: white
     radius-border: "0"
     size-title: "650%"
-    size-subtitle: "400%"
+    size-subtitle: "450%"
     size-caption: "650%"
     family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
     family-subtitle: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
@@ -327,10 +327,28 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "100%"
     width-caption: "100%"
-    padding-figure: "3% 0"
-    padding-subtitle: "2% 0 0"
+    padding-figure: "1.5% 0"
+    padding-subtitle: "0"
   # break
   16: # AFA Ropes
+    color-outer: black
+    color-inner: black
+    color-text: white
+    radius-border: "0"
+    size-title: "650%"
+    size-subtitle: "450%"
+    size-caption: "650%"
+    family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-subtitle: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-caption: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    weight-title: "700"
+    weight-subtitle: "400"
+    weight-caption: "700"
+    width-title: "100%"
+    width-subtitle: "100%"
+    width-caption: "100%"
+    padding-figure: "1.5% 0"
+    padding-subtitle: "0"
   # break
   17: # AFA Masks
   # break
