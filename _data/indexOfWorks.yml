@@ -58,6 +58,22 @@ works:
   caption: figure/ground
   subtitle: Architecture is not so much the knowledge of form, but a form of knowledge.
   type: "14"
+- title: common ground?
+  figure: https://source.unsplash.com/random/160x100
+  subtitle: Concept, not form is what distinguishes architecture from mere building.
+  figure: https://source.unsplash.com/random/160x100
+  caption: commonplace
+  type: "15"
+- figure: https://source.unsplash.com/random/200x100
+  caption: Look at it this way: <br /> The game of architecture is an intricate play with rules that you may break or accept. These rules, like so many knots that cannot be untied, have the erotic significance of bondage: the more numerous and sophisticated the restraints, the greater the pleasure.
+  title: ropes and rules
+  subtitle: The most excessive passion always involves a set of rules. Why not enjoy them?
+  type: "16"
+- figure: https://source.unsplash.com/random/100x100
+  caption: There was ample evidence that a strange man had been present in the room, and the police theory is that that the murderer accompanied his victim to her house. None of the other residents of the quiet residential street saw him arrive, or leave after his bloody business was completed.
+  title: MASKS
+  subtitle: Architecture simulates and dissimulates.
+  type: "17"
 # end
 
 # typologyDatum:
@@ -291,6 +307,28 @@ typologicalDatum:
     padding-subtitle: "2% 0 0"
   # break
   15: # AFA Commonplace
+    # Ideal two 1.6:1 figures
+    # Ideal TODO title
+    # Ideal TODO subtitle
+    # Ideal TODO caption
+    color-outer: black
+    color-inner: black
+    color-text: white
+    radius-border: "0"
+    size-title: "650%"
+    size-subtitle: "400%"
+    size-caption: "650%"
+    family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-subtitle: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-caption: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    weight-title: "700"
+    weight-subtitle: "400"
+    weight-caption: "700"
+    width-title: "100%"
+    width-subtitle: "100%"
+    width-caption: "100%"
+    padding-figure: "3% 0"
+    padding-subtitle: "2% 0 0"
   # break
   16: # AFA Ropes
   # break
