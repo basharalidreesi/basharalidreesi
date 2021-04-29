@@ -246,15 +246,15 @@ typologicalDatum:
   13: # AFA Conditions
     # Ideal 2:1 figure
     # Ideal TODO title
-    # Ideal TODO subtitle
+    # Ideal no subtitle
     # Ideal TODO caption
     color-outer: black
     color-inner: black
     color-text: white
     radius-border: "0"
-    size-title: "550%"
+    size-title: "650%"
     size-subtitle: "0" # TEMP
-    size-caption: "375%"
+    size-caption: "350%"
     family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
     family-subtitle: initial # TEMP
     family-caption: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
@@ -264,8 +264,29 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "0" # TEMP
     width-caption: "100%"
-    padding-figure: "6%"
+    padding-figure: "30%"
   14: # AFA Figure/Ground
+    # Ideal 5:6 figure
+    # Ideal TODO title
+    # Ideal TODO subtitle
+    # Ideal TODO caption
+    color-outer: black
+    color-inner: black
+    color-text: white
+    radius-border: "0"
+    size-title: "600%"
+    size-subtitle: "350%"
+    size-caption: "600%"
+    family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-subtitle: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-caption: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    weight-title: "700"
+    weight-subtitle: "400"
+    weight-caption: "700"
+    width-title: "100%"
+    width-subtitle: "100%"
+    width-caption: "100%"
+    padding-figure: "5%"
 # end
 
 ...
