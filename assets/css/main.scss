@@ -149,8 +149,17 @@ body {
 					padding-top: calc(100% * var(--indexOfWorks-aspectRatio));
 				}
 
-				{% include typology.scss %}
-
+				{%- assign index = site.data.indexOfWorks -%}
+				{%- assign datum = index.typologicalDatum -%}
+				{%- for entry in datum -%}
+				        {%- assign key = entry[0] -%}
+				        {%- assign value = entry[1] -%}
+				        {%- if key == "default" %}
+				                {%- for node in value -%}
+				                        --{{ value[0] }}: {{ value[1] }};
+				                {%- endfor -%}
+				        {%- endif -%}
+				{%- endfor -%}
 
 				--color-outer: white;
 				--color-inner: white;
