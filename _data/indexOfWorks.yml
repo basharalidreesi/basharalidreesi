@@ -219,9 +219,9 @@ typologicalDatum:
     indent-title: "0"
     indent-subtitle: "0"
     indent-caption: "0"
-    hyphens-title: "none"
-    hyphens-subtitle: "none"
-    hyphens-caption: "none"
+    hyphens-title: none
+    hyphens-subtitle: none
+    hyphens-caption: none
   # break
   11: # AFA Sensuality
     # Ideal 6:5 figure
@@ -259,9 +259,9 @@ typologicalDatum:
     indent-title: "0"
     indent-subtitle: "0"
     indent-caption: "0"
-    hyphens-title: "none"
-    hyphens-subtitle: "none"
-    hyphens-caption: "none"
+    hyphens-title: none
+    hyphens-subtitle: none
+    hyphens-caption: none
   # break
   12: # AFA Decay
     # Ideal 6:5 figure
@@ -299,9 +299,9 @@ typologicalDatum:
     indent-title: "0"
     indent-subtitle: "0"
     indent-caption: "0"
-    hyphens-title: "none"
-    hyphens-subtitle: "none"
-    hyphens-caption: "none"
+    hyphens-title: none
+    hyphens-subtitle: none
+    hyphens-caption: none
   # break
   13: # AFA Conditions
     # Ideal 2:1 figure
@@ -339,9 +339,9 @@ typologicalDatum:
     indent-title: "0"
     indent-subtitle: "0"
     indent-caption: "0"
-    hyphens-title: "none"
-    hyphens-subtitle: "none"
-    hyphens-caption: "none"
+    hyphens-title: none
+    hyphens-subtitle: none
+    hyphens-caption: none
   # break
   14: # AFA Figure/Ground
     # Ideal 5:6 figure
@@ -378,9 +378,9 @@ typologicalDatum:
     indent-title: "0"
     indent-subtitle: "0"
     indent-caption: "0"
-    hyphens-title: "none"
-    hyphens-subtitle: "none"
-    hyphens-caption: "none"
+    hyphens-title: none
+    hyphens-subtitle: none
+    hyphens-caption: none
   # break
   15: # AFA Commonplace
     # Ideal two 5:3 figures
@@ -417,9 +417,9 @@ typologicalDatum:
     indent-title: "0"
     indent-subtitle: "0"
     indent-caption: "0"
-    hyphens-title: "none"
-    hyphens-subtitle: "none"
-    hyphens-caption: "none"
+    hyphens-title: none
+    hyphens-subtitle: none
+    hyphens-caption: none
   # break
   16: # AFA Ropes
     # Ideal 2:1 figure
@@ -456,9 +456,9 @@ typologicalDatum:
     indent-title: "0"
     indent-subtitle: "0"
     indent-caption: "0"
-    hyphens-title: "none"
-    hyphens-subtitle: "none"
-    hyphens-caption: "none"
+    hyphens-title: none
+    hyphens-subtitle: none
+    hyphens-caption: none
   # break
   17: # AFA Masks
     # Ideal 1:1 figure
@@ -495,8 +495,8 @@ typologicalDatum:
     indent-title: "0"
     indent-subtitle: "0"
     indent-caption: "9%"
-    hyphens-title: "none"
-    hyphens-subtitle: "none"
+    hyphens-title: none
+    hyphens-subtitle: none
     hyphens-caption: "auto"
   # break
   18: # AFA Desire
@@ -534,9 +534,9 @@ typologicalDatum:
     indent-title: "0"
     indent-subtitle: "0"
     indent-caption: "0"
-    hyphens-title: "none"
-    hyphens-subtitle: "none"
-    hyphens-caption: "none"
+    hyphens-title: none
+    hyphens-subtitle: none
+    hyphens-caption: none
   # break
   19: # AFA Transgression
     # Ideal 1.43:1 blank figure
@@ -553,10 +553,10 @@ typologicalDatum:
     weight-title: "700"
     weight-subtitle: "700"
     weight-caption: "400"
-    width-title: "100%"
-    width-subtitle: "100%"
-    width-image: "100%"
-    width-caption: "100%"
+    width-title: "50%"
+    width-subtitle: "50%"
+    width-image: "50%"
+    width-caption: "50%"
     margin-title: "0"
     margin-subtitle: "auto 0"
     margin-figure: "auto 0"
@@ -573,9 +573,9 @@ typologicalDatum:
     indent-title: "0"
     indent-subtitle: "0"
     indent-caption: "0"
-    hyphens-title: "none"
-    hyphens-subtitle: "none"
-    hyphens-caption: "none"
+    hyphens-title: none
+    hyphens-subtitle: none
+    hyphens-caption: none
 # end
 
 ...
