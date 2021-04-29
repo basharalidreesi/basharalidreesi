@@ -444,7 +444,7 @@ typologicalDatum:
     padding-image: "0 0 3% 0"
     padding-caption: "0"
     align-caption: justify
-    indent-caption: "0"
+    indent-caption: "9%"
     hyphens-caption: "none"
   # break
   18: # AFA Desire
@@ -477,7 +477,7 @@ typologicalDatum:
     padding-image: "3% 0"
     padding-caption: "0"
     align-caption: justify
-    indent-caption: "10%"
+    indent-caption: "0"
     hyphens-caption: "auto"
   # break
   19: # AFA Transgression
