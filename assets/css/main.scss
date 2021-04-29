@@ -157,9 +157,11 @@ body {
 				        {% if key != "default" %}
 					&--type{{ key }} {
 					{% endif %}
+					{% if value != "default" %}
 			                {% for node in value %}
 					--{{ node[0] }}: {{ node[1] }};
 			                {% endfor %}
+					{% endif %}
 					{% if key != "default" %}
 					}
 					{% endif %}

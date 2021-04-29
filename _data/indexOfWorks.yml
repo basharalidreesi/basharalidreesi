@@ -174,16 +174,19 @@ typologicalDatum:
 #     ...
 #   ...
   default:
-    color-outer: blue
-    color-inner: blue
-    color-text: blue
-    radius-border: blue
-    size-title: blue
-    size-subtitle: blue
-    size-caption: blue
-    family-title: blue
-    family-subtitle: blue
-    family-caption: blue
+    color-outer: white
+    color-inner: white
+    color-text: black
+    radius-border: "0"
+    size-title: "600%"
+    size-subtitle: "600%"
+    size-caption: "400%"
+    family-title: [Helvetica, Helvetica Neue, Arial, sans-serif]
+    family-subtitle: [Helvetica, Helvetica Neue, Arial, sans-serif]
+    family-caption: [Times, Times New Roman, serif]
+    weight-title: "700"
+    weight-subtitle: "400"
+    weight-caption: "400"
   # break
   # 10:
   #   color-outer:
