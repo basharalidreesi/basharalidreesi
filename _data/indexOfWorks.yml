@@ -74,19 +74,12 @@ works:
   title: MASKS
   subtitle: Architecture simulates and dissimulates.
   type: "17"
+- title: A STREETCAR NAMED DESIRE
+  figure: https://source.unsplash.com/random/400x300
+  caption: scene Kim Hunter had when she was responding to Brando calling her from the bottom of the stairs. They said it was a moment of orgasm, which only shows that the priests who are the censors don't know anything about orgasm, don't know anything about any kind of relationship between the sexes. It was nothing, it was just that she excited by him, she was excited by his need for her, she heard his voice desiring her, and she responded to it. That's all it was, it was a perfectly natural thing.
+  subtitle: It is not the clash between fragments of architecture that counts, but the invisible movement between them. Desire.
+  type: "18"
 # end
-
-# typologyDatum:
-# Advertisements for Architecture
-        # id  | example | color-outer | color-inner | color-text | work-titleSize | work-subtitleSize | work-captionSize | work-titleFont | work-subtitleFont | work-captionFont
-        # 1.1 | decay   | black       | black       | white      | 600%           | 600%              | 400%             | helvetica700   | helvetica400      | times
-        # 1.2 | murder  | black       | white       | black      | 600%           | 600%              | 400%             | helvetica700   | helvetica400      | times
-        # 1.3 | ropes   | black       | white       | black      | 1000%          | 600%              | 600%             | helvetica700   | helvetica400      | helvetica400
-        # 1.4 | masks   | black       | black       | white      | 2000%          | 600%              | 400%             | helvetica900   | times             | quadrata
-        # 1.5 | desire  | black       | black       | white      | 800%           | 600%              | 400%             | quadrata       | times             | times
-# FLUXUS
-        # id  | example | color-outer | color-inner | color-text | work-titleSize | work-subtitleSize | work-captionSize | work-titleFont | work-subtitleFont | work-captionFont
-
 
 indexingDatum:
 #   <key>:
@@ -391,6 +384,29 @@ typologicalDatum:
     align-caption: "flex-start"
   # break
   18: # AFA Desire
+    # Ideal 4:3 figure
+    color-outer: black
+    color-inner: black
+    color-text: white
+    radius-border: "0"
+    size-title: "2000%"
+    size-subtitle: "375%"
+    size-caption: "325%"
+    family-title: '"Times", "Times New Roman", serif'
+    family-subtitle: '"Times", "Times New Roman", serif'
+    family-caption: '"Times", "Times New Roman", serif'
+    weight-title: "700"
+    weight-subtitle: "400"
+    weight-caption: "400"
+    width-title: "100%"
+    width-subtitle: "100%"
+    width-figure: "60%"
+    width-caption: "60%"
+    padding-title: "27% 0 0 0"
+    padding-subtitle: "1% 0 15% 0"
+    padding-figure: "3% 0"
+    align-figure: "flex-end"
+    align-caption: "flex-start"
   # break
   19: # AFA Transgression
 # end
