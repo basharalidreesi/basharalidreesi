@@ -53,7 +53,7 @@ works:
   caption: another sample caption
   tags: just hi
   time: [Summer 2016, Spring 2018]
-  type: "2"
+  type: "11"
 # break
 - title: Dolor
   figure: https://source.unsplash.com/random/300x200
@@ -203,17 +203,17 @@ typologicalDatum:
     weight-subtitle: default
     weight-caption: default
   # break
-  # 11:
-  #   color-outer:
-  #   color-inner:
-  #   color-text:
-  #   radius-border:
-  #   size-title:
-  #   size-subtitle:
-  #   size-caption:
-  #   family-title:
-  #   family-subtitle:
-  #   family-caption:
+  11:
+    color-outer: black
+    color-inner: white
+    color-text: black
+    radius-border: default
+    size-title: default
+    size-subtitle: default
+    size-caption: default
+    family-title: default
+    family-subtitle: default
+    family-caption: default
 # end
 
 ...
