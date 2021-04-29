@@ -15,7 +15,7 @@ layout: main
 					<article class="indexOfWorks__work__outerCard">
 						<div class="indexOfWorks__work__innerCard">
 							{%- for entry in work -%}
-							{%- assign key = entry[0] -%}
+							{%- assign key = entry[0] | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
 							{%- assign value = entry[1] -%}
 							{%- assign datum = index.indexingDatum[key] -%}
 							{%- assign previous = forloop.index0 | minus: 1 -%}
