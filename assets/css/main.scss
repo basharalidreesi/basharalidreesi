@@ -148,11 +148,25 @@ body {
 					display: block;
 					padding-top: calc(100% * var(--indexOfWorks-aspectRatio));
 				}
+
+				{%- assign index = site.data.indexOfWorks -%}
+				{%- assign datum = index.typologicalDatum -%}
+				{%- for entry in datum -%}
+					{%- assign key = entry[0] -%}
+					{%- assign value = entry[1] -%}
+					{%- if key == "default" %}
+						{%- for node in value -%}
+							--{{ value[0] }}: {{ value[1] }}
+						{%- endfor -%}
+					{%- endif -%}
+				{%- endfor -%}
+
+
 				--color-outer: white;
 				--color-inner: white;
-				--work-titleSize: 600%;
-				--work-subtitleSize: 600%;
-				--work-captionSize: 400%;
+				--size-title: 600%;
+				--size-subtitle: 600%;
+				--size-caption: 400%
 				&--type1 {
 					--color-outer: black;
 					--color-inner: black;
@@ -180,10 +194,10 @@ body {
 				background: var(--color-inner);
 			}
 			&__work__title {
-				font-size: var(--work-titleSize);
+				font-size: var(--size-title);
 			}
 			&__work__subtitle {
-				font-size: var(--work-subtitleSize);
+				font-size: var(--size-subtitle);
 			}
 			&__work__figure {
 				img {
@@ -192,7 +206,7 @@ body {
 					height: auto;
 				}
 				figcaption {
-					font-size: var(--work-captionSize);
+					font-size: var(--size-caption);
 				}
 			}
 			&__work__tag {

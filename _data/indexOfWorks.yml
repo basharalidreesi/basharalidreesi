@@ -32,7 +32,13 @@ path: /works/
 #   doesPropagate:              # <intermediateContentModifier>, false TODO
 
 works:
-# begin
+# - <key>: <value>
+#   <key>: <value>
+#   <key>: <value>
+# - <key>: <value>
+#   <key>: <value>
+#   ...
+# ...
 - title: One morning, when Gregor Samsa woke from troubled dreams
   subtitle: he found himself transformed in his bed into a horrible vermin.
   figure: https://source.unsplash.com/random/300x200
@@ -69,10 +75,17 @@ works:
         # 1.5 | desire  | black       | black       | white      | 800%           | 600%              | 400%             | quadrata       | times             | times
 # FLUXUS
         # id  | example | color-outer | color-inner | color-text | work-titleSize | work-subtitleSize | work-captionSize | work-titleFont | work-subtitleFont | work-captionFont
-        
+
 
 indexingDatum:
-# begin <content>
+#   <key>:
+#     <property>: <value>
+#     <property>: <value>
+#     <property>: <value>
+#   <key>:
+#     <property>: <value>
+#     ...
+#   ...
   title:
     classes:
       - indexOfWorks__work__title
@@ -149,6 +162,52 @@ indexingDatum:
       open: <time>
       close: </time>
     canCollapse: true
-# end <content>
+# end
+
+typologicalDatum:
+#   <key>:
+#     <property>: <value>
+#     <property>: <value>
+#     <property>: <value>
+#   <key>:
+#     <property>: <value>
+#     ...
+#   ...
+  default:
+    color-outer:
+    color-inner:
+    color-text:
+    radius-border:
+    size-title:
+    size-subtitle:
+    size-caption:
+    family-title:
+    family-subtitle:
+    family-caption:
+  # break
+  10:
+    color-outer:
+    color-inner:
+    color-text:
+    radius-border:
+    size-title:
+    size-subtitle:
+    size-caption:
+    family-title:
+    family-subtitle:
+    family-caption:
+  # break
+  11:
+    color-outer:
+    color-inner:
+    color-text:
+    radius-border:
+    size-title:
+    size-subtitle:
+    size-caption:
+    family-title:
+    family-subtitle:
+    family-caption:
+# end
 
 ...
