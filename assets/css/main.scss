@@ -213,14 +213,16 @@ body {
 				img {
 					display: block;
 					height: auto;
-					width: 100%;
+					width: var(--width-figure);
 					padding: var(--padding-figure);
+					align-self: var(--align-figure);
 				}
 				figcaption {
 					font-family: var(--family-caption);
 					font-size: var(--size-caption);
 					font-weight: var(--weight-caption);
 					width: var(--width-caption);
+					align-self: var(--align-caption);
 				}
 			}
 			&__work__tag {
