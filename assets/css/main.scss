@@ -154,7 +154,7 @@ body {
 				{% for entry in datum %}
 					{% assign key = entry[0] %}
 					{% assign value = entry[1] %}
-					{% unless key == "default" %}
+					{% unless key == "00" %}
 						&--type{{ key }} {
 					{% endunless %}
 			        	{% for node in value %}

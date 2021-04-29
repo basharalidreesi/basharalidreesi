@@ -173,7 +173,7 @@ typologicalDatum:
 #     <property>: <value>
 #     ...
 #   ...
-  default:
+  00:
     color-outer: white
     color-inner: white
     color-text: black
