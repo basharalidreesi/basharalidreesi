@@ -39,7 +39,8 @@ works:
   caption: Architecture is defined by the actions it witnesses as much as by the enclosure of its walls. Murder in the Street differs from Murder in the Cathedral in the same way as love in the street differs from the Street of Love. Radically.
   type: "10"
   override:
-    - color-outer: red
+    color-outer: red
+    color-inner: bisque
 # break
 - title: Sensuality has been known to overcome even the most rational of buildings.
   figure: https://source.unsplash.com/user/europeana/600x500?1
