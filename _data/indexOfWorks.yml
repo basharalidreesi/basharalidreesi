@@ -401,7 +401,7 @@ typologicalDatum:
     radius-border: "0"
     size-title: "2000%"
     size-subtitle: "375%"
-    size-caption: "325%"
+    size-caption: "300%"
     family-title: '"Neue Montreal", "Helvetica", "Helvetica Neue", "Arial", sans-serif'
     family-subtitle: '"Times", "Times New Roman", serif'
     family-caption: '"Times", "Times New Roman", serif'
