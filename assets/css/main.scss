@@ -152,36 +152,21 @@ body {
 				{% assign index = site.data.indexOfWorks %}
 				{% assign datum = index.typologicalDatum %}
 				{% for entry in datum %}
-				        {% assign key = entry[0] %}
-				        {% assign value = entry[1] %}
-				        {% unless key == "default" %}
-					&--type{{ key }} {
-					{% endunless %}
-			                {% for node in value %}
-					{% unless node[1] == "default" %}
-					--{{ node[0] }}: {{ node[1] }};
-					{% endunless %}
-			                {% endfor %}
+					{% assign key = entry[0] %}
+					{% assign value = entry[1] %}
 					{% unless key == "default" %}
-					}
+						&--type{{ key }} {
+					{% endunless %}
+			        	{% for node in value %}
+						{% unless node[1] == "default" %}
+							--{{ node[0] }}: {{ node[1] }};
+						{% endunless %}
+		        		{% endfor %}
+					{% unless key == "default" %}
+						}
 					{% endunless %}
 				{% endfor %}
 
-				// --color-outer: white;
-				// --color-inner: white;
-				// --size-title: 600%;
-				// --size-subtitle: 600%;
-				// --size-caption: 400%
-				// &--type1 {
-				// 	--color-outer: black;
-				// 	--color-inner: black;
-				// 	--color-text: white;
-				// }
-				// &--type2 {
-				// 	--color-outer: black;
-				// 	--color-inner: white;
-				// 	--color-text: black;
-				// }
 			}
 			&__work__outerCard {
 				position: absolute;
@@ -189,20 +174,25 @@ body {
 				left: 1rem;
 				height: calc(100% - 2rem);
 				width: calc(100% - 2rem);
-				padding: 1.5%; // past: 0.5rem
+				padding: 1.5%;
 				background: var(--color-outer);
+				border-radius: var(--radius-border);
 			}
 			&__work__innerCard {
 				height: 100%;
 				width: 100%;
-				padding: 3%; // past: 1rem
+				padding: 3%;
 				background: var(--color-inner);
 			}
 			&__work__title {
+				font-family: var(--family-title);
 				font-size: var(--size-title);
+				font-weight: var(--weight-title);
 			}
 			&__work__subtitle {
+				font-family: var(--family-subtitle);
 				font-size: var(--size-subtitle);
+				font-weight: var(--weight-subtitle);
 			}
 			&__work__figure {
 				img {
@@ -211,7 +201,9 @@ body {
 					height: auto;
 				}
 				figcaption {
+					font-family: var(--family-caption);
 					font-size: var(--size-caption);
+					font-weight: var(--weight-caption);
 				}
 			}
 			&__work__tag {

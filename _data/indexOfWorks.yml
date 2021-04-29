@@ -214,6 +214,9 @@ typologicalDatum:
     family-title: default
     family-subtitle: default
     family-caption: default
+    weight-title: default
+    weight-subtitle: default
+    weight-caption: default
 # end
 
 ...
