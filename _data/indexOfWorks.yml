@@ -191,7 +191,7 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "0" # TEMP
     width-caption: "82.5%"
-    padding-figure: "1% 0"
+    padding-figure: "3% 0"
     padding-subtitle: "0"
   # break
   11: # AFA Sensuality
@@ -288,7 +288,7 @@ typologicalDatum:
     width-subtitle: "100%"
     width-caption: "100%"
     padding-figure: "3% 0"
-    padding-subtitle: "3% 0 0"
+    padding-subtitle: "2% 0 0"
 # end
 
 ...
