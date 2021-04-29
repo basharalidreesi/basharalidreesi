@@ -221,6 +221,7 @@ typologicalDatum:
     width-subtitle: "0" # TEMP
     width-caption: "70%"
     padding-figure: "6%"
+  # break
   12: # AFA Decay
     # Ideal 6:5 figure
     # Ideal TODO title
@@ -243,6 +244,7 @@ typologicalDatum:
     width-subtitle: "0" # TEMP
     width-caption: "50%"
     padding-figure: "6%"
+  # break
   13: # AFA Conditions
     # Ideal 2:1 figure
     # Ideal TODO title
@@ -265,6 +267,7 @@ typologicalDatum:
     width-subtitle: "0" # TEMP
     width-caption: "100%"
     padding-figure: "30%"
+  # break
   14: # AFA Figure/Ground
     # Ideal 5:6 figure
     # Ideal TODO title
