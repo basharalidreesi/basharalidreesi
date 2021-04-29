@@ -205,14 +205,14 @@ body {
 				font-size: var(--size-subtitle);
 				font-weight: var(--weight-subtitle);
 				width: var(--width-subtitle);
-				padding: var(--padding-subtitle) 0;
+				padding: var(--padding-subtitle);
 			}
 			&__work__figure {
 				img {
 					display: block;
 					height: auto;
 					width: 100%;
-					padding: var(--padding-figure) 0;
+					padding: var(--padding-figure);
 				}
 				figcaption {
 					font-family: var(--family-caption);

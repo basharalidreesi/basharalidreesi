@@ -15,16 +15,10 @@ path: /works/
 #   clients:                    # <content>, unset
 #   time:                       # <content>, unset
 #   url:                        # <content>, generated from title if unset TODO
-#   type TYPOLOGY TODO:                       # <modifier>, unset
+#   type:                       # <modifier>, unset
 #   isIndexed:                  # <modifier>, true
 
-
 #   canCollapse:                # <property>, false
-
-
-#   cardType:                   # <modifier>, unset TODO
-
-
 
 #   css: ARRAY TODO
 #   js: ARRAY TODO
@@ -197,7 +191,7 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "0" # TEMP
     width-caption: "82.5%"
-    padding-figure: "1%"
+    padding-figure: "1% 0"
     padding-subtitle: "0"
   # break
   11: # AFA Sensuality
@@ -221,7 +215,7 @@ typologicalDatum:
     width-title: "80%"
     width-subtitle: "0" # TEMP
     width-caption: "70%"
-    padding-figure: "6%"
+    padding-figure: "6% 0"
     padding-subtitle: "0"
   # break
   12: # AFA Decay
@@ -245,7 +239,7 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "0" # TEMP
     width-caption: "50%"
-    padding-figure: "6%"
+    padding-figure: "6% 0"
     padding-subtitle: "0"
   # break
   13: # AFA Conditions
@@ -269,7 +263,7 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "0" # TEMP
     width-caption: "100%"
-    padding-figure: "30%"
+    padding-figure: "30% 0"
     padding-subtitle: "0"
   # break
   14: # AFA Figure/Ground
@@ -293,8 +287,8 @@ typologicalDatum:
     width-title: "100%"
     width-subtitle: "100%"
     width-caption: "100%"
-    padding-figure: "3%"
-    padding-subtitle: "1.5%"
+    padding-figure: "3% 0"
+    padding-subtitle: "3% 0 0"
 # end
 
 ...
