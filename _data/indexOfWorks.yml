@@ -455,7 +455,7 @@ typologicalDatum:
     radius-border: "0"
     size-title: "500%"
     size-subtitle: "375%"
-    size-caption: "300%"
+    size-caption: "280%"
     family-title: '"Times", "Times New Roman", serif'
     family-subtitle: '"Times", "Times New Roman", serif'
     family-caption: '"Times", "Times New Roman", serif'
