@@ -468,7 +468,7 @@ typologicalDatum:
     radius-border: "0"
     size-title: "2000%"
     size-subtitle: "375%"
-    size-caption: "300%"
+    size-caption: "298%"
     family-title: '"Neue Montreal", "Helvetica", "Helvetica Neue", "Arial", sans-serif'
     family-subtitle: '"Times", "Times New Roman", serif'
     family-caption: '"Times", "Times New Roman", serif'
@@ -539,7 +539,7 @@ typologicalDatum:
     hyphens-caption: none
   # break
   19: # AFA Transgression
-    # Ideal 1.43:1 blank figure
+    # Ideal no figure
     color-outer: black
     color-inner: black
     color-text: white
