@@ -45,7 +45,7 @@ works:
 # break
 - title: The most architectural thing about this building is the state of decay in which it is.
   figure: https://source.unsplash.com/user/europeana/600x500?2
-  caption: Architecture only survives where it negates the form that society expects of it. Where it negates itself by transgressing the limits that history has set for it.
+  caption: Architecture only survives where it negates the form that society expects of it. <br /> Where it negates itself by transgressing the limits that history has set for it.
   type: "12"
 # break
 - title: common ground?
