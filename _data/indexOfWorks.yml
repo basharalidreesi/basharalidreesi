@@ -188,9 +188,7 @@ typologicalDatum:
   # break
   10: # AFA Murder
     # Ideal 1:1 figure
-    # Ideal 71ch title
     # Ideal no subtitle
-    # Ideal 233ch caption
     color-outer: black
     color-inner: white
     color-text: black
@@ -213,9 +211,7 @@ typologicalDatum:
   # break
   11: # AFA Sensuality
     # Ideal 6:5 figure
-    # Ideal 75ch title
     # Ideal no subtitle
-    # Ideal 157ch caption
     color-outer: black
     color-inner: black
     color-text: white
@@ -238,9 +234,7 @@ typologicalDatum:
   # break
   12: # AFA Decay
     # Ideal 6:5 figure
-    # Ideal TODO title
     # Ideal no subtitle
-    # Ideal TODO caption
     color-outer: black
     color-inner: black
     color-text: white
@@ -263,9 +257,7 @@ typologicalDatum:
   # break
   13: # AFA Conditions
     # Ideal 2:1 figure
-    # Ideal TODO title
     # Ideal no subtitle
-    # Ideal TODO caption
     color-outer: black
     color-inner: black
     color-text: white
@@ -288,9 +280,6 @@ typologicalDatum:
   # break
   14: # AFA Figure/Ground
     # Ideal 5:6 figure
-    # Ideal TODO title
-    # Ideal TODO subtitle
-    # Ideal TODO caption
     color-outer: black
     color-inner: black
     color-text: white
@@ -313,9 +302,6 @@ typologicalDatum:
   # break
   15: # AFA Commonplace
     # Ideal two 1.6:1 figures
-    # Ideal TODO title
-    # Ideal TODO subtitle
-    # Ideal TODO caption
     color-outer: black
     color-inner: black
     color-text: white
@@ -334,9 +320,10 @@ typologicalDatum:
     width-caption: "100%"
     padding-title: "0"
     padding-subtitle: "0"
-    padding-figure: "1.5% 0"
+    padding-figure: "1% 0"
   # break
   16: # AFA Ropes
+    # Ideal 2:1 figure
     color-outer: black
     color-inner: black
     color-text: white
@@ -358,6 +345,26 @@ typologicalDatum:
     padding-figure: "15% 0 10% 0"
   # break
   17: # AFA Masks
+    # Ideal 1:1 figure
+    color-outer: black
+    color-inner: black
+    color-text: white
+    radius-border: "0"
+    size-title: "2000%"
+    size-subtitle: "375%"
+    size-caption: "375%"
+    family-title: '"Neue Montreal", "Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-subtitle: '"Times", "Times New Roman", serif'
+    family-caption: '"Times", "Times New Roman", serif'
+    weight-title: "700"
+    weight-subtitle: "400"
+    weight-caption: "400"
+    width-title: "100%"
+    width-subtitle: "100%"
+    width-caption: "60%"
+    padding-title: "0"
+    padding-subtitle: "0"
+    padding-figure: "0"
   # break
   18: # AFA Desire
   # break
