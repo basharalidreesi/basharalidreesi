@@ -174,16 +174,16 @@ typologicalDatum:
 #     ...
 #   ...
   default:
-    color-outer:
-    color-inner:
-    color-text:
-    radius-border:
-    size-title:
-    size-subtitle:
-    size-caption:
-    family-title:
-    family-subtitle:
-    family-caption:
+    color-outer: blue
+    color-inner: blue
+    color-text: blue
+    radius-border: blue
+    size-title: blue
+    size-subtitle: blue
+    size-caption: blue
+    family-title: blue
+    family-subtitle: blue
+    family-caption: blue
   # break
   10:
     color-outer:
