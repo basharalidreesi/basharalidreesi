@@ -214,6 +214,9 @@ typologicalDatum:
   # break
   11: # AFA Sensuality
     # Ideal 6:5 figure
+    # Ideal 75ch title
+    # Ideal no subtitle
+    # Ideal 157ch caption
     color-outer: black
     color-inner: black
     color-text: white
@@ -232,7 +235,29 @@ typologicalDatum:
     width-caption: "70%"
     padding-figure: "6%"
   12: # AFA Decay
-  13: # AFA Common Ground
+    # Ideal 6:5 figure
+    #
+    #
+    #
+    color-outer: black
+    color-inner: black
+    color-text: white
+    radius-border: "0"
+    size-title: "605%"
+    size-subtitle: "0" # TEMP
+    size-caption: "375%"
+    family-title: '"Helvetica", "Helvetica Neue", "Arial", sans-serif'
+    family-subtitle: initial # TEMP
+    family-caption: '"Times", "Times New Roman", serif'
+    weight-title: "700"
+    weight-subtitle: "0" # TEMP
+    weight-caption: "400"
+    width-title: "100%"
+    width-subtitle: "0" # TEMP
+    width-caption: "70%"
+    padding-figure: "6%"
+  13: # AFA Figure/Ground
+  14: # AFA Conditions
 # end
 
 ...
