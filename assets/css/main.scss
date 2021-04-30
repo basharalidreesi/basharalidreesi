@@ -172,6 +172,14 @@ body {
 				{% endfor %}
 
 			}
+			&__work_folio {
+				position: absolute;
+				top: 1rem
+				left: 1rem;
+				height: 100%;
+				width: 100%;
+				transform-style: preserve-3d;
+			}
 			&__work__outerRecto,
 			&__work__outerVerso {
 				position: absolute;
@@ -205,7 +213,6 @@ body {
 				}
 			}
 			&__work__outerVerso {
-				z-index: -1;
 				transform: rotateY(180deg);
 			}
 			&__work__title {
