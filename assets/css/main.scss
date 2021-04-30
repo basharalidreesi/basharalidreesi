@@ -20,6 +20,9 @@ $font-size: 15px !default;
 	@media (min-width: 2048px) {
 		--indexOfWorks-columns: 5;
 	}
+	@media (min-width: 2730px) {
+		--indexOfWorks-columns: 6;
+	}
 	@media (max-width: 1024px) {
 		--indexOfWorks-columns: 2;
 	}
