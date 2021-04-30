@@ -182,6 +182,8 @@ body {
 				padding: 1.5%;
 				background: var(--color-outer);
 				border-radius: var(--radius-outer);
+			-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
 			}
 			&__work__innerRecto,
 			&__work__innerVerso {
@@ -204,6 +206,7 @@ body {
 			}
 			&__work__outerVerso {
 				z-index: -1;
+				transform: rotateY(180deg);
 			}
 			&__work__title {
 				font-family: var(--family-title);
