@@ -172,7 +172,8 @@ body {
 				{% endfor %}
 
 			}
-			&__work__outerRecto {
+			&__work__outerRecto,
+			&__work__outerVerso {
 				position: absolute;
 				top: 1rem;
 				left: 1rem;
@@ -182,7 +183,8 @@ body {
 				background: var(--color-outer);
 				border-radius: var(--radius-outer);
 			}
-			&__work__innerRecto {
+			&__work__innerRecto,
+			&__work__innerVerso {
 				display: flex;
 				flex-flow: column nowrap;
 				align-items: center;
@@ -199,6 +201,9 @@ body {
 					justify-content: center;
 					width: 100%;
 				}
+			}
+			&__work__outerVerso {
+				z-index: -1;
 			}
 			&__work__title {
 				font-family: var(--family-title);
