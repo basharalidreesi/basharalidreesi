@@ -195,6 +195,7 @@ body {
 				left: 1rem;
 				height: calc(100% - 2rem);
 				width: calc(100% - 2rem);
+				padding: 1.5%;
 				border-radius: var(--radius-outer);
 			-webkit-backface-visibility: hidden;
 				backface-visibility: hidden;
@@ -207,6 +208,7 @@ body {
 				justify-content: center;
 				height: 100%;
 				width: 100%;
+				padding: 3%;
 				border-radius: var(--radius-inner);
 				& > * {
 					display: flex;
@@ -217,20 +219,16 @@ body {
 				}
 			}
 			&__work__outerRecto {
-				padding: 1.5%;
 				background: var(--color-outer);
 			}
 			&__work__innerRecto {
-				padding: 3%;
 				background: var(--color-inner);
 			}
 			&__work__outerVerso {
 				transform: rotateY(180deg);
-				padding: 4.5%;
 				background: black;
 			}
 			&__work__innerVerso {
-				padding: 0;
 				background: #cccccc;
 			}
 			&__work__title {
