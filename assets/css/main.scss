@@ -222,9 +222,10 @@ body {
 			}
 			&__work__outerVerso {
 				transform: rotateY(180deg);
+				background: black;
 			}
 			&__work__innerVerso {
-				background-image: url("");
+				background: #cccccc;
 			}
 			&__work__title {
 				font-family: var(--family-title);
