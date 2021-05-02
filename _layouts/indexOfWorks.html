@@ -50,11 +50,11 @@ layout: main
 								{%- assign datum = index.indexingDatum[key] -%}
 								{%- if value and datum and datum.face == "verso" -%}
 								{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' %}
-								{% if forloop.first == false and datum.outerHTML.open == previousDatum.outerHTML.open and datum.canCollapse and previousDatum.canCollapse and datum.classes == previousDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.open }}` -->{% else %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% endif %}
+								{{ datum.outerHTML.open | replace: "&classes", classes }}
 								{%- for node in value %}
 									{{ datum.innerHTML.open }}{{ node | strip }}{{ datum.innerHTML.close }}
 								{%- endfor %}
-								{% if forloop.last == false and datum.outerHTML.close == nextDatum.outerHTML.close and datum.canCollapse and nextDatum.canCollapse and datum.classes == nextDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% else %}{{ datum.outerHTML.close }}{% endif %}
+								{{ datum.outerHTML.close }}
 								{%- endif -%}
 								{%- endfor %}
 							</div>
