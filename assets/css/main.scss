@@ -223,6 +223,9 @@ body {
 			&__work__outerVerso {
 				transform: rotateY(180deg);
 			}
+			&__work__innerVerso {
+				background-image: url("");
+			}
 			&__work__title {
 				font-family: var(--family-title);
 				font-size: var(--size-title);
