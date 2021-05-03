@@ -16,23 +16,23 @@ $font-size: 15px !default;
 
 	--indexOfWorks-aspectRatio: (2 / 3); // 1:1.5
 
-	--indexOfWorks-columns: 3;
-	@media (max-width: 3584px) {
+	// --indexOfWorks-columns: 3;
+	@media (max-width: 3840px) {
 		--indexOfWorks-columns: 7;
 	}
-	@media (max-width: 3072px) {
+	@media (max-width: 3328px) {
 		--indexOfWorks-columns: 6;
 	}
-	@media (max-width: 2560px) {
+	@media (max-width: 2816px) {
 		--indexOfWorks-columns: 5;
 	}
-	@media (max-width: 2048px) {
+	@media (max-width: 2304px) {
 		--indexOfWorks-columns: 4;
 	}
-	@media (max-width: 1536px) {
+	@media (max-width: 1792px) {
 		--indexOfWorks-columns: 3;
 	}
-	@media (max-width: 1024px) {
+	@media (max-width: 1280px) {
 		--indexOfWorks-columns: 2;
 	}
 	@media (max-width: 768px) {
