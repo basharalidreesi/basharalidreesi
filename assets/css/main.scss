@@ -14,21 +14,22 @@ $font-size: 15px !default;
 	--color-light: lightgray;
 	@media (prefers-color-scheme: dark) { }
 
-	--indexOfWorks-columns: 3;
 	--indexOfWorks-aspectRatio: (2 / 3); // 1:1.5
-	// @media (min-width: 2048px) {
-	// 	--indexOfWorks-columns: 4;
-	// }
-	// @media (min-width: 4096px) {
-	// 	--indexOfWorks-columns: 5;
-	// }
-	@media (max-width: 1729px) {
+
+	--indexOfWorks-columns: 3;
+	@media (max-width: 3584px) {
+		--indexOfWorks-columns: 7;
+	}
+	@media (max-width: 3072px) {
+		--indexOfWorks-columns: 6;
+	}
+	@media (max-width: 2560px) {
 		--indexOfWorks-columns: 5;
 	}
-	@media (max-width: 1536px) {
+	@media (max-width: 2048px) {
 		--indexOfWorks-columns: 4;
 	}
-	@media (max-width: 1280px) {
+	@media (max-width: 1536px) {
 		--indexOfWorks-columns: 3;
 	}
 	@media (max-width: 1024px) {
