@@ -10,10 +10,8 @@ $font-size: 15px !default;
 	--color-inner: #cccccc;
 	--color-shine: white;
 	--color-text: black;
-	--color-outer-dark: gray;
-	--color-outer-light: lightgray;
-	--color-inner-dark: gray;
-	--color-inner-light: lightgray;
+	--color-dark: dimgray;
+	--color-light: lightgray;
 	@media (prefers-color-scheme: dark) { }
 
 	--indexOfWorks-columns: 3;
@@ -162,8 +160,20 @@ body {
 					content: "";
 					display: block;
 					padding-top: calc(100% * var(--indexOfWorks-aspectRatio));
-					background: linear-gradient(to right, var(--color-inner-light) 0%, transparent 30%, transparent 70%, var(--color-inner-light) 100%);
+					background: linear-gradient(to right, var(--color-light) 0%, transparent 30%, transparent 70%, var(--color-light) 100%);
 					border-radius: var(--radius-outer);
+				}
+				&::after {
+					content: "";
+					position: absolute;
+					top: 1rem;
+					left: 50%;
+					display: block;
+					height: calc(100% - 2rem);
+					width: 0.75%;
+					background: var(--color-dark);
+					transform: translateX(-50%);
+					z-index: -1;
 				}
 
 				{% assign index = site.data.indexOfWorks %}
