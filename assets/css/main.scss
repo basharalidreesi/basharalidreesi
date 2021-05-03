@@ -264,6 +264,14 @@ body {
 			&__work__innerVerso {
 				background: #cccccc;
 			}
+			&__work__sfx {
+				position: absolute;
+				top: 1rem;
+				left: 1rem;
+				height: calc(100% - 2rem);
+				width: calc(100% - 2rem);
+				pointer-events: none;
+			}
 			&__work__title {
 				font-family: var(--family-title);
 				font-size: var(--size-title);
