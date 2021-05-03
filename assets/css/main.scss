@@ -16,7 +16,13 @@ $font-size: 15px !default;
 
 	--indexOfWorks-aspectRatio: (2 / 3); // 1:1.5
 
-	// --indexOfWorks-columns: 3;
+	--indexOfWorks-columns: 10;
+	@media (max-width: 4864px) {
+		--indexOfWorks-columns: 9;
+	}
+	@media (max-width: 4352px) {
+		--indexOfWorks-columns: 8;
+	}
 	@media (max-width: 3840px) {
 		--indexOfWorks-columns: 7;
 	}
