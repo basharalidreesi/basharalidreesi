@@ -705,7 +705,7 @@ typologicalDatum:
     # Fluxus ideal no text
     # AFA ideal 1:1 figure
     # AFA ideal no subtitle
-    color-outer: "#fefdfa"
+    color-outer: black
     color-inner: "#fefdfa"
     color-text: black
     radius-outer: "7.5% / 5%"
