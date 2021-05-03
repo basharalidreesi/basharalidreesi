@@ -273,6 +273,9 @@ body {
 				padding: var(--padding-title);
 				text-align: var(--align-title);
 				text-indent: var(--indent-title);
+			-webkit-hyphens: var(--hyphens-title);
+			   -moz-hyphens: var(--hyphens-title);
+			    -ms-hyphens: var(--hyphens-title);
 				hyphens: var(--hyphens-title);
 			}
 			&__work__subtitle {
@@ -284,6 +287,9 @@ body {
 				padding: var(--padding-subtitle);
 				text-align: var(--align-subtitle);
 				text-indent: var(--indent-subtitle);
+			-webkit-hyphens: var(--hyphens-subtitle);
+			   -moz-hyphens: var(--hyphens-subtitle);
+			    -ms-hyphens: var(--hyphens-subtitle);
 				hyphens: var(--hyphens-subtitle);
 			}
 			&__work__figure {
@@ -305,6 +311,9 @@ body {
 					padding: var(--padding-caption);
 					text-align: var(--align-caption);
 					text-indent: var(--indent-caption);
+				-webkit-hyphens: var(--hyphens-caption);
+				   -moz-hyphens: var(--hyphens-caption);
+				    -ms-hyphens: var(--hyphens-caption);
 					hyphens: var(--hyphens-caption);
 				}
 			}
