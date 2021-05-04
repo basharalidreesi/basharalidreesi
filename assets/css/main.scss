@@ -229,6 +229,7 @@ body {
 				height: calc(100% - 2rem);
 				width: calc(100% - 2rem);
 				padding: 1.5%;
+				background: var(--color-outer);
 				border-radius: var(--radius-outer);
 			-webkit-backface-visibility: hidden;
 				backface-visibility: hidden;
@@ -242,6 +243,7 @@ body {
 				height: 100%;
 				width: 100%;
 				padding: 3%;
+				background: var(--color-inner);
 				border-radius: var(--radius-inner);
 				& > * {
 					display: flex;
@@ -251,18 +253,14 @@ body {
 					width: 100%;
 				}
 			}
-			&__work__outerRecto {
-				background: var(--color-outer);
-			}
-			&__work__innerRecto {
-				background: var(--color-inner);
-			}
+			&__work__outerRecto { }
+			&__work__innerRecto { }
 			&__work__outerVerso {
 				transform: rotateY(180deg);
-				background: black;
+				--color-outer: black;
 			}
 			&__work__innerVerso {
-				background: #cccccc;
+				--color-inner: #dcdcdc;
 			}
 			// &__work__sfx {
 			// 	position: absolute;
