@@ -115,7 +115,11 @@ a:focus {
 }
 
 body {
-        background: var(--color-outer);
+	{% if site.notice %}
+		background: var(--color-outer);
+	{% else %}
+		background: linear-gradient(var(--color-light) 0, var(--color-light) calc(4rem + {{ site.notice.size }}rem), var(--color-outer) calc(4rem + {{ site.notice.size }}rem));
+	{% endif %}
 }
 
 #mother {
@@ -133,11 +137,14 @@ body {
 	& > * {
 		margin: 1rem;
 	}
-	#announcement {
-		margin: -1rem -1rem 1rem -1rem;
-		padding: 1rem;
+	#notice {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+		margin: 0 0 1rem 0;
+		padding: 0 0 1rem 0;
 		font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
-		text-align: center;
 		background: var(--color-light);
 		& > * {
 			padding: 0.5rem;

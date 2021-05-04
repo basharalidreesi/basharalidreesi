@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>{{ site.title }}</title>
-	<meta name="description" content="{{ site.description | strip }}">
-	<meta name="author" content="{{ site.author.en | strip }}">
+	<meta name="description" content="{{ site.description }}">
+	<meta name="author" content="{{ site.author.en }}">
 	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preload" href="/assets/css/font.css" as="style">
@@ -25,9 +25,11 @@
 </head>
 <body>
 	<div id="mother">
-		{%- if site.announcement %}
-		<aside id="announcement">
-			{{ site.announcement | strip }}
+		{%- if site.notice %}
+		<aside id="notice">
+			{%- for notice in site.notice %}
+			{{ notice }}
+			{%- endfor %}
 		</aside>
 		{%- endif %}
 		<header id="header">
