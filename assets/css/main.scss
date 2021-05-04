@@ -131,14 +131,15 @@ body {
 	#announcement {
 		margin: -1rem -1rem 1rem -1rem;
 		padding: 1rem;
-		background: black;
-		--color-text: white;
 		font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
 		text-align: center;
+		background: black;
+		--color-text: white;
 		a {
 			text-decoration: underline;
-			&:hover {
-				color: #cccccc;
+			&:hover,
+			&:focus {
+				--color-text: #cccccc;
 			}
 		}
 	}
