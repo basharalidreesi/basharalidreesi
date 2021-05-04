@@ -331,6 +331,9 @@ body {
 			&__work__numero {
 				width: auto;
 				margin: 0 auto auto 0;
+				span {
+					font-family: "Times", "Times New Roman", serif;
+				}
 			}
 			&__work__tag {
 				display: none;
