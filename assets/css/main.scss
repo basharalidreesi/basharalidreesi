@@ -6,6 +6,7 @@
 $font-size: 15px !default;
 
 :root {
+
 	--color-outer: #cccccc;
 	--color-inner: #cccccc;
 	--color-shine: white;
@@ -14,36 +15,36 @@ $font-size: 15px !default;
 	--color-light: lightgray;
 	@media (prefers-color-scheme: dark) { }
 
-	--indexOfWorks-aspectRatio: (2 / 3); // 1:1.5
-
-	--indexOfWorks-columns: 10;
+	--aspectRatio-indexOfWorks: (2 / 3); // 1:1.5
+	--columns-indexOfWorks: 10;
 	@media (max-width: 4864px) {
-		--indexOfWorks-columns: 9;
+		--columns-indexOfWorks: 9;
 	}
 	@media (max-width: 4352px) {
-		--indexOfWorks-columns: 8;
+		--columns-indexOfWorks: 8;
 	}
 	@media (max-width: 3840px) {
-		--indexOfWorks-columns: 7;
+		--columns-indexOfWorks: 7;
 	}
 	@media (max-width: 3328px) {
-		--indexOfWorks-columns: 6;
+		--columns-indexOfWorks: 6;
 	}
 	@media (max-width: 2816px) {
-		--indexOfWorks-columns: 5;
+		--columns-indexOfWorks: 5;
 	}
 	@media (max-width: 2304px) {
-		--indexOfWorks-columns: 4;
+		--columns-indexOfWorks: 4;
 	}
 	@media (max-width: 1792px) {
-		--indexOfWorks-columns: 3;
+		--columns-indexOfWorks: 3;
 	}
 	@media (max-width: 1280px) {
-		--indexOfWorks-columns: 2;
+		--columns-indexOfWorks: 2;
 	}
 	@media (max-width: 768px) {
-		--indexOfWorks-columns: 1;
+		--columns-indexOfWorks: 1;
 	}
+
 }
 
 html,
@@ -166,16 +167,16 @@ body {
 			justify-content: flex-start;
 			margin: -1rem;
 			&__work {
-				flex-basis: calc(100% / var(--indexOfWorks-columns));
+				flex-basis: calc(100% / var(--columns-indexOfWorks));
 				position: relative;
 				padding: 1rem;
-				font-size: calc((100vw - 4rem - ((var(--indexOfWorks-columns) - 1) * 2rem)) / var(--indexOfWorks-columns) / 100);
+				font-size: calc((100vw - 4rem - ((var(--columns-indexOfWorks) - 1) * 2rem)) / var(--columns-indexOfWorks) / 100);
 				text-align: center;
-				perspective: calc(2500vw / var(--indexOfWorks-columns));
+				perspective: calc(2500vw / var(--columns-indexOfWorks));
 				&::before {
 					content: "";
 					display: block;
-					padding-top: calc(100% / var(--indexOfWorks-aspectRatio));
+					padding-top: calc(100% / var(--aspectRatio-indexOfWorks));
 					background: linear-gradient(to right, var(--color-light) 0%, transparent 30%, transparent 70%, var(--color-light) 100%);
 					box-shadow: inset 0 0 1rem var(--color-dark);
 					border-radius: var(--radius-outer);
@@ -261,6 +262,7 @@ body {
 			}
 			&__work__innerVerso {
 				--color-inner: #dcdcdc;
+				--color-text: black;
 			}
 			// &__work__sfx {
 			// 	position: absolute;
@@ -322,6 +324,9 @@ body {
 				    -ms-hyphens: var(--hyphens-caption);
 					hyphens: var(--hyphens-caption);
 				}
+			}
+			&__work__numero {
+
 			}
 			&__work__tag {
 				display: none;
