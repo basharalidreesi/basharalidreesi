@@ -49,13 +49,25 @@ layout: main
 								{%- assign key = entry[0] | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
 								{%- assign value = entry[1] -%}
 								{%- assign datum = index.indexingDatum[key] -%}
+								{%- assign previous = forloop.index0 | minus: 1 -%}
+								{%- assign next = forloop.index0 | plus: 1 -%}
+								{%- for previousEntry in work offset: previous limit: 1 -%}
+								{%- assign previousKey = previousEntry[0] -%}
+								{%- assign previousValue = previousEntry[1] -%}
+								{%- assign previousDatum = index.indexingDatum[previousKey] -%}
+								{%- endfor -%}
+								{%- for nextEntry in work offset: next limit: 1 -%}
+								{%- assign nextKey = nextEntry[0] -%}
+								{%- assign nextValue = nextEntry[1] -%}
+								{%- assign nextDatum = index.indexingDatum[nextKey] -%}
+								{%- endfor -%}
 								{%- if value and datum and datum.face == "verso" -%}
 								{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' %}
-								{{ datum.outerHTML.open | replace: "&classes", classes }}
+								{% if forloop.first == false and datum.outerHTML.open == previousDatum.outerHTML.open and datum.canCollapse and previousDatum.canCollapse and datum.classes == previousDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.open }}` -->{% else %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% endif %}
 								{%- for node in value %}
 									{{ datum.innerHTML.open }}{{ node | strip }}{{ datum.innerHTML.close }}
 								{%- endfor %}
-								{{ datum.outerHTML.close }}
+								{% if forloop.last == false and datum.outerHTML.close == nextDatum.outerHTML.close and datum.canCollapse and nextDatum.canCollapse and datum.classes == nextDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% else %}{{ datum.outerHTML.close }}{% endif %}
 								{%- endif -%}
 								{%- endfor %}
 							</div>
