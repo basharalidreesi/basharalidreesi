@@ -128,6 +128,19 @@ body {
 	& > * {
 		margin: 1rem;
 	}
+	#announcement {
+		margin: -1rem -1rem 1rem -1rem;
+		padding: 1rem;
+		background: black;
+		--color-text: white;
+		font-family: "Neue Montreal", "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+		a {
+			text-decoration: underline;
+			&:hover {
+				color: #cccccc;
+			}
+		}
+	}
 	#header {
 		font-size: 0;
 	-webkit-user-select: none;
