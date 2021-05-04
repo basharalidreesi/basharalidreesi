@@ -111,13 +111,6 @@ a:focus {
 	outline: none;
 }
 
-p {
-	padding: 1rem;
-	& + p {
-		padding-top: 0;
-	}
-}
-
 body {
         background: var(--color-outer);
 }
@@ -143,11 +136,14 @@ body {
 		font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
 		text-align: center;
 		background: var(--color-light);
+		& > * {
+			padding: 0.5rem;
+		}
 		a {
 			text-decoration: underline;
 			padding: 0.25rem;
 			border: 1px solid var(--color-text);
-			background: var(--color-uniform-dark);
+			background: var(--color-uniform-light);
 			&:hover,
 			&:focus {
 				--color-text: var(--color-dark);
