@@ -116,7 +116,7 @@ a:focus {
 
 body {
 	{% if site.notice %}
-		background: linear-gradient(var(--color-light) 0, var(--color-light) calc(4rem + {{ site.notice.size }}rem), var(--color-outer) calc(4rem + {{ site.notice.size }}rem));
+		background: linear-gradient(var(--color-light) 0, var(--color-light) calc(4rem + ({{ site.notice.size }}rem * 2)), var(--color-outer) calc(4rem + {{ site.notice.size }}rem));
 	{% else %}
 		background: var(--color-outer);
 	{% endif %}
@@ -147,13 +147,12 @@ body {
 		font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
 		background: var(--color-light);
 		& > * {
-			padding: 0.5rem;
+			padding: 1rem;
 		}
 		a {
-			text-decoration: underline;
 			padding: 0.25rem;
-			border: 1px solid var(--color-text);
 			background: #fefdfa;
+			border: 1px solid var(--color-text);
 			&:hover,
 			&:focus {
 				--color-text: var(--color-dark);
