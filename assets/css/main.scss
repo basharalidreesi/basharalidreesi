@@ -116,9 +116,9 @@ a:focus {
 
 body {
 	{% if site.notice %}
-		background: var(--color-outer);
-	{% else %}
 		background: linear-gradient(var(--color-light) 0, var(--color-light) calc(4rem + {{ site.notice.size }}rem), var(--color-outer) calc(4rem + {{ site.notice.size }}rem));
+	{% else %}
+		background: var(--color-outer);
 	{% endif %}
 }
 
