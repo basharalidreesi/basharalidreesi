@@ -133,12 +133,12 @@ body {
 		padding: 1rem;
 		font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
 		text-align: center;
-		background: var(--color-dark);
+		background: var(--color-light);
 		a {
 			text-decoration: underline;
 			&:hover,
 			&:focus {
-				--color-text: #cccccc;
+				--color-text: var(--color-dark);
 			}
 		}
 	}
