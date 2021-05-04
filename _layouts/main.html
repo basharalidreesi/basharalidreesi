@@ -26,6 +26,9 @@
 <body>
 	<div id="mother">
 		<header id="header">
+			{%- if site.announcement %}
+			<span>{{ site.announcement }}</span>
+			{%- endif %}
 			<h1>
 				<a href="/">
 					<svg id="headerSVG" height="150" width="1209" version="1.1" viewBox="0 0 1209 150" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
