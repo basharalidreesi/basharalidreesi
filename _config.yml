@@ -14,7 +14,8 @@ timezone: JO
 notice:
   - <p>This website is under construction.</p>
   - <address><a href="mailto:basharalidreesi@gmail.com">basharalidreesi@gmail.com</a></address>
-  - blbalbala
+  - <p>blbalbala</p>
+  - <p>blbalbala</p>
 
 # Build
 collections:
