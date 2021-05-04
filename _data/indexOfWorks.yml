@@ -290,9 +290,9 @@ typologicalDatum:
   10: # AFA Murder
     # Ideal 1:1 figure
     # Ideal no subtitle
-    color-outer: black
-    color-inner: "#fefdfa"
-    color-text: black
+    color-outer: var(--color-uniform-dark)
+    color-inner: var(--color-uniform-light)
+    color-text: var(--color-uniform-dark)
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -332,9 +332,9 @@ typologicalDatum:
   11: # AFA Sensuality
     # Ideal 6:5 figure
     # Ideal no subtitle
-    color-outer: black
-    color-inner: black
-    color-text: "#fefdfa"
+    color-outer: var(--color-uniform-dark)
+    color-inner: var(--color-uniform-dark)
+    color-text: var(--color-uniform-light)
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -374,9 +374,9 @@ typologicalDatum:
   12: # AFA Decay
     # Ideal 6:5 figure
     # Ideal no subtitle
-    color-outer: black
-    color-inner: black
-    color-text: "#fefdfa"
+    color-outer: var(--color-uniform-dark)
+    color-inner: var(--color-uniform-dark)
+    color-text: var(--color-uniform-light)
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -416,9 +416,9 @@ typologicalDatum:
   13: # AFA Conditions
     # Ideal 2:1 figure
     # Ideal no caption
-    color-outer: black
-    color-inner: black
-    color-text: "#fefdfa"
+    color-outer: var(--color-uniform-dark)
+    color-inner: var(--color-uniform-dark)
+    color-text: var(--color-uniform-light)
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -457,9 +457,9 @@ typologicalDatum:
   # break
   14: # AFA Figure/Ground
     # Ideal 5:6 figure
-    color-outer: black
-    color-inner: black
-    color-text: "#fefdfa"
+    color-outer: var(--color-uniform-dark)
+    color-inner: var(--color-uniform-dark)
+    color-text: var(--color-uniform-light)
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -498,9 +498,9 @@ typologicalDatum:
   # break
   15: # AFA Commonplace
     # Ideal two 5:3 figures
-    color-outer: black
-    color-inner: black
-    color-text: "#fefdfa"
+    color-outer: var(--color-uniform-dark)
+    color-inner: var(--color-uniform-dark)
+    color-text: var(--color-uniform-light)
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -539,9 +539,9 @@ typologicalDatum:
   # break
   16: # AFA Ropes
     # Ideal 2:1 figure
-    color-outer: black
-    color-inner: black
-    color-text: "#fefdfa"
+    color-outer: var(--color-uniform-dark)
+    color-inner: var(--color-uniform-dark)
+    color-text: var(--color-uniform-light)
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -580,9 +580,9 @@ typologicalDatum:
   # break
   17: # AFA Masks
     # Ideal 1:1 figure
-    color-outer: black
-    color-inner: black
-    color-text: "#fefdfa"
+    color-outer: var(--color-uniform-dark)
+    color-inner: var(--color-uniform-dark)
+    color-text: var(--color-uniform-light)
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -621,9 +621,9 @@ typologicalDatum:
   # break
   18: # AFA Desire
     # Ideal 4:3 figure
-    color-outer: black
-    color-inner: black
-    color-text: "#fefdfa"
+    color-outer: var(--color-uniform-dark)
+    color-inner: var(--color-uniform-dark)
+    color-text: var(--color-uniform-light)
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -662,9 +662,9 @@ typologicalDatum:
   # break
   19: # AFA Transgression
     # Ideal no figure
-    color-outer: black
-    color-inner: black
-    color-text: "#fefdfa"
+    color-outer: var(--color-uniform-dark)
+    color-inner: var(--color-uniform-dark)
+    color-text: var(--color-uniform-light)
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -705,9 +705,9 @@ typologicalDatum:
     # Fluxus ideal no text
     # AFA ideal 1:1 figure
     # AFA ideal no subtitle
-    color-outer: black
-    color-inner: "#fefdfa"
-    color-text: black
+    color-outer: var(--color-uniform-dark)
+    color-inner: var(--color-uniform-light)
+    color-text: var(--color-uniform-dark)
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
     # radius-rx: "7.5%"
@@ -748,9 +748,9 @@ typologicalDatum:
     # Fluxus ideal no text
     # AFA ideal 6:5 figure
     # AFA ideal no subtitle
-    color-outer: "#fefdfa"
-    color-inner: "#fefdfa"
-    color-text: black
+    color-outer: var(--color-uniform-light)
+    color-inner: var(--color-uniform-light)
+    color-text: var(--color-uniform-dark)
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
     # radius-rx: "7.5%"
@@ -791,9 +791,9 @@ typologicalDatum:
     # Fluxus ideal no text
     # AFA ideal 6:5 figure
     # AFA ideal no subtitle
-    color-outer: "#fefdfa"
-    color-inner: "#fefdfa"
-    color-text: black
+    color-outer: var(--color-uniform-light)
+    color-inner: var(--color-uniform-light)
+    color-text: var(--color-uniform-dark)
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
     # radius-rx: "7.5%"
@@ -834,9 +834,9 @@ typologicalDatum:
     # Fluxus ideal no text
     # AFA ideal 2:1 figure
     # AFA ideal no caption
-    color-outer: "#fefdfa"
-    color-inner: "#fefdfa"
-    color-text: black
+    color-outer: var(--color-uniform-light)
+    color-inner: var(--color-uniform-light)
+    color-text: var(--color-uniform-dark)
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
     # radius-rx: "7.5%"
@@ -876,9 +876,9 @@ typologicalDatum:
   24: # Fluxus / AFA Figure/Ground
     # Fluxus ideal no text
     # AFA ideal 5:6 figure
-    color-outer: "#fefdfa"
-    color-inner: "#fefdfa"
-    color-text: black
+    color-outer: var(--color-uniform-light)
+    color-inner: var(--color-uniform-light)
+    color-text: var(--color-uniform-dark)
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
     # radius-rx: "7.5%"
@@ -918,9 +918,9 @@ typologicalDatum:
   25: # Fluxus / AFA Commonplace
     # Fluxus ideal no text
     # AFA ideal two 5:3 figures
-    color-outer: "#fefdfa"
-    color-inner: "#fefdfa"
-    color-text: black
+    color-outer: var(--color-uniform-light)
+    color-inner: var(--color-uniform-light)
+    color-text: var(--color-uniform-dark)
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
     # radius-rx: "7.5%"
@@ -960,9 +960,9 @@ typologicalDatum:
   26: # Fluxus / AFA Ropes
     # Fluxus ideal no text
     # AFA ideal 2:1 figure
-    color-outer: "#fefdfa"
-    color-inner: "#fefdfa"
-    color-text: black
+    color-outer: var(--color-uniform-light)
+    color-inner: var(--color-uniform-light)
+    color-text: var(--color-uniform-dark)
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
     # radius-rx: "7.5%"
@@ -1002,9 +1002,9 @@ typologicalDatum:
   27: # Fluxus / AFA Masks
     # Fluxus ideal no text
     # AFA ideal 1:1 figure
-    color-outer: "#fefdfa"
-    color-inner: "#fefdfa"
-    color-text: black
+    color-outer: var(--color-uniform-light)
+    color-inner: var(--color-uniform-light)
+    color-text: var(--color-uniform-dark)
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
     # radius-rx: "7.5%"
@@ -1044,9 +1044,9 @@ typologicalDatum:
   28: # Fluxus / AFA Desire
     # Fluxus ideal no text
     # AFA ideal 4:3 figure
-    color-outer: "#fefdfa"
-    color-inner: "#fefdfa"
-    color-text: black
+    color-outer: var(--color-uniform-light)
+    color-inner: var(--color-uniform-light)
+    color-text: var(--color-uniform-dark)
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
     # radius-rx: "7.5%"
@@ -1086,9 +1086,9 @@ typologicalDatum:
   29: # Fluxus / AFA Transgression
     # Fluxus ideal no text
     # AFA ideal no figure
-    color-outer: "#fefdfa"
-    color-inner: "#fefdfa"
-    color-text: black
+    color-outer: var(--color-uniform-light)
+    color-inner: var(--color-uniform-light)
+    color-text: var(--color-uniform-dark)
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
     # radius-rx: "7.5%"
