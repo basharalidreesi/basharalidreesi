@@ -263,6 +263,9 @@ body {
 			&__work__innerVerso {
 				--color-inner: #dcdcdc;
 				--color-text: black;
+				font-family: "Neue Montreal", "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+				font-size: 500%;
+				font-weight: 400;
 			}
 			// &__work__sfx {
 			// 	position: absolute;
@@ -326,7 +329,8 @@ body {
 				}
 			}
 			&__work__numero {
-
+				width: auto;
+				margin: 0 auto auto 0;
 			}
 			&__work__tag {
 				display: none;
