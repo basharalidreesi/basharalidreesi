@@ -11,8 +11,6 @@ $font-size: 15px !default;
 	--color-inner: #cccccc;
 	--color-dark: #b6b6b6;
 	--color-light: #dcdcdc;
-	--color-uniform-dark: black;
-	--color-uniform-light: #fefdfa;
 	--color-shine: white;
 	--color-text: black;
 	@media (prefers-color-scheme: dark) { }
@@ -148,7 +146,7 @@ body {
 			text-decoration: underline;
 			padding: 0.25rem;
 			border: 1px solid var(--color-text);
-			background: var(--color-uniform-light);
+			background: #fefdfa;
 			&:hover,
 			&:focus {
 				--color-text: var(--color-dark);
