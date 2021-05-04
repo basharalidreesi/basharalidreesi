@@ -9,10 +9,10 @@ $font-size: 15px !default;
 
 	--color-outer: #cccccc;
 	--color-inner: #cccccc;
+	--color-dark: #b6b6b6;
+	--color-light: #dcdcdc;
 	--color-shine: white;
 	--color-text: black;
-	--color-dark: dimgray;
-	--color-light: lightgray;
 	@media (prefers-color-scheme: dark) { }
 
 	--aspectRatio-indexOfWorks: (2 / 3); // 1:1.5
@@ -133,7 +133,7 @@ body {
 		padding: 1rem;
 		font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
 		text-align: center;
-		background: black;
+		background: var(--color-dark);
 		--color-text: white;
 		a {
 			text-decoration: underline;
