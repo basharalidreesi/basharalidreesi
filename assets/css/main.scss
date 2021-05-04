@@ -177,9 +177,9 @@ body {
 					content: "";
 					display: block;
 					padding-top: calc(100% / var(--aspectRatio-indexOfWorks));
-					background: linear-gradient(to right, var(--color-light) 0%, transparent 30%, transparent 70%, var(--color-light) 100%);
-					box-shadow: inset 0 0 1rem var(--color-dark);
-					border-radius: var(--radius-outer);
+					// background: linear-gradient(to right, var(--color-light) 0%, transparent 30%, transparent 70%, var(--color-light) 100%);
+					// box-shadow: inset 0 0 1rem var(--color-dark);
+					// border-radius: var(--radius-outer);
 				}
 				&::after {
 					content: "";
