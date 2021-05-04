@@ -116,7 +116,7 @@ a:focus {
 
 body {
 	{% if site.notice %}
-		background: linear-gradient(var(--color-light) 0, var(--color-light) calc(2rem + (3rem * {{ site.notice.size }})), var(--color-outer) calc(2rem + (3rem * {{ site.notice.size }})));
+		background: linear-gradient(var(--color-light) 0, var(--color-light) calc(2rem + (2rem * {{ site.notice.size }})), var(--color-outer) calc(2rem + (2rem * {{ site.notice.size }})));
 	{% else %}
 		background: var(--color-outer);
 	{% endif %}
@@ -147,7 +147,7 @@ body {
 		font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
 		background: var(--color-light);
 		& > * {
-			padding: 1rem;
+			margin: 0.5rem;
 		}
 		a {
 			padding: 0.25rem;
