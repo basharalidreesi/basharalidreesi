@@ -149,11 +149,7 @@ body {
 			display: block;
 			padding: 0.25rem;
 			background: #fefdfa;
-			border: 1px solid var(--color-text);
-			&:hover,
-			&:focus {
-				--color-text: var(--color-dark);
-			}
+			border: 1px solid;
 		}
 	}
 	#header {
