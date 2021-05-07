@@ -4,7 +4,7 @@ style: indexOfWorks
 ---
 
 			{%- assign index = site.data.indexOfWorks -%}
-			<article class="indexOfWorks" aria-labelledby="main__title">
+			<article class="indexOfWorks">
 				<h2 id="main__title" class="--hidden">Index of Works</h2>
 				{%- for work in index.works -%}
 				{%- if work.url -%}
@@ -13,11 +13,11 @@ style: indexOfWorks
 				{%- assign url = work.title | slugify | prepend: index.path | append: "/" -%}
 				{%- endif -%}
                                 {%- unless work.isIndexed == false %}
-				<article class="indexOfWorks__work {%- if work.type %} indexOfWorks__work--type{{work.type}} {%- endif %}" {%- if work.override %} style="{% for override in work.override -%} --{{ override[0] }}: {{ override[1] }}; {%- unless forloop.last %} {% endunless %}{% endfor %}"{% endif %} aria-labelledby="work__{{ forloop.rindex }}">
+				<article class="indexOfWorks__work {%- if work.type %} indexOfWorks__work--type{{work.type}} {%- endif %}" {%- if work.override %} style="{% for override in work.override -%} --{{ override[0] }}: {{ override[1] }}; {%- unless forloop.last %} {% endunless %}{% endfor %}"{% endif %} aria-labelledby="main__title work__{{ forloop.rindex }}">
 					<h3 id="work__{{ forloop.rindex }}" class="--hidden">Work {{ forloop.rindex }}</h3>
-					<article class="indexOfWorks__work__folio" aria-labelledby="work__{{ forloop.rindex }}">
-						<header class="indexOfWorks__work__outerRecto" aria-labelledby="work__{{ forloop.rindex }}">
-							<div class="indexOfWorks__work__innerRecto" aria-labelledby="work__{{ forloop.rindex }}">
+					<article class="indexOfWorks__work__folio">
+						<header class="indexOfWorks__work__outerRecto">
+							<div class="indexOfWorks__work__innerRecto">
 								{%- for entry in work -%}
 								{%- assign key = entry[0] | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
 								{%- assign value = entry[1] -%}
@@ -45,8 +45,8 @@ style: indexOfWorks
 								{%- endfor %}
 							</div>
 						</header>
-						<footer class="indexOfWorks__work__outerVerso" aria-labelledby="work__{{ forloop.rindex }}">
-							<div class="indexOfWorks__work__innerVerso" aria-labelledby="work__{{ forloop.rindex }}">
+						<footer class="indexOfWorks__work__outerVerso">
+							<div class="indexOfWorks__work__innerVerso">
 								<data class="indexOfWorks__work__numero" value="{{ forloop.rindex }}">
 									<pre><span>№</span> {{ forloop.rindex }}</pre>
 								</data>
