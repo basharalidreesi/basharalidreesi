@@ -14,13 +14,13 @@
 	<link rel="stylesheet" type="text/css" href="/assets/css/main.css" media="all" />
 	<script type="text/javascript" src="/assets/js/main.js" defer></script>
 	<!-- begin google analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7CVLJ7QBN"></script>
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7CVLJ7QBN"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 		gtag('config', 'G-Y7CVLJ7QBN');
-	</script>
+	</script> -->
 	<!-- end google analytics -->
 </head>
 <body>
@@ -33,8 +33,9 @@
 		</aside> -->
 		{%- endif %}
 		<header id="header">
-			<a href="/">
-				<svg id="headerSVG" height="150" width="1209" version="1.1" viewBox="0 0 1209 150" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+			<a href="/" alt="To homepage">
+				<svg id="header__graphic" height="150" width="1209" viewBox="0 0 1209 150" aria-labelledby="header__graphic__title">
+					<title id="header__graphic__title">Bashar al-Idreesi</title>
 					<defs>
 						<linearGradient id="fillGradient" x1="0" y1="-5%" x2="0" y2="105%" gradientUnits="userSpaceOnUse">
 							<stop offset="0%" stop-color="var(--color-text)" />
@@ -79,9 +80,15 @@
 							</g>
 						</g>
 					</defs>
-					<switch fill="var(--color-text)"><use href="#headerMain" /></switch>
-					<switch fill="url(#fillGradient)" stroke="url(#strokeGradient)" vector-effect="non-scaling-stroke"><use href="#headerMain" /></switch>
-					<switch><use href="#headerSparkle" /></switch>
+					<switch fill="var(--color-text)">
+						<use href="#headerMain" />
+					</switch>
+					<switch fill="url(#fillGradient)" stroke="url(#strokeGradient)" vector-effect="non-scaling-stroke">
+						<use href="#headerMain" />
+					</switch>
+					<switch>
+						<use href="#headerSparkle" />
+					</switch>
 				</svg>
 			</a>
 		</header>
