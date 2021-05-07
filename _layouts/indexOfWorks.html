@@ -3,7 +3,7 @@ layout: main
 ---
 
 			{%- assign index = site.data.indexOfWorks -%}
-			<nav class="indexOfWorks">
+			<article class="indexOfWorks">
 				<h2>Index of Works</h2>
 				{%- for work in index.works -%}
 				{%- if work.url -%}
@@ -90,4 +90,4 @@ layout: main
 				</article>
                                 {%- endunless -%}
 				{%- endfor %}
-			</nav>
+			</article>
