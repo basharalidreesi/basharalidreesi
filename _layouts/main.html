@@ -10,6 +10,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preload" href="/assets/css/font.css" as="style">
 	<link rel="preload" href="/assets/css/main.css" as="style">
+	{%- if layout.style -%}
+	{%- for style in layout.style %}
+	<link rel="preload" href="/assets/css/{{ style }}.css" as="style">
+	{%- endfor -%}
+	{%- endif %}
 	<link rel="stylesheet" type="text/css" href="/assets/css/font.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="/assets/css/main.css" media="all" />
 	{%- if layout.style -%}
@@ -18,15 +23,6 @@
 	{%- endfor -%}
 	{%- endif %}
 	<script src="/assets/js/main.js" defer></script>
-	<!-- begin google analytics -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7CVLJ7QBN"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-Y7CVLJ7QBN');
-	</script> -->
-	<!-- end google analytics -->
 </head>
 <body>
 	<div id="mother">
@@ -38,7 +34,7 @@
 		</aside> -->
 		{%- endif %}
 		<header id="header">
-			<a href="/" alt="To homepage">
+			<a href="/" title="To homepage...">
 				<svg id="header__graphic" height="150" width="1209" viewBox="0 0 1209 150" aria-labelledby="header__graphic__title">
 					<title id="header__graphic__title">Bashar al-Idreesi</title>
 					<defs>
