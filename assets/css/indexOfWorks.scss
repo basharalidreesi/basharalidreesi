@@ -69,7 +69,7 @@
                 height: 100%;
                 width: 100%;
                 transform-style: preserve-3d;
-                animation: rotate 5s linear infinite;
+                animation: rotate 12.5s ease-in-out infinite;
                 animation-play-state: paused;
                 @keyframes rotate {
                         from {
