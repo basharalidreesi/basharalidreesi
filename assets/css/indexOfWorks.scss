@@ -39,7 +39,7 @@
                 }
 
                 &:hover > .indexOfWorks__work__folio {
-                        animation-play-state: running;
+                        transform: rotateY(180deg);
                 }
 
                 {% assign index = site.data.indexOfWorks %}
@@ -69,16 +69,7 @@
                 height: 100%;
                 width: 100%;
                 transform-style: preserve-3d;
-                animation: rotate 12.5s linear infinite;
-                animation-play-state: paused;
-                @keyframes rotate {
-                        from {
-                                transform: rotateY(0deg);
-                        }
-                        to {
-                                transform: rotateY(360deg);
-                        }
-                }
+                transition: transform 5s linear;
         }
 
         &__work__outerRecto,
