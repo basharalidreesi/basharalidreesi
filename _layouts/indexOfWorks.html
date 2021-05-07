@@ -3,7 +3,7 @@ layout: main
 ---
 
 			{%- assign index = site.data.indexOfWorks -%}
-			<ol class="indexOfWorks">
+			<nav class="indexOfWorks">
 				{%- for work in index.works -%}
 				{%- if work.url -%}
 				{%- assign url = work.url -%}
@@ -11,8 +11,8 @@ layout: main
 				{%- assign url = work.title | slugify | prepend: index.path | append: "/" -%}
 				{%- endif -%}
                                 {%- unless work.isIndexed == false %}
-				<li class="indexOfWorks__work {%- if work.type %} indexOfWorks__work--type{{work.type}} {%- endif %}" {%- if work.override %} style="{% for override in work.override -%} --{{ override[0] }}: {{ override[1] }}; {%- unless forloop.last %} {% endunless %}{% endfor %}"{% endif %}>
-					<article class="indexOfWorks__work__folio">
+				<article class="indexOfWorks__work {%- if work.type %} indexOfWorks__work--type{{work.type}} {%- endif %}" {%- if work.override %} style="{% for override in work.override -%} --{{ override[0] }}: {{ override[1] }}; {%- unless forloop.last %} {% endunless %}{% endfor %}"{% endif %}>
+					<div class="indexOfWorks__work__folio">
 						<header class="indexOfWorks__work__outerRecto">
 							<div class="indexOfWorks__work__innerRecto">
 								{%- for entry in work -%}
@@ -84,8 +84,8 @@ layout: main
 							</defs>
 							<rect width="100" height="150" rx="var(--radius-rx)" fill="url(#sfxFg{{ forloop.index }})" />
 						</svg> -->
-					</article>
-				</li>
+					</div>
+				</article>
                                 {%- endunless -%}
 				{%- endfor %}
-			</ol>
+			</nav>
