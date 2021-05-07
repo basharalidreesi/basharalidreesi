@@ -12,9 +12,9 @@
 	<link rel="preload" href="/assets/css/main.css" as="style">
 	<link rel="stylesheet" type="text/css" href="/assets/css/font.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="/assets/css/main.css" media="all" />
-	{%- if page.stylesheet -%}
-	{%- for stylesheet in page.stylesheet %}
-	<link rel="stylesheet" type="text/css" href="/assets/css/{{ stylesheet }}.css" media="all" />
+	{%- if layout.style -%}
+	{%- for style in layout.style %}
+	<link rel="stylesheet" type="text/css" href="/assets/css/{{ style }}.css" media="all" />
 	{%- endfor -%}
 	{%- endif %}
 	<script src="/assets/js/main.js" defer></script>
