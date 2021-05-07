@@ -223,7 +223,7 @@ indexingDatum:
       open: <figure &classes>
       close: </figure>
     innerHTML:
-      open: '<img src="'
+      open: '<img alt="" src="'
       close: '" />'
     canCollapse: true
   # break
