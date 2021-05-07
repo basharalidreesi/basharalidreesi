@@ -158,25 +158,23 @@ body {
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		& > h1 {
-			& > a {
-				display: block;
-				height: 100%;
-				width: 100%;
-				cursor: crosshair;
-				& > svg {
-					display: block;
-					height: 100%;
-					width: 100%;
-					overflow: visible;
-					& > switch:nth-of-type(2) {
-						stroke-width: 1px;
-						@media (any-hover: none) {
-							fill: var(--color-text);
-						}
-					}
-				}
-			}
+		a {
+			display: block;
+			height: 100%;
+			width: 100%;
+			cursor: crosshair;
+		}
+		svg {
+			display: block;
+			height: 100%;
+			width: 100%;
+			overflow: visible;
+			// & > switch:nth-of-type(2) {
+			// 	stroke-width: 1px;
+			// 	@media (any-hover: none) {
+			// 		fill: var(--color-text);
+			// 	}
+			// }
 		}
 	}
 
