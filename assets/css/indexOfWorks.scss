@@ -1,0 +1,207 @@
+---
+---
+
+@charset "UTF-8";
+
+.indexOfWorks {
+
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: -1rem;
+
+        &__work {
+
+                flex-basis: calc(100% / var(--columns-indexOfWorks));
+                position: relative;
+                padding: 1rem;
+                font-size: calc((100vw - 4rem - ((var(--columns-indexOfWorks) - 1) * 2rem)) / var(--columns-indexOfWorks) / 100);
+                text-align: center;
+                perspective: calc(2500vw / var(--columns-indexOfWorks));
+                &::before {
+                        content: "";
+                        display: block;
+                        padding-top: calc(100% / var(--aspectRatio-indexOfWorks));
+                }
+                &::after {
+                        content: "";
+                        position: absolute;
+                        top: 1rem;
+                        left: 50%;
+                        display: block;
+                        height: calc(100% - 2rem);
+                        width: 0.5%;
+                        background: var(--color-dark);
+                        transform: translateX(-50%);
+                        z-index: -1;
+                }
+
+                {% assign index = site.data.indexOfWorks %}
+                {% assign datum = index.typologicalDatum %}
+                {% for entry in datum %}
+                        {% assign key = entry[0] %}
+                        {% assign value = entry[1] %}
+                        {% unless key == "default" %}
+                                &--type{{ key }} {
+                        {% endunless %}
+                        {% for node in value %}
+                                {% unless node[1] == "default" %}
+                                        --{{ node[0] }}: {{ node[1] }};
+                                {% endunless %}
+                        {% endfor %}
+                        {% unless key == "default" %}
+                                }
+                        {% endunless %}
+                {% endfor %}
+
+        }
+
+        &__work__folio {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                transform: rotateY(0deg);
+                transform-style: preserve-3d;
+        }
+
+        &__work__outerRecto,
+        &__work__outerVerso {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                height: calc(100% - 2rem);
+                width: calc(100% - 2rem);
+                padding: 1.5%;
+                background: var(--color-outer);
+                border-radius: var(--radius-outer);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        }
+
+        &__work__innerRecto,
+        &__work__innerVerso {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+                padding: 3%;
+                background: var(--color-inner);
+                border-radius: var(--radius-inner);
+                & > * {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                }
+        }
+
+        &__work__outerRecto { }
+
+        &__work__innerRecto { }
+
+        &__work__outerVerso {
+                transform: rotateY(180deg);
+                --color-outer: black;
+        }
+
+        &__work__innerVerso {
+                --color-inner: #dcdcdc;
+                --color-text: black;
+                font-family: "Neue Montreal", "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+                font-size: 500%;
+                font-weight: 400;
+        }
+
+        &__work__sfx {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                height: calc(100% - 2rem);
+                width: calc(100% - 2rem);
+                pointer-events: none;
+        }
+
+        &__work__title {
+                font-family: var(--family-title);
+                font-size: var(--size-title);
+                font-weight: var(--weight-title);
+                width: var(--width-title);
+                margin: var(--margin-title);
+                padding: var(--padding-title);
+                text-align: var(--align-title);
+                text-indent: var(--indent-title);
+                -webkit-hyphens: var(--hyphens-title);
+                -moz-hyphens: var(--hyphens-title);
+                -ms-hyphens: var(--hyphens-title);
+                hyphens: var(--hyphens-title);
+        }
+
+        &__work__subtitle {
+                font-family: var(--family-subtitle);
+                font-size: var(--size-subtitle);
+                font-weight: var(--weight-subtitle);
+                width: var(--width-subtitle);
+                margin: var(--margin-subtitle);
+                padding: var(--padding-subtitle);
+                text-align: var(--align-subtitle);
+                text-indent: var(--indent-subtitle);
+                -webkit-hyphens: var(--hyphens-subtitle);
+                -moz-hyphens: var(--hyphens-subtitle);
+                -ms-hyphens: var(--hyphens-subtitle);
+                hyphens: var(--hyphens-subtitle);
+        }
+
+        &__work__figure {
+                margin: var(--margin-figure);
+                padding: var(--padding-figure);
+                img {
+                        display: block;
+                        height: auto;
+                        width: var(--width-image);
+                        margin: var(--margin-image);
+                        padding: var(--padding-image);
+                }
+                figcaption {
+                        font-family: var(--family-caption);
+                        font-size: var(--size-caption);
+                        font-weight: var(--weight-caption);
+                        width: var(--width-caption);
+                        margin: var(--margin-caption);
+                        padding: var(--padding-caption);
+                        text-align: var(--align-caption);
+                        text-indent: var(--indent-caption);
+                        -webkit-hyphens: var(--hyphens-caption);
+                        -moz-hyphens: var(--hyphens-caption);
+                        -ms-hyphens: var(--hyphens-caption);
+                        hyphens: var(--hyphens-caption);
+                }
+        }
+
+        &__work__numero {
+                width: auto;
+                margin: 0 auto auto 0;
+                span {
+                        font-family: "Times", "Times New Roman", serif;
+                }
+        }
+
+        &__work__tag {
+                display: none;
+        }
+
+        &__work__client {
+                display: none;
+        }
+
+        &__work__time {
+                display: none;
+        }
+
+}
