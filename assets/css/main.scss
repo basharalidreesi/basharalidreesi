@@ -153,16 +153,21 @@ body {
 	}
 
 	#header {
-		font-size: 0;
 		-webkit-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		a {
+		&__anchor {
 			display: block;
 			height: 100%;
 			width: 100%;
 			cursor: crosshair;
+		}
+		&__graphic {
+			display: block;
+			height: 100%;
+			width: 100%;
+			pointer-events: none;
 		}
 		svg {
 			display: block;
