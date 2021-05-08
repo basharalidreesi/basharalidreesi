@@ -24,12 +24,12 @@ style: indexOfWorks
 							{%- assign previous = forloop.index0 | minus: 1 -%}
 							{%- assign next = forloop.index0 | plus: 1 -%}
 							{%- for previousEntry in work offset: previous limit: 1 -%}
-							{%- assign previousKey = previousEntry[0] -%}
+							{%- assign previousKey = previousEntry[0] | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
 							{%- assign previousValue = previousEntry[1] -%}
 							{%- assign previousDatum = index.indexingDatum[previousKey] -%}
 							{%- endfor -%}
 							{%- for nextEntry in work offset: next limit: 1 -%}
-							{%- assign nextKey = nextEntry[0] -%}
+							{%- assign nextKey = nextEntry[0] | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
 							{%- assign nextValue = nextEntry[1] -%}
 							{%- assign nextDatum = index.indexingDatum[nextKey] -%}
 							{%- endfor -%}
