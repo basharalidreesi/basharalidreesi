@@ -98,7 +98,7 @@ works:
 -
   # recto
   subtitle: If you want to follow architecture's first rule, break it.
-  caption: Transgression. <br /> An exquisitely perverse act that never lasts. <br /> And like a caress is <br /> almost impossible to resist.
+  text: Transgression. <br /> An exquisitely perverse act that never lasts. <br /> And like a caress is <br /> almost impossible to resist.
   title: TRANSGRESSION
   # folio
   type: "19"
@@ -174,7 +174,7 @@ works:
 -
   # recto
   subtitle: If you want to follow architecture's first rule, break it.
-  caption: Transgression. <br /> An exquisitely perverse act that never lasts. <br /> And like a caress is <br /> almost impossible to resist.
+  text: Transgression. <br /> An exquisitely perverse act that never lasts. <br /> And like a caress is <br /> almost impossible to resist.
   title: TRANSGRESSION
   # folio
   type: "29"
@@ -223,6 +223,18 @@ indexingDatum:
     innerHTML:
       open: '<img src="'
       close: '" />'
+    canCollapse: true
+  # break
+  text:
+    face: recto
+    classes:
+      - indexOfWorks__work__figure
+    outerHTML:
+      open: <figure &classes>
+      close: </figure>
+    innerHTML:
+      open: <p>
+      close: </p>
     canCollapse: true
   # break
   caption:
