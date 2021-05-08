@@ -27,6 +27,11 @@ works:
 #   isIndexed:  # <modifier>, true
 #   override:   # <modifier>, unset
 -
+  title: To genuinely break away from architecture, you may even need to be murdered.
+  figure: /assets/graphics/frame15.jpg
+  caption: Architecture is defined by the actions it witnesses as much as by the enclosure of its walls. Building a building differs from the making of buildings in the same way as scaling a building for your life differs from being thrown off one. Menacingly.
+  type: "10"
+-
   # recto
   title: To really appreciate architecture, you may even need to commit <br /> a murder.
   figure: https://source.unsplash.com/user/europeana/500x500?1
