@@ -25,7 +25,7 @@
 	<script src="/assets/js/main.js" defer></script>
 </head>
 <body>
-	<div id="mother">
+	<div id="mother" aria-labelledby="header__title main__title">
 		{%- if site.notice %}
 		<!-- <aside id="notice">
 			{%- for notice in site.notice %}
@@ -33,10 +33,10 @@
 			{%- endfor %}
 		</aside> -->
 		{%- endif %}
-		<header id="header">
+		<header id="header" aria-labelledby="header__title">
 			<nav>
 				<a href="/" title="Landing">
-					<!-- <h1 id="header__title" class="--hidden">{{ site.author.en }}</h1> -->
+					<h1 id="header__title" class="--hidden">{{ site.author.en }}</h1>
 					<svg id="header__graphic" height="150" width="1209" viewBox="0 0 1209 150" aria-hidden="true">
 						<defs>
 							<linearGradient id="fillGradient" x1="0" y1="-5%" x2="0" y2="105%" gradientUnits="userSpaceOnUse">
@@ -96,7 +96,7 @@
 			</nav>
 		</header>
 		<!-- <nav id="nav"></nav> -->
-		<main id="main">
+		<main id="main" aria-labelledby="main__title">
 			{{ content }}
 		</main>
 		<!-- <footer id="footer"></footer> -->
