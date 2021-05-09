@@ -1,6 +1,6 @@
 "use strict";
 
-window.addEventListener("DOMContentLoaded", () => {
+document.querySelector("#header__graphic").addEventListener("load", () => {
 
 	const bashar = {
 
