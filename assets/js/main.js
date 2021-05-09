@@ -18,9 +18,7 @@ const bashar = {
 
 	header: {
 		initHeaderScripts: function() {
-			bashar.lexicon.object.addEventListener("load", () => {
-				bashar.header.trackCursorY();
-			});
+			bashar.header.trackCursorY();
 		},
 		trackCursorY: function() {
 			window.addEventListener("mousemove", (event) => {
