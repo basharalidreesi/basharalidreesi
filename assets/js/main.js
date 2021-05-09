@@ -4,7 +4,7 @@ const bashar = {
 
 	lexicon: {
 		header: document.querySelector("#header"),
-		svg: document.querySelector("#svg"),
+		graphic: document.querySelector("#header__graphic"),
 		flStop: document.querySelector("#flStop"),
 		stStop: document.querySelector("#stStop"),
 		spZone: document.querySelector("#spZone"),
@@ -54,17 +54,17 @@ const bashar = {
 		proposeSparkle: function(clampedCursorYRatio) {
 			let minSparkleRangeX =
 				parseFloat(bashar.lexicon.spZone.getAttribute("x")) / 100
-				* parseFloat(bashar.lexicon.svg.getAttribute("width"));
+				* parseFloat(bashar.lexicon.graphic.getAttribute("width"));
 			let maxSparkleRangeX =
 				parseFloat(bashar.lexicon.spZone.getAttribute("width")) / 100
-				* parseFloat(bashar.lexicon.svg.getAttribute("width"))
+				* parseFloat(bashar.lexicon.graphic.getAttribute("width"))
 				+ minSparkleRangeX;
 			let minSparkleRangeY =
 				parseFloat(bashar.lexicon.spZone.getAttribute("y")) / 100
-				* parseFloat(bashar.lexicon.svg.getAttribute("height"));
+				* parseFloat(bashar.lexicon.graphic.getAttribute("height"));
 			let maxSparkleRangeY =
 				parseFloat(bashar.lexicon.spZone.getAttribute("height")) / 100
-				* parseFloat(bashar.lexicon.svg.getAttribute("height"))
+				* parseFloat(bashar.lexicon.graphic.getAttribute("height"))
 				+ minSparkleRangeY;
 			let sparkleX = bashar.util.randomIntBetween(minSparkleRangeX, maxSparkleRangeX);
 			let sparkleY = bashar.util.randomIntBetween(minSparkleRangeY, maxSparkleRangeY);
@@ -72,8 +72,8 @@ const bashar = {
 		},
 		validateSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
 			let validSparkle = false;
-			let validationZones = bashar.lexicon.svg.querySelectorAll("#g > *");
-			let validationPoint = bashar.lexicon.svg.createSVGPoint();
+			let validationZones = bashar.lexicon.graphic.querySelectorAll("#g > *");
+			let validationPoint = bashar.lexicon.graphic.createSVGPoint();
 			validationPoint.x = sparkleX;
 			validationPoint.y = sparkleY;
 			validationZones.forEach((validationZone) => {
