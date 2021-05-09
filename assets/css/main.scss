@@ -167,19 +167,7 @@ body {
 			display: block;
 			height: 100%;
 			width: 100%;
-			pointer-events: none;
-		}
-		svg {
-			display: block;
-			height: 100%;
-			width: 100%;
 			overflow: visible;
-			// & > switch:nth-of-type(2) {
-			// 	stroke-width: 1px;
-			// 	@media (any-hover: none) {
-			// 		fill: var(--color-text);
-			// 	}
-			// }
 		}
 	}
 
