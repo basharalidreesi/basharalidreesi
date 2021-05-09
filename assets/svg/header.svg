@@ -18,7 +18,7 @@
                 </radialGradient>
                 <g id="spGroup">
                         <rect id="spZone" x="0" y="50%" width="100%" height="25%" fill="transparent" stroke="transparent" />
-                        <g id="sp" fill-opacity="0" height="100" width="100" stroke-opacity="0" transform="" style="overflow: visible;">
+                        <g id="sparkle" fill-opacity="0" height="100" width="100" stroke-opacity="0" transform="" style="overflow: visible;">
                                 <circle cx="0" cy="0" r="2.5" fill="url(#spGradient)" />
                                 <g transform="translate(-50, -50)">
                                         <line x1="50%" y1="0" x2="50%" y2="100%" stroke="url(#spGradient)" />
