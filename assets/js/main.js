@@ -5,8 +5,8 @@ const bashar = {
 	lexicon: {
 		header: document.querySelector("#header"),
 		svg: document.querySelector("#svg"),
-		fStop: document.querySelector("#flStop"),
-		sStop: document.querySelector("#stStop"),
+		flStop: document.querySelector("#flStop"),
+		stStop: document.querySelector("#stStop"),
 		sparkleZone: document.querySelector("#spZone"),
 		sparkle: document.querySelector("#sparkle"),
 		switches: document.querySelectorAll(".use"),
@@ -39,13 +39,13 @@ const bashar = {
 		},
 		opacifyStops: function(clampedCursorYRatio) {
 			let opacificationRate = bashar.util.parabola(-4, clampedCursorYRatio, -0.5, 1);
-			bashar.lexicon.fStop.setAttribute("stop-opacity", opacificationRate);
-			bashar.lexicon.sStop.setAttribute("stop-opacity", opacificationRate);
+			bashar.lexicon.flStop.setAttribute("stop-opacity", opacificationRate);
+			bashar.lexicon.stStop.setAttribute("stop-opacity", opacificationRate);
 		},
 		offsetStops: function(clampedCursorYRatio) {
 			let offsettingRate = parseInt(clampedCursorYRatio * 100) + "%";
-			bashar.lexicon.fStop.setAttribute("offset", offsettingRate);
-			bashar.lexicon.sStop.setAttribute("offset", offsettingRate);
+			bashar.lexicon.flStop.setAttribute("offset", offsettingRate);
+			bashar.lexicon.stStop.setAttribute("offset", offsettingRate);
 		},
 		shiftSparkleZone: function(clampedCursorYRatio) {
 			let sparkleZoneHalfHeight = parseFloat(bashar.lexicon.sparkleZone.getAttribute("height")) / 2;
