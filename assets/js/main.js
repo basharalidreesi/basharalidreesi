@@ -97,12 +97,9 @@ const bashar = {
 			bashar.lexicon.sparkle.setAttribute("fill-opacity", opacity);
 			bashar.lexicon.sparkle.setAttribute("stroke-opacity", opacity);
 			if(clampedCursorYRatio >= 1 || clampedCursorYRatio <= 0) { return; }
-			bashar.lexicon.sparkle.setAttribute(
-				"transform",
-					"translate(" + sparkleX + ", " + sparkleY + ")"
-					+ " scale(" + scale + ")"
-					+ " rotate(45)"
-			);
+			bashar.lexicon.sparkle.setAttribute("x", sparkleX);
+			bashar.lexicon.sparkle.setAttribute("y", sparkleY);
+			bashar.lexicon.sparkle.setAttribute("transform", " scale(" + scale + ")" + " rotate(45)");
 		},
 	},
 
