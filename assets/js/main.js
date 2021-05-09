@@ -75,7 +75,7 @@ const bashar = {
 		},
 		validateSparkle: function(sparkleX, sparkleY, clampedCursorYRatio) {
 			let validSparkle = false;
-			let validationZones = document.querySelectorAll("#headerMain > g > *");
+			let validationZones = document.querySelectorAll("#g > *");
 			let validationPoint = bashar.lexicon.svg.createSVGPoint();
 			validationPoint.x = sparkleX;
 			validationPoint.y = sparkleY;
