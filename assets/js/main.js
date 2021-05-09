@@ -3,20 +3,18 @@
 const bashar = {
 
 	lexicon: {
-		header: document.getElementById("header"),
-		svg: document.getElementById("header__graphic"),
-		fStop: document.getElementById("fStop"),
-		sStop: document.getElementById("sStop"),
-		sparkleZone: document.getElementById("sparkleZone"),
-		sparkle: document.getElementById("sparkle"),
-		switches: document.querySelectorAll("switch"),
-
+		header: document.querySelector("#header"),
+		svg: document.querySelector("#svg"),
+		fStop: document.querySelector("#flStop"),
+		sStop: document.querySelector("#stStop"),
+		sparkleZone: document.querySelector("#spZone"),
+		sparkle: document.querySelector("#sparkle"),
+		switches: document.querySelectorAll(".use"),
 		works: document.querySelectorAll(".indexOfWorks__work"),
 	},
 
 	initAllScripts: function() {
 		bashar.header.initHeaderScripts();
-		bashar.main.initMainScripts();
 	},
 
 	header: {
@@ -107,30 +105,6 @@ const bashar = {
 					+ " scale(" + scale + ")"
 					+ " rotate(45)"
 			);
-		},
-	},
-
-	main: {
-		initMainScripts: function() {
-			// window.addEventListener("load", () => {
-			// 	bashar.main.workIndex.resizeWorks();
-			// });
-			// window.addEventListener("resize", () => {
-			// 	bashar.main.workIndex.resizeWorks();
-			// });
-		},
-		workIndex: {
-			resizeWorks: function() {
-				let fontSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("font-size"));
-				let gridRowHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--number-index-grid-rows")) * fontSize;
-				let gridGapHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--number-index-grid-gaps")) * fontSize;
-				bashar.lexicon.works.forEach((work) => {
-					let workDl = work.querySelector(":scope dl");
-					let workDlHeight = workDl.getBoundingClientRect().height;
-					let workDlSpan = Math.ceil((workDlHeight + gridGapHeight) / (gridRowHeight + gridGapHeight));
-					work.style.setProperty("--number-index-grid-row-spans", workDlSpan);
-				});
-			},
 		},
 	},
 
