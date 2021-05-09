@@ -4,12 +4,11 @@ const bashar = {
 
 	lexicon: {
 		header: document.querySelector("#header"),
-		object: document.querySelector("#header__graphic"),
-		svg: bashar.lexicon.object.contentDocument.querySelector("#svg"),
-		flStop: bashar.lexicon.object.contentDocument.querySelector("#flStop"),
-		stStop: bashar.lexicon.object.contentDocument.querySelector("#stStop"),
-		spZone: bashar.lexicon.object.contentDocument.querySelector("#spZone"),
-		sparkle: bashar.lexicon.object.contentDocument.querySelector("#sparkle"),
+		svg: document.querySelector("#header__graphic").contentDocument.querySelector("#svg"),
+		flStop: document.querySelector("#header__graphic").contentDocument.querySelector("#flStop"),
+		stStop: document.querySelector("#header__graphic").contentDocument.querySelector("#stStop"),
+		spZone: document.querySelector("#header__graphic").contentDocument.querySelector("#spZone"),
+		sparkle: document.querySelector("#header__graphic").contentDocument.querySelector("#sparkle"),
 	},
 
 	initAllScripts: function() {
