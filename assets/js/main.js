@@ -4,12 +4,12 @@ const bashar = {
 
 	lexicon: {
 		header: document.querySelector("#header"),
-		svg: document.querySelector("#svg"),
-		flStop: document.querySelector("#flStop"),
-		stStop: document.querySelector("#stStop"),
-		sparkleZone: document.querySelector("#spZone"),
-		sparkle: document.querySelector("#sparkle"),
-		switches: document.querySelectorAll(".use"),
+		object: document.querySelector("#header__graphic"),
+		svg: bashar.lexicon.object.contentDocument.querySelector("#svg"),
+		flStop: bashar.lexicon.object.contentDocument.querySelector("#flStop"),
+		stStop: bashar.lexicon.object.contentDocument.querySelector("#stStop"),
+		spZone: bashar.lexicon.object.contentDocument.querySelector("#spZone"),
+		sparkle: bashar.lexicon.object.contentDocument.querySelector("#sparkle"),
 	},
 
 	initAllScripts: function() {
@@ -34,7 +34,7 @@ const bashar = {
 		reportCursorY: function(clampedCursorYRatio) {
 			bashar.header.opacifyStops(clampedCursorYRatio);
 			bashar.header.offsetStops(clampedCursorYRatio);
-			bashar.header.shiftSparkleZone(clampedCursorYRatio);
+			bashar.header.shiftspZone(clampedCursorYRatio);
 		},
 		opacifyStops: function(clampedCursorYRatio) {
 			let opacificationRate = bashar.util.parabola(-4, clampedCursorYRatio, -0.5, 1);
@@ -46,25 +46,25 @@ const bashar = {
 			bashar.lexicon.flStop.setAttribute("offset", offsettingRate);
 			bashar.lexicon.stStop.setAttribute("offset", offsettingRate);
 		},
-		shiftSparkleZone: function(clampedCursorYRatio) {
-			let sparkleZoneHalfHeight = parseFloat(bashar.lexicon.sparkleZone.getAttribute("height")) / 2;
-			let shiftingRate = parseInt(clampedCursorYRatio * 100) - sparkleZoneHalfHeight + "%";
-			bashar.lexicon.sparkleZone.setAttribute("y", shiftingRate);
+		shiftspZone: function(clampedCursorYRatio) {
+			let spZoneHalfHeight = parseFloat(bashar.lexicon.spZone.getAttribute("height")) / 2;
+			let shiftingRate = parseInt(clampedCursorYRatio * 100) - spZoneHalfHeight + "%";
+			bashar.lexicon.spZone.setAttribute("y", shiftingRate);
 			bashar.header.proposeSparkle(clampedCursorYRatio);
 		},
 		proposeSparkle: function(clampedCursorYRatio) {
 			let minSparkleRangeX =
-				parseFloat(bashar.lexicon.sparkleZone.getAttribute("x")) / 100
+				parseFloat(bashar.lexicon.spZone.getAttribute("x")) / 100
 				* parseFloat(bashar.lexicon.svg.getAttribute("width"));
 			let maxSparkleRangeX =
-				parseFloat(bashar.lexicon.sparkleZone.getAttribute("width")) / 100
+				parseFloat(bashar.lexicon.spZone.getAttribute("width")) / 100
 				* parseFloat(bashar.lexicon.svg.getAttribute("width"))
 				+ minSparkleRangeX;
 			let minSparkleRangeY =
-				parseFloat(bashar.lexicon.sparkleZone.getAttribute("y")) / 100
+				parseFloat(bashar.lexicon.spZone.getAttribute("y")) / 100
 				* parseFloat(bashar.lexicon.svg.getAttribute("height"));
 			let maxSparkleRangeY =
-				parseFloat(bashar.lexicon.sparkleZone.getAttribute("height")) / 100
+				parseFloat(bashar.lexicon.spZone.getAttribute("height")) / 100
 				* parseFloat(bashar.lexicon.svg.getAttribute("height"))
 				+ minSparkleRangeY;
 			let sparkleX = bashar.util.randomIntBetween(minSparkleRangeX, maxSparkleRangeX);

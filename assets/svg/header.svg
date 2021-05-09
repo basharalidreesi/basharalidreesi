@@ -39,7 +39,7 @@
                         <polygon points="706.9 102.04 754.85 102.04 756.43 95.33 708.48 95.33"/>
                 </g>
         </defs>
-        <use class="use" href="#g" fill="var(--color-text)" vector-effect="non-scaling-stroke" />
-        <use class="use" href="#g" fill="url(#flGradient)" stroke="url(#stGradient)" vector-effect="non-scaling-stroke" />
-        <use class="use" href="#spGroup" vector-effect="non-scaling-stroke" />
+        <use href="#g" fill="var(--color-text)" vector-effect="non-scaling-stroke" />
+        <use href="#g" fill="url(#flGradient)" stroke="url(#stGradient)" vector-effect="non-scaling-stroke" />
+        <use href="#spGroup" vector-effect="non-scaling-stroke" />
 </svg>
