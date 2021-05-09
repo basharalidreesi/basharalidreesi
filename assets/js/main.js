@@ -4,6 +4,7 @@ const bashar = {
 
 	lexicon: {
 		header: document.querySelector("#header"),
+		object: document.querySelector("#header__graphic"),
 		svg: document.querySelector("#header__graphic").contentDocument.querySelector("#svg"),
 		flStop: document.querySelector("#header__graphic").contentDocument.querySelector("#flStop"),
 		stStop: document.querySelector("#header__graphic").contentDocument.querySelector("#stStop"),
@@ -17,7 +18,9 @@ const bashar = {
 
 	header: {
 		initHeaderScripts: function() {
-			bashar.header.trackCursorY();
+			bashar.lexicon.object.addEventListener("load", () => {
+				bashar.header.trackCursorY();
+			});
 		},
 		trackCursorY: function() {
 			window.addEventListener("mousemove", (event) => {
