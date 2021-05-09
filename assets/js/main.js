@@ -10,7 +10,6 @@ const bashar = {
 		sparkleZone: document.querySelector("#spZone"),
 		sparkle: document.querySelector("#sparkle"),
 		switches: document.querySelectorAll(".use"),
-		works: document.querySelectorAll(".indexOfWorks__work"),
 	},
 
 	initAllScripts: function() {
