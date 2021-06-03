@@ -307,7 +307,7 @@ typologicalDatum:
     # Ideal 1:1 figure
     # Ideal no subtitle
     color-outer: black
-    color-inner: "#dcdcdc"
+    color-inner: white
     color-text: black
     radius-outer: "0"
     radius-inner: "0"
@@ -350,7 +350,7 @@ typologicalDatum:
     # Ideal no subtitle
     color-outer: black
     color-inner: black
-    color-text: "#dcdcdc"
+    color-text: white
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -392,7 +392,7 @@ typologicalDatum:
     # Ideal no subtitle
     color-outer: black
     color-inner: black
-    color-text: "#dcdcdc"
+    color-text: white
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -434,7 +434,7 @@ typologicalDatum:
     # Ideal no caption
     color-outer: black
     color-inner: black
-    color-text: "#dcdcdc"
+    color-text: white
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -475,7 +475,7 @@ typologicalDatum:
     # Ideal 5:6 figure
     color-outer: black
     color-inner: black
-    color-text: "#dcdcdc"
+    color-text: white
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -516,7 +516,7 @@ typologicalDatum:
     # Ideal two 5:3 figures
     color-outer: black
     color-inner: black
-    color-text: "#dcdcdc"
+    color-text: white
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -557,7 +557,7 @@ typologicalDatum:
     # Ideal 2:1 figure
     color-outer: black
     color-inner: black
-    color-text: "#dcdcdc"
+    color-text: white
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -598,7 +598,7 @@ typologicalDatum:
     # Ideal 1:1 figure
     color-outer: black
     color-inner: black
-    color-text: "#dcdcdc"
+    color-text: white
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -639,7 +639,7 @@ typologicalDatum:
     # Ideal 4:3 figure
     color-outer: black
     color-inner: black
-    color-text: "#dcdcdc"
+    color-text: white
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -680,7 +680,7 @@ typologicalDatum:
     # Ideal no figure
     color-outer: black
     color-inner: black
-    color-text: "#dcdcdc"
+    color-text: white
     radius-outer: "0"
     radius-inner: "0"
     # radius-rx: "0"
@@ -722,7 +722,7 @@ typologicalDatum:
     # AFA ideal 1:1 figure
     # AFA ideal no subtitle
     color-outer: black
-    color-inner: "#dcdcdc"
+    color-inner: white
     color-text: black
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
@@ -764,8 +764,8 @@ typologicalDatum:
     # Fluxus ideal no text
     # AFA ideal 6:5 figure
     # AFA ideal no subtitle
-    color-outer: "#dcdcdc"
-    color-inner: "#dcdcdc"
+    color-outer: white
+    color-inner: white
     color-text: black
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
@@ -807,8 +807,8 @@ typologicalDatum:
     # Fluxus ideal no text
     # AFA ideal 6:5 figure
     # AFA ideal no subtitle
-    color-outer: "#dcdcdc"
-    color-inner: "#dcdcdc"
+    color-outer: white
+    color-inner: white
     color-text: black
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
@@ -850,8 +850,8 @@ typologicalDatum:
     # Fluxus ideal no text
     # AFA ideal 2:1 figure
     # AFA ideal no caption
-    color-outer: "#dcdcdc"
-    color-inner: "#dcdcdc"
+    color-outer: white
+    color-inner: white
     color-text: black
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
@@ -892,8 +892,8 @@ typologicalDatum:
   24: # Fluxus / AFA Figure/Ground
     # Fluxus ideal no text
     # AFA ideal 5:6 figure
-    color-outer: "#dcdcdc"
-    color-inner: "#dcdcdc"
+    color-outer: white
+    color-inner: white
     color-text: black
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
@@ -934,8 +934,8 @@ typologicalDatum:
   25: # Fluxus / AFA Commonplace
     # Fluxus ideal no text
     # AFA ideal two 5:3 figures
-    color-outer: "#dcdcdc"
-    color-inner: "#dcdcdc"
+    color-outer: white
+    color-inner: white
     color-text: black
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
@@ -976,8 +976,8 @@ typologicalDatum:
   26: # Fluxus / AFA Ropes
     # Fluxus ideal no text
     # AFA ideal 2:1 figure
-    color-outer: "#dcdcdc"
-    color-inner: "#dcdcdc"
+    color-outer: white
+    color-inner: white
     color-text: black
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
@@ -1018,8 +1018,8 @@ typologicalDatum:
   27: # Fluxus / AFA Masks
     # Fluxus ideal no text
     # AFA ideal 1:1 figure
-    color-outer: "#dcdcdc"
-    color-inner: "#dcdcdc"
+    color-outer: white
+    color-inner: white
     color-text: black
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
@@ -1060,8 +1060,8 @@ typologicalDatum:
   28: # Fluxus / AFA Desire
     # Fluxus ideal no text
     # AFA ideal 4:3 figure
-    color-outer: "#dcdcdc"
-    color-inner: "#dcdcdc"
+    color-outer: white
+    color-inner: white
     color-text: black
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"
@@ -1102,8 +1102,8 @@ typologicalDatum:
   29: # Fluxus / AFA Transgression
     # Fluxus ideal no text
     # AFA ideal no figure
-    color-outer: "#dcdcdc"
-    color-inner: "#dcdcdc"
+    color-outer: white
+    color-inner: white
     color-text: black
     radius-outer: "7.5% / 5%"
     radius-inner: "calc((100% - 15%) * 0.075) / calc((100% - 15%) * 0.05)"

@@ -33,7 +33,7 @@ const bashar = {
 		reportCursorY: function(clampedCursorYRatio) {
 			bashar.header.opacifyStops(clampedCursorYRatio);
 			bashar.header.offsetStops(clampedCursorYRatio);
-			bashar.header.shiftspZone(clampedCursorYRatio);
+			bashar.header.shiftSpZone(clampedCursorYRatio);
 		},
 		opacifyStops: function(clampedCursorYRatio) {
 			let opacificationRate = bashar.util.parabola(-4, clampedCursorYRatio, -0.5, 1);
@@ -45,7 +45,7 @@ const bashar = {
 			bashar.lexicon.flStop.setAttribute("offset", offsettingRate);
 			bashar.lexicon.stStop.setAttribute("offset", offsettingRate);
 		},
-		shiftspZone: function(clampedCursorYRatio) {
+		shiftSpZone: function(clampedCursorYRatio) {
 			let spZoneHalfHeight = parseFloat(bashar.lexicon.spZone.getAttribute("height")) / 2;
 			let shiftingRate = parseInt(clampedCursorYRatio * 100) - spZoneHalfHeight + "%";
 			bashar.lexicon.spZone.setAttribute("y", shiftingRate);
