@@ -3,16 +3,22 @@
 const bashar = {
 
 	lexicon: {
+
 		header: document.querySelector("#header"),
 		graphic: document.querySelector("#header__graphic"),
 		flStop: document.querySelector("#flStop"),
 		stStop: document.querySelector("#stStop"),
 		spZone: document.querySelector("#spZone"),
 		sparkle: document.querySelector("#sparkle"),
+
+		main: document.querySelector("#main"),
+		disabledAnchors: document.querySelectorAll(".generic--disabled"),
+
 	},
 
 	initAllScripts: function() {
 		bashar.header.initHeaderScripts();
+		bashar.main.initMainScripts();
 	},
 
 	header: {
@@ -103,6 +109,21 @@ const bashar = {
 					+ " scale(" + scale + ")"
 					+ " rotate(45)"
 			);
+		},
+	},
+
+	main: {
+		initMainScripts: function() {
+			bashar.main.disableFolioAnchors();
+		},
+		disableFolioAnchors: function() {
+			bashar.lexicon.disabledAnchors.forEach((anchor) => {
+				anchor.addEventListener("click", (event) => {
+					event.preventDefault();
+					console.log("Prevented");
+				});
+			});
+
 		},
 	},
 

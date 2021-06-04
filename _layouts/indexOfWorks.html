@@ -17,7 +17,7 @@ style: indexOfWorks
 					<h3 class="generic--hidden">Work {{ forloop.rindex }}</h3>
 					<article class="indexOfWorks__work__folio">
 						<header class="indexOfWorks__work__outerRecto">
-							<a href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
+							<a class="generic--disabled" href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
 								<blockquote class="indexOfWorks__work__innerRecto" cite="{{ url | remove: site.url | prepend: site.url }}">
 									{%- for entry in work -%}
 									{%- assign key = entry[0] | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
