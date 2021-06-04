@@ -120,7 +120,7 @@ const bashar = {
 			bashar.lexicon.disabledAnchors.forEach((anchor) => {
 				anchor.addEventListener("click", (event) => {
 					event.preventDefault();
-					console.log("Prevented");
+					event.target.parentElement.parentElement.style.background = "red";
 				});
 			});
 
