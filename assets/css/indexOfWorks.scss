@@ -66,6 +66,7 @@
                 width: 100%;
                 transform-style: preserve-3d;
                 transform: rotateY(0deg);
+                transition: transform 2s linear;
         }
 
         &__work__outerRecto,

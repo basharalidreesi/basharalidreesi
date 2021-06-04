@@ -183,4 +183,8 @@ body {
 		left: -9999px !important;
 	}
 
+	.generic--flipped {
+		transform: rotateY(180deg);
+	}
+
 }
