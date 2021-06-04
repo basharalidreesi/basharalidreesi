@@ -65,8 +65,8 @@
                 height: 100%;
                 width: 100%;
                 transform-style: preserve-3d;
-                transform: rotateY(0deg);
-                transition: transform 2s linear;
+                // transform: rotateY(0deg);
+                transition: transform 1.25s linear;
         }
 
         &__work__outerRecto,
