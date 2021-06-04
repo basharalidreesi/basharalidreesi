@@ -82,6 +82,8 @@
                 padding: 1.5%;
                 background: var(--color-outer);
                 border-radius: var(--radius-outer);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
         }
 
         &__work__innerRecto,
