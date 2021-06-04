@@ -68,7 +68,8 @@
                 // transform: rotateY(0deg);
                 transition: transform 1.25s linear;
                 &:first-of-type {
-                        animation: demo 1.25s linear;
+                        animation: demo 1.25s;
+                        animation-play-state: paused;
                         @keyframes demo {
                                 0% {
                                         transform: rotateY(0deg);

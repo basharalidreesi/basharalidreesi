@@ -115,6 +115,7 @@ const bashar = {
 	main: {
 		initMainScripts: function() {
 			bashar.main.disableFolioAnchors();
+			bashar.main.demonstrateFolioFlipping();
 		},
 		disableFolioAnchors: function() {
 			bashar.lexicon.disabledAnchors.forEach((anchor) => {
@@ -124,6 +125,11 @@ const bashar = {
 				});
 			});
 
+		},
+		demonstrateFolioFlipping: function() {
+			window.addEventListener("load", () => {
+				document.querySelector(".indexOfWorks__work__folio").classList.toggle("generic--running");
+			});
 		},
 	},
 
