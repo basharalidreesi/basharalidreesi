@@ -13,6 +13,7 @@ const bashar = {
 
 		main: document.querySelector("#main"),
 		disabledAnchors: document.querySelectorAll(".generic--disabled"),
+		folios: document.querySelectorAll(".indexOfWorks__work__folio"),
 
 	},
 
@@ -128,7 +129,9 @@ const bashar = {
 		},
 		demonstrateFolioFlipping: function() {
 			window.addEventListener("load", () => {
-				document.querySelector(".indexOfWorks__work__folio").classList.toggle("generic--running");
+				folios.forEach((folio) => {
+					folio.classList.toggle("generic--running");
+				});
 			});
 		},
 	},
