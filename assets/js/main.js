@@ -128,11 +128,11 @@ const bashar = {
 
 		},
 		demonstrateFolioFlipping: function() {
-			window.addEventListener("load", () => {
-				bashar.lexicon.folios.forEach((folio) => {
-					folio.classList.toggle("generic--running");
-				});
-			});
+			// window.addEventListener("load", () => {
+			// 	bashar.lexicon.folios.forEach((folio) => {
+			// 		folio.classList.toggle("generic--running");
+			// 	});
+			// });
 		},
 	},
 
