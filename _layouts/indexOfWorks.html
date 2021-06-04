@@ -35,7 +35,7 @@ style: indexOfWorks
 									{%- assign nextValue = nextEntry[1] -%}
 									{%- assign nextDatum = index.indexingDatum[nextKey] -%}
 									{%- endfor -%}
-									{%- if value and datum and datum.face = "recto" -%}
+									{%- if value and datum and datum.face == "recto" -%}
 									{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' %}
 									{% if forloop.first == false and datum.outerHTML.open == previousDatum.outerHTML.open and datum.canCollapse and previousDatum.canCollapse and datum.classes == previousDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.open }}` -->{% else %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% endif %}
 									{%- for node in value %}
@@ -64,7 +64,7 @@ style: indexOfWorks
 									{%- assign nextValue = nextEntry[1] -%}
 									{%- assign nextDatum = index.indexingDatum[nextKey] -%}
 									{%- endfor -%}
-									{%- if value and datum and datum.face = "recto" -%}
+									{%- if value and datum and datum.face == "verso" -%}
 									{%- assign classes = datum.classes | join: " " | prepend: 'class="' | append: '"' %}
 									{% if forloop.first == false and datum.outerHTML.open == previousDatum.outerHTML.open and datum.canCollapse and previousDatum.canCollapse and datum.classes == previousDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.open }}` -->{% else %}{{ datum.outerHTML.open | replace: "&classes", classes }}{% endif %}
 									{%- for node in value %}
