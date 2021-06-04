@@ -129,7 +129,7 @@ const bashar = {
 		},
 		demonstrateFolioFlipping: function() {
 			window.addEventListener("load", () => {
-				folios.forEach((folio) => {
+				bashar.lexicon.folios.forEach((folio) => {
 					folio.classList.toggle("generic--running");
 				});
 			});
