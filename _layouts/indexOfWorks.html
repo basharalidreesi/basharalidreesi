@@ -74,6 +74,9 @@ style: indexOfWorks
 								{% if forloop.last == false and datum.outerHTML.close == nextDatum.outerHTML.close and datum.canCollapse and nextDatum.canCollapse and datum.classes == nextDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% else %}{{ datum.outerHTML.close }}{% endif %}
 								{%- endif -%}
 								{%- endfor %}
+								<a href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
+									See more
+								</a>
 							</blockquote>
 						</footer>
 					</article>
