@@ -70,7 +70,6 @@
                 &:first-of-type {
                         animation: demo 1.25s;
                         animation-play-state: paused;
-                        animation-iteration-count: 2;
                         @keyframes demo {
                                 0% {
                                         transform: rotateY(0deg);

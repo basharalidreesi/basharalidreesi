@@ -127,7 +127,7 @@ const bashar = {
 
 		},
 		demonstrateFolioFlipping: function() {
-			window.addEventListener("DOMContentLoaded", () => {
+			window.addEventListener("load", () => {
 				document.querySelector(".indexOfWorks__work__folio").classList.toggle("generic--running");
 			});
 		},
