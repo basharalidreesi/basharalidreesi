@@ -38,10 +38,6 @@
                         z-index: -1;
                 }
 
-                &:hover > .indexOfWorks__work__folio {
-                        transform: rotateY(180deg);
-                }
-
                 {% assign index = site.data.indexOfWorks %}
                 {% assign datum = index.typologicalDatum %}
                 {% for entry in datum %}
@@ -69,7 +65,7 @@
                 height: 100%;
                 width: 100%;
                 transform-style: preserve-3d;
-                transition: transform 5s linear;
+                transform: rotateY(0deg);
         }
 
         &__work__outerRecto,
