@@ -38,6 +38,10 @@
                         z-index: -1;
                 }
 
+                &:hover > .indexOfWorks__work__folio {
+                        transform: rotateY(180deg);
+                }
+
                 {% assign index = site.data.indexOfWorks %}
                 {% assign datum = index.typologicalDatum %}
                 {% for entry in datum %}
@@ -58,7 +62,18 @@
 
         }
 
-        &__work__outer {
+        &__work__folio {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                transform-style: preserve-3d;
+                transition: transform 5s linear;
+        }
+
+        &__work__outerRecto,
+        &__work__outerVerso {
                 position: absolute;
                 top: 1rem;
                 left: 1rem;
@@ -69,7 +84,8 @@
                 border-radius: var(--radius-outer);
         }
 
-        &__work__inner {
+        &__work__innerRecto,
+        &__work__innerVerso {
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: center;
@@ -86,6 +102,23 @@
                         justify-content: center;
                         width: 100%;
                 }
+        }
+
+        &__work__outerRecto { }
+
+        &__work__innerRecto { }
+
+        &__work__outerVerso {
+                transform: rotateY(180deg);
+                --color-outer: black;
+        }
+
+        &__work__innerVerso {
+                --color-inner: #dcdcdc;
+                --color-text: black;
+                font-family: "Neue Montreal", "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+                font-size: 500%;
+                font-weight: 400;
         }
 
         &__work__sfx {
