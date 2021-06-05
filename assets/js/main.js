@@ -12,6 +12,7 @@ const bashar = {
 		sparkle: document.querySelector("#sparkle"),
 
 		main: document.querySelector("#main"),
+		jsOnly: document.querySelectorAll(".generic--jsOnly"),
 		disabledAnchors: document.querySelectorAll(".generic--disabled"),
 
 	},
@@ -114,7 +115,13 @@ const bashar = {
 
 	main: {
 		initMainScripts: function() {
+			bashar.main.displayJsOnly();
 			bashar.main.disableFolioAnchors();
+		},
+		displayJsOnly: function() {
+			bashar.lexicon.jsOnly.forEach((jsOnly) => {
+				jsOnly.classList.remove("generic--jsOnly");
+			});
 		},
 		disableFolioAnchors: function() {
 			bashar.lexicon.disabledAnchors.forEach((anchor) => {
