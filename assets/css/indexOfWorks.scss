@@ -146,10 +146,25 @@
 
         &__work__flipBack {
                 margin: 0 0 auto 0;
+                a {
+                        margin: 0 auto 0 0;
+                }
         }
 
         &__work__seeMore {
                 margin: auto 0 0 0;
+                a {
+                        margin: 0 0 0 auto;
+                }
+        }
+
+        &__work__flipBack,
+        &__work__seeMore {
+                a {
+                        margin: 0 0 0 auto;
+                        padding: 1rem;
+                        border: 1px dashed var(--color-text);
+                }
         }
 
         &__work__title {

@@ -51,7 +51,7 @@ style: indexOfWorks
 							<blockquote class="indexOfWorks__work__innerVerso" cite="{{ url | remove: site.url | prepend: site.url }}">
 								<div class="indexOfWorks__work__flipBack">
 									<a class="generic--disabled" href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
-										Flip back
+										← Flip back ←
 									</a>
 								</div>
 								{%- for entry in work -%}
@@ -81,7 +81,7 @@ style: indexOfWorks
 								{%- endfor %}
 								<div class="indexOfWorks__work__seeMore">
 									<a href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
-										See more
+										→ See more →
 									</a>
 								</div>
 							</blockquote>
