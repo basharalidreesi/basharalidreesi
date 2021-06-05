@@ -119,11 +119,13 @@ const bashar = {
 			bashar.main.disableFolioAnchors();
 		},
 		displayJsOnly: function() {
+			if (!bashar.lexicon.jsOnly) { return; }
 			bashar.lexicon.jsOnly.forEach((jsOnly) => {
 				jsOnly.classList.remove("generic--jsOnly");
 			});
 		},
 		disableFolioAnchors: function() {
+			if (!bashar.lexicon.disabledAnchors) { return; }
 			bashar.lexicon.disabledAnchors.forEach((anchor) => {
 				anchor.addEventListener("click", (event) => {
 					event.preventDefault();
