@@ -49,9 +49,11 @@ style: indexOfWorks
 						</header>
 						<footer class="indexOfWorks__work__outerVerso">
 							<blockquote class="indexOfWorks__work__innerVerso" cite="{{ url | remove: site.url | prepend: site.url }}">
-								<a class="generic--disabled" href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
-									Flip back
-								</a>
+								<div class="indexOfWorks__work__flipBack">
+									<a class="generic--disabled" href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
+										Flip back
+									</a>
+								</div>
 								{%- for entry in work -%}
 								{%- assign key = entry[0] | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
 								{%- assign value = entry[1] -%}
@@ -77,9 +79,11 @@ style: indexOfWorks
 								{% if forloop.last == false and datum.outerHTML.close == nextDatum.outerHTML.close and datum.canCollapse and nextDatum.canCollapse and datum.classes == nextDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% else %}{{ datum.outerHTML.close }}{% endif %}
 								{%- endif -%}
 								{%- endfor %}
-								<a href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
-									See more
-								</a>
+								<div class="indexOfWorks__work__seeMore">
+									<a href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
+										See more
+									</a>
+								</div>
 							</blockquote>
 						</footer>
 					</article>
