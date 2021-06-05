@@ -13,7 +13,6 @@ const bashar = {
 
 		main: document.querySelector("#main"),
 		disabledAnchors: document.querySelectorAll(".generic--disabled"),
-		folios: document.querySelectorAll(".indexOfWorks__work__folio"),
 
 	},
 
@@ -116,7 +115,6 @@ const bashar = {
 	main: {
 		initMainScripts: function() {
 			bashar.main.disableFolioAnchors();
-			bashar.main.demonstrateFolioFlipping();
 		},
 		disableFolioAnchors: function() {
 			bashar.lexicon.disabledAnchors.forEach((anchor) => {
@@ -126,13 +124,6 @@ const bashar = {
 				});
 			});
 
-		},
-		demonstrateFolioFlipping: function() {
-			// window.addEventListener("load", () => {
-			// 	bashar.lexicon.folios.forEach((folio) => {
-			// 		folio.classList.toggle("generic--running");
-			// 	});
-			// });
 		},
 	},
 

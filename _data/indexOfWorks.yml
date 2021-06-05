@@ -22,14 +22,18 @@ works:
 #   clients:    # <content>, unset
 #   time:       # <content>, unset
 #   # modifiers
-#   url:        # <modifier>, generated from title if unset TODO
+#   url:        # <modifier>, generated from title if unset
 #   type:       # <modifier>, unset
 #   isIndexed:  # <modifier>, true
 #   override:   # <modifier>, unset
 -
+  # recto
   title: To genuinely break away from architecture, you may even need to be murdered.
   figure: /assets/graphics/frame15.jpg
   caption: Architecture is defined by the actions it witnesses as much as by the enclosure of its walls. Building a building differs from the making of buildings in the same way as scaling a building for your life differs from being thrown off one. Menacingly.
+  # verso
+  time: Summer 2020
+  # folio
   type: "10"
   url: /works/how-to-genuinely-break-away-from-architecture/
 -
