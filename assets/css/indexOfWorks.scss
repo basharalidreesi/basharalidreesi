@@ -252,7 +252,9 @@
                 font-style: italic;
         }
 
-        &__work__client { }
+        &__work__client {
+                display: none;
+        }
 
         &__work__time { }
 
