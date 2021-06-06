@@ -54,14 +54,14 @@ style: indexOfWorks
 						</header>
 						<footer class="indexOfWorks__work__outerVerso generic--jsOnly">
 							<article class="indexOfWorks__work__innerVerso">
-								<header class="indexOfWorks__work__header">
+								<div class="indexOfWorks__work__header">
 									<a class="generic--disabled" href="{{ url }}" title="{{ title }}">
 										← Flip back ←
 									</a>
 									<data value="{{ forloop.rindex }}">
 										№ {{ forloop.rindex }}
 									</data>
-								</header>
+								</div>
 								<h4 class="indexOfWorks__work__trueTitle">
 									{{ title }}
 								</h4>
@@ -90,11 +90,11 @@ style: indexOfWorks
 								{% if forloop.last == false and datum.outerHTML.close == nextDatum.outerHTML.close and datum.canCollapse and nextDatum.canCollapse and datum.classes == nextDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% else %}{{ datum.outerHTML.close }}{% endif %}
 								{%- endif -%}
 								{%- endfor %}
-								<footer class="indexOfWorks__work__footer">
+								<div class="indexOfWorks__work__footer">
 									<a href="{{ url }}" title="{{ title }}">
 										→ See more →
 									</a>
-								</footer>
+								</div>
 							</article>
 						</footer>
 					</div>

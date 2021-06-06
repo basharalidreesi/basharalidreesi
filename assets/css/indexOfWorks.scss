@@ -237,12 +237,12 @@
         }
 
         &__work__innerVerso {
-                & > *:not(header):not(footer) {
+                & > *:not(&__work__header):not(&__work__footer) {
                         padding: 3%;
                         font-family: "Times", "Times New Roman", serif;
                         line-height: 110%;
                 }
-                & > * + *:not(header):not(footer) {
+                & > * + *:not(&__work__header):not(&__work__footer) {
                         border-bottom: 1px solid var(--color-text);
                 }
         }
