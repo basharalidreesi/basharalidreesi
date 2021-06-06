@@ -201,6 +201,8 @@
                 }
         }
 
+        &__work__rText { }
+
         &__work__header {
                 flex-flow: row nowrap;
                 align-items: center;
@@ -250,6 +252,8 @@
                 font-style: italic;
         }
 
+        &__work__time { }
+
         &__work__tag {
                 display: none;
         }
@@ -258,8 +262,6 @@
                 display: none;
         }
 
-        &__work__time {
-                display: none;
-        }
+        &__work__vText { }
 
 }
