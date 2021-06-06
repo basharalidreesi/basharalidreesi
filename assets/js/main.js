@@ -28,7 +28,7 @@ const bashar = {
 		},
 		trackCursorY: function() {
 			window.addEventListener("mousemove", (event) => {
-				if (bashar.util.queryMedia("(any-hover: hover)")) { return; }
+				if (!bashar.util.queryMedia("(any-hover: hover)")) { return; }
 				if (bashar.util.queryMedia("(prefers-reduced-motion: reduce)")) { return; }
 				let cursorYPos = event.clientY;
 				let headerOffsetTop = bashar.lexicon.header.getBoundingClientRect().top;
