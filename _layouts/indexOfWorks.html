@@ -49,14 +49,14 @@ style: indexOfWorks
 						</header>
 						<footer class="indexOfWorks__work__outerVerso generic--jsOnly">
 							<blockquote class="indexOfWorks__work__innerVerso" cite="{{ url | remove: site.url | prepend: site.url }}">
-								<div class="indexOfWorks__work__flipBack">
+								<header class="indexOfWorks__work__header">
 									<a class="generic--disabled" href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
 										← Flip back ←
 									</a>
-								</div>
-								<data class="indexOfWorks__work__numero" value="{{ forloop.rindex }}">
-									№ {{ forloop.rindex }}
-								</data>
+									<data value="{{ forloop.rindex }}">
+										№ {{ forloop.rindex }}
+									</data>
+								</header>
 								<h4 class="indexOfWorks__work__trueTitle">
 									{%- if work.trueTitle %}
 									{{ work.trueTitle | strip | strip_html | replace: "  ", " " }}
@@ -89,11 +89,11 @@ style: indexOfWorks
 								{% if forloop.last == false and datum.outerHTML.close == nextDatum.outerHTML.close and datum.canCollapse and nextDatum.canCollapse and datum.classes == nextDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% else %}{{ datum.outerHTML.close }}{% endif %}
 								{%- endif -%}
 								{%- endfor %}
-								<div class="indexOfWorks__work__seeMore">
+								<footer class="indexOfWorks__work__footer">
 									<a href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
 										→ See more →
 									</a>
-								</div>
+								</footer>
 							</blockquote>
 						</footer>
 					</article>

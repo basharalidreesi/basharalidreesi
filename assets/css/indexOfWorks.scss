@@ -144,15 +144,19 @@
                 pointer-events: none;
         }
 
-        &__work__flipBack {
+        &__work__header {
                 margin: 0 0 auto 0;
                 a {
                         margin: 0 auto 0 0;
                         cursor: w-resize;
                 }
+                data {
+                        margin: 0 0 0 auto;
+                        font-family: "Times", "Times New Roman", serif;
+                }
         }
 
-        &__work__seeMore {
+        &__work__footer {
                 margin: auto 0 0 0;
                 a {
                         margin: 0 0 0 auto;
@@ -160,8 +164,8 @@
                 }
         }
 
-        &__work__flipBack,
-        &__work__seeMore {
+        &__work__header,
+        &__work__footer {
                 a {
                         padding: 3%;
                         border: 1px dashed var(--color-text);
@@ -225,13 +229,9 @@
                 }
         }
 
-        &__work__numero,
         &__work__trueTitle {
                 padding: 3%;
                 font-family: "Times", "Times New Roman", serif;
-        }
-
-        &__work__trueTitle {
                 font-style: italic;
         }
 
