@@ -54,6 +54,9 @@ style: indexOfWorks
 										← Flip back ←
 									</a>
 								</div>
+								<data class="indexOfWorks__work__numero" value="{{ forloop.rindex }}">
+									№ {{ forloop.rindex }}
+								</data>
 								{%- for entry in work -%}
 								{%- assign key = entry[0] | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
 								{%- assign value = entry[1] -%}
