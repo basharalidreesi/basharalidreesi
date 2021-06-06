@@ -59,9 +59,9 @@ style: indexOfWorks
 								</data>
 								<h4 class="indexOfWorks__work__trueTitle">
 									{%- if work.trueTitle %}
-									{{ work.trueTitle | strip }}
+									{{ work.trueTitle | strip | strip_html | replace: "  ", " " }}
 									{%- else %}
-									{{ work.title | strip }}
+									{{ work.title | strip | strip_html | replace: "  ", " " }}
 									{%- endif %}
 								</h4>
 								{%- for entry in work -%}
