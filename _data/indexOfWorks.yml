@@ -17,10 +17,12 @@ works:
 #   subtitle:   # <content>, unset
 #   figure:     # <content>, unset
 #   caption:    # <content>, unset
+#   rText:      # <content>, unset
 #   # verso
 #   tags:       # <content>, unset
 #   clients:    # <content>, unset
 #   time:       # <content>, unset
+#   vText:      # <content>, unset
 #   # modifiers
 #   trueTitle:  # <modifier>, unset
 #   url:        # <modifier>, generated from title if unset
@@ -33,6 +35,7 @@ works:
   figure: /assets/graphics/frame15.jpg
   caption: Architecture is defined by the actions it witnesses as much as by the enclosure of its walls. Building a building differs from the making of buildings in the same way as scaling a building for your life differs from being thrown off one. Menacingly.
   # verso
+  vText: "Janet Abu-Lughod Library Seminar IV: <br /> «Superheat» <br /> Led by Ala Younis"
   time: Summer 2020
   # folio
   trueTitle: How to Genuinely Break Away From Architecture (In Your City Tonight)
@@ -261,6 +264,18 @@ indexingDatum:
       close: </figcaption>
     canCollapse: true
   # break
+  rText:
+    face: recto
+    classes:
+      - indexOfWorks__work__rText
+    outerHTML:
+      open: <p &classes>
+      close: </p>
+    innerHTML:
+      open:
+      close:
+    canCollapse: false
+  # break
   tags:
     face: verso
     classes:
@@ -296,6 +311,18 @@ indexingDatum:
       open: <time>
       close: </time>
     canCollapse: true
+  # break
+  vText:
+    face: verso
+    classes:
+      - indexOfWorks__work__vText
+    outerHTML:
+      open: <p &classes>
+      close: </p>
+    innerHTML:
+      open:
+      close:
+    canCollapse: false
 # end
 
 typologicalDatum:
