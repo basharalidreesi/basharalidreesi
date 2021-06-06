@@ -237,12 +237,12 @@
         }
 
         &__work__innerVerso {
-                & > *:not(indexOfWorks__work__header):not(indexOfWorks__work__footer) {
+                & > *:not(.indexOfWorks__work__header):not(.indexOfWorks__work__footer) {
                         padding: 3%;
                         font-family: "Times", "Times New Roman", serif;
                         line-height: 110%;
                 }
-                & > * + *:not(indexOfWorks__work__header):not(indexOfWorks__work__footer) {
+                & > * + *:not(.indexOfWorks__work__header):not(.indexOfWorks__work__footer) {
                         border-bottom: 1px solid var(--color-text);
                 }
         }
