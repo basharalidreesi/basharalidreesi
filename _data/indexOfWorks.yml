@@ -22,6 +22,7 @@ works:
 #   clients:    # <content>, unset
 #   time:       # <content>, unset
 #   # modifiers
+#   trueTitle:  # <modifier>, unset
 #   url:        # <modifier>, generated from title if unset
 #   type:       # <modifier>, unset
 #   isIndexed:  # <modifier>, true
