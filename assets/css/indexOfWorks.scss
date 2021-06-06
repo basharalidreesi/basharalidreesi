@@ -238,7 +238,7 @@
                 & > *:not(header):not(footer) {
                         padding: 3%;
                 }
-                & > * + * {
+                & > * + *:not(header):not(footer) {
                         border-bottom: 1px solid var(--color-text);
                 }
         }
