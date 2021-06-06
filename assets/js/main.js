@@ -28,7 +28,7 @@ const bashar = {
 		},
 		trackCursorY: function() {
 			window.addEventListener("mousemove", (event) => {
-				if (!bashar.util.deviceCanHover) { return; }
+				if (bashar.util.queryMedia("(any-hover: hover)")) { return; }
 				if (bashar.util.queryMedia("(prefers-reduced-motion: reduce)")) { return; }
 				let cursorYPos = event.clientY;
 				let headerOffsetTop = bashar.lexicon.header.getBoundingClientRect().top;
@@ -168,7 +168,6 @@ const bashar = {
 		randomFloatBetween: function(min, max) {
 			return Math.random() * (max - min) + min;
 		},
-		deviceCanHover: window.matchMedia("(any-hover: hover)").matches,
 		queryMedia: function(query) {
 			return window.matchMedia(query).matches;
 		},
