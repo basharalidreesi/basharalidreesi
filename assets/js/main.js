@@ -29,6 +29,7 @@ const bashar = {
 		trackCursorY: function() {
 			window.addEventListener("mousemove", (event) => {
 				if (!bashar.util.deviceCanHover) { return; }
+				if (bashar.util.queryMedia("(prefers-reduced-motion: reduce)")) { return; }
 				let cursorYPos = event.clientY;
 				let headerOffsetTop = bashar.lexicon.header.getBoundingClientRect().top;
 				let headerHeight = bashar.lexicon.header.clientHeight;
