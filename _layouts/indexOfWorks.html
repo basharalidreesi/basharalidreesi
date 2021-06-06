@@ -19,6 +19,7 @@ style: indexOfWorks
 						<header class="indexOfWorks__work__outerRecto">
 							<a class="generic--disabled" href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
 								<article class="indexOfWorks__work__innerRecto" cite="{{ url | remove: site.url | prepend: site.url }}">
+									<h4 class="generic--hidden">Recto</h4>
 									{%- for entry in work -%}
 									{%- assign key = entry[0] | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
 									{%- assign value = entry[1] -%}
@@ -50,6 +51,7 @@ style: indexOfWorks
 						<footer class="indexOfWorks__work__outerVerso generic--jsOnly">
 							<article class="indexOfWorks__work__innerVerso" cite="{{ url | remove: site.url | prepend: site.url }}">
 								<header class="indexOfWorks__work__header">
+									<h4 class="generic--hidden">Verso</h4>
 									<a class="generic--disabled" href="{{ url }}" title="{{ work.title | strip_html | replace: '  ', ' ' }}">
 										← Flip back ←
 									</a>
@@ -57,13 +59,13 @@ style: indexOfWorks
 										№ {{ forloop.rindex }}
 									</data>
 								</header>
-								<h4 class="indexOfWorks__work__trueTitle">
+								<h5 class="indexOfWorks__work__trueTitle">
 									{%- if work.trueTitle %}
 									{{ work.trueTitle | strip_html | replace: "  ", " " }}
 									{%- else %}
 									{{ work.title | strip_html | replace: "  ", " " }}
 									{%- endif %}
-								</h4>
+								</h5>
 								{%- for entry in work -%}
 								{%- assign key = entry[0] | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
 								{%- assign value = entry[1] -%}

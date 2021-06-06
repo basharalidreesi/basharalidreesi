@@ -209,8 +209,8 @@ indexingDatum:
     classes:
       - indexOfWorks__work__title
     outerHTML:
-      open: <h4 &classes>
-      close: </h4>
+      open: <h5 &classes>
+      close: </h5>
     innerHTML:
       open:
       close:
@@ -221,8 +221,8 @@ indexingDatum:
     classes:
       - indexOfWorks__work__subtitle
     outerHTML:
-      open: <h5 &classes>
-      close: </h5>
+      open: <h6 &classes>
+      close: </h6>
     innerHTML:
       open:
       close:
