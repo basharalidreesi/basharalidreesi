@@ -237,6 +237,7 @@
         &__work__innerVerso {
                 & > *:not(header):not(footer) {
                         padding: 3%;
+                        font-family: "Times", "Times New Roman", serif;
                 }
                 & > * + *:not(header):not(footer) {
                         border-bottom: 1px solid var(--color-text);
@@ -245,7 +246,6 @@
 
         &__work__trueTitle {
                 border-top: 1px solid var(--color-text);
-                font-family: "Times", "Times New Roman", serif;
                 font-style: italic;
         }
 
