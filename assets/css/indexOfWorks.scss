@@ -258,17 +258,7 @@
                 font-style: italic;
         }
 
-        &__work__body {
-                a {
-                        text-decoration: underline;
-                        text-decoration-style: dashed;
-                        @media (any-hover: hover) {
-                                &:hover {
-                                        color: blue;
-                                }
-                        }
-                }
-        }
+        &__work__body { }
 
         &__work__time { }
 
