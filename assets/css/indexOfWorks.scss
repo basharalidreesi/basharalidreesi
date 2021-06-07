@@ -260,12 +260,11 @@
 
         &__work__body {
                 a {
-                        color: blue;
                         text-decoration: underline;
                         text-decoration-style: dashed;
                         @media (any-hover: hover) {
                                 &:hover {
-                                        color: var(--color-text);
+                                        color: blue;
                                 }
                         }
                 }
