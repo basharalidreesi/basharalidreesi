@@ -283,7 +283,7 @@ indexingDatum:
       - indexOfWorks__work__body
     outerHTML:
       open: <p &classes>
-      close: <p>
+      close: </p>
     innerHTML:
       open:
       close:
