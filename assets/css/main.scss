@@ -191,6 +191,10 @@ body {
 		display: none;
 	}
 
+	.generic--highlighted {
+		background: var(--color-shine);
+	}
+
 	@media (prefers-reduced-motion: reduce) {
 		* {
 			animation: none !important;

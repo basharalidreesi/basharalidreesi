@@ -14,6 +14,7 @@ const bashar = {
 		main: document.querySelector("#main"),
 		jsOnly: document.querySelectorAll(".generic--jsOnly"),
 		disabledAnchors: document.querySelectorAll(".generic--disabled"),
+		numeros: document.querySelectorAll(".indexOfWorks__work__numero"),
 
 	},
 
@@ -118,6 +119,7 @@ const bashar = {
 		initMainScripts: function() {
 			bashar.main.displayJsOnly();
 			bashar.main.disableFolioAnchors();
+			bashar.main.enableNumeroHighlighting();
 		},
 		displayJsOnly: function() {
 			if (!bashar.lexicon.jsOnly) { return; }
@@ -131,6 +133,15 @@ const bashar = {
 				anchor.addEventListener("click", (event) => {
 					event.preventDefault();
 					event.target.closest(".indexOfWorks__work__folio").classList.toggle("generic--flipped");
+				});
+			});
+
+		},
+		enableNumeroHighlighting: function() {
+			if (!bashar.lexicon.numeros) { return; }
+			bashar.lexicon.numeros.forEach((numero) => {
+				numero.addEventListener("click", (event) => {
+					event.target.closest(".indexOfWorks__work__folio").classList.toggle("generic--highlighted");
 				});
 			});
 
