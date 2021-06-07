@@ -20,7 +20,7 @@ works:
 #   rText:      # <content>, unset
 #   # verso
 #   tags:       # <content>, unset
-#   bodies:     # <content>, unset TODO
+#   bodies:     # <content>, unset
 #   time:       # <content>, unset
 #   vText:      # <content>, unset
 #   # modifiers
