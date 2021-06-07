@@ -138,12 +138,12 @@ const bashar = {
 
 		},
 		enableNumeroHighlighting: function() {
-			if (!bashar.lexicon.numeros) { return; }
-			bashar.lexicon.numeros.forEach((numero) => {
-				numero.addEventListener("click", (event) => {
-					event.target.closest(".indexOfWorks__work").classList.toggle("generic--highlighted");
-				});
-			});
+			// if (!bashar.lexicon.numeros) { return; }
+			// bashar.lexicon.numeros.forEach((numero) => {
+			// 	numero.addEventListener("click", (event) => {
+			// 		event.target.closest(".indexOfWorks__work").classList.toggle("generic--highlighted");
+			// 	});
+			// });
 
 		},
 	},
