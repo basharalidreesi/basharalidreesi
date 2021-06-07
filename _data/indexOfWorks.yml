@@ -318,11 +318,11 @@ indexingDatum:
     classes:
       - indexOfWorks__work__vText
     outerHTML:
-      open: <p &classes>
-      close: </p>
+      open: <span &classes>
+      close: </span>
     innerHTML:
-      open:
-      close:
+      open: <p>
+      close: </p>
     canCollapse: false
 # end
 
