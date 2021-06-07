@@ -118,7 +118,6 @@ const bashar = {
 		initMainScripts: function() {
 			bashar.main.displayJsOnly();
 			bashar.main.disableFolioAnchors();
-			bashar.main.enableNumeroHighlighting();
 		},
 		displayJsOnly: function() {
 			if (!bashar.lexicon.jsOnly) { return; }
