@@ -258,8 +258,12 @@
                 font-style: italic;
         }
 
-        &__work__client {
-                display: none;
+        &__work__bodies {
+                a {
+                        color: blue;
+                        text-decoration: underline;
+                        text-decoration-style: dashed;
+                }
         }
 
         &__work__time { }

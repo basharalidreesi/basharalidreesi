@@ -20,7 +20,7 @@ works:
 #   rText:      # <content>, unset
 #   # verso
 #   tags:       # <content>, unset
-#   clients:    # <content>, unset
+#   bodies:     # <content>, unset TODO
 #   time:       # <content>, unset
 #   vText:      # <content>, unset
 #   # modifiers
@@ -289,16 +289,16 @@ indexingDatum:
       close: </li>
     canCollapse: true
   # break
-  clients:
+  bodies:
     face: verso
     classes:
-      - indexOfWorks__work__client
+      - indexOfWorks__work__bodies
     outerHTML:
-      open: <ul &classes>
-      close: </ul>
+      open: <p &classes>
+      close: <p>
     innerHTML:
-      open: <li>
-      close: </li>
+      open: <span>
+      close: </span>
     canCollapse: true
   # break
   time:
