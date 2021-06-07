@@ -35,7 +35,7 @@ works:
   figure: /assets/graphics/frame15.jpg
   caption: Architecture is defined by the actions it witnesses as much as by the enclosure of its walls. Building a building differs from the making of buildings in the same way as scaling a building for your life differs from being thrown off one. Menacingly.
   # verso
-  vText: "JAL Seminar IV: <br /> <a href='https://www.arch.columbia.edu/environments/11-studio-x-amman' title='Superheat: Bearable Substructures | Columbia GSAPP Studio-X Amman'>«Superheat» led by Ala Younis</a>"
+  bodies: "JAL Seminar IV: <br /> <a href='https://www.arch.columbia.edu/environments/11-studio-x-amman' title='Superheat: Bearable Substructures | Columbia GSAPP Studio-X Amman'>«Superheat» led by Ala Younis</a>"
   time: Summer 2020
   tags: ["architecture", "text"]
   # folio
