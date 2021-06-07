@@ -193,6 +193,11 @@ body {
 		display: none;
 	}
 
+	.generic--highlighted {
+		background: var(--color-highlight);
+		box-shadow: inset 0 0 0 2px var(--color-redundant);
+	}
+
 	@media (prefers-reduced-motion: reduce) {
 		* {
 			animation: none !important;
