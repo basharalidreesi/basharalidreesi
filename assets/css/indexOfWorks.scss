@@ -258,7 +258,7 @@
                 font-style: italic;
         }
 
-        &__work__bodies {
+        &__work__body {
                 a {
                         color: blue;
                         text-decoration: underline;
@@ -273,7 +273,7 @@
 
         &__work__time { }
 
-        &__work__tags {
+        &__work__tag {
                 flex-flow: row wrap;
                 padding: 3% 0 3% 0;
                 list-style: none;
