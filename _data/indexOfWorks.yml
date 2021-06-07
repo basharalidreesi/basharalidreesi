@@ -25,7 +25,7 @@ works:
 #   vText:      # <content>, unset
 #   # modifiers
 #   trueTitle:  # <modifier>, unset
-#   url:        # <modifier>, generated from title if unset
+#   url:        # <modifier>, generated from trueTitle then title if unset
 #   type:       # <modifier>, unset
 #   isIndexed:  # <modifier>, true
 #   override:   # <modifier>, unset
