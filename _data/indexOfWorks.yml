@@ -280,7 +280,7 @@ indexingDatum:
   tags:
     face: verso
     classes:
-      - indexOfWorks__work__tag
+      - indexOfWorks__work__tags
     outerHTML:
       open: <ul &classes>
       close: </ul>
