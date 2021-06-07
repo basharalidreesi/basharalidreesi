@@ -237,7 +237,7 @@
         }
 
         &__work__innerVerso {
-                & > *:not(header):not(footer) {
+                & > *:not(header):not(footer):not(ul) {
                         padding: 3%;
                         font-family: "Times", "Times New Roman", serif;
                         line-height: 110%;
@@ -265,7 +265,7 @@
                         padding: 3%;
                         margin: 3%;
                         border: 1px dashed var(--color-text);
-                        border-radius: 100%;
+                        // border-radius: 100%;
                 }
         }
 
