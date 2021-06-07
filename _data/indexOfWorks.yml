@@ -241,18 +241,6 @@ indexingDatum:
       close: '" />'
     canCollapse: true
   # break
-  text:
-    face: recto
-    classes:
-      - indexOfWorks__work__figure
-    outerHTML:
-      open: <figure &classes>
-      close: </figure>
-    innerHTML:
-      open: <p>
-      close: </p>
-    canCollapse: true
-  # break
   caption:
     face: recto
     classes:
@@ -268,14 +256,14 @@ indexingDatum:
   rText:
     face: recto
     classes:
-      - indexOfWorks__work__rText
+      - indexOfWorks__work__figure
     outerHTML:
-      open: <span &classes>
-      close: </span>
+      open: <figure &classes>
+      close: </figure>
     innerHTML:
       open: <p>
       close: </p>
-    canCollapse: false
+    canCollapse: true
   # break
   tag:
     face: verso
@@ -297,8 +285,8 @@ indexingDatum:
       open: <p &classes>
       close: <p>
     innerHTML:
-      open: <span>
-      close: </span>
+      open:
+      close:
     canCollapse: true
   # break
   time:
@@ -306,11 +294,11 @@ indexingDatum:
     classes:
       - indexOfWorks__work__time
     outerHTML:
-      open: <span &classes>
-      close: </span>
-    innerHTML:
-      open: <time>
+      open: <time &classes>
       close: </time>
+    innerHTML:
+      open:
+      close:
     canCollapse: true
   # break
   vText:
@@ -318,11 +306,11 @@ indexingDatum:
     classes:
       - indexOfWorks__work__vText
     outerHTML:
-      open: <span &classes>
-      close: </span>
-    innerHTML:
-      open: <p>
+      open: <p &classes>
       close: </p>
+    innerHTML:
+      open:
+      close:
     canCollapse: false
 # end
 
