@@ -294,11 +294,11 @@ indexingDatum:
     classes:
       - indexOfWorks__work__time
     outerHTML:
-      open: <time &classes>
-      close: </time>
+      open: <p &classes>
+      close: </p>
     innerHTML:
-      open:
-      close:
+      open: <time>
+      close: </time>
     canCollapse: true
   # break
   vText:
