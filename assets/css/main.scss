@@ -9,10 +9,12 @@ $font-size: 15px !default;
 
 	--color-outer: #cccccc; // #cccccc
 	--color-inner: #cccccc; // #cccccc
+	--color-redundant: #cccccc;
 	// --color-dark: #b6b6b6;
 	// --color-light: #dcdcdc;
 	--color-shine: white;
 	--color-text: black; // #fefdfa
+	--color-highlight: red;
 	@media (prefers-color-scheme: dark) { }
 
 	--aspectRatio-indexOfWorks: (2 / 3); // 1:1.5
@@ -192,7 +194,8 @@ body {
 	}
 
 	.generic--highlighted {
-		background: var(--color-shine);
+		background: var(--color-highlight);
+		box-shadow: inset 0 0 0 2px var(--color-redundant);
 	}
 
 	@media (prefers-reduced-motion: reduce) {
