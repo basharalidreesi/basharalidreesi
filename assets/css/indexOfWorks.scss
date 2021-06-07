@@ -238,7 +238,7 @@
 
         &__work__innerVerso {
                 & > *:not(header):not(footer):not(ul) {
-                        padding: 3%;
+                        padding: 3% 0 3% 0;
                         font-family: "Times", "Times New Roman", serif;
                         line-height: 110%;
                 }
@@ -260,6 +260,7 @@
 
         &__work__tags {
                 flex-flow: row wrap;
+                padding: 3% 0 3% 0;
                 list-style: none;
                 li {
                         padding: 3%;
