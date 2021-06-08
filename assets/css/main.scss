@@ -10,8 +10,8 @@ $font-size: 15px !default;
 	--color-outer: #cccccc; // #cccccc
 	--color-inner: #cccccc; // #cccccc
 	--color-redundant: #cccccc;
-	// --color-dark: #b6b6b6;
-	// --color-light: #dcdcdc;
+	--color-dark: #b6b6b6;
+	--color-light: #dcdcdc;
 	--color-shine: white;
 	--color-text: black; // #fefdfa
 	--color-highlight: #7df9ff; // electric blue
@@ -130,30 +130,6 @@ body {
 		margin: 1rem;
 	}
 
-	#notice {
-		align-self: center;
-		display: flex;
-		flex-flow: column nowrap;
-		align-items: center;
-		justify-content: center;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
-		padding: 1rem;
-		font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
-		text-align: center;
-		background: var(--color-light);
-		& > * {
-			margin: 0.5rem;
-		}
-		a {
-			display: block;
-			padding: 0.25rem;
-			background: #fefdfa;
-			border: 1px solid;
-		}
-	}
-
 	#header {
 		-webkit-user-select: none;
 		-moz-user-select: none;
@@ -176,8 +152,6 @@ body {
 	#nav { /* none yet! */ }
 
 	#main { /* none yet! */ }
-
-	#footer { /* none yet! */ }
 
 	.generic--hidden {
 		position: absolute !important;
@@ -205,4 +179,10 @@ body {
 		}
 	}
 
+}
+
+#notice,
+#footer {
+	display: none;
+	background: var(--color-light);
 }

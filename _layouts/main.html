@@ -25,14 +25,14 @@
 	<script src="/assets/js/main.js" defer></script>
 </head>
 <body>
+	{%- if site.notice %}
+	<div id="notice">
+		{%- for notice in site.notice %}
+		{{ notice }}
+		{%- endfor %}
+	</div>
+	{%- endif %}
 	<div id="mother">
-		{%- if site.notice %}
-		<!-- <aside id="notice">
-			{%- for notice in site.notice %}
-			{{ notice }}
-			{%- endfor %}
-		</aside> -->
-		{%- endif %}
 		<header id="header">
 			<a id="header__anchor" href="/" title="Homepage | Bashar al-Idreesi">
 				<h1>
@@ -90,7 +90,7 @@
 		<main id="main">
 			{{ content }}
 		</main>
-		<!-- <footer id="footer"></footer> -->
 	</div>
+	<footer id="footer"></footer>
 </body>
 </html>
