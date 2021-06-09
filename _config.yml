@@ -29,6 +29,7 @@ defaults:
       path: ''
       type: 'works'
     values:
+      layout: work
 theme: null
 sass:
   sass_dir: _sass
