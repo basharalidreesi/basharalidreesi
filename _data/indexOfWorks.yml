@@ -667,7 +667,7 @@ typologicalDatum:
     indent-caption: "9%"
     hyphens-title: none
     hyphens-subtitle: none
-    hyphens-caption: "auto"
+    hyphens-caption: auto
   # break
   18: # AFA Desire
     # Ideal 4:3 figure
@@ -708,7 +708,7 @@ typologicalDatum:
     indent-caption: "0"
     hyphens-title: none
     hyphens-subtitle: none
-    hyphens-caption: none
+    hyphens-caption: auto
   # break
   19: # AFA Transgression
     # Ideal no figure
@@ -1089,7 +1089,7 @@ typologicalDatum:
     indent-caption: "9%"
     hyphens-title: none
     hyphens-subtitle: none
-    hyphens-caption: "auto"
+    hyphens-caption: auto
   # break
   28: # Fluxus / AFA Desire
     # Fluxus ideal no text
@@ -1131,7 +1131,7 @@ typologicalDatum:
     indent-caption: "0"
     hyphens-title: none
     hyphens-subtitle: none
-    hyphens-caption: none
+    hyphens-caption: auto
   # break
   29: # Fluxus / AFA Transgression
     # Fluxus ideal no text
