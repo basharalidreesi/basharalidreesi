@@ -29,6 +29,9 @@ works:
 #   type:       # <modifier>, unset
 #   isIndexed:  # <modifier>, true
 #   override:   # <modifier>, unset
+# -
+#   # recto
+#   title: To view architecture as nothing more than nicely-designed functional forms or as ornamental wrappings around our essential needs is to assign it the role of a craft and places too little value on its importance in our lives.
 -
   # recto
   title: To genuinely break away from architecture, you may even need to be murdered.
@@ -114,7 +117,7 @@ works:
 -
   # recto
   subtitle: If you want to follow architecture's first rule, break it.
-  text: Transgression. <br /> An exquisitely perverse act that never lasts. <br /> And like a caress is <br /> almost impossible to resist.
+  rText: Transgression. <br /> An exquisitely perverse act that never lasts. <br /> And like a caress is <br /> almost impossible to resist.
   title: TRANSGRESSION
   # folio
   type: "19"
@@ -190,7 +193,7 @@ works:
 -
   # recto
   subtitle: If you want to follow architecture's first rule, break it.
-  text: Transgression. <br /> An exquisitely perverse act that never lasts. <br /> And like a caress is <br /> almost impossible to resist.
+  rText: Transgression. <br /> An exquisitely perverse act that never lasts. <br /> And like a caress is <br /> almost impossible to resist.
   title: TRANSGRESSION
   # folio
   type: "29"
