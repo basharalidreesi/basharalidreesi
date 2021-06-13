@@ -25,18 +25,18 @@
                         display: block;
                         padding-top: calc(100% / var(--aspectRatio-indexOfWorks));
                 }
-                &::after {
-                        content: "";
-                        position: absolute;
-                        top: 1rem;
-                        left: 50%;
-                        display: block;
-                        height: calc(100% - 2rem);
-                        width: 0.5%;
-                        background: var(--color-dark);
-                        transform: translateX(-50%);
-                        z-index: -1;
-                }
+                // &::after {
+                //         content: "";
+                //         position: absolute;
+                //         top: 1rem;
+                //         left: 50%;
+                //         display: block;
+                //         height: calc(100% - 2rem);
+                //         width: 0.5%;
+                //         background: var(--color-dark);
+                //         transform: translateX(-50%);
+                //         z-index: -1;
+                // }
 
                 {% assign index = site.data.indexOfWorks %}
                 {% assign datum = index.typologicalDatum %}
