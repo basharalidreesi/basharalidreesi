@@ -8,9 +8,11 @@ style: indexOfWorks
 				{%- assign index = site.data.indexOfWorks -%}
 				{%- for work in index.works -%}
 				{%- if work.trueTitle -%}
-				{%- assign title = work.trueTitle | strip_html | replace: "  ", " " -%}
+				{%- assign title = work.trueTitle -%}
+				{%- assign strippedTitle = work.trueTitle | strip_html | replace: "  ", " " -%}
 				{%- else -%}
-				{%- assign title = work.title | strip_html | replace: "  ", " " -%}
+				{%- assign title = work.title -%}
+				{%- assign strippedTitle = work.title | strip_html | replace: "  ", " " -%}
 				{%- endif -%}
 				{%- if work.url -%}
 				{%- assign url = work.url -%}
@@ -22,7 +24,7 @@ style: indexOfWorks
 					<h3 class="generic--hidden">Work {{ forloop.rindex }}</h3>
 					<div class="indexOfWorks__work__folio">
 						<header class="indexOfWorks__work__outerRecto">
-							<a class="generic--disabled" href="{{ url }}" title="{{ title }}">
+							<a class="generic--disabled" href="{{ url }}" title="{{ strippedTitle }}">
 								<blockquote class="indexOfWorks__work__innerRecto" cite="{{ url | remove: site.url | prepend: site.url }}">
 									{%- for entry in work -%}
 									{%- assign key = entry[0] | remove: "0" | remove: "1" | remove: "2" | remove: "3" | remove: "4" | remove: "5" | remove: "6" | remove: "7" | remove: "8" | remove: "9" -%}
@@ -55,7 +57,7 @@ style: indexOfWorks
 						<footer class="indexOfWorks__work__outerVerso generic--jsOnly">
 							<article class="indexOfWorks__work__innerVerso">
 								<header class="indexOfWorks__work__header">
-									<a class="generic--disabled" href="{{ url }}" title="{{ title }}">
+									<a class="generic--disabled" href="{{ url }}" title="{{ strippedTitle }}">
 										← Flip back ←
 									</a>
 									<data class="indexOfWorks__work__numero" value="{{ forloop.rindex }}">
@@ -91,7 +93,7 @@ style: indexOfWorks
 								{%- endif -%}
 								{%- endfor %}
 								<footer class="indexOfWorks__work__footer">
-									<a href="{{ url }}" title="{{ title }}">
+									<a href="{{ url }}" title="{{ strippedTitle }}">
 										→ See more →
 									</a>
 								</footer>
