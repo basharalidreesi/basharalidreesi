@@ -20,6 +20,8 @@ style:
                                 {%- else -%}
                                 {%- assign url = title | strip_html | replace: "  ", " " | slugify | prepend: index.path | append: "/index.html" -%}
                                 {%- endif -%}
+                                <p>{{ page.url }}</p>
+                                <p>{{ url }}</p>
                                 {%- if url == page.url -%}
                                 {{ title }}
                                 {%- endif -%}
