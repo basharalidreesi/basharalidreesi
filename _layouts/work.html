@@ -18,7 +18,7 @@ style:
                                 {%- if work.url -%}
                                 {%- assign url = work.url -%}
                                 {%- else -%}
-                                {%- assign url = title | strip_html | replace: "  ", " " | slugify | prepend: index.path | append: "/" -%}
+                                {%- assign url = title | strip_html | replace: "  ", " " | slugify | prepend: index.path | append: "/index.html" -%}
                                 {%- endif -%}
                                 {%- if url == page.url -%}
                                 {{ title }}
