@@ -16,7 +16,17 @@
 		justify-content: center;
 		margin: -1rem -1rem 1rem -1rem;
 
-		&__work__folio { }
+		&__work__folio {
+			animation: rotate 5s infinite;
+			@keyframes rotate {
+				from {
+					transform: rotateY(0deg);
+				}
+				to {
+					transform: rotateY(180deg);
+				}
+			}
+		}
 
 		&__work__innerVerso > *:last-child {
 			margin-bottom: auto;
