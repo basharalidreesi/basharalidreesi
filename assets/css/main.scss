@@ -15,36 +15,6 @@ $font-size: 15px !default;
 	--color-text: black; // #fefdfa
 	@media (prefers-color-scheme: dark) { }
 
-	--aspectRatio-indexOfWorks: (2 / 3); // 1:1.5
-	--columns-indexOfWorks: 10;
-	@media (max-width: 4864px) {
-		--columns-indexOfWorks: 9;
-	}
-	@media (max-width: 4352px) {
-		--columns-indexOfWorks: 8;
-	}
-	@media (max-width: 3840px) {
-		--columns-indexOfWorks: 7;
-	}
-	@media (max-width: 3328px) {
-		--columns-indexOfWorks: 6;
-	}
-	@media (max-width: 2816px) {
-		--columns-indexOfWorks: 5;
-	}
-	@media (max-width: 2304px) {
-		--columns-indexOfWorks: 4;
-	}
-	@media (max-width: 1792px) {
-		--columns-indexOfWorks: 3;
-	}
-	@media (max-width: 1280px) {
-		--columns-indexOfWorks: 2;
-	}
-	@media (max-width: 768px) {
-		--columns-indexOfWorks: 1;
-	}
-
 }
 
 html,
