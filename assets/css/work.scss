@@ -12,7 +12,13 @@
 	}
 
 	.indexOfWorks {
+
 		justify-content: center;
+		margin: -1rem -1rem 1rem -1rem;
+
+		&__work__innerVerso > *:last-child {
+			margin-bottom: auto;
+		}
 	}
 
 }
