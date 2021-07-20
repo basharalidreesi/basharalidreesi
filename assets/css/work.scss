@@ -17,13 +17,26 @@
 		margin: -1rem -1rem 1rem -1rem;
 
 		&__work__folio {
-			animation: rotate 15s infinite linear both;
-			@keyframes rotate {
-				from {
-					transform: rotateY(0deg);
+			&:not(.generic--flipped) {
+				animation: rotateNormal 30s infinite linear;
+				@keyframes rotateNormal {
+					from {
+						transform: rotateY(0deg);
+					}
+					to {
+						transform: rotateY(360deg);
+					}
 				}
-				to {
-					transform: rotateY(360deg);
+			}
+			&.generic--flipped {
+				animation: rotateFlipped 30s infinite linear;
+				@keyframes rotateFlipped {
+					from {
+						transform: rotateY(180deg);
+					}
+					to {
+						transform: rotateY(540deg);
+					}
 				}
 			}
 		}
