@@ -6,25 +6,22 @@ style:
 ---
 
 	<article class="work">
+                                <p>{{ page.url }}</p>
                                 {%- assign index = site.data.indexOfWorks -%}
                                 {%- for work in index.works -%}
-                                {%- if work.trueTitle -%}
-                                {%- assign title = work.trueTitle -%}
-                                {%- assign strippedTitle = work.trueTitle | strip_html | replace: "  ", " " -%}
-                                {%- else -%}
-                                {%- assign title = work.title -%}
-                                {%- assign strippedTitle = work.title | strip_html | replace: "  ", " " -%}
-                                {%- endif -%}
-                                {%- if work.url -%}
-                                {%- assign url = work.url -%}
-                                {%- else -%}
-                                {%- assign url = title | strip_html | replace: "  ", " " | slugify | prepend: index.path | append: "/index.html" -%}
-                                {%- endif -%}
-                                <p>{{ page.url }}</p>
-                                <p>{{ url }}</p>
-                                {%- if url == page.url -%}
-                                {{ title }}
-                                {%- endif -%}
+                                        {%- if work.trueTitle -%}
+                                                {%- assign title = work.trueTitle -%}
+                                                {%- assign strippedTitle = work.trueTitle | strip_html | replace: "  ", " " -%}
+                                        {%- else -%}
+                                                {%- assign title = work.title -%}
+                                                {%- assign strippedTitle = work.title | strip_html | replace: "  ", " " -%}
+                                        {%- endif -%}
+                                        {%- if work.url -%}
+                                                {%- assign url = work.url -%}
+                                        {%- else -%}
+                                                {%- assign url = title | strip_html | replace: "  ", " " | slugify | prepend: index.path | append: "/index.html" -%}
+                                        {%- endif -%}
+                                        <p>{{ url }}</p>
                                 {%- endfor -%}
 				{{ content }}
 			</article>
