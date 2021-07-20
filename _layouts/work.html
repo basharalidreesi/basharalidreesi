@@ -17,7 +17,7 @@ style:
                                                 {%- assign strippedTitle = work.title | strip_html | replace: "  ", " " -%}
                                         {%- endif -%}
                                         {%- if work.url -%}
-                                                {%- assign url = work.url -%}
+                                                {%- assign url = work.url | append: "index.html" -%}
                                         {%- else -%}
                                                 {%- assign url = title | strip_html | replace: "  ", " " | slugify | prepend: index.path | append: "/index.html" -%}
                                         {%- endif -%}
