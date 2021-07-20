@@ -100,22 +100,7 @@
                 width: 100%;
                 transform-style: preserve-3d;
                 transition: transform 1.25s linear;
-                // transform: rotateY(0deg);
-                // &:first-of-type {
-                //         animation: demo 1.25s;
-                //         animation-play-state: paused;
-                //         @keyframes demo {
-                //                 0% {
-                //                         transform: rotateY(0deg);
-                //                 }
-                //                 50% {
-                //                         transform: rotateY(30deg);
-                //                 }
-                //                 100% {
-                //                         transform: rotateY(0deg);
-                //                 }
-                //         }
-                // }
+                outline: 1px solid transparent;
         }
 
         &__work__outerRecto,
