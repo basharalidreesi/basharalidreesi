@@ -51,6 +51,10 @@
 		&__work__innerVerso > *:last-child {
 			margin-bottom: auto;
 		}
+
+		&__work__tag {
+			pointer-events: none;
+		}
 	}
 
 }
