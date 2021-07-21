@@ -18,7 +18,7 @@
 
 		&__work__folio {
 			&:not(.generic--flipped) {
-				animation: rotateNormal 30s infinite linear;
+				animation: rotateNormal 60s infinite linear;
 				@keyframes rotateNormal {
 					from {
 						transform: rotateY(0deg);
@@ -29,7 +29,7 @@
 				}
 			}
 			&.generic--flipped {
-				animation: rotateFlipped 30s infinite linear;
+				animation: rotateFlipped 60s infinite linear;
 				@keyframes rotateFlipped {
 					from {
 						transform: rotateY(180deg);
