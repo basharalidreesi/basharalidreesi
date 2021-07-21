@@ -62,6 +62,13 @@ img {
 	user-select: none;
 }
 
+label {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 a,
 a:link,
 a:hover,
