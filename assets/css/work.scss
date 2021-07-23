@@ -22,6 +22,9 @@
 
 	#workHeaderToggle {
 		display: none;
+		&:checked ~ .indexOfWorks .indexOfWorks__work:last-of-type {
+			display: none;
+		}
 	}
 
 	.indexOfWorks {
