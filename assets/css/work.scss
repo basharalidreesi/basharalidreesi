@@ -5,6 +5,10 @@
 
 :root {
 
+	--color-outer: var(--color-light);
+	--color-inner: var(--color-light);
+	@media (prefers-color-scheme: dark) { }
+
 	--aspectRatio-indexOfWorks: (2 / 3); // 1:1.5
 	--columns-indexOfWorks: 4;
 	@media (max-width: 1280px) {
@@ -13,88 +17,89 @@
 	@media (max-width: 768px) {
 		--columns-indexOfWorks: 2;
 	}
+}
+
+.work {
 
 	#workHeaderToggle {
 		display: none;
 	}
 
-	.work {
-		.indexOfWorks {
+	.indexOfWorks {
 
-			justify-content: center;
-			margin: -1rem -1rem 1rem -1rem;
+		justify-content: center;
+		margin: -1rem -1rem 1rem -1rem;
 
-			&__work__folio {
-				&:not(.generic--flipped) {
-					animation: rotateNormal 60s infinite linear;
-					@keyframes rotateNormal {
-						from {
-							transform: rotateY(0deg);
-						}
-						to {
-							transform: rotateY(360deg);
-						}
+		&__work__folio {
+			&:not(.generic--flipped) {
+				animation: rotateNormal 60s infinite linear;
+				@keyframes rotateNormal {
+					from {
+						transform: rotateY(0deg);
 					}
-				}
-				&.generic--flipped {
-					animation: rotateFlipped 60s infinite linear;
-					@keyframes rotateFlipped {
-						from {
-							transform: rotateY(180deg);
-						}
-						to {
-							transform: rotateY(540deg);
-						}
+					to {
+						transform: rotateY(360deg);
 					}
 				}
 			}
+			&.generic--flipped {
+				animation: rotateFlipped 60s infinite linear;
+				@keyframes rotateFlipped {
+					from {
+						transform: rotateY(180deg);
+					}
+					to {
+						transform: rotateY(540deg);
+					}
+				}
+			}
+		}
 
-			&__work__innerVerso > *:last-child {
-				margin-bottom: auto;
-			}
-
-			&__work__tag {
-				pointer-events: none;
-			}
+		&__work__innerVerso > *:last-child {
+			margin-bottom: auto;
 		}
 
-		& > p,
-		& > blockquote,
-		& > header {
-			line-height: 1.2;
-			width: 50%;
-			@media (max-width: 1280px) {
-				width: 75%;
-			}
-			@media (max-width: 768px) {
-				width: 100%;
-			}
+		&__work__tag {
+			pointer-events: none;
 		}
-		& > p,
-		& > blockquote {
-			font-size: 1.5rem;
-			margin: auto;
-			& + p,
-			& + blockquote {
-				margin-top: 2rem;
-			}
-			i,
-			q,
-			em,
-			dfn {
-				font-style: italic;
-			}
+	}
+
+	& > p,
+	& > blockquote,
+	& > header {
+		line-height: 1.2;
+		width: 50%;
+		@media (max-width: 1280px) {
+			width: 75%;
 		}
-		& > header {
-			font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
-			font-size: 2rem;
-			font-weight: 700;
-			margin: 2rem auto;
+		@media (max-width: 768px) {
+			width: 100%;
 		}
-		& > blockquote {
-			border: 1px solid var(--color-text);
-			padding: 2rem;
+	}
+	& > p,
+	& > blockquote {
+		font-size: 1.5rem;
+		margin: auto;
+		& + p,
+		& + blockquote {
+			margin-top: 2rem;
 		}
+		i,
+		q,
+		em,
+		dfn {
+			font-style: italic;
+		}
+	}
+	& > header {
+		font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+		font-size: 2rem;
+		font-weight: 700;
+		margin: 2rem auto;
+	}
+	& > blockquote {
+		border: 1px solid var(--color-text);
+		padding: 2rem;
 	}
 
 }
