@@ -86,6 +86,11 @@ a:focus {
 	outline: none;
 }
 
+::-moz-selection,
+::selection {
+	background: yellow;
+}
+
 body {
 	background: var(--color-outer);
 }
