@@ -104,8 +104,20 @@ style:
                                 </header>
                                 {%- endif -%}
                                 {%- endfor %}
-                                {%- capture test -%}
-                                        <div style="height: 10px; width: 10px; background: blue;"></div>
+                                {%- capture sidenote -%}
+                                <span class="sidenote">
+                                        <input type="checkbox" id="sidenote__checkbox--1" class="sidenote__checkbox" aria-label="Show sidenote" />
+                                        <label for="sidenote__checkbox--1" tabindex="0" title="" aria-describedby="sidenote-1">Sidenote label</label>
+                                        <small id="sidenote-1" class="sidenote__content">
+                                                <span class="sidenote__content-parenthesis">
+                                                        (sidenote:
+                                                </span>
+                                                Sidenote content
+                                                <span class="sidenote__content-parenthesis">
+                                                        )
+                                                </span>
+                                        </small>
+                                </span>
                                 {%- endcapture %}
-				{{ content | replace: "the", test }}
+				{{ content | replace: "<!-- sidenote -->", sidenote }}
 			</article>
