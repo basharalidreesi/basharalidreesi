@@ -72,16 +72,17 @@
 		}
 		& > p,
 		& > blockquote {
+			font-size: 1.5rem;
 			margin: auto;
 			& + p,
 			& + blockquote {
-				font-size: 1.5rem;
 				margin-top: 2rem;
 			}
 		}
 		& > header {
 			font-size: 2rem;
 			margin: 2rem auto;
+			font-family: "Neue Montreal", "Helvetica", "Helvetica Neue", "Arial", sans-serif;
 		}
 	}
 
