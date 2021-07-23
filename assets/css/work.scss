@@ -78,12 +78,22 @@
 			& + blockquote {
 				margin-top: 2rem;
 			}
+			i,
+			q,
+			em,
+			dfn {
+				font-style: italic;
+			}
 		}
 		& > header {
 			font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
 			font-size: 2rem;
 			font-weight: 700;
 			margin: 2rem auto;
+		}
+		& > blockquote {
+			border: 1px solid var(--color-text);
+			padding: 2rem;
 		}
 	}
 
