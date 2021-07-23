@@ -23,7 +23,11 @@
 	#workHeaderToggle {
 		display: none;
 		&:checked ~ .indexOfWorks .indexOfWorks__work:last-of-type {
-			display: none;
+			position: absolute !important;
+			top: -9999px !important;
+			left: -9999px !important;
+			height: 1px !important;
+			width: 1px !important;
 		}
 	}
 
