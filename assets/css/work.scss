@@ -28,6 +28,9 @@
 
 		justify-content: center;
 		margin: -1rem -2rem;
+		@media (max-width: 768px) {
+			margin: -1rem;
+		}
 
 		&__work__folio {
 			&:not(.generic--flipped) {
