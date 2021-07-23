@@ -7,9 +7,9 @@
 
 	--aspectRatio-indexOfWorks: (2 / 3); // 1:1.5
 	--columns-indexOfWorks: 4;
-	@media (max-width: 1280px) {
-		--columns-indexOfWorks: 3;
-	}
+	// @media (max-width: 1280px) {
+	// 	--columns-indexOfWorks: 3;
+	// }
 	@media (max-width: 768px) {
 		--columns-indexOfWorks: 2;
 	}
@@ -18,42 +18,53 @@
 		display: none;
 	}
 
-	.indexOfWorks {
+	.work {
+		.indexOfWorks {
 
-		justify-content: center;
-		margin: -1rem -1rem 1rem -1rem;
+			justify-content: center;
+			margin: -1rem -1rem 1rem -1rem;
 
-		&__work__folio {
-			&:not(.generic--flipped) {
-				animation: rotateNormal 60s infinite linear;
-				@keyframes rotateNormal {
-					from {
-						transform: rotateY(0deg);
+			&__work__folio {
+				&:not(.generic--flipped) {
+					animation: rotateNormal 60s infinite linear;
+					@keyframes rotateNormal {
+						from {
+							transform: rotateY(0deg);
+						}
+						to {
+							transform: rotateY(360deg);
+						}
 					}
-					to {
-						transform: rotateY(360deg);
+				}
+				&.generic--flipped {
+					animation: rotateFlipped 60s infinite linear;
+					@keyframes rotateFlipped {
+						from {
+							transform: rotateY(180deg);
+						}
+						to {
+							transform: rotateY(540deg);
+						}
 					}
 				}
 			}
-			&.generic--flipped {
-				animation: rotateFlipped 60s infinite linear;
-				@keyframes rotateFlipped {
-					from {
-						transform: rotateY(180deg);
-					}
-					to {
-						transform: rotateY(540deg);
-					}
-				}
+
+			&__work__innerVerso > *:last-child {
+				margin-bottom: auto;
+			}
+
+			&__work__tag {
+				pointer-events: none;
 			}
 		}
 
-		&__work__innerVerso > *:last-child {
-			margin-bottom: auto;
-		}
-
-		&__work__tag {
-			pointer-events: none;
+		p {
+			font-size: 1.5rem;
+			width: 50%;
+			margin: auto;
+			@media (max-width: 768px) {
+				width: 100%;
+			}
 		}
 	}
 
