@@ -103,6 +103,9 @@ style:
                                         </h1>
                                 </header>
                                 {%- endif -%}
-                                {%- endfor -%}
-				{{ content | replace: "the", "lmfao butt" }}
+                                {%- endfor %}
+                                {%- capture test -%}
+                                        <div style="height: 10px; width: 10px; background: blue;"></div>
+                                {%- endcapture %}
+				{{ content | replace: "the", test }}
 			</article>
