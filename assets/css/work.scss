@@ -161,9 +161,6 @@
 				--color-text: blue;
 			}
 		}
-		&:active {
-			--color-text: black;
-		}
 		&__toggle {
 			display: none;
 			&:checked ~ .note__label,
