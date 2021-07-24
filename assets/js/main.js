@@ -146,9 +146,12 @@ const bashar = {
 			bashar.lexicon.noteContents.forEach((note, i) => {
 				let noteOffsetTop = note.getBoundingClientRect().top;
 				let noteOffsetBottom = note.getBoundingClientRect().bottom;
-				console.log(i + ": " + noteOffsetTop + " + " + noteOffsetBottom);
+				// console.log(i + ": " + noteOffsetTop + " + " + noteOffsetBottom);
 				if (noteOffsetTop <= previousNoteOffsetBottom) {
-					console.log(i + " is overlapping" + (i - 1));
+					let offsetDelta = previousNoteOffsetBottom - noteOffsetTop;
+					let newOffsetTop = "calc(" + "-3.35rem + " + offsetDelta + ")";
+					note.style.setProperty("margin-top", newOffsetTop);
+					// console.log(i + " is overlapping " + (i - 1));
 				}
 				previousNoteOffsetTop = noteOffsetTop;
 				previousNoteOffsetBottom = noteOffsetBottom;
