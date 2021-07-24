@@ -16,6 +16,8 @@
 	@media (max-width: 768px) {
 		--columns-indexOfWorks: 2;
 	}
+
+	counter-reset: note;
 }
 
 .work {
@@ -159,6 +161,7 @@
 		}
 		&__toggle {
 			display: none;
+			counter-increment: note;
 			&:checked ~ .note__label,
 			&:checked ~ .note__content {
 				--color-text: blue;
@@ -175,6 +178,12 @@
 			}
 		}
 		&__label {
+			&::after {
+				content: " " counter(note);
+				font-size: 1rem;
+				vertical-align: super;
+				--color-text: blue;
+			}
 			// --color-text: blue;
 			// text-decoration: underline;
 			// text-decoration-style: dashed;
@@ -195,6 +204,11 @@
 			left: calc(75% + 1rem);
 			width: max-content;
 			max-width: calc(25% - 3rem);
+			&::before {
+				content: counter(note) " ";
+				font-size: 1rem;
+				vertical-align: super;
+			}
 			// opacity: 0.25;
 			// transition: opacity 0.25s, color 0.25s;
 			// @media (any-hover: hover) {
