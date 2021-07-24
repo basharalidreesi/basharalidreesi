@@ -154,6 +154,11 @@
 
 		&__toggle {
 			display: none;
+			@media (max-width: 1280px) {
+				&:checked ~ .note__content {
+					display: block;
+				}
+			}
 		}
 		&__label {
 			/* display: none; */
@@ -161,6 +166,9 @@
 		&__content {
 			display: block;
 			margin: 1rem auto;
+			@media (max-width: 1280px) {
+				display: none;
+			}
 		}
 		&__parenthesis {
 			position: absolute !important;
@@ -170,7 +178,7 @@
 			height: 1px !important;
 			overflow: hidden;
 		}
-		
+
 	}
 
 }
