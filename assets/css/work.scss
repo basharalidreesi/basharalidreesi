@@ -116,11 +116,6 @@
 		dfn {
 			font-style: italic;
 		}
-		q,
-		q::before,
-		q::after {
-			// quotes: "«" "»" "‹" "›";
-		}
 	}
 	& > p,
 	& > blockquote {
@@ -189,9 +184,8 @@
 					font-size: 1rem;
 					vertical-align: super;
 					--color-text: blue;
-			    // -moz-webkit-font-feature-settings: "sups";
-				// -webkit-font-feature-settings: "sups";
-				// 	font-feature-settings: "sups";
+					text-decoration: underline;
+					text-decoration-color: var(--color-inner);
 				}
 			}
 		}
