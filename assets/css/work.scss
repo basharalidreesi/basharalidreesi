@@ -116,6 +116,10 @@
 		dfn {
 			font-style: italic;
 		}
+		q::before,
+		q::after {
+			text-decoration: none;
+		}
 	}
 	& > p,
 	& > blockquote {
@@ -184,6 +188,7 @@
 					font-size: 1rem;
 					vertical-align: super;
 					--color-text: blue;
+					text-decoration: none;
 				}
 			}
 		}
