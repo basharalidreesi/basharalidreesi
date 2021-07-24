@@ -206,9 +206,7 @@
 			width: max-content;
 			max-width: calc(25% - 3rem);
 			&::before {
-				content: counter(note) " ";
-				font-size: 1rem;
-				vertical-align: super;
+				content: counter(note) " — ";
 				--color-text: blue;
 			}
 			// opacity: 0.25;
