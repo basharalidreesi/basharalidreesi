@@ -99,7 +99,8 @@
 		margin: auto;
 		max-width: 100%;
 		& + p,
-		& + blockquote {
+		& + blockquote,
+		& + img {
 			margin-top: 2rem;
 		}
 	}
