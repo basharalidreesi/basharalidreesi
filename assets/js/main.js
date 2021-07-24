@@ -143,6 +143,7 @@ const bashar = {
 		spaceNoteContents: function() {
 			var previousNoteOffsetTop = 0;
 			var previousNoteOffsetBottom = 0;
+			var offsetDelta = 0;
 			var previousOffsetDelta = 0;
 			bashar.lexicon.noteContents.forEach((note, i) => {
 				let noteOffsetTop = note.getBoundingClientRect().top;
@@ -150,7 +151,7 @@ const bashar = {
 				// console.log(i + ": " + noteOffsetTop + " + " + noteOffsetBottom);
 				if (noteOffsetTop <= previousNoteOffsetBottom) {
 					// console.log("Check 1: " + (i+1) + " is overlapping " + i);
-					let offsetDelta = previousNoteOffsetBottom - noteOffsetTop;
+					offsetDelta = previousNoteOffsetBottom - noteOffsetTop;
 					let newOffsetTop = "calc(" + "-3.35rem + " + offsetDelta + "px - 1px + " + previousOffsetDelta + "px)";
 					note.style.marginTop = newOffsetTop;
 				} else {
@@ -160,8 +161,7 @@ const bashar = {
 				previousNoteOffsetBottom = noteOffsetBottom;
 				previousOffsetDelta = offsetDelta;
 			});
-
-		}
+		},
 	},
 
 	util: {
