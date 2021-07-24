@@ -198,7 +198,7 @@
 		&__content {
 			position: absolute;
 			display: block;
-			margin-top: -3rem;
+			margin-top: -3.35rem;
 			padding: 1rem;
 			border: 1px dashed var(--color-text);
 			font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
@@ -206,7 +206,7 @@
 			width: max-content;
 			max-width: calc(25% - 3rem);
 			&::before {
-				content: counter(note) " — ";
+				content: counter(note) " ";
 				--color-text: blue;
 			}
 			// opacity: 0.25;
