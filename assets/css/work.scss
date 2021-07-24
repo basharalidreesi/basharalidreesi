@@ -160,8 +160,8 @@
 					display: block;
 				}
 			}
-			@media (any-hover: hover) {
-				&:hover ~ .note__content {
+			&:hover ~ .note__content {
+				@media (any-hover: hover) {
 					--color-text: blue;
 				}
 			}
