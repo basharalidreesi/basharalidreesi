@@ -154,7 +154,10 @@
 	.note__toggle {
 		display: none;
 	}
-	.note__content { /* display: none; */ }
+	.note__content {
+		display: block;
+		margin: 1rem auto;
+	}
 	.note__parenthesis {
 		position: absolute !important;
 		top: -9999px !important;
