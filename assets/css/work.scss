@@ -166,19 +166,17 @@
 		&__content {
 			position: absolute;
 			display: block;
-			margin-top: -2rem;
+			margin-top: -3rem;
 			padding: 1rem;
 			border: 1px dashed var(--color-text);
 			font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
-
-			right: 2rem;
-			width: calc(25% - 1rem);
-
+			left: calc(75% + 1rem);
+			width: max-content;
+			max-width: calc(25% - 3rem);
 			@media (max-width: 1280px) {
 				position: relative;
 				display: none;
-				right: 0;
-				width: max-content;
+				left: 0;
 				max-width: 100%;
 				margin: 2rem auto;
 			}
