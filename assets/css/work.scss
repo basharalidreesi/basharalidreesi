@@ -154,6 +154,8 @@
 
 	.note {
 
+		counter-increment: note;
+
 		&:hover {
 			@media (any-hover: hover) {
 				--color-text: blue;
@@ -161,7 +163,6 @@
 		}
 		&__toggle {
 			display: none;
-			counter-increment: note;
 			&:checked ~ .note__label,
 			&:checked ~ .note__content {
 				--color-text: blue;
