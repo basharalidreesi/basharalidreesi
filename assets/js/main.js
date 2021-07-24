@@ -141,8 +141,8 @@ const bashar = {
 
 		},
 		spaceNoteContents: function() {
-			let previousNoteOffsetTop = 0;
-			let previousNoteOffsetBottom = 0;
+			var previousNoteOffsetTop = 0;
+			var previousNoteOffsetBottom = 0;
 			bashar.lexicon.noteContents.forEach((note, i) => {
 				let noteOffsetTop = note.getBoundingClientRect().top;
 				let noteOffsetBottom = note.getBoundingClientRect().bottom;
