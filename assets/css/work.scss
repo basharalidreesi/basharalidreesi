@@ -67,6 +67,10 @@
 					}
 				}
 			}
+			@media print {
+				animation: none !important;
+				transition: none !important;
+			}
 		}
 
 		&__work__innerVerso > *:last-child {

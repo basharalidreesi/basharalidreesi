@@ -151,7 +151,7 @@ body {
 		display: none;
 	}
 
-	@media (prefers-reduced-motion: reduce), print {
+	@media (prefers-reduced-motion: reduce) {
 		* {
 			animation: none !important;
 			transition: none !important;
