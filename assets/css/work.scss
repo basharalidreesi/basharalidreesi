@@ -152,8 +152,10 @@
 
 	.note {
 
-		@media (any-hover: hover) {
-			--color-text: blue;
+		&:hover {
+			@media (any-hover: hover) {
+				--color-text: blue;
+			}
 		}
 		&__toggle {
 			display: none;
