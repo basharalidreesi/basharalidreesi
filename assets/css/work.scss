@@ -175,17 +175,17 @@
 					font-size: 1rem;
 					vertical-align: super;
 					--color-text: blue;
-					text-decoration: underline;
-					text-decoration-color: var(--color-inner);
+					// text-decoration: underline;
+					// text-decoration-color: var(--color-inner);
 				}
 			}
 		}
 		&__label {
-			text-decoration: underline;
-			text-decoration-style: dashed;
-			text-decoration-thickness: 1px;
-			text-decoration-color: var(--color-text);
-			text-underline-offset: 0.5rem;
+			// text-decoration: underline;
+			// text-decoration-style: dashed;
+			// text-decoration-thickness: 1px;
+			// text-decoration-color: var(--color-text);
+			// text-underline-offset: 0.5rem;
 		}
 		&__content {
 			position: absolute;
