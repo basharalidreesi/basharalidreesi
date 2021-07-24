@@ -153,34 +153,33 @@
 	.note {
 
 		&__toggle {
-			display: none;
+			&:checked ~ .note__content {
+				display: block;
+			}
 			@media (max-width: 1792px) {
-				&:checked ~ .note__content {
-					display: block;
-				}
+				display: none;
 			}
 		}
 		&__label {
 			--color-text: blue;
 		}
 		&__content {
-			position: absolute;
-			display: block;
-			margin-top: -2rem;
-			padding: 1rem;
-			border: 1px dashed var(--color-text);
-			font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
-
-			right: 2rem;
-			width: calc(25% - 1rem);
-
+			position: relative;
+			display: none;
+			right: 0;
+			width: max-content;
+			max-width: 100%;
+			margin: 2rem auto;
 			@media (max-width: 1792px) {
-				position: relative;
-				display: none;
-				right: 0;
-				width: max-content;
-				max-width: 100%;
-				margin: 2rem auto;
+				position: absolute;
+				display: block;
+				margin-top: -2rem;
+				padding: 1rem;
+				border: 1px dashed var(--color-text);
+				font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+
+				right: 2rem;
+				width: calc(25% - 1rem);
 			}
 		}
 		&__parenthesis {
