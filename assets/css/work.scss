@@ -193,6 +193,8 @@
 		&__label {
 			text-decoration: underline;
 			text-decoration-style: dashed;
+			text-decoration-thickness: 1px;
+			text-decoration-color: var(--color-text);
 			text-underline-offset: 0.5rem;
 		}
 		&__content {
