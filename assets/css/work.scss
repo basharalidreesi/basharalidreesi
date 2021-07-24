@@ -179,15 +179,15 @@
 			}
 			& + .note__label {
 				counter-increment: note;
+				&::after {
+					content: " " counter(note);
+					font-size: 1rem;
+					vertical-align: super;
+					--color-text: blue;
+				}
 			}
 		}
 		&__label {
-			&::after {
-				content: " " counter(note);
-				font-size: 1rem;
-				vertical-align: super;
-				--color-text: blue;
-			}
 			// --color-text: blue;
 			// text-decoration: underline;
 			// text-decoration-style: dashed;
