@@ -88,6 +88,31 @@
 			width: 100%;
 		}
 	}
+	& > header,
+	& > p,
+	& > blockquote {
+		line-height: 1.25;
+	}
+	& > p,
+	& > blockquote,
+	& > img {
+		margin: auto;
+		max-width: 100%;
+		& + p,
+		& + blockquote {
+			margin-top: 2rem;
+		}
+	}
+	& > p,
+	& > blockquote {
+		font-size: 1.5rem;
+		i,
+		q,
+		em,
+		dfn {
+			font-style: italic;
+		}
+	}
 	& > header {
 		font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
 		font-weight: 700;
@@ -100,27 +125,6 @@
 		@media (max-width: 768px) {
 			padding: 1rem;
 			font-size: 1.5rem;
-		}
-	}
-	& > header,
-	& > p,
-	& > blockquote {
-		line-height: 1.25;
-	}
-	& > p,
-	& > blockquote {
-		font-size: 1.5rem;
-		margin: auto;
-		max-width: 100%;
-		& + p,
-		& + blockquote {
-			margin-top: 2rem;
-		}
-		i,
-		q,
-		em,
-		dfn {
-			font-style: italic;
 		}
 	}
 	& > blockquote {
