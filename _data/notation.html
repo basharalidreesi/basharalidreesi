@@ -1,1 +1,8 @@
-<span class="sidenote"><input type="checkbox" id="sidenote__checkbox--{%- assign sidenote = sidenote | plus: 1 -%}{{- sidenote -}}" class="sidenote__checkbox" aria-label="Show sidenote" /><label for="sidenote__checkbox--{{- sidenote -}}" tabindex="0" title="" aria-describedby="sidenote-{{- sidenote -}}"><!-- SIDENOTE LABEL --></label><small id="sidenote-{{- sidenote -}}" class="sidenote__content"><span class="sidenote__content-parenthesis"> (sidenote: </span><!-- SIDENOTE CONTENT --><span class="sidenote__content-parenthesis">)</span></small></span>
+<!-- mono-part note -->
+<span class="note"><input type="checkbox" id="note__toggle--{%- assign note = note | plus: 1 -%}{{- note -}}" class="note__toggle" aria-label="Show note" /><label for="note__toggle--{{- note -}}" class="note__label" aria-describedby="note--{{- note -}}" title="<!-- NOTE CONTENT -->"><!-- NOTE LABEL --></label><small id="note--{{- note -}}" class="note__content"><span class="note__parenthesis"> [note: </span><!-- NOTE CONTENT --><span class="note__parenthesis">]</span></small></span>
+
+<!-- multi-part note -->
+<span class="note"><label for="note__toggle--{%- assign note = note | plus: 1 -%}{{- note -}}" class="note__label" aria-describedby="note--{{- note -}}" title="<!-- NOTE CONTENT -->"><!-- NOTE LABEL 1 --></label></span>
+<!-- ... -->
+<!-- IN-BETWEEN CONTENT -->
+<span class="note"><input type="checkbox" id="note__toggle--{{- note -}}" class="note__toggle" aria-label="Show note" /><label for="note__toggle--{{- note -}}" class="note__label" aria-describedby="note--{{- note -}}" title="<!-- NOTE CONTENT -->"><!-- NOTE LABEL 2 --></label><small id="note--{{- note -}}" class="note__content"><span class="note__parenthesis"> [note: </span><!-- NOTE CONTENT --><span class="note__parenthesis">]</span></small></span>
