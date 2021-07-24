@@ -180,7 +180,7 @@
 			& + .note__label {
 				counter-increment: note;
 				&::after {
-					content: " " counter(note);
+					content: "\00A0" counter(note);
 					font-size: 1rem;
 					vertical-align: super;
 					--color-text: blue;
