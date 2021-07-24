@@ -151,7 +151,7 @@ const bashar = {
 					let offsetDelta = previousNoteOffsetBottom - noteOffsetTop;
 					let newOffsetTop = "calc(" + "-3.35rem + " + offsetDelta + ")";
 					note.style.marginTop = newOffsetTop;
-					// console.log(i + " is overlapping " + (i - 1));
+					console.log(i + " is overlapping " + (i - 1));
 				}
 				previousNoteOffsetTop = noteOffsetTop;
 				previousNoteOffsetBottom = noteOffsetBottom;
