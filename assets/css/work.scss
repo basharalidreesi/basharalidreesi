@@ -157,8 +157,10 @@
 			@media (max-width: 1280px) {
 				&:checked ~ .note__content {
 					display: block;
-					--color-text: blue;
 				}
+			}
+			&:checked ~ .note__content {
+				--color-text: blue;
 			}
 		}
 		&__label {
