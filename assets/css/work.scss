@@ -100,14 +100,17 @@
 		}
 	}
 	& > p,
-	& > blockquote,
-	.note__content {
+	& > blockquote {
 		font-family: "Times", "Times New Roman", serif;
 		i,
 		q,
 		em,
 		dfn {
 			font-style: italic;
+		}
+		b,
+		strong {
+			font-weight: 700;
 		}
 	}
 	& > p,
