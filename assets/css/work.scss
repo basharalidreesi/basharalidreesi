@@ -116,9 +116,10 @@
 		dfn {
 			font-style: italic;
 		}
+		q,
 		q::before,
 		q::after {
-			text-decoration: none;
+			quotes: "«" "»" "‹" "›";
 		}
 	}
 	& > p,
