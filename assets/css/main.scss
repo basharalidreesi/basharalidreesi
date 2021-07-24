@@ -62,7 +62,7 @@ img {
 	user-select: none;
 }
 
-label {
+label:not(.note__label) {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
