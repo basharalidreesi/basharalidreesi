@@ -143,21 +143,22 @@ const bashar = {
 		spaceNoteContents: function() {
 			var previousNoteOffsetTop = 0;
 			var previousNoteOffsetBottom = 0;
+			var previousOffsetDelta = 0;
 			bashar.lexicon.noteContents.forEach((note, i) => {
 				let noteOffsetTop = note.getBoundingClientRect().top;
 				let noteOffsetBottom = note.getBoundingClientRect().bottom;
 				// console.log(i + ": " + noteOffsetTop + " + " + noteOffsetBottom);
 				if (noteOffsetTop <= previousNoteOffsetBottom) {
-					console.log("Check 1: " + (i+1) + " is overlapping " + i);
+					// console.log("Check 1: " + (i+1) + " is overlapping " + i);
 					let offsetDelta = previousNoteOffsetBottom - noteOffsetTop;
-					let newOffsetTop = "calc(" + "-3.35rem + " + offsetDelta + "px - 1px)";
+					let newOffsetTop = "calc(" + "-3.35rem + " + offsetDelta + "px - 1px + " + previousOffsetDelta + "px)";
 					note.style.marginTop = newOffsetTop;
+				} else {
+					previousOffsetDelta = 0;
 				}
 				previousNoteOffsetTop = noteOffsetTop;
 				previousNoteOffsetBottom = noteOffsetBottom;
-				if (noteOffsetTop <= previousNoteOffsetBottom) {
-					console.log("Check 2: " + (i+1) + " is overlapping " + i);
-				}
+				previousOffsetDelta = offsetDelta;
 			});
 
 		}
