@@ -157,18 +157,20 @@
 			@media (max-width: 1280px) {
 				&:checked ~ .note__content {
 					display: block;
+					--color-text: blue;
 				}
 			}
 		}
 		&__label {
-			text-decoration: underline;
-			text-decoration-style: dashed;
-			text-underline-offset: 0.5rem;
-			@media (any-hover: hover) {
-				&:hover ~ .note__content {
-					opacity: 1;
-				}
-			}
+			--color-text: blue;
+			// text-decoration: underline;
+			// text-decoration-style: dashed;
+			// text-underline-offset: 0.5rem;
+			// @media (any-hover: hover) {
+			// 	&:hover ~ .note__content {
+			// 		opacity: 1;
+			// 	}
+			// }
 		}
 		&__content {
 			position: absolute;
@@ -181,12 +183,12 @@
 			width: max-content;
 			max-width: calc(25% - 3rem);
 			opacity: 0.25;
-			transition: opacity 0.25s;
-			@media (any-hover: hover) {
-				&:hover {
-					opacity: 1;
-				}
-			}
+			transition: opacity 0.25s, color 0.25s;
+			// @media (any-hover: hover) {
+			// 	&:hover {
+			// 		opacity: 1;
+			// 	}
+			// }
 			@media (max-width: 1280px) {
 				position: relative;
 				display: none;
