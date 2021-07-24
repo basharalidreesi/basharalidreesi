@@ -105,15 +105,22 @@
 		}
 	}
 	& > p,
-	& > blockquote {
+	& > blockquote,
+	.note__content {
 		font-family: "Times", "Times New Roman", serif;
-		font-size: 1.5rem;
 		i,
 		q,
 		em,
 		dfn {
 			font-style: italic;
 		}
+	}
+	& > p,
+	& > blockquote {
+		font-size: 1.5rem;
+	}
+	.note__content {
+		font-size: 1rem;
 	}
 	& > header {
 		font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
@@ -144,7 +151,9 @@
 	}
 
 	.note { /* display: none; */ }
-	.note__toggle { /* display: none; */ }
+	.note__toggle {
+		display: none;
+	}
 	.note__content { /* display: none; */ }
 	.note__parenthesis { /* display: none; */ }
 
