@@ -16,6 +16,8 @@ const bashar = {
 		disabledAnchors: document.querySelectorAll(".generic--disabled"),
 		numeros: document.querySelectorAll(".indexOfWorks__work__numero"),
 
+		noteContents: document.querySelectorAll(".note__content"),
+
 	},
 
 	initAllScripts: function() {
@@ -119,6 +121,7 @@ const bashar = {
 		initMainScripts: function() {
 			bashar.main.displayJsOnly();
 			bashar.main.disableFolioAnchors();
+			bashar.main.spaceNoteContents();
 		},
 		displayJsOnly: function() {
 			if (!bashar.lexicon.jsOnly) { return; }
@@ -137,6 +140,14 @@ const bashar = {
 			});
 
 		},
+		spaceNoteContents: function() {
+			bashar.lexicon.noteContents.forEach((note, i) => {
+				let noteOffsetTop = note.getBoundingClientRect().top;
+				let noteOffsetBottom = note.getBoundingClientRect().bottom;
+				console.log(i + ": " + noteOffsetTop + " + " + noteOffsetBottom);
+			});
+
+		}
 	},
 
 	util: {
