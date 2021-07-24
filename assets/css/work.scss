@@ -152,17 +152,17 @@
 
 	.note {
 
-		@media (any-hover: hover) {
-			&:hover {
-				--color-text: blue;
-			}
-		}
 		&__toggle {
 			display: none;
 			&:checked ~ .note__content {
 				--color-text: blue;
 				@media (max-width: 1280px) {
 					display: block;
+				}
+			}
+			@media (any-hover: hover) {
+				&:hover ~ .note__content {
+					--color-text: blue;
 				}
 			}
 		}
