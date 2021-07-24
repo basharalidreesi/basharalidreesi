@@ -67,10 +67,6 @@
 					}
 				}
 			}
-			@media print {
-				animation: none !important;
-				transition: none !important;
-			}
 		}
 
 		&__work__innerVerso > *:last-child {
@@ -188,9 +184,6 @@
 					--color-text: blue;
 					text-decoration: underline;
 					text-decoration-color: var(--color-inner);
-					@media print {
-						text-decoration: none;
-					}
 				}
 			}
 		}
@@ -200,9 +193,6 @@
 			text-decoration-thickness: 1px;
 			text-decoration-color: var(--color-text);
 			text-underline-offset: 0.5rem;
-			@media print {
-				text-decoration: none;
-			}
 		}
 		&__content {
 			position: absolute;
@@ -218,15 +208,12 @@
 				content: counter(note) " ";
 				--color-text: blue;
 			}
-			@media (max-width: 1280px), print {
+			@media (max-width: 1280px) {
 				position: relative;
 				display: none;
 				left: 0;
 				max-width: 100%;
 				margin: 2rem auto;
-			}
-			@media print {
-				display: block;
 			}
 		}
 		&__parenthesis {
