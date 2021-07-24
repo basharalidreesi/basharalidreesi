@@ -155,7 +155,7 @@ const bashar = {
 					let newOffsetTop = "calc(" + "-3.35rem + " + offsetDelta + "px - 1px + " + previousOffsetDelta + "px)";
 					note.style.marginTop = newOffsetTop;
 				} else {
-					previousOffsetDelta = 0;
+					offsetDelta = 0;
 				}
 				previousNoteOffsetTop = noteOffsetTop;
 				previousNoteOffsetBottom = noteOffsetBottom;
