@@ -154,8 +154,6 @@
 
 	.note {
 
-		// counter-increment: note;
-
 		&:hover {
 			@media (any-hover: hover) {
 				--color-text: blue;
@@ -182,7 +180,6 @@
 				&::after {
 					content: "\00A0" counter(note);
 					font-size: 1rem;
-					// font-weight: 700;
 					vertical-align: super;
 					--color-text: blue;
 					text-decoration: underline;
@@ -204,30 +201,19 @@
 			padding: 1rem;
 			border: 1px dashed var(--color-text);
 			font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
-			// left: calc(75% + 1rem);
 			left: calc(75% + 4rem);
 			width: max-content;
-			// max-width: calc(25% - 3rem);
 			max-width: calc(25% - 9rem);
 			&::before {
 				content: counter(note) " ";
-				// font-weight: 700;
 				--color-text: blue;
 			}
-			// opacity: 0.25;
-			// transition: opacity 0.25s, color 0.25s;
-			// @media (any-hover: hover) {
-			// 	&:hover {
-			// 		opacity: 1;
-			// 	}
-			// }
-			@media (max-width: 1280px) {
+			@media (max-width: 1280px), print {
 				position: relative;
 				display: none;
 				left: 0;
 				max-width: 100%;
 				margin: 2rem auto;
-				// opacity: 1;
 			}
 		}
 		&__parenthesis {
