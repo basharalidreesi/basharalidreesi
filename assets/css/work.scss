@@ -154,7 +154,7 @@
 
 		&__toggle {
 			display: none;
-			@media (max-width: 1280px) {
+			@media (max-width: 1792px) {
 				&:checked ~ .note__content {
 					display: block;
 				}
@@ -174,7 +174,7 @@
 			right: 2rem;
 			width: calc(25% - 1rem);
 
-			@media (max-width: 1280px) {
+			@media (max-width: 1792px) {
 				position: relative;
 				display: none;
 				right: 0;
