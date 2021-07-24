@@ -159,6 +159,11 @@
 				@media (max-width: 1280px) {
 					display: block;
 				}
+				@media (any-hover: hover) {
+					&:hover {
+						--color-text: blue;
+					}
+				}
 			}
 		}
 		&__label {
