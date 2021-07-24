@@ -175,7 +175,7 @@
 			max-width: calc(25% - 3rem);
 			opacity: 0.25;
 			transition: opacity 0.25s;
-			@media (hover: any-hover) {
+			@media (any-hover: hover) {
 				&:hover {
 					opacity: 1;
 				}
