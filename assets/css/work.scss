@@ -119,6 +119,7 @@
 	}
 	& > p,
 	& > blockquote {
+		width: max-content;
 		font-size: 1.5rem;
 	}
 	.note__content {
