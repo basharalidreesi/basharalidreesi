@@ -182,8 +182,8 @@
 			left: calc(75% + 1rem);
 			width: max-content;
 			max-width: calc(25% - 3rem);
-			opacity: 0.25;
-			transition: opacity 0.25s, color 0.25s;
+			// opacity: 0.25;
+			// transition: opacity 0.25s, color 0.25s;
 			// @media (any-hover: hover) {
 			// 	&:hover {
 			// 		opacity: 1;
@@ -195,7 +195,7 @@
 				left: 0;
 				max-width: 100%;
 				margin: 2rem auto;
-				opacity: 1;
+				// opacity: 1;
 			}
 		}
 		&__parenthesis {
