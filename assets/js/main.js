@@ -148,10 +148,10 @@ const bashar = {
 				let noteOffsetBottom = note.getBoundingClientRect().bottom;
 				// console.log(i + ": " + noteOffsetTop + " + " + noteOffsetBottom);
 				if (noteOffsetTop <= previousNoteOffsetBottom) {
-					let offsetDelta = previousNoteOffsetBottom - noteOffsetTop;
-					let newOffsetTop = "calc(" + "-3.35rem + " + offsetDelta + ")";
-					note.style.marginTop = newOffsetTop;
 					console.log((i+1) + " is overlapping " + i);
+					let offsetDelta = previousNoteOffsetBottom - noteOffsetTop;
+					let newOffsetTop = "calc(" + "-3.35rem + " + offsetDelta + "px)";
+					note.style.marginTop = newOffsetTop;
 				}
 				previousNoteOffsetTop = noteOffsetTop;
 				previousNoteOffsetBottom = noteOffsetBottom;
