@@ -187,9 +187,11 @@
 				&::after {
 					content: " " counter(note);
 					font-size: 1rem;
-					vertical-align: super;
+					// vertical-align: super;
 					--color-text: blue;
-					text-decoration: none;
+			    -moz-webkit-font-feature-settings: "sups";
+				-webkit-font-feature-settings: "sups";
+					font-feature-settings: "sups";
 				}
 			}
 		}
