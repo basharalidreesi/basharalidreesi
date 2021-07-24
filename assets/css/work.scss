@@ -161,8 +161,7 @@
 			}
 		}
 		&__label {
-			border: 1px dashed var(--color-text);
-			padding: 0.2rem;
+			--color-text: blue;
 		}
 		&__content {
 			position: absolute;
