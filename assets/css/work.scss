@@ -215,6 +215,9 @@
 				max-width: 100%;
 				margin: 2rem auto;
 			}
+			@media print {
+				display: block;
+			}
 		}
 		&__parenthesis {
 			position: absolute !important;
