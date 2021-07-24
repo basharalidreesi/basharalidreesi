@@ -182,6 +182,7 @@
 				&::after {
 					content: "\00A0" counter(note);
 					font-size: 1rem;
+					font-weight: 700;
 					vertical-align: super;
 					--color-text: blue;
 					text-decoration: underline;
@@ -206,6 +207,7 @@
 			max-width: calc(25% - 3rem);
 			&::before {
 				content: counter(note) " ";
+				font-weight: 700;
 				--color-text: blue;
 			}
 			// opacity: 0.25;
