@@ -150,9 +150,9 @@ const bashar = {
 			bashar.lexicon.noteContents.forEach((note, i) => {
 				let noteOffsetTop = note.getBoundingClientRect().top;
 				let noteOffsetBottom = note.getBoundingClientRect().bottom;
-				// console.log(i + ": " + noteOffsetTop + " + " + noteOffsetBottom);
+				// console.log((i+1) + ": " + noteOffsetTop + " + " + noteOffsetBottom);
 				if (noteOffsetTop < previousNoteOffsetBottom) {
-					// console.log("Check 1: " + (i+1) + " is overlapping " + i);
+					// console.log((i+1) + " is overlapping " + i);
 					offsetDelta = previousNoteOffsetBottom - noteOffsetTop;
 					continuityCounter++;
 					let newOffsetTop = "calc(" + "-3.35rem + " + offsetDelta + "px + " + previousOffsetDelta + "px - " + continuityCounter + "px)";
