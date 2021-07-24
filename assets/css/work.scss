@@ -161,7 +161,14 @@
 			}
 		}
 		&__label {
-			--color-text: blue;
+			text-decoration: unerline;
+			text-decoration-style: dashed;
+			text-underline-offset: 0.5rem;
+			@media (any-hover: hover) {
+				&:hover ~ .note__content {
+					opacity: 1;
+				}
+			}
 		}
 		&__content {
 			position: absolute;
