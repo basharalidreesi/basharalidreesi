@@ -167,14 +167,16 @@
 		&__content {
 			position: absolute;
 			display: block;
-			right: 0;
-			width: 25%;
+			right: 2rem;
+			width: calc(25% - 1rem);
 			margin-top: -2rem;
+			padding-left: 2rem;
 			@media (max-width: 1280px) {
 				position: relative;
 				display: none;
 				width: 100%;
 				margin: 1rem auto;
+				padding: 0;
 			}
 		}
 		&__parenthesis {
