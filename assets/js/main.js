@@ -146,7 +146,7 @@ const bashar = {
 			var offsetDelta = 0;
 			var previousOffsetDelta = 0;
 			var continuityCounter = 0;
-			if (!bashar.util.queryMedia("(max-width: 1280px)")) { return; }
+			if (bashar.util.queryMedia("(max-width: 1280px)")) { return; }
 			bashar.lexicon.noteContents.forEach((note, i) => {
 				let noteOffsetTop = note.getBoundingClientRect().top;
 				let noteOffsetBottom = note.getBoundingClientRect().bottom;
