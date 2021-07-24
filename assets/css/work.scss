@@ -204,9 +204,11 @@
 			padding: 1rem;
 			border: 1px dashed var(--color-text);
 			font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
-			left: calc(75% + 1rem);
+			// left: calc(75% + 1rem);
+			left: calc(75% + 3rem);
 			width: max-content;
-			max-width: calc(25% - 3rem);
+			// max-width: calc(25% - 3rem);
+			max-width: calc(25% - 7rem);
 			&::before {
 				content: counter(note) " ";
 				// font-weight: 700;
