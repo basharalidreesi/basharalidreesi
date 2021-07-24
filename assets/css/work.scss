@@ -161,10 +161,19 @@
 			&:checked ~ .note__content {
 				@media (max-width: 1280px) {
 					position: relative;
-					top: auto;
 					left: 0;
 					max-width: 100%;
 					margin: 2rem auto;
+				}
+			}
+			&:not(:checked) ~ .note__content {
+				@media (max-width: 1280px) {
+					position: absolute;
+					top: -9999px;
+					left: -9999px;
+					width: 1px;
+					height: 1px;
+					overflow: hidden;
 				}
 			}
 			&:hover ~ .note__content {
@@ -204,14 +213,6 @@
 			&::before {
 				content: counter(note) " ";
 				--color-text: blue;
-			}
-			@media (max-width: 1280px) {
-				position: absolute;
-				top: -9999px;
-				left: -9999px;
-				width: 1px;
-				height: 1px;
-				overflow: hidden;
 			}
 		}
 		&__parenthesis {
