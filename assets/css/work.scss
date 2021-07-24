@@ -150,22 +150,27 @@
 		display: block;
 	}
 
-	.note { /* display: none; */ }
-	.note__toggle {
-		display: none;
-	}
-	.note__label { /* display: none; */ }
-	.note__content {
-		display: block;
-		margin: 1rem auto;
-	}
-	.note__parenthesis {
-		position: absolute !important;
-		top: -9999px !important;
-		left: -9999px !important;
-		width: 1px !important;
-		height: 1px !important;
-		overflow: hidden;
+	.note {
+
+		&__toggle {
+			display: none;
+		}
+		&__label {
+			/* display: none; */
+		}
+		&__content {
+			display: block;
+			margin: 1rem auto;
+		}
+		&__parenthesis {
+			position: absolute !important;
+			top: -9999px !important;
+			left: -9999px !important;
+			width: 1px !important;
+			height: 1px !important;
+			overflow: hidden;
+		}
+		
 	}
 
 }
