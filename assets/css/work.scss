@@ -154,7 +154,7 @@
 
 	.note {
 
-		counter-increment: note;
+		// counter-increment: note;
 
 		&:hover {
 			@media (any-hover: hover) {
@@ -176,6 +176,9 @@
 				@media (any-hover: hover) {
 					--color-text: blue;
 				}
+			}
+			& + .note__label {
+				counter-increment: note;
 			}
 		}
 		&__label {
