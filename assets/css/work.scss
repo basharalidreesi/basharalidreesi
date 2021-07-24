@@ -167,18 +167,21 @@
 		&__content {
 			position: absolute;
 			display: block;
-			right: 2rem;
-			width: calc(25% - 1rem);
 			margin-top: -2rem;
 			padding: 1rem;
 			border: 1px dashed var(--color-text);
 			font-family: "Helvetica", "Helvetica Neue", "Arial", sans-serif;
+
+			right: 2rem;
+			width: calc(25% - 1rem);
+
 			@media (max-width: 1280px) {
 				position: relative;
 				display: none;
 				right: 0;
-				width: 100%;
-				margin: 1rem auto;
+				width: max-content;
+				max-width: 100%;
+				margin: 2rem auto;
 			}
 		}
 		&__parenthesis {
