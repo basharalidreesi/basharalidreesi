@@ -121,7 +121,8 @@ const bashar = {
 		initMainScripts: function() {
 			bashar.main.displayJsOnly();
 			bashar.main.disableFolioAnchors();
-			bashar.main.distributeNotes();
+			// bashar.main.distributeNotes();
+			bashar.main.trackNotes();
 		},
 		displayJsOnly: function() {
 			if (!bashar.lexicon.jsOnly) { return; }
@@ -140,13 +141,19 @@ const bashar = {
 			});
 
 		},
-		distributeNotes: function() {
+		trackNotes: function() {
+			window.addEventListener("resize", bashar.util.debounce(bashar.main.checkOverlappingNotes(), 500));
+		},
+		checkOverlappingNotes: function() {
+			if (bashar.util.queryMedia("(max-width: 1280px)")) {
+				bashar.main.resetNoteOffsets();
+				return;
+			}
 			var previousNoteOffsetTop = 0;
 			var previousNoteOffsetBottom = 0;
 			var noteOffsetDelta = 0;
 			var previousNoteOffsetDelta = 0;
 			var continuityCounter = 0;
-			// if (bashar.util.queryMedia("(max-width: 1280px)")) { return; }
 			bashar.lexicon.notes.forEach((note) => {
 				let noteOffsetTop = note.getBoundingClientRect().top;
 				let noteOffsetBottom = note.getBoundingClientRect().bottom;
@@ -164,6 +171,38 @@ const bashar = {
 				previousNoteOffsetDelta = noteOffsetDelta;
 			});
 		},
+		offsetOverlappingNotes: function(note, noteOffsetDelta) {
+
+		},
+		resetNoteOffsets: function() {
+			bashar.lexicon.notes.forEach((note) => {
+				note.style.removeProperty("margin-top");
+			});
+		},
+		// distributeNotes: function() {
+		// 	var previousNoteOffsetTop = 0;
+		// 	var previousNoteOffsetBottom = 0;
+		// 	var noteOffsetDelta = 0;
+		// 	var previousNoteOffsetDelta = 0;
+		// 	var continuityCounter = 0;
+		// 	// if (bashar.util.queryMedia("(max-width: 1280px)")) { return; }
+		// 	bashar.lexicon.notes.forEach((note) => {
+		// 		let noteOffsetTop = note.getBoundingClientRect().top;
+		// 		let noteOffsetBottom = note.getBoundingClientRect().bottom;
+		// 		if (noteOffsetTop < previousNoteOffsetBottom) {
+		// 			noteOffsetDelta = previousNoteOffsetBottom - noteOffsetTop;
+		// 			continuityCounter++;
+		// 			let newOffsetTop = "calc(" + "-3.35rem + " + noteOffsetDelta + "px + " + previousNoteOffsetDelta + "px - " + continuityCounter + "px)";
+		// 			note.style.marginTop = newOffsetTop;
+		// 		} else {
+		// 			noteOffsetDelta = 0;
+		// 			continuityCounter = 0;
+		// 		}
+		// 		previousNoteOffsetTop = noteOffsetTop;
+		// 		previousNoteOffsetBottom = noteOffsetBottom;
+		// 		previousNoteOffsetDelta = noteOffsetDelta;
+		// 	});
+		// },
 	},
 
 	util: {
