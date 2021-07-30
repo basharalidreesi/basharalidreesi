@@ -121,8 +121,7 @@ const bashar = {
 		initMainScripts: function() {
 			bashar.main.displayJsOnly();
 			bashar.main.disableFolioAnchors();
-			bashar.main.work.distributeNotes();
-			bashar.main.spaceNoteContents();
+			bashar.main.distributeNotes();
 		},
 		displayJsOnly: function() {
 			if (!bashar.lexicon.jsOnly) { return; }
@@ -141,57 +140,31 @@ const bashar = {
 			});
 
 		},
-		work: {
-			distributeNotes: function() {
-				var previousNoteOffsetTop = 0;
-				var previousNoteOffsetBottom = 0;
-				var previousNoteOffsetDelta = 0;
-				var counter = 0;
-				bashar.lexicon.notes.forEach((note) => {
-					var noteOffsetTop = note.getBoundingClientRect().top;
-					var noteOffsetBottom = note.getBoundingClientRect().bottom;
-					var noteOffsetDelta = previousNoteOffsetBottom - noteOffsetTop;
-					if (noteOffsetDelta < 0) {
-						counter++;
-						note.style.marginTop = "calc(" + "-3.35rem + " + noteOffsetDelta + "px + " + previousNoteOffsetDelta + "px - " + counter + "px)";
-					} else {
-						noteOffsetDelta = 0;
-						counter = 0;
-					}
-					previousNoteOffsetTop = noteOffsetTop;
-					previousNoteOffsetBottom = noteOffsetBottom;
-					previousNoteOffsetDelta = noteOffsetDelta;
-				});
-			},
-			resetNoteDistibution: function() {
-
-			},
-		},
-		spaceNoteContents: function() {
-			// var previousNoteOffsetTop = 0;
-			// var previousNoteOffsetBottom = 0;
-			// var offsetDelta = 0;
-			// var previousOffsetDelta = 0;
-			// var continuityCounter = 0;
+		distributeNotes: function() {
+			var previousNoteOffsetTop = 0;
+			var previousNoteOffsetBottom = 0;
+			var noteOffsetDelta = 0;
+			var previousNoteOffsetDelta = 0;
+			var continuityCounter = 0;
 			// if (bashar.util.queryMedia("(max-width: 1280px)")) { return; }
-			// bashar.lexicon.noteContents.forEach((note, i) => {
-			// 	let noteOffsetTop = note.getBoundingClientRect().top;
-			// 	let noteOffsetBottom = note.getBoundingClientRect().bottom;
-			// 	// console.log((i+1) + ": " + noteOffsetTop + " + " + noteOffsetBottom);
-			// 	if (noteOffsetTop < previousNoteOffsetBottom) {
-			// 		// console.log((i+1) + " is overlapping " + i);
-			// 		offsetDelta = previousNoteOffsetBottom - noteOffsetTop;
-			// 		continuityCounter++;
-			// 		let newOffsetTop = "calc(" + "-3.35rem + " + offsetDelta + "px + " + previousOffsetDelta + "px - " + continuityCounter + "px)";
-			// 		note.style.marginTop = newOffsetTop;
-			// 	} else {
-			// 		offsetDelta = 0;
-			// 		continuityCounter = 0;
-			// 	}
-			// 	previousNoteOffsetTop = noteOffsetTop;
-			// 	previousNoteOffsetBottom = noteOffsetBottom;
-			// 	previousOffsetDelta = offsetDelta;
-			// });
+			bashar.lexicon.noteContents.forEach((note, i) => {
+				let noteOffsetTop = note.getBoundingClientRect().top;
+				let noteOffsetBottom = note.getBoundingClientRect().bottom;
+				// console.log((i+1) + ": " + noteOffsetTop + " + " + noteOffsetBottom);
+				if (noteOffsetTop < previousNoteOffsetBottom) {
+					// console.log((i+1) + " is overlapping " + i);
+					noteOffsetDelta = previousNoteOffsetBottom - noteOffsetTop;
+					continuityCounter++;
+					let newOffsetTop = "calc(" + "-3.35rem + " + noteOffsetDelta + "px + " + previousNoteOffsetDelta + "px - " + continuityCounter + "px)";
+					note.style.marginTop = newOffsetTop;
+				} else {
+					noteOffsetDelta = 0;
+					continuityCounter = 0;
+				}
+				previousNoteOffsetTop = noteOffsetTop;
+				previousNoteOffsetBottom = noteOffsetBottom;
+				previousNoteOffsetDelta = noteOffsetDelta;
+			});
 		},
 	},
 
