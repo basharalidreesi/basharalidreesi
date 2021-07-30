@@ -142,7 +142,9 @@ const bashar = {
 
 		},
 		trackNotes: function() {
-			window.addEventListener("resize", bashar.util.debounce(bashar.main.checkOverlappingNotes, 500));
+			window.addEventListener("resize", bashar.util.debounce(() => {
+				bashar.main.checkOverlappingNotes();
+			}, 500));
 		},
 		checkOverlappingNotes: function() {
 			if (bashar.util.queryMedia("(max-width: 1280px)")) {
