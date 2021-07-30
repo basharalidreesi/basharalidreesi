@@ -143,14 +143,14 @@ const bashar = {
 		},
 		work: {
 			distributeNotes: function() {
-				let previousNoteOffsetTop = 0;
-				let previousNoteOffsetBottom = 0;
-				let previousNoteOffsetDelta = 0;
-				let counter = 0;
+				var previousNoteOffsetTop = 0;
+				var previousNoteOffsetBottom = 0;
+				var previousNoteOffsetDelta = 0;
+				var counter = 0;
 				bashar.lexicon.notes.forEach((note) => {
-					let noteOffsetTop = note.getBoundingClientRect().top;
-					let noteOffsetBottom = note.getBoundingClientRect().bottom;
-					let noteOffsetDelta = previousNoteOffsetBottom - noteOffsetTop;
+					var noteOffsetTop = note.getBoundingClientRect().top;
+					var noteOffsetBottom = note.getBoundingClientRect().bottom;
+					var noteOffsetDelta = previousNoteOffsetBottom - noteOffsetTop;
 					if (noteOffsetDelta < 0) {
 						counter++;
 						note.style.marginTop = "calc(" + "-3.35rem + " + noteOffsetDelta + "px + " + previousNoteOffsetDelta + "px - " + counter + "px)";
