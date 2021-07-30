@@ -151,7 +151,7 @@ const bashar = {
 					let noteOffsetTop = note.getBoundingClientRect().top;
 					let noteOffsetBottom = note.getBoundingClientRect().bottom;
 					let noteOffsetDelta = previousNoteOffsetBottom - noteOffsetTop;
-					if (noteOffsetDelta <= 15 && noteOffsetDelta != 0) {
+					if (noteOffsetDelta < 0) {
 						counter++;
 						note.style.marginTop = "calc(" + "-3.35rem + " + noteOffsetDelta + "px + " + previousNoteOffsetDelta + "px - " + counter + "px)";
 					} else {
