@@ -16,7 +16,7 @@ const bashar = {
 		disabledAnchors: document.querySelectorAll(".generic--disabled"),
 		numeros: document.querySelectorAll(".indexOfWorks__work__numero"),
 
-		noteContents: document.querySelectorAll(".note__content"),
+		notes: document.querySelectorAll(".note__content"),
 
 	},
 
@@ -121,6 +121,7 @@ const bashar = {
 		initMainScripts: function() {
 			bashar.main.displayJsOnly();
 			bashar.main.disableFolioAnchors();
+			bashar.main.work.distributeNotes();
 			bashar.main.spaceNoteContents();
 		},
 		displayJsOnly: function() {
@@ -140,31 +141,28 @@ const bashar = {
 			});
 
 		},
-		spaceNoteContents: function() {
-			var previousNoteOffsetTop = 0;
-			var previousNoteOffsetBottom = 0;
-			var offsetDelta = 0;
-			var previousOffsetDelta = 0;
-			var continuityCounter = 0;
-			if (bashar.util.queryMedia("(max-width: 1280px)")) { return; }
-			bashar.lexicon.noteContents.forEach((note, i) => {
-				let noteOffsetTop = note.getBoundingClientRect().top;
-				let noteOffsetBottom = note.getBoundingClientRect().bottom;
-				// console.log((i+1) + ": " + noteOffsetTop + " + " + noteOffsetBottom);
-				if (noteOffsetTop < previousNoteOffsetBottom) {
-					// console.log((i+1) + " is overlapping " + i);
-					offsetDelta = previousNoteOffsetBottom - noteOffsetTop;
-					continuityCounter++;
-					let newOffsetTop = "calc(" + "-3.35rem + " + offsetDelta + "px + " + previousOffsetDelta + "px - " + continuityCounter + "px)";
-					note.style.marginTop = newOffsetTop;
-				} else {
-					offsetDelta = 0;
-					continuityCounter = 0;
-				}
-				previousNoteOffsetTop = noteOffsetTop;
-				previousNoteOffsetBottom = noteOffsetBottom;
-				previousOffsetDelta = offsetDelta;
-			});
+		work: {
+			distributeNotes: function() {
+				let previousNoteOffsetTop = 0;
+				let previousNoteOffsetBottom = 0;
+				let previousNoteOffsetDelta = 0;
+				let counter = 0;
+				bashar.lexicon.notes.forEach((note) => {
+					let noteOffsetTop = note.getBoundingClientRect().top;
+					let noteOffsetBottom = note.getBoundingClientRect().bottom;
+					let noteOffsetDelta = previousNoteOffsetBottom - noteOffsetTop;
+					if (noteOffsetDelta <= 15) {
+						counter++;
+						note.style.marginTop = "calc(" + "-3.35rem + " + noteOffsetDelta + "px + " + previousNoteOffsetDelta + "px - " + counter + "px)";
+					} else {
+						offsetDelta = 0;
+						counter = 0;
+					}
+					previousNoteOffsetTop = noteOffsetTop;
+					previousNoteOffsetBottom = noteOffsetBottom;
+					previousNoteOffsetDelta = noteOffsetDelta;
+				});
+			},
 		},
 	},
 
