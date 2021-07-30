@@ -151,7 +151,7 @@ const bashar = {
 					let noteOffsetTop = note.getBoundingClientRect().top;
 					let noteOffsetBottom = note.getBoundingClientRect().bottom;
 					let noteOffsetDelta = previousNoteOffsetBottom - noteOffsetTop;
-					if (noteOffsetDelta <= 15) {
+					if (noteOffsetDelta <= 15 && noteOffsetDelta != 0) {
 						counter++;
 						note.style.marginTop = "calc(" + "-3.35rem + " + noteOffsetDelta + "px + " + previousNoteOffsetDelta + "px - " + counter + "px)";
 					} else {
@@ -163,6 +163,35 @@ const bashar = {
 					previousNoteOffsetDelta = noteOffsetDelta;
 				});
 			},
+			resetNoteDistibution: function() {
+
+			},
+		},
+		spaceNoteContents: function() {
+			// var previousNoteOffsetTop = 0;
+			// var previousNoteOffsetBottom = 0;
+			// var offsetDelta = 0;
+			// var previousOffsetDelta = 0;
+			// var continuityCounter = 0;
+			// if (bashar.util.queryMedia("(max-width: 1280px)")) { return; }
+			// bashar.lexicon.noteContents.forEach((note, i) => {
+			// 	let noteOffsetTop = note.getBoundingClientRect().top;
+			// 	let noteOffsetBottom = note.getBoundingClientRect().bottom;
+			// 	// console.log((i+1) + ": " + noteOffsetTop + " + " + noteOffsetBottom);
+			// 	if (noteOffsetTop < previousNoteOffsetBottom) {
+			// 		// console.log((i+1) + " is overlapping " + i);
+			// 		offsetDelta = previousNoteOffsetBottom - noteOffsetTop;
+			// 		continuityCounter++;
+			// 		let newOffsetTop = "calc(" + "-3.35rem + " + offsetDelta + "px + " + previousOffsetDelta + "px - " + continuityCounter + "px)";
+			// 		note.style.marginTop = newOffsetTop;
+			// 	} else {
+			// 		offsetDelta = 0;
+			// 		continuityCounter = 0;
+			// 	}
+			// 	previousNoteOffsetTop = noteOffsetTop;
+			// 	previousNoteOffsetBottom = noteOffsetBottom;
+			// 	previousOffsetDelta = offsetDelta;
+			// });
 		},
 	},
 
