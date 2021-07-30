@@ -147,12 +147,10 @@ const bashar = {
 			var previousNoteOffsetDelta = 0;
 			var continuityCounter = 0;
 			// if (bashar.util.queryMedia("(max-width: 1280px)")) { return; }
-			bashar.lexicon.noteContents.forEach((note, i) => {
+			bashar.lexicon.notes.forEach((note) => {
 				let noteOffsetTop = note.getBoundingClientRect().top;
 				let noteOffsetBottom = note.getBoundingClientRect().bottom;
-				// console.log((i+1) + ": " + noteOffsetTop + " + " + noteOffsetBottom);
 				if (noteOffsetTop < previousNoteOffsetBottom) {
-					// console.log((i+1) + " is overlapping " + i);
 					noteOffsetDelta = previousNoteOffsetBottom - noteOffsetTop;
 					continuityCounter++;
 					let newOffsetTop = "calc(" + "-3.35rem + " + noteOffsetDelta + "px + " + previousNoteOffsetDelta + "px - " + continuityCounter + "px)";
