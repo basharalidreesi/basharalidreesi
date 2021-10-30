@@ -226,6 +226,10 @@ const bashar = {
 		clamp: function(min, number, max) {
 			return Math.max(min, Math.min(number, max));
 		},
+		line: function(a, x, b) {
+                        /* https://www.desmos.com/calculator */
+                        return (a * x) + b;
+                },
 		parabola: function(a, x, b, c) {
 			/* https://www.desmos.com/calculator */
 			return a * (x + b) ** 2 + c;
