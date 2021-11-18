@@ -92,11 +92,11 @@ style: indexOfWorks
 								{% if forloop.last == false and datum.outerHTML.close == nextDatum.outerHTML.close and datum.canCollapse and nextDatum.canCollapse and datum.classes == nextDatum.classes %}<!-- collapsed tag: `{{ datum.outerHTML.close }}` -->{% else %}{{ datum.outerHTML.close }}{% endif %}
 								{%- endif -%}
 								{%- endfor %}
-								<!-- <footer class="indexOfWorks__work__footer">
-									<a href="{{ url }}" title="{{ strippedTitle }}">
+								<footer class="indexOfWorks__work__footer">
+									<!-- <a href="{{ url }}" title="{{ strippedTitle }}">
 										→ See more →
-									</a>
-								</footer> -->
+									</a> -->
+								</footer>
 							</article>
 						</footer>
 					</div>
