@@ -272,6 +272,9 @@
         &__work__time { }
 
         &__work__tag {
+
+		pointer-events: none !important;
+
                 flex-flow: row wrap;
                 padding: 3% 0 3% 0;
                 list-style: none;
