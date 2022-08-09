@@ -51,32 +51,32 @@ works:
   # verso
   tag: ["architecture", "text"]
   # folio
-  trueTitle: "God is Dead; Long Live the Transparent: Bruno Taut's Glashaus in the 1914 Werkbund Exhibition"
+  trueTitle: "Long Live the Transparent: Bruno Taut's Glashaus in the 1914 Werkbund Exhibition"
   url: /works/bruno-tauts-glashaus-in-the-1914-werkbund-exhibition/
   type: "18"
+# -
+#  # recto
+#  title: contested space?
+#  figure: /assets/graphics/otherness-and-the-public-realm-of-amman.jpg
+#  subtitle: The city's sites of spatial agency border one another not physically, but culturally and socially. The city's capacity to generate images of her people speaks of her theatricality.
+#  # verso
+#  time: Summer 2019
+#  tag: ["architecture", "text"]
+#  # folio
+#  trueTitle: "News from the Urban South: <br /> Otherness and the Public Realm of Amman"
+#  url: /works/otherness-and-the-public-realm-of-amman/
+#  type: "13"
 -
  # recto
  title: contested space?
  figure: /assets/graphics/otherness-and-the-public-realm-of-amman.jpg
- subtitle: The city's sites of spatial agency border one another not physically, but culturally and socially. The city's capacity to generate images of her people speaks of her theatricality.
- # verso
- time: Summer 2019
- tag: ["architecture", "text"]
- # folio
- trueTitle: "News from the Urban South: <br /> Otherness and the Public Realm of Amman"
- url: /works/otherness-and-the-public-realm-of-amman/
- type: "13"
--
- # recto
- title: contested space?
- figure: /assets/graphics/a-cruisy-night-at-the-stately-plaza.jpg
- subtitle: The city's sites of spatial agency border one another not physically, but culturally and socially. The theatricality of the city requires investments in space and in her infrastructures of intimacy.
+ subtitle: When we wanted to talk, <br /> they took away the street <br /> where we like to walk.
  # verso
  time: Winter 2019
  tag: ["architecture", "text"]
  # folio
- trueTitle: "(More) News from the Urban South: <br /> A Cruisy Night at the Stately Plaza"
- url: /works/a-cruisy-night-at-the-stately-plaza/
+ trueTitle: "(More) News from the Urban South: <br /> Otherness & the Public Realm of Amman"
+ url: /works/otherness-and-the-public-realm-of-amman/
  type: "13"
 # -
 #   # recto
