@@ -19,7 +19,7 @@ notice:
 collections:
   works:
     title: Works
-    output: false
+    output: true
 defaults:
   - scope:
       path: ''
