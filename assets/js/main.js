@@ -120,9 +120,9 @@ const bashar = {
 	main: {
 		initMainScripts: function() {
 			bashar.main.displayJsOnly();
-			bashar.main.disableFolioAnchors();
+			// bashar.main.disableFolioAnchors();
 			// bashar.main.distributeNotes();
-			bashar.main.trackNotes();
+			// bashar.main.trackNotes();
 		},
 		displayJsOnly: function() {
 			if (!bashar.lexicon.jsOnly) { return; }
@@ -130,57 +130,57 @@ const bashar = {
 				jsOnly.classList.remove("generic--jsOnly");
 			});
 		},
-		disableFolioAnchors: function() {
-			if (!bashar.lexicon.disabledAnchors) { return; }
-			bashar.lexicon.disabledAnchors.forEach((anchor) => {
-				anchor.addEventListener("click", (event) => {
-					event.preventDefault();
-					event.target.closest(".indexOfWorks__work__folio").classList.toggle("generic--flipped");
-					plausible("Flip");
-				});
-			});
+		// disableFolioAnchors: function() {
+		// 	if (!bashar.lexicon.disabledAnchors) { return; }
+		// 	bashar.lexicon.disabledAnchors.forEach((anchor) => {
+		// 		anchor.addEventListener("click", (event) => {
+		// 			event.preventDefault();
+		// 			event.target.closest(".indexOfWorks__work__folio").classList.toggle("generic--flipped");
+		// 			plausible("Flip");
+		// 		});
+		// 	});
 
-		},
-		trackNotes: function() {
-			window.addEventListener("resize", bashar.util.debounce(() => {
-				bashar.main.checkOverlappingNotes();
-			}, 500));
-		},
-		checkOverlappingNotes: function() {
-			if (bashar.util.queryMedia("(max-width: 1280px)")) {
-				bashar.main.resetNoteOffsets();
-				return;
-			}
-			var previousNoteOffsetTop = 0;
-			var previousNoteOffsetBottom = 0;
-			var noteOffsetDelta = 0;
-			var previousNoteOffsetDelta = 0;
-			var continuityCounter = 0;
-			bashar.lexicon.notes.forEach((note) => {
-				let noteOffsetTop = note.getBoundingClientRect().top;
-				let noteOffsetBottom = note.getBoundingClientRect().bottom;
-				if (noteOffsetTop < previousNoteOffsetBottom) {
-					noteOffsetDelta = previousNoteOffsetBottom - noteOffsetTop;
-					continuityCounter++;
-					let newOffsetTop = "calc(" + "-3.35rem + " + noteOffsetDelta + "px + " + previousNoteOffsetDelta + "px - " + continuityCounter + "px)";
-					note.style.marginTop = newOffsetTop;
-				} else {
-					noteOffsetDelta = 0;
-					continuityCounter = 0;
-				}
-				previousNoteOffsetTop = noteOffsetTop;
-				previousNoteOffsetBottom = noteOffsetBottom;
-				previousNoteOffsetDelta = noteOffsetDelta;
-			});
-		},
-		offsetOverlappingNotes: function(note, noteOffsetDelta) {
+		// },
+		// trackNotes: function() {
+		// 	window.addEventListener("resize", bashar.util.debounce(() => {
+		// 		bashar.main.checkOverlappingNotes();
+		// 	}, 500));
+		// },
+		// checkOverlappingNotes: function() {
+		// 	if (bashar.util.queryMedia("(max-width: 1280px)")) {
+		// 		bashar.main.resetNoteOffsets();
+		// 		return;
+		// 	}
+		// 	var previousNoteOffsetTop = 0;
+		// 	var previousNoteOffsetBottom = 0;
+		// 	var noteOffsetDelta = 0;
+		// 	var previousNoteOffsetDelta = 0;
+		// 	var continuityCounter = 0;
+		// 	bashar.lexicon.notes.forEach((note) => {
+		// 		let noteOffsetTop = note.getBoundingClientRect().top;
+		// 		let noteOffsetBottom = note.getBoundingClientRect().bottom;
+		// 		if (noteOffsetTop < previousNoteOffsetBottom) {
+		// 			noteOffsetDelta = previousNoteOffsetBottom - noteOffsetTop;
+		// 			continuityCounter++;
+		// 			let newOffsetTop = "calc(" + "-3.35rem + " + noteOffsetDelta + "px + " + previousNoteOffsetDelta + "px - " + continuityCounter + "px)";
+		// 			note.style.marginTop = newOffsetTop;
+		// 		} else {
+		// 			noteOffsetDelta = 0;
+		// 			continuityCounter = 0;
+		// 		}
+		// 		previousNoteOffsetTop = noteOffsetTop;
+		// 		previousNoteOffsetBottom = noteOffsetBottom;
+		// 		previousNoteOffsetDelta = noteOffsetDelta;
+		// 	});
+		// },
+		// offsetOverlappingNotes: function(note, noteOffsetDelta) {
 
-		},
-		resetNoteOffsets: function() {
-			bashar.lexicon.notes.forEach((note) => {
-				note.style.removeProperty("margin-top");
-			});
-		},
+		// },
+		// resetNoteOffsets: function() {
+		// 	bashar.lexicon.notes.forEach((note) => {
+		// 		note.style.removeProperty("margin-top");
+		// 	});
+		// },
 		// distributeNotes: function() {
 		// 	var previousNoteOffsetTop = 0;
 		// 	var previousNoteOffsetBottom = 0;
