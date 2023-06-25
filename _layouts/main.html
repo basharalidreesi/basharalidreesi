@@ -28,13 +28,13 @@
 </head>
 <body>
 	{%- if site.notice %}
-	<div id="notice">
+	<div id="notice" style="position: fixed; top: 0; left: 0; width: 100%;">
 		{%- for notice in site.notice %}
 		{{ notice }}
 		{%- endfor %}
 	</div>
 	{%- endif %}
-	<div id="mother">
+	<div id="mother" style="margin: 0; width: 100%; align-items: center; justify-content: center;">
 		<header id="header" role="presentation" aria-hidden="true">
 			<a id="header__anchor" href="/" title="Homepage | Bashar al-Idreesi">
 				<h1>
