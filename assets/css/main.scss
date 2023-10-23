@@ -7,14 +7,17 @@ $font-size: 15px !default;
 
 :root {
 
-	--color-outer: #cccccc; // #cccccc
-	--color-inner: #cccccc; // #cccccc
-	--color-dark: #b6b6b6;
-	--color-light: #dcdcdc;
+	// --color-outer: #cccccc; // #cccccc
+	// --color-inner: #cccccc; // #cccccc
+	// --color-dark: #b6b6b6;
+	// --color-light: #dcdcdc;
+	// --color-shine: white;
+	// --color-text: black; // #fefdfa
+	// --color-redundant: #cccccc;
 	--color-shine: white;
-	--color-text: black; // #fefdfa
-	--color-redundant: #cccccc;
-	@media (prefers-color-scheme: dark) { }
+	--color-text: red;
+	--color-background: linear-gradient(to bottom, black, #009000);
+	// @media (prefers-color-scheme: dark) { }
 
 }
 
@@ -94,7 +97,7 @@ a:focus {
 }
 
 body {
-	background: var(--color-outer);
+	background: var(--color-background);
 }
 
 #mother {
@@ -105,7 +108,7 @@ body {
 	height: 100%;
 	min-height: 100vh;
 	margin: 1rem;
-	background: var(--color-inner);
+	// background: var(--color-inner);
 	// animation: fadeIn 1.5s;
 	// @keyframes fadeIn {
 	// 	from { opacity: 0; } to { opacity: 1; }
