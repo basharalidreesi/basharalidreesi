@@ -15,8 +15,8 @@ $font-size: 15px !default;
 	// --color-text: black; // #fefdfa
 	// --color-redundant: #cccccc;
 	--color-shine: white;
-	--color-text: black;
-	--color-background: linear-gradient(to bottom, #eeeeee, #cccccc);
+	--color-text: red;
+	--color-background: linear-gradient(to bottom, black, green);
 	// @media (prefers-color-scheme: dark) { }
 
 }
@@ -122,6 +122,7 @@ body {
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+		width: calc((100% - 4rem) * 0.8);
 		&__anchor {
 			display: block;
 			height: 100%;
